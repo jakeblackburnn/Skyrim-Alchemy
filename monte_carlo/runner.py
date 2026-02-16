@@ -10,6 +10,7 @@ from dataclasses import dataclass, field
 from typing import Dict, List, Any, Optional
 import time
 from tqdm import tqdm
+import pandas as pd
 
 @dataclass
 class MonteCarloConfig:
@@ -40,8 +41,7 @@ class MonteCarloResult(ABC):
         self.run_results.append(run)
 
     def to_dataframe(self):
-        # TODO: figure out dataframes
-        pass
+        return pd.DataFrame(self.run_results)
 
     @abstractmethod
     def aggregate_stats(self):
