@@ -75,15 +75,17 @@ class Alembic:
 
     # fundamental potionmaking method - realizing a potion
     def create_potion(self, potion):
-        self.inventory.consume_recipe(potion.recipie)
-        self._update_valid_potions(potion.recipie)
-        self.realized_potions.append(potion)
+        if self.valid_potions:
+            self.inventory.consume_recipe(potion.recipie)
+            self._update_valid_potions(potion.recipie)
+            self.realized_potions.append(potion)
             
     ### Lazy Potionmaking Algorithms
 
     def _lazy_potionmaking(self):
         best = self._get_best_potion()
-        self.create_potion(best)
+        if best:
+            self.create_potion(best)
 
     def _lazy_strategy(self):
         while self.valid_potions:
@@ -112,6 +114,8 @@ class Alembic:
     def _lookahead(self):
         pass
     def _get_best_potion(self):
+        if not self.valid_potions:
+            return None
         return max(self.valid_potions, key=lambda p: p.total_value)
 
     def _get_value_sorted_potions(self):
