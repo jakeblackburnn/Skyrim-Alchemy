@@ -1,4 +1,5 @@
 # personal files & project stuff
+.gitignore
 .DS_Store
 __pycache__
 CLAUDE.md
@@ -6,6 +7,7 @@ CLAUDE.md
 writing
 docs
 data/backup/
+monte_carlo/*.md
 
 # env stuff 
 .env
