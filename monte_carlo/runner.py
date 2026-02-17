@@ -40,6 +40,12 @@ class MonteCarloResult(ABC):
     def add_run(self, run: Dict[str, any]):
         self.run_results.append(run)
 
+    def register_sigint_handler(self, handler):
+        if self._sigint_handler:
+            return False
+        self._sigint_handler = handler
+        return True
+
     def to_dataframe(self):
         return pd.DataFrame(self.run_results)
 
@@ -61,6 +67,16 @@ class MonteCarloResult(ABC):
 
 
 class Experiment:
+    def get_state(self) -> Optional[Dict[str, any]]:
+        """
+        Override to provide current state for SIGINT debugging.
+        
+        Returns:
+            Dict with experiment-specific state to display on Ctrl+C,
+            or None if no debug state tracking is needed.
+        """
+        return None
+
     @abstractmethod
     def run_once(self) -> Dict[str, any]:
         # this is where the actual potionmaking stuff happens
@@ -82,9 +98,73 @@ class MonteCarlo: # main runner object
 
 
     def run(self, experiment: Experiment):
+        import signal
+        import sys
+        
         if self.verbose: print("running monte carlo...")
 
         start = time.time()
+
+        # State tracking for SIGINT handler
+        state_tracker = {
+            'current_iteration': -1,
+            'total_iterations': self.config.num_simulations,
+            'start_time': start,
+            'last_update_time': start
+        }
+        
+        def sigint_handler(sig, frame):
+            """Handle Ctrl+C by dumping current state and exiting gracefully"""
+            print("\n" + "="*70)
+            print("MONTE CARLO INTERRUPTED (SIGINT)")
+            print("="*70)
+            
+            elapsed = time.time() - state_tracker['start_time']
+            since_update = time.time() - state_tracker['last_update_time']
+            current_iter = state_tracker['current_iteration']
+            total_iter = state_tracker['total_iterations']
+            
+            print(f"\nProgress:")
+            print(f"  Iteration: {current_iter + 1}/{total_iter} ({(current_iter+1)/total_iter*100:.1f}%)")
+            print(f"  Total elapsed: {elapsed:.2f}s")
+            if current_iter >= 0:
+                print(f"  Average per iteration: {elapsed/(current_iter+1):.2f}s")
+            print(f"  Time since last update: {since_update:.2f}s")
+            
+            # Determine if hung or just slow
+            if since_update > 30:
+                print(f"\n⚠️  WARNING: No update in {since_update:.1f}s - possible hang!")
+            elif since_update > 10:
+                print(f"\n⚠️  SLOW: Processing for {since_update:.1f}s - might be expensive operation")
+            else:
+                print(f"\n✓ Program is actively running (last update {since_update:.1f}s ago)")
+            
+            # Get experiment-specific debug state
+            debug_state = experiment.get_state()
+            if debug_state:
+                print(f"\nExperiment Debug State:")
+                for key, value in debug_state.items():
+                    # Truncate long lists for readability
+                    if isinstance(value, list) and len(value) > 5:
+                        print(f"  {key}: {value[:5]} ... ({len(value)} total)")
+                    else:
+                        print(f"  {key}: {value}")
+            else:
+                print(f"\nExperiment Debug State: (none available)")
+            
+            # Show partial results
+            if self.results.run_results:
+                print(f"\nPartial Results:")
+                print(f"  Completed runs: {len(self.results.run_results)}")
+                print(f"  Last result: {self.results.run_results[-1]}")
+            
+            print("\n" + "="*70)
+            print("Exiting gracefully.")
+            print("="*70 + "\n")
+            sys.exit(0)
+        
+        # Register signal handler
+        signal.signal(signal.SIGINT, sigint_handler)
 
         # Create progress bar if enabled
         pbar = tqdm(
@@ -95,6 +175,10 @@ class MonteCarlo: # main runner object
         ) if self.config.progress_bar else None
 
         for run_idx in range(self.config.num_simulations):
+            # Update state tracker before running experiment
+            state_tracker['current_iteration'] = run_idx
+            state_tracker['last_update_time'] = time.time()
+            
             self.results.add_run(experiment.run_once(run_idx))
             if pbar:
                 pbar.update(1)
