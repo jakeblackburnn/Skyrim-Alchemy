@@ -1,4 +1,5 @@
 from itertools import combinations
+from typing import Set
 from .potion import Potion
 from .player import Player
 from .inventory import Inventory
@@ -33,16 +34,14 @@ class Alembic:
                 valid_combos.append(list(combo))
         self.valid_potions = [Potion(combo, self.player, self.ing_db) for combo in valid_combos]
 
-    def _update_valid_potions(self, ingredients: Set):
-        # check if ingredients *werent* used up
-        for ing in ingredients:
-            if not self.inventory.get_ingredient_availability(ing):
-                ingredients.remove(ing)
-
-        for ing in ingredients:
-            for pot in self.valid_potions:
-                if ing in pot.ingredients:
-                    self.valid_potions.remove(pot)
+    def _update_valid_potions(self, ingredients: Set[Ingredient]):
+        # Filter ingredients to only those still available in inventory
+        available_ingredients = {ing for ing in ingredients 
+                                if not self.inventory.get_ingredient_availability(ing)}
+        
+        # Remove potions containing any of the available ingredients
+        self.valid_potions = [pot for pot in self.valid_potions 
+                             if not any(ing in pot.recipie for ing in available_ingredients)]
 
     def _shared_effects(self, ingredients):
         ingredient_effects_sets = [set(ing.get_effect_names()) for ing in ingredients]
@@ -101,8 +100,8 @@ class Alembic:
             if not self.valid_potions:
                 break
             best = self._get_best_potion()
-            self._update_valid_potions(best.ingredients)
-            if self.inventory.consume_recipe(best.ingredients):
+            self._update_valid_potions(best.recipie)
+            if self.inventory.consume_recipe(best.recipie):
                 self.realized_potions.append(best)
             else:
                 break  
@@ -122,7 +121,7 @@ class Alembic:
         return sorted(self.potions, key=lambda p: p.total_value, reverse=True)
 
     def _filter_by_ingredient(self, ingredient=None):
-        return filter(lambda p: any([i is ingredient for i in p.ingredients()]), self.potions)
+        return filter(lambda p: any([i is ingredient for i in p.recipie]), self.potions)
 
 
 
