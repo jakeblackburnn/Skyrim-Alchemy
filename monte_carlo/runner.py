@@ -40,12 +40,6 @@ class MonteCarloResult(ABC):
     def add_run(self, run: Dict[str, any]):
         self.run_results.append(run)
 
-    def register_sigint_handler(self, handler):
-        if self._sigint_handler:
-            return False
-        self._sigint_handler = handler
-        return True
-
     def to_dataframe(self):
         return pd.DataFrame(self.run_results)
 
@@ -60,9 +54,9 @@ class MonteCarloResult(ABC):
         pass
 
     def summary(self):
-        print(f"Monte Carlo Results Summary")
-        print(f"configuration:\n{str(self.config)}\n")
-        print(f"results:\n{len(self.run_results)} run entries.\n")
+        print(f"Monte Carlo Summary")
+        print("raw data results:")
+        print(self.to_dataframe())
         print(f"analysis:\n{self.aggregated_stats}\n")
 
 
