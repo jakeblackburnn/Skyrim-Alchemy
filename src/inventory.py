@@ -8,48 +8,6 @@ from .ingredient import Ingredient
 
 class Inventory:
 
-    # Rarity weights for sampling strategies
-    RARITY_WEIGHTS = {
-        'normal': {
-            'common': 1.0,
-            'uncommon': 1.0,
-            'rare': 1.0,
-            'very_rare': 1.0,
-            'unique': 1.0
-        },
-        'random_weighted': {
-            'common': 1.0,
-            'uncommon': 0.85,
-            'rare': 0.7,
-            'very_rare': 0.5,
-            'unique': 0.3
-        }
-    }
-
-    # Source type weights for sampling strategies
-    SOURCE_WEIGHTS = {
-        'normal': {
-            'plant': 1.0,
-            'creature': 1.0,
-            'fish': 1.0,
-            'fungus': 1.0,
-            'food': 1.0,
-            'crafting': 1.0,
-            'misc': 1.0,
-            'drug': 1.0
-        },
-        'random_weighted': {
-            'plant': 1.0,
-            'creature': 1.0,
-            'fish': 1.0,
-            'fungus': 1.0,
-            'food': 1.0,
-            'crafting': 1.0,
-            'misc': 1.0,
-            'drug': 1.0
-        }
-    }
-
     # Inventory size distribution parameters
     INVENTORY_SIZE_PARAMS = {
         'normal': {
@@ -57,46 +15,6 @@ class Inventory:
             'std': 10,
             'min': 10,
             'max': 70
-        },
-        'random_weighted': {
-            'mean': 35,
-            'std': 10,
-            'min': 10,
-            'max': 70
-        }
-    }
-
-    # Ingredients excluded from vendor inventories
-    VENDOR_BLACKLIST = [
-        'Ancestor Moth Wing',
-        'Chaurus Hunter Antennae',
-        'Crimson Nirnroot',
-        'Glowing Mushroom',
-        'Gleamblossom',
-    ]
-
-    # Maps ingredient rarity levels to vendor tier pools
-    VENDOR_TIER_ASSIGNMENT = {
-        'common': 'common_pool',
-        'uncommon': 'uncommon_pool',
-        'rare': 'rare_pool',
-        'very_rare': 'EXCLUDED',
-        'unique': 'EXCLUDED',
-    }
-
-    # Vendor tier configuration for Bernoulli sampling
-    VENDOR_TIERS = {
-        'common_pool': {
-            'slots': 15,
-            'spawn_chance': 0.75,
-        },
-        'uncommon_pool': {
-            'slots': 10,
-            'spawn_chance': 0.75,
-        },
-        'rare_pool': {
-            'slots': 5,
-            'spawn_chance': 0.75,
         },
     }
 
@@ -106,22 +24,6 @@ class Inventory:
         'scale': 1.5,
         'min_qty': 1,
         'max_qty': 50
-    }
-
-    # Default rarity-based chi-squared parameters for weighted strategy
-    QUANTITY_PARAMS_WEIGHTED = {
-        'common': {'df': 5, 'scale': 1.5, 'min_qty': 1, 'max_qty': 50},
-        'uncommon': {'df': 3, 'scale': 1.2, 'min_qty': 1, 'max_qty': 30},
-        'rare': {'df': 1.5, 'scale': 0.7, 'min_qty': 1, 'max_qty': 10},
-        'very_rare': {'df': 1, 'scale': 0.5, 'min_qty': 1, 'max_qty': 5},
-        'unique': {'df': 1, 'scale': 0.3, 'min_qty': 1, 'max_qty': 3}
-    }
-
-    # Default vendor quantity ranges
-    VENDOR_QUANTITY_RANGES = {
-        'common': (1, 5),
-        'uncommon': (1, 3),
-        'rare': (1, 2)
     }
 
     def __init__(self, items: Optional[Dict[Ingredient, int]] = None):
@@ -170,34 +72,12 @@ class Inventory:
         return True
 
     @staticmethod
-    def _calculate_inventory_size(strategy: str) -> int:
-        params = Inventory.INVENTORY_SIZE_PARAMS[strategy]
-        size = random.gauss(params['mean'], params['std'])
-        return max(params['min'], min(params['max'], int(size)))
-
-    @staticmethod
-    def _calculate_weights(ingredients, strategy: str):
-        rarity_weights = Inventory.RARITY_WEIGHTS[strategy]
-        source_weights = Inventory.SOURCE_WEIGHTS[strategy]
-
-        weights = []
-        for ing in ingredients:
-            rarity_weight = rarity_weights.get(ing.rarity, 1.0)
-            source_weight = source_weights.get(ing.source, 1.0)
-            combined_weight = rarity_weight * source_weight
-            weights.append(combined_weight)
-
-        return weights
-
-    @staticmethod
     def _sample_chi2_quantity(df, scale, min_qty, max_qty):
-        raw_value = np.random.gamma(df / 2.0, 2.0) * scale
+        raw_value = np.random.chisquare(df) * scale
         return max(min_qty, min(max_qty, int(raw_value)))
 
     @classmethod
-    def generate_normal(cls, db, size: Optional[int] = None, qty_params: Optional[dict] = None):
-        if size is None:
-            size = cls._calculate_inventory_size('normal')
+    def generate_normal(cls, db, size=0, qty_params: Optional[dict] = None):
 
         all_ingredients = db.get_all_ingredients()
 
@@ -218,113 +98,6 @@ class Inventory:
                 params['min_qty'],
                 params['max_qty']
             )
-            items[ing] = qty
-
-        return cls(items)
-
-    @classmethod
-    def generate_random_weighted(cls, db, size: Optional[int] = None, qty_params: Optional[dict] = None):
-        if size is None:
-            size = cls._calculate_inventory_size('random_weighted')
-
-        all_ingredients = db.get_all_ingredients()
-        weights = cls._calculate_weights(all_ingredients, 'random_weighted')
-
-        # Use set to track unique selections (Ingredient objects)
-        selected_ingredients = set()
-
-        # Iteratively sample until we have desired size or exhaust attempts
-        max_attempts = size * 3  # Allow some buffer for deduplication
-        attempts = 0
-
-        while len(selected_ingredients) < size and attempts < max_attempts:
-            # Sample with replacement, then deduplicate
-            remaining = size - len(selected_ingredients)
-            batch = random.choices(all_ingredients, weights=weights, k=remaining)
-            selected_ingredients.update(batch)
-            attempts += 1
-
-        # Use provided params or default
-        params = qty_params if qty_params is not None else cls.QUANTITY_PARAMS_WEIGHTED
-
-        items = {}
-        for ing in selected_ingredients:
-            # Get rarity-specific params (fallback to 'common' if rarity not in dict)
-            rarity_params = params.get(ing.rarity)
-            if rarity_params is None:
-                rarity_params = params['common']
-
-            qty = cls._sample_chi2_quantity(
-                rarity_params['df'],
-                rarity_params['scale'],
-                rarity_params['min_qty'],
-                rarity_params['max_qty']
-            )
-            items[ing] = qty
-
-        return cls(items)
-
-    @classmethod
-    def generate_vendor(cls, db, qty_params: Optional[dict] = None):
-        # Load all ingredients
-        all_ingredients = db.get_all_ingredients()
-
-        # Partition into tier pools with filtering
-        common_pool = []
-        uncommon_pool = []
-        rare_pool = []
-
-        for ing in all_ingredients:
-            # Skip blacklisted ingredients
-            if ing.name in cls.VENDOR_BLACKLIST:
-                continue
-
-            # Skip very_rare and unique rarities
-            if ing.rarity in ['very_rare', 'unique']:
-                continue
-
-            # Assign to tier
-            if ing.rarity == 'common':
-                common_pool.append(ing)
-            elif ing.rarity == 'uncommon':
-                uncommon_pool.append(ing)
-            elif ing.rarity == 'rare':
-                rare_pool.append(ing)
-
-        # Run Bernoulli trials for each tier
-        selected_ingredients = []
-
-        # Common tier: 15 slots @ 75%
-        for _ in range(cls.VENDOR_TIERS['common_pool']['slots']):
-            if random.random() < cls.VENDOR_TIERS['common_pool']['spawn_chance']:
-                if common_pool:
-                    selected_ingredients.append(random.choice(common_pool))
-
-        # Uncommon tier: 10 slots @ 75%
-        for _ in range(cls.VENDOR_TIERS['uncommon_pool']['slots']):
-            if random.random() < cls.VENDOR_TIERS['uncommon_pool']['spawn_chance']:
-                if uncommon_pool:
-                    selected_ingredients.append(random.choice(uncommon_pool))
-
-        # Rare tier: 5 slots @ 75%
-        for _ in range(cls.VENDOR_TIERS['rare_pool']['slots']):
-            if random.random() < cls.VENDOR_TIERS['rare_pool']['spawn_chance']:
-                if rare_pool:
-                    selected_ingredients.append(random.choice(rare_pool))
-
-        # Deduplicate
-        unique_ingredients = set(selected_ingredients)
-
-        # Use provided ranges or default
-        ranges = qty_params if qty_params is not None else cls.VENDOR_QUANTITY_RANGES
-
-        items = {}
-        for ing in unique_ingredients:
-            # Get range for this rarity (fallback to (1, 3))
-            min_q, max_q = ranges.get(ing.rarity, (1, 3))
-
-            # Sample quantity uniformly from range
-            qty = random.randint(min_q, max_q)
             items[ing] = qty
 
         return cls(items)
