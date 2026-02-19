@@ -54,13 +54,13 @@ class Alembic:
         return True
 
     def _update_valid_potions(self, ingredients: Set[Ingredient]):
-        # Filter ingredients to only those still available in inventory
-        available_ingredients = {ing for ing in ingredients 
+        # Filter ingredients to only those no longer available in inventory
+        exhausted_ings = {ing for ing in ingredients 
                                 if not self.inventory.get_ingredient_availability(ing)}
         
         # Remove potions containing any of the available ingredients
         self.valid_potions = [pot for pot in self.valid_potions 
-                             if not any(ing in pot.recipie for ing in available_ingredients)]
+                             if not any(ing in pot.recipie for ing in exhausted_ings)]
 
 
             
