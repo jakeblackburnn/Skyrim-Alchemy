@@ -75,17 +75,23 @@ class Inventory:
     # stable inventory generation
 
     @classmethod
-    def generate_stable(cls, total: int, distinct: int):
+    def generate_stable(cls, db, total: int, distinct: int):
         if total < distinct:
-            raise ValueError(f"dis shit fucked")
+            raise ValueError(f"stable gen: more distinct than total ingredients is impossible!")
+        if distinct > len(db):
+            raise ValueError(f"stable gen: too many distinct ingredients! (max: 111)")
 
-        # random partitions of total,
 
         # random selection of Ingredients (without replacement)
-        # for each partition
+        ingredients = db.get_all_ingredients()
+        sampled = random.sample(ingredients, distinct)
 
         # yield a dict of [Ingredient -> qty] 
+        partitions = {}
+
+        # TODO: implement random partitions of total,
         # then return the cls
+        return cls(partitions)
 
     ### 
 
