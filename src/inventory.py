@@ -86,11 +86,28 @@ class Inventory:
         ingredients = db.get_all_ingredients()
         sampled = random.sample(ingredients, distinct)
 
-        # yield a dict of [Ingredient -> qty] 
-        partitions = {}
-
-        # TODO: implement random partitions of total,
-        # then return the cls
+        # random partitions of total across distinct ingredients
+        # start with base allocation of 1 per ingredient
+        quantities = [1] * distinct
+        remaining = total - distinct
+        
+        if remaining > 0:
+            # use stick-breaking to create random uniform partition
+            # generate distinct-1 random cut points in [0, remaining]
+            cuts = sorted([random.randint(0, remaining) for _ in range(distinct - 1)])
+            
+            # add boundaries
+            cuts = [0] + cuts + [remaining]
+            
+            # partition sizes are differences between consecutive cuts
+            partition = [cuts[i+1] - cuts[i] for i in range(distinct)]
+            
+            # add partition to base quantities
+            quantities = [q + p for q, p in zip(quantities, partition)]
+        
+        # build ingredient -> quantity mapping
+        partitions = {ing: qty for ing, qty in zip(sampled, quantities)}
+        
         return cls(partitions)
 
     ### 
