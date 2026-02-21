@@ -5,29 +5,21 @@ import numpy as np
 from .database import IngredientsDatabase
 from .ingredient import Ingredient
 
-
 class Inventory:
 
-    # Inventory size distribution parameters
-    INVENTORY_SIZE_PARAMS = {
-        'normal': {
-            'mean': 35,
-            'std': 10,
-            'min': 10,
-            'max': 70
-        },
-    }
-
-    # Default chi-squared parameters for normal strategy
-    QUANTITY_PARAMS_NORMAL = {
-        'df': 5,
-        'scale': 1.5,
-        'min_qty': 1,
-        'max_qty': 50
-    }
-
+    # Inventory class wraps a dict of ingredients to quantities
+    # and provides basic access and update methods
+    # but no adding ingredients once created. 
+    # 
+    # implement a class method for individual inventory generation 
+    # strategies 
+    # ... would inheritence be easier than adding classmethods to this file?
     def __init__(self, items: Optional[Dict[Ingredient, int]] = None):
         self._items = items.copy() if items is not None else {}
+
+
+
+    # Access methods
 
     def get_ingredient_availability(self, ingredient) -> bool:
         if ingredient in self._items.keys():
@@ -51,6 +43,12 @@ class Inventory:
 
     def is_empty(self) -> bool:
         return len(self._items) == 0
+    
+    ###
+
+
+
+    # update methods
 
     def consume(self, ing: Ingredient) -> bool:
         if not self.has_ingredient(ing):
@@ -71,21 +69,52 @@ class Inventory:
 
         return True
 
+    ####
+
+
+    # stable inventory generation
+
+    @classmethod
+    def generate_stable(cls, total: int, distinct: int):
+        if total < distinct:
+            raise ValueError(f"dis shit fucked")
+
+        # random partitions of total,
+
+        # random selection of Ingredients (without replacement)
+        # for each partition
+
+        # yield a dict of [Ingredient -> qty] 
+        # then return the cls
+
+    ### 
+
+
+
+    # Chi Squared sampling methods & defaults:
+
     @staticmethod
     def _sample_chi2_quantity(df, scale, min_qty, max_qty):
         raw_value = np.random.chisquare(df) * scale
         return max(min_qty, min(max_qty, int(raw_value)))
 
+    # Default chi-squared parameters for normal strategy
+    QUANTITY_PARAMS_NORMAL = {
+        'df': 5,
+        'scale': 1.5,
+        'min_qty': 1,
+        'max_qty': 50
+    }
+
     @classmethod
     def generate_normal(cls, db, size=0, qty_params: Optional[dict] = None):
 
-        all_ingredients = db.get_all_ingredients()
+        size = min(size, len(db)) # ensure size isnt greater than max ingredients
 
-        # Ensure size doesn't exceed available ingredients
-        size = min(size, len(all_ingredients))
+        ingredients = db.get_all_ingredients()
 
         # Uniform random sampling without replacement
-        sampled = random.sample(all_ingredients, size)
+        sampled = random.sample(ingredients, size)
 
         # Use provided params or default
         params = qty_params if qty_params is not None else cls.QUANTITY_PARAMS_NORMAL
