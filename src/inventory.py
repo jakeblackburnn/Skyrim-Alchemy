@@ -72,6 +72,61 @@ class Inventory:
     ####
 
 
+    BASIC_RARITY_DIST = {
+        "common": 0.50,
+        "uncommon": 0.30,
+        "rare": 0.15,
+        "very_rare": 0.04,
+        "unique": 0.01,
+    }
+
+
+
+
+    @classmethod
+    def generate_weighted(cls, db, total: int, distinct: int, rarity_dist: Optional[Dict[str, float]] = None):
+        if total < distinct:
+            raise ValueError(f"weighted gen: more distinct than total ingredients is impossible!")
+        if distinct > len(db):
+            raise ValueError(f"weighted gen: too many distinct ingredients! (max: {len(db)})")
+        
+        if rarity_dist is None:
+            rarity_dist = cls.BASIC_RARITY_DIST
+        
+        ingredients = db.get_all_ingredients()
+        weights = []
+        for ing in ingredients:
+            if ing.rarity not in rarity_dist:
+                raise ValueError(
+                    f"weighted gen: ingredient '{ing.name}' has rarity '{ing.rarity}' "
+                    f"not found in rarity_dist. Available rarities: {list(rarity_dist.keys())}"
+                )
+            weights.append(rarity_dist[ing.rarity])
+        
+        weights_array = np.array(weights)
+        probabilities = weights_array / weights_array.sum()
+        
+        indices = np.random.choice(
+            len(ingredients),
+            size=distinct,
+            replace=False,
+            p=probabilities
+        )
+        sampled = [ingredients[i] for i in indices]
+        
+        quantities = [1] * distinct
+        remaining = total - distinct
+        
+        if remaining > 0:
+            cuts = sorted([random.randint(0, remaining) for _ in range(distinct - 1)])
+            cuts = [0] + cuts + [remaining]
+            partition = [cuts[i+1] - cuts[i] for i in range(distinct)]
+            quantities = [q + p for q, p in zip(quantities, partition)]
+        
+        partitions = {ing: qty for ing, qty in zip(sampled, quantities)}
+        
+        return cls(partitions)
+
     # stable inventory generation
 
     @classmethod
