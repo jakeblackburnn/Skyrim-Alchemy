@@ -1,0 +1,229 @@
+================================================================================
+PERK SYNERGY ANALYSIS
+================================================================================
+Running 10000 simulations per perk configuration
+
+
+================================================================================
+Testing: baseline
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=False, benefactor=False, poisoner=False)
+================================================================================
+
+Completed in 86.26s
+Average potions: 38.24
+
+================================================================================
+Testing: benefactor
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=False, benefactor=True, poisoner=False)
+================================================================================
+
+Completed in 87.80s
+Average potions: 38.27
+
+================================================================================
+Testing: physician
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=True, benefactor=False, poisoner=False)
+================================================================================
+
+Completed in 87.98s
+Average potions: 38.22
+
+================================================================================
+Testing: poisoner
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=False, benefactor=False, poisoner=True)
+================================================================================
+
+Completed in 87.65s
+Average potions: 38.20
+
+================================================================================
+Testing: benefactor+physician
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=True, benefactor=True, poisoner=False)
+================================================================================
+
+Completed in 88.57s
+Average potions: 38.27
+
+================================================================================
+Testing: benefactor+poisoner
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=False, benefactor=True, poisoner=True)
+================================================================================
+
+Completed in 90.69s
+Average potions: 38.27
+
+================================================================================
+Testing: physician+poisoner
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=True, benefactor=False, poisoner=True)
+================================================================================
+
+Completed in 88.22s
+Average potions: 38.22
+
+================================================================================
+Testing: all_perks
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=True, benefactor=True, poisoner=True)
+================================================================================
+
+Completed in 89.92s
+Average potions: 38.31
+
+================================================================================
+PERK COMPARISON SUMMARY
+================================================================================
+
+baseline                 : avg= 38.24  total=    382411
+
+benefactor               : avg= 38.27  total=    382682
+
+physician                : avg= 38.22  total=    382226
+
+poisoner                 : avg= 38.20  total=    382037
+
+benefactor+physician     : avg= 38.27  total=    382679
+
+benefactor+poisoner      : avg= 38.27  total=    382717
+
+physician+poisoner       : avg= 38.22  total=    382225
+
+all_perks                : avg= 38.31  total=    383124
+
+================================================================================
+INGREDIENT SYNERGY WITH PERKS
+================================================================================
+Top 10 ingredients by average value for each perk configuration:
+
+
+baseline:
+----------------------------------------
+   1. Frost Mirriam                    1136
+   2. Giant Lichen                      839
+   3. Trama Root                        510
+   4. Silverside Perch                  436
+   5. Yellow Mountain Flower            430
+   6. Ashen Grass Pod                   425
+   7. Creep Cluster                     415
+   8. Deathbell                         409
+   9. Purple Mountain Flower            402
+  10. Bear Claws                        400
+
+benefactor:
+----------------------------------------
+   1. Frost Mirriam                    1085
+   2. Giant Lichen                      856
+   3. Trama Root                        554
+   4. Yellow Mountain Flower            435
+   5. Small Pearl                       427
+   6. Purple Mountain Flower            424
+   7. Silverside Perch                  424
+   8. Creep Cluster                     421
+   9. Ashen Grass Pod                   414
+  10. Abecean Longfin                   407
+
+physician:
+----------------------------------------
+   1. Frost Mirriam                    1119
+   2. Giant Lichen                      851
+   3. Trama Root                        521
+   4. Silverside Perch                  438
+   5. Yellow Mountain Flower            429
+   6. Ashen Grass Pod                   424
+   7. Bear Claws                        412
+   8. Creep Cluster                     408
+   9. Histcarp                          405
+  10. Salt Pile                         397
+
+poisoner:
+----------------------------------------
+   1. Giant Lichen                     1109
+   2. Frost Mirriam                    1097
+   3. Trama Root                        638
+   4. Ashen Grass Pod                   501
+   5. Deathbell                         499
+   6. Yellow Mountain Flower            458
+   7. Bear Claws                        454
+   8. Hanging Moss                      446
+   9. Silverside Perch                  443
+  10. Creep Cluster                     439
+
+benefactor+physician:
+----------------------------------------
+   1. Frost Mirriam                    1153
+   2. Giant Lichen                      836
+   3. Trama Root                        535
+   4. Small Pearl                       440
+   5. Silverside Perch                  438
+   6. Purple Mountain Flower            435
+   7. Yellow Mountain Flower            435
+   8. Abecean Longfin                   420
+   9. Creep Cluster                     408
+  10. Bear Claws                        405
+
+benefactor+poisoner:
+----------------------------------------
+   1. Frost Mirriam                    1140
+   2. Giant Lichen                     1081
+   3. Trama Root                        642
+   4. Ashen Grass Pod                   514
+   5. Deathbell                         493
+   6. Bear Claws                        463
+   7. Abecean Longfin                   458
+   8. Hanging Moss                      457
+   9. Yellow Mountain Flower            452
+  10. Silverside Perch                  450
+
+physician+poisoner:
+----------------------------------------
+   1. Frost Mirriam                    1147
+   2. Giant Lichen                     1091
+   3. Trama Root                        626
+   4. Deathbell                         491
+   5. Ashen Grass Pod                   487
+   6. Yellow Mountain Flower            478
+   7. Silverside Perch                  475
+   8. Hanging Moss                      464
+   9. Bear Claws                        455
+  10. Salt Pile                         451
+
+all_perks:
+----------------------------------------
+   1. Frost Mirriam                    1111
+   2. Giant Lichen                     1084
+   3. Trama Root                        647
+   4. Ashen Grass Pod                   503
+   5. Deathbell                         491
+   6. Silverside Perch                  480
+   7. Bear Claws                        468
+   8. Hanging Moss                      458
+   9. Salt Pile                         456
+  10. Yellow Mountain Flower            456
+
+================================================================================
+INGREDIENT PERK SENSITIVITY
+================================================================================
+Ingredients that benefit most from perks (vs baseline):
+
+Top 20 ingredients by perk benefit:
+
+   1. Giant Lichen                   +   270 ( 32.2%)  best: poisoner
+   2. Trama Root                     +   137 ( 26.9%)  best: all_perks
+   3. Abecean Longfin                +   122 ( 36.3%)  best: benefactor+poisoner
+   4. Deathbell                      +    90 ( 22.0%)  best: poisoner
+   5. Ashen Grass Pod                +    89 ( 20.9%)  best: benefactor+poisoner
+   6. Beehive Husk                   +    78 ( 23.7%)  best: benefactor+poisoner
+   7. Blue Butterfly Wing            +    74 ( 23.3%)  best: physician+poisoner
+   8. Salt Pile                      +    73 ( 19.1%)  best: all_perks
+   9. River Betty                    +    73 ( 23.9%)  best: physician+poisoner
+  10. Blue Mountain Flower           +    72 ( 21.1%)  best: benefactor+poisoner
+  11. Hanging Moss                   +    71 ( 18.1%)  best: physician+poisoner
+  12. Bee                            +    69 ( 21.2%)  best: physician+poisoner
+  13. Bear Claws                     +    68 ( 17.0%)  best: all_perks
+  14. Canis Root                     +    68 ( 20.3%)  best: benefactor+poisoner
+  15. Imp Stool                      +    67 ( 27.3%)  best: physician+poisoner
+  16. Small Antlers                  +    61 ( 24.5%)  best: physician+poisoner
+  17. Boar Tusk                      +    60 ( 27.5%)  best: all_perks
+  18. Small Pearl                    +    59 ( 15.2%)  best: all_perks
+  19. Spider Egg                     +    59 ( 17.8%)  best: all_perks
+  20. Cyrodilic Spadetail            +    58 ( 24.3%)  best: benefactor+poisoner
+
+================================================================================
