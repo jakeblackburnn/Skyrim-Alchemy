@@ -12,14 +12,29 @@ class Inventory:
     def __init__(self, items: Optional[Dict[Ingredient, int]] = None):
         self._items = items.copy() if items is not None else {}
 
+    # Defaults for ingredient sampling 
+
+    # rarity weighted sampling probabilities
+    BASIC_RARITY_DIST = { 
+        "common": 0.50,
+        "uncommon": 0.30,
+        "rare": 0.15,
+        "very_rare": 0.04,
+        "unique": 0.01,
+    }
+
+    # chi-squared parameters for normal sampling
+    QUANTITY_PARAMS_NORMAL = {
+        'df': 5,
+        'scale': 1.5,
+        'min_qty': 1,
+        'max_qty': 50
+    }
+
+
 
 
     # Access methods
-
-    def get_ingredient_availability(self, ingredient) -> bool:
-        if ingredient in self._items.keys():
-            return True
-        return False
 
     def get_available_ingredients(self) -> List[Ingredient]:
         return list(self._items.keys())
@@ -42,6 +57,11 @@ class Inventory:
 
     # Update methods
 
+    def add(self, ing: Ingredient, qty: int = 1):
+        if qty <= 0:
+            raise ValueError(f"Quantity must be positive, got {qty}")
+        self._items[ing] = self._items.get(ing, 0) + qty
+
     def consume(self, ing: Ingredient) -> bool:
         if not self.has_ingredient(ing):
             return False
@@ -60,24 +80,6 @@ class Inventory:
             self.consume(ing)
 
         return True
-
-
-    # Constants for ingredient sampling
-
-    BASIC_RARITY_DIST = {
-        "common": 0.50,
-        "uncommon": 0.30,
-        "rare": 0.15,
-        "very_rare": 0.04,
-        "unique": 0.01,
-    }
-
-    QUANTITY_PARAMS_NORMAL = {
-        'df': 5,
-        'scale': 1.5,
-        'min_qty': 1,
-        'max_qty': 50
-    }
 
 
 
@@ -241,21 +243,11 @@ class Inventory:
         for ing, qty in self._build_normal_sample(db, size, qty_params, exclude=exclude).items():
             self.add(ing, qty)
 
-    # other stuff
 
-    def add(self, ing: Ingredient, qty: int = 1):
-        if qty <= 0:
-            raise ValueError(f"Quantity must be positive, got {qty}")
-        self._items[ing] = self._items.get(ing, 0) + qty
-
-    def to_ingredient_list(self) -> List[Ingredient]:
-        return self.get_available_ingredients()
+    # utilities and dunder methods
 
     def copy(self):
         return Inventory(self._items.copy())
-
-
-    # dunder stuff
 
     def __repr__(self):
         if self.is_empty():
