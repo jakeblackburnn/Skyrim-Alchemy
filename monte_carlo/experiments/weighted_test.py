@@ -56,7 +56,6 @@ class WeightedInventoryExperiment(Experiment):
 
 @dataclass
 class WeightedInventoryResult(MonteCarloResult):
-    db: IngredientsDatabase = field(default_factory=IngredientsDatabase)
 
     def __repr__(self):
         return "Weighted Inventory Experiment - tests weighted inventory generation"
@@ -72,46 +71,3 @@ class WeightedInventoryResult(MonteCarloResult):
         self.aggregated_stats.append({"result aggregation time": time.time() - start})
 
         self.aggregated_stats.append(self._average_ingredient_performance())
-
-
-    def _average_and_total_simtime(self):
-        total = sum([run["simulation_time"] for run in self.run_results])
-        return {
-            "total_simtime": total,
-            "average_simtime": total / self.config.num_simulations,
-        }
-
-    def _average_and_total_potions(self):
-        total = sum([run["num_potions"] for run in self.run_results])
-        return {
-            "total_potions": total,
-            "average_potions": total / self.config.num_simulations,
-        }
-
-    def _average_ingredient_performance(self):
-        db = self.db
-
-        appearances = {}
-        total_values = {}
-
-        for ing in db: 
-            appearances[ing] = 0
-            total_values[ing] = 0
-
-        for run in self.run_results:
-            ingmap = run["ingredients_map"]
-            for ing in db:
-                if ing in ingmap.keys():
-                    appearances[ing] += 1
-                    for potion in ingmap[ing]:
-                        total_values[ing] += potion.value
-
-        performance_map = dict(sorted(
-            ((ing.name, (total_values[ing] // appearances[ing]) if appearances[ing] != 0 else None) for ing in db),
-            key=lambda item: item[1] if item[1] is not None else -1,
-            reverse=True
-        ))
-
-        return {
-                "average_performance": performance_map,
-        }

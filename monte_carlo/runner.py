@@ -36,6 +36,7 @@ class MonteCarloResult(ABC):
     aggregated_stats: List[Dict[str, any]] = field(default_factory=list)
 
     config: MonteCarloConfig = field(default_factory=lambda: None)
+    db: Optional[Any] = field(default=None)
 
     def add_run(self, run: Dict[str, any]):
         self.run_results.append(run)
@@ -58,6 +59,47 @@ class MonteCarloResult(ABC):
         print("raw data results:")
         print(self.to_dataframe())
         print(f"analysis:\n{self.aggregated_stats}\n")
+
+    def _average_and_total_simtime(self):
+        total = sum([run["simulation_time"] for run in self.run_results])
+        return {
+            "total_simtime": total,
+            "average_simtime": total / self.config.num_simulations,
+        }
+
+    def _average_and_total_potions(self):
+        total = sum([run["num_potions"] for run in self.run_results])
+        return {
+            "total_potions": total,
+            "average_potions": total / self.config.num_simulations,
+        }
+
+    def _average_ingredient_performance(self):
+        n = self.config.num_simulations
+        appearances = {ing: 0 for ing in self.db}
+        total_values = {ing: 0 for ing in self.db}
+
+        for run in self.run_results:
+            ingmap = run["ingredients_map"]
+            for ing in self.db:
+                potions = ingmap.get(ing, [])
+                if potions:
+                    appearances[ing] += 1
+                    for potion in potions:
+                        total_values[ing] += potion.value
+
+        performance_map = dict(sorted(
+            (
+                (ing.name, {
+                    "avg_value": total_values[ing] // appearances[ing] if appearances[ing] else None,
+                    "appearance_rate": appearances[ing] / n,
+                })
+                for ing in self.db
+            ),
+            key=lambda item: item[1]["avg_value"] if item[1]["avg_value"] is not None else -1,
+            reverse=True,
+        ))
+        return {"average_performance": performance_map}
 
 
 class Experiment:
