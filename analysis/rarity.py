@@ -66,64 +66,21 @@ class RarityToleranceExperiment(Experiment):
 
 @dataclass
 class RarityToleranceResult(MonteCarloResult):
-    db: IngredientsDatabase = field(default_factory=IngredientsDatabase)
-    
+
     def __repr__(self):
         return "Rarity Tolerance Experiment - tests ingredient performance across rarity distributions"
-    
+
     def aggregate_stats(self):
         start = time.time()
         potion_stats = self._average_and_total_potions()
         self.aggregated_stats.append(potion_stats)
-        
+
         simtime_stats = self._average_and_total_simtime()
         self.aggregated_stats.append(simtime_stats)
-        
+
         self.aggregated_stats.append({"result aggregation time": time.time() - start})
-        
+
         self.aggregated_stats.append(self._average_ingredient_performance())
-    
-    def _average_and_total_simtime(self):
-        total = sum([run["simulation_time"] for run in self.run_results])
-        return {
-            "total_simtime": total,
-            "average_simtime": total / self.config.num_simulations,
-        }
-    
-    def _average_and_total_potions(self):
-        total = sum([run["num_potions"] for run in self.run_results])
-        return {
-            "total_potions": total,
-            "average_potions": total / self.config.num_simulations,
-        }
-    
-    def _average_ingredient_performance(self):
-        db = self.db
-        
-        appearances = {}
-        total_values = {}
-        
-        for ing in db:
-            appearances[ing] = 0
-            total_values[ing] = 0
-        
-        for run in self.run_results:
-            ingmap = run["ingredients_map"]
-            for ing in db:
-                if ing in ingmap.keys():
-                    appearances[ing] += 1
-                    for potion in ingmap[ing]:
-                        total_values[ing] += potion.value
-        
-        performance_map = dict(sorted(
-            ((ing.name, (total_values[ing] // appearances[ing]) if appearances[ing] != 0 else None) for ing in db),
-            key=lambda item: item[1] if item[1] is not None else -1,
-            reverse=True
-        ))
-        
-        return {
-            "average_performance": performance_map,
-        }
 
 
 def scale_rarity_distribution(base_dist, multiplier):
@@ -212,17 +169,17 @@ def run_rarity_analysis():
     print("How ingredient performance changes across rarity distributions:\n")
     
     baseline_perf = results_by_distribution["normal"].aggregated_stats[3]['average_performance']
-    
+
     tolerance_scores = {}
     for ing_name in baseline_perf.keys():
-        if baseline_perf[ing_name] is None:
+        if baseline_perf[ing_name]["avg_value"] is None:
             continue
-        
+
         values_across_distributions = []
         for dist_name in rarity_distributions.keys():
             perf_map = results_by_distribution[dist_name].aggregated_stats[3]['average_performance']
-            if ing_name in perf_map and perf_map[ing_name] is not None:
-                values_across_distributions.append(perf_map[ing_name])
+            if ing_name in perf_map and perf_map[ing_name]["avg_value"] is not None:
+                values_across_distributions.append(perf_map[ing_name]["avg_value"])
         
         if len(values_across_distributions) >= 2:
             avg_value = sum(values_across_distributions) / len(values_across_distributions)
@@ -254,23 +211,23 @@ def run_rarity_analysis():
     print("="*80)
     
     for ing_name in list(baseline_perf.keys())[:15]:
-        if baseline_perf[ing_name] is None:
+        if baseline_perf[ing_name]["avg_value"] is None:
             continue
-        
+
         ing_obj = None
         for ing in db:
             if ing.name == ing_name:
                 ing_obj = ing
                 break
-        
+
         if ing_obj is None:
             continue
-        
+
         print(f"\n{ing_name} (rarity: {ing_obj.rarity}):")
         for dist_name in rarity_distributions.keys():
             perf_map = results_by_distribution[dist_name].aggregated_stats[3]['average_performance']
-            if ing_name in perf_map and perf_map[ing_name] is not None:
-                print(f"  {dist_name:20s}: {perf_map[ing_name]:6.0f}")
+            if ing_name in perf_map and perf_map[ing_name]["avg_value"] is not None:
+                print(f"  {dist_name:20s}: {perf_map[ing_name]['avg_value']:6.0f}")
     
     print("\n" + "="*80)
 
