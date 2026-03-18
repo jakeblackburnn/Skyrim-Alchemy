@@ -1,0 +1,229 @@
+================================================================================
+PERK SYNERGY ANALYSIS
+================================================================================
+Running 10000 simulations per perk configuration
+
+
+================================================================================
+Testing: baseline
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=False, benefactor=False, poisoner=False)
+================================================================================
+
+Completed in 85.74s
+Average potions: 38.25
+
+================================================================================
+Testing: benefactor
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=False, benefactor=True, poisoner=False)
+================================================================================
+
+Completed in 87.62s
+Average potions: 38.30
+
+================================================================================
+Testing: physician
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=True, benefactor=False, poisoner=False)
+================================================================================
+
+Completed in 87.40s
+Average potions: 38.24
+
+================================================================================
+Testing: poisoner
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=False, benefactor=False, poisoner=True)
+================================================================================
+
+Completed in 87.29s
+Average potions: 38.33
+
+================================================================================
+Testing: benefactor+physician
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=True, benefactor=True, poisoner=False)
+================================================================================
+
+Completed in 88.34s
+Average potions: 38.29
+
+================================================================================
+Testing: benefactor+poisoner
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=False, benefactor=True, poisoner=True)
+================================================================================
+
+Completed in 90.79s
+Average potions: 38.25
+
+================================================================================
+Testing: physician+poisoner
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=True, benefactor=False, poisoner=True)
+================================================================================
+
+Completed in 88.42s
+Average potions: 38.18
+
+================================================================================
+Testing: all_perks
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=True, benefactor=True, poisoner=True)
+================================================================================
+
+Completed in 90.22s
+Average potions: 38.26
+
+================================================================================
+PERK COMPARISON SUMMARY
+================================================================================
+
+baseline                 : avg= 38.25  total=    382526
+
+benefactor               : avg= 38.30  total=    382996
+
+physician                : avg= 38.24  total=    382407
+
+poisoner                 : avg= 38.33  total=    383288
+
+benefactor+physician     : avg= 38.29  total=    382874
+
+benefactor+poisoner      : avg= 38.25  total=    382527
+
+physician+poisoner       : avg= 38.18  total=    381788
+
+all_perks                : avg= 38.26  total=    382622
+
+================================================================================
+INGREDIENT SYNERGY WITH PERKS
+================================================================================
+Top 10 ingredients by average value for each perk configuration:
+
+
+baseline:
+----------------------------------------
+   1. Frost Mirriam                    5994
+   2. Giant Lichen                     4557
+   3. Salmon Roe                       3226
+   4. Jarrin Root                      3031
+   5. Trama Root                       1840
+   6. River Betty                      1679
+   7. Large Antlers                    1619
+   8. Hawk Beak                        1521
+   9. Yellow Mountain Flower           1510
+  10. Burnt Spriggan Wood              1480
+
+benefactor:
+----------------------------------------
+   1. Frost Mirriam                    6243
+   2. Giant Lichen                     4532
+   3. Salmon Roe                       3274
+   4. Jarrin Root                      3236
+   5. Trama Root                       1946
+   6. River Betty                      1746
+   7. Hawk Beak                        1722
+   8. Giant's Toe                      1660
+   9. Poison Bloom                     1557
+  10. Yellow Mountain Flower           1517
+
+physician:
+----------------------------------------
+   1. Frost Mirriam                    6289
+   2. Giant Lichen                     4503
+   3. Jarrin Root                      3600
+   4. Salmon Roe                       3201
+   5. Trama Root                       1816
+   6. River Betty                      1707
+   7. Silverside Perch                 1571
+   8. Poison Bloom                     1564
+   9. Large Antlers                    1561
+  10. Hawk Beak                        1557
+
+poisoner:
+----------------------------------------
+   1. Frost Mirriam                    6197
+   2. Giant Lichen                     5896
+   3. Jarrin Root                      4085
+   4. Salmon Roe                       3223
+   5. Trama Root                       2276
+   6. River Betty                      2021
+   7. Burnt Spriggan Wood              1844
+   8. Large Antlers                    1835
+   9. Deathbell                        1743
+  10. Poison Bloom                     1728
+
+benefactor+physician:
+----------------------------------------
+   1. Frost Mirriam                    6247
+   2. Giant Lichen                     4562
+   3. Salmon Roe                       3397
+   4. Jarrin Root                      3266
+   5. Trama Root                       1926
+   6. Hawk Beak                        1748
+   7. River Betty                      1709
+   8. Giant's Toe                      1634
+   9. Silverside Perch                 1568
+  10. Yellow Mountain Flower           1562
+
+benefactor+poisoner:
+----------------------------------------
+   1. Frost Mirriam                    6452
+   2. Giant Lichen                     5604
+   3. Jarrin Root                      3861
+   4. Salmon Roe                       3422
+   5. Trama Root                       2213
+   6. River Betty                      2086
+   7. Burnt Spriggan Wood              1865
+   8. Large Antlers                    1773
+   9. Poison Bloom                     1767
+  10. Hawk Beak                        1731
+
+physician+poisoner:
+----------------------------------------
+   1. Frost Mirriam                    6247
+   2. Giant Lichen                     5871
+   3. Jarrin Root                      3699
+   4. Salmon Roe                       3169
+   5. Trama Root                       2244
+   6. River Betty                      2027
+   7. Burnt Spriggan Wood              1829
+   8. Large Antlers                    1806
+   9. Giant's Toe                      1764
+  10. Ashen Grass Pod                  1743
+
+all_perks:
+----------------------------------------
+   1. Frost Mirriam                    6154
+   2. Giant Lichen                     5968
+   3. Jarrin Root                      3975
+   4. Salmon Roe                       3369
+   5. Trama Root                       2174
+   6. River Betty                      2028
+   7. Poison Bloom                     1836
+   8. Burnt Spriggan Wood              1818
+   9. Large Antlers                    1776
+  10. Ashen Grass Pod                  1750
+
+================================================================================
+INGREDIENT PERK SENSITIVITY
+================================================================================
+Ingredients that benefit most from perks (vs baseline):
+
+Top 20 ingredients by perk benefit:
+
+   1. Giant Lichen                   +  1411 ( 31.0%)  best: all_perks
+   2. Jarrin Root                    +  1054 ( 34.8%)  best: poisoner
+   3. Frost Mirriam                  +   458 (  7.6%)  best: benefactor+poisoner
+   4. Human Flesh                    +   449 ( 37.4%)  best: benefactor+poisoner
+   5. Trama Root                     +   436 ( 23.7%)  best: poisoner
+   6. River Betty                    +   407 ( 24.2%)  best: benefactor+poisoner
+   7. Burnt Spriggan Wood            +   385 ( 26.0%)  best: benefactor+poisoner
+   8. Deathbell                      +   380 ( 27.9%)  best: poisoner
+   9. Poison Bloom                   +   362 ( 24.6%)  best: all_perks
+  10. Abecean Longfin                +   359 ( 30.1%)  best: all_perks
+  11. Ashen Grass Pod                +   344 ( 24.5%)  best: all_perks
+  12. Bee                            +   334 ( 30.3%)  best: all_perks
+  13. Wisp Wrappings                 +   326 ( 29.2%)  best: benefactor+physician
+  14. Daedra Heart                   +   326 ( 30.8%)  best: physician+poisoner
+  15. Netch Jelly                    +   305 ( 21.9%)  best: all_perks
+  16. Giant's Toe                    +   304 ( 20.8%)  best: physician+poisoner
+  17. Glow Dust                      +   294 ( 21.7%)  best: benefactor+poisoner
+  18. Beehive Husk                   +   293 ( 26.9%)  best: benefactor
+  19. Powdered Mammoth Tusk          +   291 ( 30.9%)  best: benefactor+poisoner
+  20. Hanging Moss                   +   288 ( 21.5%)  best: all_perks
+
+================================================================================

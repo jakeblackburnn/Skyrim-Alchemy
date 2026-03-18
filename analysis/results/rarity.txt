@@ -1,0 +1,282 @@
+================================================================================
+RARITY TOLERANCE ANALYSIS
+================================================================================
+Running 10000 simulations per rarity distribution
+
+Rarity Distributions:
+
+very_flat:
+  common         : 0.3001
+  uncommon       : 0.2574
+  rare           : 0.2091
+  very_rare      : 0.1406
+  unique         : 0.0928
+
+flat:
+  common         : 0.3641
+  uncommon       : 0.2820
+  rare           : 0.1994
+  very_rare      : 0.1030
+  unique         : 0.0515
+
+normal:
+  common         : 0.5000
+  uncommon       : 0.3000
+  rare           : 0.1500
+  very_rare      : 0.0400
+  unique         : 0.0100
+
+steep:
+  common         : 0.6864
+  uncommon       : 0.2471
+  rare           : 0.0618
+  very_rare      : 0.0044
+  unique         : 0.0003
+
+very_steep:
+  common         : 0.8042
+  uncommon       : 0.1737
+  rare           : 0.0217
+  very_rare      : 0.0004
+  unique         : 0.0000
+
+extreme_steep:
+  common         : 0.9258
+  uncommon       : 0.0720
+  rare           : 0.0022
+  very_rare      : 0.0000
+  unique         : 0.0000
+
+================================================================================
+Testing: very_flat
+================================================================================
+
+Completed in 86.91s
+Average potions: 38.43
+
+================================================================================
+Testing: flat
+================================================================================
+
+Completed in 86.85s
+Average potions: 38.34
+
+================================================================================
+Testing: normal
+================================================================================
+
+Completed in 87.53s
+Average potions: 38.30
+
+================================================================================
+Testing: steep
+================================================================================
+
+Completed in 87.61s
+Average potions: 38.22
+
+================================================================================
+Testing: very_steep
+================================================================================
+
+Completed in 87.15s
+Average potions: 38.13
+
+================================================================================
+Testing: extreme_steep
+================================================================================
+
+Completed in 86.51s
+Average potions: 38.08
+
+================================================================================
+RARITY DISTRIBUTION COMPARISON
+================================================================================
+
+very_flat           : avg= 38.43  total=    384285
+
+flat                : avg= 38.34  total=    383355
+
+normal              : avg= 38.30  total=    382959
+
+steep               : avg= 38.22  total=    382176
+
+very_steep          : avg= 38.13  total=    381263
+
+extreme_steep       : avg= 38.08  total=    380803
+
+================================================================================
+INGREDIENT RARITY TOLERANCE
+================================================================================
+How ingredient performance changes across rarity distributions:
+
+Most STABLE ingredients (low variation across distributions):
+
+   1. Ash Hopper Jelly               CV=0.010  avg=   516  range=[  510,   525]
+   2. Gleamblossom                   CV=0.014  avg=  1325  range=[ 1296,  1356]
+   3. Torchbug Thorax                CV=0.015  avg=   493  range=[  480,   504]
+   4. Scaly Pholiota                 CV=0.019  avg=  1111  range=[ 1074,  1135]
+   5. Bone Meal                      CV=0.020  avg=   688  range=[  668,   705]
+   6. Honeycomb                      CV=0.021  avg=   504  range=[  488,   522]
+   7. Spider Egg                     CV=0.023  avg=  1126  range=[ 1098,  1171]
+   8. Dragon's Tongue                CV=0.026  avg=   680  range=[  663,   707]
+   9. Hanging Moss                   CV=0.027  avg=  1347  range=[ 1301,  1409]
+  10. Pearl                          CV=0.027  avg=   677  range=[  654,   702]
+  11. Bear Claws                     CV=0.030  avg=  1365  range=[ 1311,  1424]
+  12. Troll Fat                      CV=0.031  avg=   760  range=[  730,   799]
+  13. Burnt Spriggan Wood            CV=0.032  avg=  1494  range=[ 1446,  1589]
+  14. Cyrodilic Spadetail            CV=0.032  avg=   813  range=[  759,   839]
+  15. Ancestor Moth Wing             CV=0.032  avg=  1167  range=[ 1118,  1228]
+  16. Mora Tapinella                 CV=0.033  avg=   768  range=[  728,   799]
+  17. Canis Root                     CV=0.034  avg=  1200  range=[ 1149,  1252]
+  18. Fly Amanita                    CV=0.034  avg=   810  range=[  763,   850]
+  19. Mudcrab Chitin                 CV=0.035  avg=   733  range=[  702,   777]
+  20. Spawn Ash                      CV=0.036  avg=   485  range=[  458,   513]
+
+================================================================================
+Most VOLATILE ingredients (high variation across distributions):
+
+   1. Void Salts                     CV=0.374  avg=   845  range=[  297,  1217]
+   2. Crimson Nirnroot               CV=0.262  avg=  1469  range=[  954,  2148]
+   3. Human Flesh                    CV=0.249  avg=   997  range=[  664,  1271]
+   4. Hawk's Egg                     CV=0.243  avg=  1211  range=[  724,  1623]
+   5. Hagraven Feathers              CV=0.242  avg=   965  range=[  523,  1237]
+   6. Frost Salts                    CV=0.230  avg=   864  range=[  541,  1079]
+   7. Wisp Wrappings                 CV=0.221  avg=  1030  range=[  540,  1198]
+   8. Blisterwort                    CV=0.212  avg=   380  range=[  283,   508]
+   9. Chicken Egg                    CV=0.205  avg=  1169  range=[  895,  1494]
+  10. Chaurus Eggs                   CV=0.203  avg=  1122  range=[  783,  1426]
+  11. Ice Wraith Teeth               CV=0.193  avg=   684  range=[  408,   800]
+  12. Histcarp                       CV=0.187  avg=  1266  range=[  940,  1538]
+  13. Pine Thrush Egg                CV=0.183  avg=   835  range=[  578,  1019]
+  14. Purple Mountain Flower         CV=0.180  avg=  1274  range=[  870,  1490]
+  15. Bleeding Crown                 CV=0.179  avg=   786  range=[  591,   967]
+  16. Moon Sugar                     CV=0.177  avg=  1104  range=[  825,  1311]
+  17. Deathbell                      CV=0.164  avg=  1273  range=[  915,  1508]
+  18. Giant's Toe                    CV=0.163  avg=  1418  range=[  914,  1588]
+  19. Ash Creep Cluster              CV=0.163  avg=   993  range=[  758,  1235]
+  20. Vampire Dust                   CV=0.159  avg=   979  range=[  704,  1113]
+
+================================================================================
+INGREDIENT PERFORMANCE BY RARITY TYPE
+================================================================================
+
+Frost Mirriam (rarity: uncommon):
+  very_flat           :   5827
+  flat                :   5978
+  normal              :   6228
+  steep               :   6398
+  very_steep          :   6502
+  extreme_steep       :   6639
+
+Giant Lichen (rarity: uncommon):
+  very_flat           :   4471
+  flat                :   4478
+  normal              :   4488
+  steep               :   4818
+  very_steep          :   4759
+  extreme_steep       :   4865
+
+Salmon Roe (rarity: rare):
+  very_flat           :   3197
+  flat                :   3352
+  normal              :   3439
+  steep               :   3772
+  very_steep          :   3352
+  extreme_steep       :   4334
+
+Jarrin Root (rarity: unique):
+  very_flat           :   3301
+  flat                :   3043
+  normal              :   3356
+  steep               :   2740
+
+Trama Root (rarity: common):
+  very_flat           :   1989
+  flat                :   1943
+  normal              :   1830
+  steep               :   1644
+  very_steep          :   1493
+  extreme_steep       :   1230
+
+River Betty (rarity: uncommon):
+  very_flat           :   1809
+  flat                :   1749
+  normal              :   1784
+  steep               :   1604
+  very_steep          :   1633
+  extreme_steep       :   1542
+
+Large Antlers (rarity: uncommon):
+  very_flat           :   1589
+  flat                :   1539
+  normal              :   1624
+  steep               :   1445
+  very_steep          :   1452
+  extreme_steep       :   1372
+
+Giant's Toe (rarity: rare):
+  very_flat           :   1543
+  flat                :   1509
+  normal              :   1588
+  steep               :   1413
+  very_steep          :   1541
+  extreme_steep       :    914
+
+Hawk Beak (rarity: uncommon):
+  very_flat           :   1604
+  flat                :   1652
+  normal              :   1532
+  steep               :   1410
+  very_steep          :   1345
+  extreme_steep       :   1022
+
+Yellow Mountain Flower (rarity: common):
+  very_flat           :   1476
+  flat                :   1474
+  normal              :   1517
+  steep               :   1481
+  very_steep          :   1410
+  extreme_steep       :   1347
+
+Purple Mountain Flower (rarity: common):
+  very_flat           :   1455
+  flat                :   1469
+  normal              :   1490
+  steep               :   1274
+  very_steep          :   1084
+  extreme_steep       :    870
+
+Poison Bloom (rarity: uncommon):
+  very_flat           :   1639
+  flat                :   1559
+  normal              :   1487
+  steep               :   1426
+  very_steep          :   1383
+  extreme_steep       :   1262
+
+Silverside Perch (rarity: common):
+  very_flat           :   1589
+  flat                :   1522
+  normal              :   1487
+  steep               :   1313
+  very_steep          :   1169
+  extreme_steep       :   1007
+
+Burnt Spriggan Wood (rarity: rare):
+  very_flat           :   1589
+  flat                :   1517
+  normal              :   1475
+  steep               :   1464
+  very_steep          :   1446
+  extreme_steep       :   1472
+
+Glow Dust (rarity: uncommon):
+  very_flat           :   1536
+  flat                :   1423
+  normal              :   1430
+  steep               :   1417
+  very_steep          :   1369
+  extreme_steep       :   1320
+
+================================================================================
