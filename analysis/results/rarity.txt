@@ -51,59 +51,59 @@ extreme_steep:
 Testing: very_flat
 ================================================================================
 
-Completed in 86.91s
-Average potions: 38.43
+Completed in 88.93s
+Average potions: 38.39
 
 ================================================================================
 Testing: flat
 ================================================================================
 
-Completed in 86.85s
-Average potions: 38.34
+Completed in 97.07s
+Average potions: 38.40
 
 ================================================================================
 Testing: normal
 ================================================================================
 
-Completed in 87.53s
-Average potions: 38.30
+Completed in 102.25s
+Average potions: 38.31
 
 ================================================================================
 Testing: steep
 ================================================================================
 
-Completed in 87.61s
-Average potions: 38.22
+Completed in 108.78s
+Average potions: 38.20
 
 ================================================================================
 Testing: very_steep
 ================================================================================
 
-Completed in 87.15s
-Average potions: 38.13
+Completed in 115.00s
+Average potions: 38.16
 
 ================================================================================
 Testing: extreme_steep
 ================================================================================
 
-Completed in 86.51s
-Average potions: 38.08
+Completed in 119.65s
+Average potions: 38.07
 
 ================================================================================
 RARITY DISTRIBUTION COMPARISON
 ================================================================================
 
-very_flat           : avg= 38.43  total=    384285
+very_flat           : avg= 38.39  total=    383882
 
-flat                : avg= 38.34  total=    383355
+flat                : avg= 38.40  total=    383973
 
-normal              : avg= 38.30  total=    382959
+normal              : avg= 38.31  total=    383072
 
-steep               : avg= 38.22  total=    382176
+steep               : avg= 38.20  total=    382008
 
-very_steep          : avg= 38.13  total=    381263
+very_steep          : avg= 38.16  total=    381616
 
-extreme_steep       : avg= 38.08  total=    380803
+extreme_steep       : avg= 38.07  total=    380673
 
 ================================================================================
 INGREDIENT RARITY TOLERANCE
@@ -112,171 +112,1118 @@ How ingredient performance changes across rarity distributions:
 
 Most STABLE ingredients (low variation across distributions):
 
-   1. Ash Hopper Jelly               CV=0.010  avg=   516  range=[  510,   525]
-   2. Gleamblossom                   CV=0.014  avg=  1325  range=[ 1296,  1356]
-   3. Torchbug Thorax                CV=0.015  avg=   493  range=[  480,   504]
-   4. Scaly Pholiota                 CV=0.019  avg=  1111  range=[ 1074,  1135]
-   5. Bone Meal                      CV=0.020  avg=   688  range=[  668,   705]
-   6. Honeycomb                      CV=0.021  avg=   504  range=[  488,   522]
-   7. Spider Egg                     CV=0.023  avg=  1126  range=[ 1098,  1171]
-   8. Dragon's Tongue                CV=0.026  avg=   680  range=[  663,   707]
-   9. Hanging Moss                   CV=0.027  avg=  1347  range=[ 1301,  1409]
-  10. Pearl                          CV=0.027  avg=   677  range=[  654,   702]
-  11. Bear Claws                     CV=0.030  avg=  1365  range=[ 1311,  1424]
-  12. Troll Fat                      CV=0.031  avg=   760  range=[  730,   799]
-  13. Burnt Spriggan Wood            CV=0.032  avg=  1494  range=[ 1446,  1589]
-  14. Cyrodilic Spadetail            CV=0.032  avg=   813  range=[  759,   839]
-  15. Ancestor Moth Wing             CV=0.032  avg=  1167  range=[ 1118,  1228]
-  16. Mora Tapinella                 CV=0.033  avg=   768  range=[  728,   799]
-  17. Canis Root                     CV=0.034  avg=  1200  range=[ 1149,  1252]
-  18. Fly Amanita                    CV=0.034  avg=   810  range=[  763,   850]
-  19. Mudcrab Chitin                 CV=0.035  avg=   733  range=[  702,   777]
-  20. Spawn Ash                      CV=0.036  avg=   485  range=[  458,   513]
+   1. Torchbug Thorax                CV=0.012  avg=   493  range=[  486,   503]
+   2. Ash Hopper Jelly               CV=0.015  avg=   530  range=[  520,   539]
+   3. Honeycomb                      CV=0.019  avg=   504  range=[  488,   517]
+   4. Bone Meal                      CV=0.020  avg=   690  range=[  678,   718]
+   5. Troll Fat                      CV=0.020  avg=   743  range=[  718,   762]
+   6. Spawn Ash                      CV=0.025  avg=   486  range=[  464,   500]
+   7. Gleamblossom                   CV=0.025  avg=  1308  range=[ 1268,  1356]
+   8. Glow Dust                      CV=0.026  avg=  1429  range=[ 1382,  1481]
+   9. Fly Amanita                    CV=0.026  avg=   806  range=[  772,   834]
+  10. Mora Tapinella                 CV=0.027  avg=   775  range=[  734,   795]
+  11. Blue Mountain Flower           CV=0.030  avg=  1217  range=[ 1168,  1279]
+  12. Frost Mirriam                  CV=0.031  avg=  6212  range=[ 5957,  6515]
+  13. Mudcrab Chitin                 CV=0.032  avg=   731  range=[  689,   757]
+  14. Elves Ear                      CV=0.032  avg=   688  range=[  663,   727]
+  15. Bear Claws                     CV=0.033  avg=  1362  range=[ 1300,  1430]
+  16. Canis Root                     CV=0.033  avg=  1192  range=[ 1151,  1255]
+  17. Hanging Moss                   CV=0.033  avg=  1362  range=[ 1326,  1455]
+  18. Scaly Pholiota                 CV=0.033  avg=  1107  range=[ 1057,  1161]
+  19. Spider Egg                     CV=0.034  avg=  1138  range=[ 1098,  1213]
+  20. Imp Stool                      CV=0.036  avg=   859  range=[  818,   913]
+  21. Cyrodilic Spadetail            CV=0.037  avg=   819  range=[  761,   858]
+  22. Eye of Sabre Cat               CV=0.040  avg=   435  range=[  412,   465]
+  23. Pearl                          CV=0.041  avg=   678  range=[  648,   729]
+  24. Giant Lichen                   CV=0.041  avg=  4660  range=[ 4423,  4975]
+  25. Felsaad Tern Feathers          CV=0.042  avg=   360  range=[  343,   382]
+  26. Swamp Fungal Pod               CV=0.042  avg=   953  range=[  891,  1013]
+  27. Boar Tusk                      CV=0.043  avg=  1190  range=[ 1103,  1260]
+  28. Charred Skeever Hide           CV=0.045  avg=   582  range=[  540,   609]
+  29. Falmer Ear                     CV=0.048  avg=   633  range=[  596,   678]
+  30. Grass Pod                      CV=0.048  avg=   542  range=[  492,   564]
+  31. Large Antlers                  CV=0.050  avg=  1505  range=[ 1378,  1581]
+  32. Orange Dartwing                CV=0.050  avg=   626  range=[  576,   652]
+  33. Salt Pile                      CV=0.051  avg=  1295  range=[ 1190,  1380]
+  34. Ancestor Moth Wing             CV=0.053  avg=  1127  range=[ 1037,  1213]
+  35. Taproot                        CV=0.057  avg=   924  range=[  863,  1000]
+  36. Butterfly Wing                 CV=0.057  avg=   321  range=[  305,   358]
+  37. Yellow Mountain Flower         CV=0.058  avg=  1458  range=[ 1307,  1574]
+  38. Briar Heart                    CV=0.058  avg=  1081  range=[  991,  1199]
+  39. Wheat                          CV=0.060  avg=  1084  range=[  950,  1150]
+  40. Hawk Feathers                  CV=0.061  avg=   908  range=[  826,   985]
+  41. Dragon's Tongue                CV=0.061  avg=   699  range=[  645,   783]
+  42. River Betty                    CV=0.062  avg=  1696  range=[ 1544,  1858]
+  43. Chaurus Hunter Antennae        CV=0.063  avg=  1138  range=[ 1001,  1222]
+  44. Garlic                         CV=0.063  avg=  1217  range=[ 1120,  1308]
+  45. Dwarven Oil                    CV=0.063  avg=   902  range=[  796,   971]
+  46. Hagraven Claw                  CV=0.064  avg=   366  range=[  328,   392]
+  47. Emperor Parasol Moss           CV=0.064  avg=   848  range=[  779,   926]
+  48. Blue Butterfly Wing            CV=0.065  avg=  1103  range=[ 1042,  1227]
+  49. Blue Dartwing                  CV=0.066  avg=   708  range=[  628,   756]
+  50. Slaughterfish Egg              CV=0.066  avg=   822  range=[  744,   898]
+  51. Netch Jelly                    CV=0.067  avg=  1397  range=[ 1258,  1488]
+  52. Giant's Toe                    CV=0.067  avg=  1482  range=[ 1360,  1610]
+  53. Rock Warbler Egg               CV=0.067  avg=   752  range=[  699,   848]
+  54. Jazbay Grapes                  CV=0.068  avg=   814  range=[  735,   884]
+  55. Namira's Rot                   CV=0.071  avg=   961  range=[  868,  1038]
+  56. Lavender                       CV=0.074  avg=   520  range=[  469,   571]
+  57. Small Pearl                    CV=0.076  avg=  1288  range=[ 1113,  1407]
+  58. Burnt Spriggan Wood            CV=0.076  avg=  1549  range=[ 1444,  1789]
+  59. Scathecraw                     CV=0.077  avg=   276  range=[  239,   301]
+  60. Nightshade                     CV=0.080  avg=  1262  range=[ 1181,  1450]
+  61. Poison Bloom                   CV=0.085  avg=  1492  range=[ 1293,  1632]
+  62. Juniper Berries                CV=0.091  avg=  1244  range=[ 1082,  1370]
+  63. Salmon Roe                     CV=0.092  avg=  3397  range=[ 3018,  3989]
+  64. Creep Cluster                  CV=0.094  avg=  1319  range=[ 1101,  1442]
+  65. Fire Salts                     CV=0.096  avg=   897  range=[  795,  1059]
+  66. Beehive Husk                   CV=0.097  avg=  1050  range=[  866,  1145]
+  67. Skeever Tail                   CV=0.098  avg=   808  range=[  672,   904]
+  68. Luna Moth Wing                 CV=0.103  avg=  1135  range=[  942,  1270]
+  69. Ectoplasm                      CV=0.106  avg=   713  range=[  605,   798]
+  70. Glowing Mushroom               CV=0.108  avg=   912  range=[  751,  1032]
+  71. White Cap                      CV=0.109  avg=   337  range=[  283,   385]
+  72. Thistle Branch                 CV=0.110  avg=  1011  range=[  823,  1116]
+  73. Slaughterfish Scales           CV=0.112  avg=   888  range=[  707,   991]
+  74. Snowberries                    CV=0.117  avg=   946  range=[  749,  1087]
+  75. Small Antlers                  CV=0.123  avg=   822  range=[  647,   943]
+  76. Vampire Dust                   CV=0.124  avg=  1014  range=[  774,  1145]
+  77. Wisp Wrappings                 CV=0.127  avg=  1131  range=[  845,  1251]
+  78. Red Mountain Flower            CV=0.128  avg=   409  range=[  332,   479]
+  79. Powdered Mammoth Tusk          CV=0.129  avg=   852  range=[  661,   983]
+  80. Ashen Grass Pod                CV=0.131  avg=  1339  range=[ 1026,  1524]
+  81. Crimson Nirnroot               CV=0.132  avg=  1421  range=[ 1136,  1713]
+  82. Abecean Longfin                CV=0.134  avg=  1098  range=[  838,  1286]
+  83. Hawk Beak                      CV=0.138  avg=  1457  range=[ 1104,  1657]
+  84. Tundra Cotton                  CV=0.139  avg=   536  range=[  432,   643]
+  85. Daedra Heart                   CV=0.139  avg=  1050  range=[  883,  1258]
+  86. Nirnroot                       CV=0.141  avg=   900  range=[  757,  1100]
+  87. Spriggan Sap                   CV=0.144  avg=   939  range=[  718,  1126]
+  88. Jarrin Root                    CV=0.144  avg=  2873  range=[ 2179,  3220]
+  89. Bee                            CV=0.148  avg=  1025  range=[  749,  1199]
+  90. Nordic Barnacle                CV=0.152  avg=  1173  range=[  982,  1407]
+  91. Aloe Vera Leaves               CV=0.159  avg=   984  range=[  772,  1201]
+  92. Ash Creep Cluster              CV=0.159  avg=   998  range=[  744,  1195]
+  93. Trama Root                     CV=0.164  avg=  1679  range=[ 1207,  1972]
+  94. Moon Sugar                     CV=0.167  avg=  1124  range=[  862,  1385]
+  95. Silverside Perch               CV=0.171  avg=  1372  range=[  971,  1617]
+  96. Pine Thrush Egg                CV=0.172  avg=   835  range=[  583,   985]
+  97. Deathbell                      CV=0.176  avg=  1272  range=[  892,  1553]
+  98. Histcarp                       CV=0.181  avg=  1266  range=[  946,  1548]
+  99. Purple Mountain Flower         CV=0.189  avg=  1260  range=[  841,  1505]
+  100. Hawk's Egg                     CV=0.190  avg=  1203  range=[  876,  1564]
+  101. Hagraven Feathers              CV=0.191  avg=  1038  range=[  683,  1295]
+  102. Bleeding Crown                 CV=0.192  avg=   778  range=[  541,   968]
+  103. Sabre Cat Tooth                CV=0.205  avg=   666  range=[  433,   820]
+  104. Frost Salts                    CV=0.213  avg=   796  range=[  566,   990]
+  105. Chaurus Eggs                   CV=0.216  avg=  1128  range=[  751,  1441]
+  106. Chicken Egg                    CV=0.217  avg=  1176  range=[  908,  1585]
+  107. Blisterwort                    CV=0.233  avg=   382  range=[  281,   532]
+  108. Ice Wraith Teeth               CV=0.242  avg=   685  range=[  325,   814]
+  109. Human Flesh                    CV=0.263  avg=  1115  range=[  529,  1297]
+  110. Human Heart                    CV=0.264  avg=  1133  range=[  544,  1361]
+  111. Void Salts                     CV=0.279  avg=   874  range=[  512,  1176]
 
 ================================================================================
 Most VOLATILE ingredients (high variation across distributions):
 
-   1. Void Salts                     CV=0.374  avg=   845  range=[  297,  1217]
-   2. Crimson Nirnroot               CV=0.262  avg=  1469  range=[  954,  2148]
-   3. Human Flesh                    CV=0.249  avg=   997  range=[  664,  1271]
-   4. Hawk's Egg                     CV=0.243  avg=  1211  range=[  724,  1623]
-   5. Hagraven Feathers              CV=0.242  avg=   965  range=[  523,  1237]
-   6. Frost Salts                    CV=0.230  avg=   864  range=[  541,  1079]
-   7. Wisp Wrappings                 CV=0.221  avg=  1030  range=[  540,  1198]
-   8. Blisterwort                    CV=0.212  avg=   380  range=[  283,   508]
-   9. Chicken Egg                    CV=0.205  avg=  1169  range=[  895,  1494]
-  10. Chaurus Eggs                   CV=0.203  avg=  1122  range=[  783,  1426]
-  11. Ice Wraith Teeth               CV=0.193  avg=   684  range=[  408,   800]
-  12. Histcarp                       CV=0.187  avg=  1266  range=[  940,  1538]
-  13. Pine Thrush Egg                CV=0.183  avg=   835  range=[  578,  1019]
-  14. Purple Mountain Flower         CV=0.180  avg=  1274  range=[  870,  1490]
-  15. Bleeding Crown                 CV=0.179  avg=   786  range=[  591,   967]
-  16. Moon Sugar                     CV=0.177  avg=  1104  range=[  825,  1311]
-  17. Deathbell                      CV=0.164  avg=  1273  range=[  915,  1508]
-  18. Giant's Toe                    CV=0.163  avg=  1418  range=[  914,  1588]
-  19. Ash Creep Cluster              CV=0.163  avg=   993  range=[  758,  1235]
-  20. Vampire Dust                   CV=0.159  avg=   979  range=[  704,  1113]
+   1. Void Salts                     CV=0.279  avg=   874  range=[  512,  1176]
+   2. Human Heart                    CV=0.264  avg=  1133  range=[  544,  1361]
+   3. Human Flesh                    CV=0.263  avg=  1115  range=[  529,  1297]
+   4. Ice Wraith Teeth               CV=0.242  avg=   685  range=[  325,   814]
+   5. Blisterwort                    CV=0.233  avg=   382  range=[  281,   532]
+   6. Chicken Egg                    CV=0.217  avg=  1176  range=[  908,  1585]
+   7. Chaurus Eggs                   CV=0.216  avg=  1128  range=[  751,  1441]
+   8. Frost Salts                    CV=0.213  avg=   796  range=[  566,   990]
+   9. Sabre Cat Tooth                CV=0.205  avg=   666  range=[  433,   820]
+  10. Bleeding Crown                 CV=0.192  avg=   778  range=[  541,   968]
+  11. Hagraven Feathers              CV=0.191  avg=  1038  range=[  683,  1295]
+  12. Hawk's Egg                     CV=0.190  avg=  1203  range=[  876,  1564]
+  13. Purple Mountain Flower         CV=0.189  avg=  1260  range=[  841,  1505]
+  14. Histcarp                       CV=0.181  avg=  1266  range=[  946,  1548]
+  15. Deathbell                      CV=0.176  avg=  1272  range=[  892,  1553]
+  16. Pine Thrush Egg                CV=0.172  avg=   835  range=[  583,   985]
+  17. Silverside Perch               CV=0.171  avg=  1372  range=[  971,  1617]
+  18. Moon Sugar                     CV=0.167  avg=  1124  range=[  862,  1385]
+  19. Trama Root                     CV=0.164  avg=  1679  range=[ 1207,  1972]
+  20. Ash Creep Cluster              CV=0.159  avg=   998  range=[  744,  1195]
+  21. Aloe Vera Leaves               CV=0.159  avg=   984  range=[  772,  1201]
+  22. Nordic Barnacle                CV=0.152  avg=  1173  range=[  982,  1407]
+  23. Bee                            CV=0.148  avg=  1025  range=[  749,  1199]
+  24. Jarrin Root                    CV=0.144  avg=  2873  range=[ 2179,  3220]
+  25. Spriggan Sap                   CV=0.144  avg=   939  range=[  718,  1126]
+  26. Nirnroot                       CV=0.141  avg=   900  range=[  757,  1100]
+  27. Daedra Heart                   CV=0.139  avg=  1050  range=[  883,  1258]
+  28. Tundra Cotton                  CV=0.139  avg=   536  range=[  432,   643]
+  29. Hawk Beak                      CV=0.138  avg=  1457  range=[ 1104,  1657]
+  30. Abecean Longfin                CV=0.134  avg=  1098  range=[  838,  1286]
+  31. Crimson Nirnroot               CV=0.132  avg=  1421  range=[ 1136,  1713]
+  32. Ashen Grass Pod                CV=0.131  avg=  1339  range=[ 1026,  1524]
+  33. Powdered Mammoth Tusk          CV=0.129  avg=   852  range=[  661,   983]
+  34. Red Mountain Flower            CV=0.128  avg=   409  range=[  332,   479]
+  35. Wisp Wrappings                 CV=0.127  avg=  1131  range=[  845,  1251]
+  36. Vampire Dust                   CV=0.124  avg=  1014  range=[  774,  1145]
+  37. Small Antlers                  CV=0.123  avg=   822  range=[  647,   943]
+  38. Snowberries                    CV=0.117  avg=   946  range=[  749,  1087]
+  39. Slaughterfish Scales           CV=0.112  avg=   888  range=[  707,   991]
+  40. Thistle Branch                 CV=0.110  avg=  1011  range=[  823,  1116]
+  41. White Cap                      CV=0.109  avg=   337  range=[  283,   385]
+  42. Glowing Mushroom               CV=0.108  avg=   912  range=[  751,  1032]
+  43. Ectoplasm                      CV=0.106  avg=   713  range=[  605,   798]
+  44. Luna Moth Wing                 CV=0.103  avg=  1135  range=[  942,  1270]
+  45. Skeever Tail                   CV=0.098  avg=   808  range=[  672,   904]
+  46. Beehive Husk                   CV=0.097  avg=  1050  range=[  866,  1145]
+  47. Fire Salts                     CV=0.096  avg=   897  range=[  795,  1059]
+  48. Creep Cluster                  CV=0.094  avg=  1319  range=[ 1101,  1442]
+  49. Salmon Roe                     CV=0.092  avg=  3397  range=[ 3018,  3989]
+  50. Juniper Berries                CV=0.091  avg=  1244  range=[ 1082,  1370]
+  51. Poison Bloom                   CV=0.085  avg=  1492  range=[ 1293,  1632]
+  52. Nightshade                     CV=0.080  avg=  1262  range=[ 1181,  1450]
+  53. Scathecraw                     CV=0.077  avg=   276  range=[  239,   301]
+  54. Burnt Spriggan Wood            CV=0.076  avg=  1549  range=[ 1444,  1789]
+  55. Small Pearl                    CV=0.076  avg=  1288  range=[ 1113,  1407]
+  56. Lavender                       CV=0.074  avg=   520  range=[  469,   571]
+  57. Namira's Rot                   CV=0.071  avg=   961  range=[  868,  1038]
+  58. Jazbay Grapes                  CV=0.068  avg=   814  range=[  735,   884]
+  59. Rock Warbler Egg               CV=0.067  avg=   752  range=[  699,   848]
+  60. Giant's Toe                    CV=0.067  avg=  1482  range=[ 1360,  1610]
+  61. Netch Jelly                    CV=0.067  avg=  1397  range=[ 1258,  1488]
+  62. Slaughterfish Egg              CV=0.066  avg=   822  range=[  744,   898]
+  63. Blue Dartwing                  CV=0.066  avg=   708  range=[  628,   756]
+  64. Blue Butterfly Wing            CV=0.065  avg=  1103  range=[ 1042,  1227]
+  65. Emperor Parasol Moss           CV=0.064  avg=   848  range=[  779,   926]
+  66. Hagraven Claw                  CV=0.064  avg=   366  range=[  328,   392]
+  67. Dwarven Oil                    CV=0.063  avg=   902  range=[  796,   971]
+  68. Garlic                         CV=0.063  avg=  1217  range=[ 1120,  1308]
+  69. Chaurus Hunter Antennae        CV=0.063  avg=  1138  range=[ 1001,  1222]
+  70. River Betty                    CV=0.062  avg=  1696  range=[ 1544,  1858]
+  71. Dragon's Tongue                CV=0.061  avg=   699  range=[  645,   783]
+  72. Hawk Feathers                  CV=0.061  avg=   908  range=[  826,   985]
+  73. Wheat                          CV=0.060  avg=  1084  range=[  950,  1150]
+  74. Briar Heart                    CV=0.058  avg=  1081  range=[  991,  1199]
+  75. Yellow Mountain Flower         CV=0.058  avg=  1458  range=[ 1307,  1574]
+  76. Butterfly Wing                 CV=0.057  avg=   321  range=[  305,   358]
+  77. Taproot                        CV=0.057  avg=   924  range=[  863,  1000]
+  78. Ancestor Moth Wing             CV=0.053  avg=  1127  range=[ 1037,  1213]
+  79. Salt Pile                      CV=0.051  avg=  1295  range=[ 1190,  1380]
+  80. Orange Dartwing                CV=0.050  avg=   626  range=[  576,   652]
+  81. Large Antlers                  CV=0.050  avg=  1505  range=[ 1378,  1581]
+  82. Grass Pod                      CV=0.048  avg=   542  range=[  492,   564]
+  83. Falmer Ear                     CV=0.048  avg=   633  range=[  596,   678]
+  84. Charred Skeever Hide           CV=0.045  avg=   582  range=[  540,   609]
+  85. Boar Tusk                      CV=0.043  avg=  1190  range=[ 1103,  1260]
+  86. Swamp Fungal Pod               CV=0.042  avg=   953  range=[  891,  1013]
+  87. Felsaad Tern Feathers          CV=0.042  avg=   360  range=[  343,   382]
+  88. Giant Lichen                   CV=0.041  avg=  4660  range=[ 4423,  4975]
+  89. Pearl                          CV=0.041  avg=   678  range=[  648,   729]
+  90. Eye of Sabre Cat               CV=0.040  avg=   435  range=[  412,   465]
+  91. Cyrodilic Spadetail            CV=0.037  avg=   819  range=[  761,   858]
+  92. Imp Stool                      CV=0.036  avg=   859  range=[  818,   913]
+  93. Spider Egg                     CV=0.034  avg=  1138  range=[ 1098,  1213]
+  94. Scaly Pholiota                 CV=0.033  avg=  1107  range=[ 1057,  1161]
+  95. Hanging Moss                   CV=0.033  avg=  1362  range=[ 1326,  1455]
+  96. Canis Root                     CV=0.033  avg=  1192  range=[ 1151,  1255]
+  97. Bear Claws                     CV=0.033  avg=  1362  range=[ 1300,  1430]
+  98. Elves Ear                      CV=0.032  avg=   688  range=[  663,   727]
+  99. Mudcrab Chitin                 CV=0.032  avg=   731  range=[  689,   757]
+  100. Frost Mirriam                  CV=0.031  avg=  6212  range=[ 5957,  6515]
+  101. Blue Mountain Flower           CV=0.030  avg=  1217  range=[ 1168,  1279]
+  102. Mora Tapinella                 CV=0.027  avg=   775  range=[  734,   795]
+  103. Fly Amanita                    CV=0.026  avg=   806  range=[  772,   834]
+  104. Glow Dust                      CV=0.026  avg=  1429  range=[ 1382,  1481]
+  105. Gleamblossom                   CV=0.025  avg=  1308  range=[ 1268,  1356]
+  106. Spawn Ash                      CV=0.025  avg=   486  range=[  464,   500]
+  107. Troll Fat                      CV=0.020  avg=   743  range=[  718,   762]
+  108. Bone Meal                      CV=0.020  avg=   690  range=[  678,   718]
+  109. Honeycomb                      CV=0.019  avg=   504  range=[  488,   517]
+  110. Ash Hopper Jelly               CV=0.015  avg=   530  range=[  520,   539]
+  111. Torchbug Thorax                CV=0.012  avg=   493  range=[  486,   503]
 
 ================================================================================
 INGREDIENT PERFORMANCE BY RARITY TYPE
 ================================================================================
 
 Frost Mirriam (rarity: uncommon):
-  very_flat           :   5827
-  flat                :   5978
-  normal              :   6228
-  steep               :   6398
-  very_steep          :   6502
-  extreme_steep       :   6639
+  very_flat           :   5985
+  flat                :   5957
+  normal              :   6227
+  steep               :   6328
+  very_steep          :   6515
+  extreme_steep       :   6257
 
 Giant Lichen (rarity: uncommon):
-  very_flat           :   4471
-  flat                :   4478
-  normal              :   4488
-  steep               :   4818
-  very_steep          :   4759
-  extreme_steep       :   4865
+  very_flat           :   4566
+  flat                :   4423
+  normal              :   4491
+  steep               :   4665
+  very_steep          :   4837
+  extreme_steep       :   4975
 
 Salmon Roe (rarity: rare):
-  very_flat           :   3197
-  flat                :   3352
-  normal              :   3439
-  steep               :   3772
-  very_steep          :   3352
-  extreme_steep       :   4334
+  very_flat           :   3194
+  flat                :   3218
+  normal              :   3423
+  steep               :   3540
+  very_steep          :   3989
+  extreme_steep       :   3018
 
 Jarrin Root (rarity: unique):
-  very_flat           :   3301
-  flat                :   3043
-  normal              :   3356
-  steep               :   2740
+  very_flat           :   3220
+  flat                :   3156
+  normal              :   2937
+  steep               :   2179
 
 Trama Root (rarity: common):
-  very_flat           :   1989
-  flat                :   1943
-  normal              :   1830
-  steep               :   1644
-  very_steep          :   1493
-  extreme_steep       :   1230
+  very_flat           :   1972
+  flat                :   1915
+  normal              :   1887
+  steep               :   1616
+  very_steep          :   1475
+  extreme_steep       :   1207
 
 River Betty (rarity: uncommon):
-  very_flat           :   1809
-  flat                :   1749
-  normal              :   1784
-  steep               :   1604
-  very_steep          :   1633
-  extreme_steep       :   1542
-
-Large Antlers (rarity: uncommon):
-  very_flat           :   1589
-  flat                :   1539
-  normal              :   1624
-  steep               :   1445
-  very_steep          :   1452
-  extreme_steep       :   1372
-
-Giant's Toe (rarity: rare):
-  very_flat           :   1543
-  flat                :   1509
-  normal              :   1588
-  steep               :   1413
-  very_steep          :   1541
-  extreme_steep       :    914
+  very_flat           :   1858
+  flat                :   1788
+  normal              :   1682
+  steep               :   1696
+  very_steep          :   1608
+  extreme_steep       :   1544
 
 Hawk Beak (rarity: uncommon):
-  very_flat           :   1604
-  flat                :   1652
-  normal              :   1532
-  steep               :   1410
-  very_steep          :   1345
-  extreme_steep       :   1022
-
-Yellow Mountain Flower (rarity: common):
-  very_flat           :   1476
-  flat                :   1474
-  normal              :   1517
-  steep               :   1481
-  very_steep          :   1410
-  extreme_steep       :   1347
-
-Purple Mountain Flower (rarity: common):
-  very_flat           :   1455
-  flat                :   1469
-  normal              :   1490
-  steep               :   1274
-  very_steep          :   1084
-  extreme_steep       :    870
-
-Poison Bloom (rarity: uncommon):
-  very_flat           :   1639
-  flat                :   1559
-  normal              :   1487
-  steep               :   1426
-  very_steep          :   1383
-  extreme_steep       :   1262
+  very_flat           :   1657
+  flat                :   1606
+  normal              :   1621
+  steep               :   1466
+  very_steep          :   1286
+  extreme_steep       :   1104
 
 Silverside Perch (rarity: common):
-  very_flat           :   1589
-  flat                :   1522
-  normal              :   1487
-  steep               :   1313
-  very_steep          :   1169
-  extreme_steep       :   1007
+  very_flat           :   1617
+  flat                :   1499
+  normal              :   1615
+  steep               :   1350
+  very_steep          :   1183
+  extreme_steep       :    971
+
+Yellow Mountain Flower (rarity: common):
+  very_flat           :   1514
+  flat                :   1488
+  normal              :   1574
+  steep               :   1454
+  very_steep          :   1410
+  extreme_steep       :   1307
+
+Giant's Toe (rarity: rare):
+  very_flat           :   1610
+  flat                :   1565
+  normal              :   1561
+  steep               :   1360
+  very_steep          :   1394
+  extreme_steep       :   1400
+
+Poison Bloom (rarity: uncommon):
+  very_flat           :   1632
+  flat                :   1618
+  normal              :   1556
+  steep               :   1494
+  very_steep          :   1360
+  extreme_steep       :   1293
+
+Large Antlers (rarity: uncommon):
+  very_flat           :   1576
+  flat                :   1581
+  normal              :   1547
+  steep               :   1513
+  very_steep          :   1437
+  extreme_steep       :   1378
+
+Netch Jelly (rarity: uncommon):
+  very_flat           :   1488
+  flat                :   1485
+  normal              :   1480
+  steep               :   1366
+  very_steep          :   1304
+  extreme_steep       :   1258
 
 Burnt Spriggan Wood (rarity: rare):
-  very_flat           :   1589
-  flat                :   1517
-  normal              :   1475
-  steep               :   1464
-  very_steep          :   1446
-  extreme_steep       :   1472
+  very_flat           :   1539
+  flat                :   1581
+  normal              :   1444
+  steep               :   1446
+  very_steep          :   1496
+  extreme_steep       :   1789
+
+Ashen Grass Pod (rarity: common):
+  very_flat           :   1524
+  flat                :   1505
+  normal              :   1429
+  steep               :   1346
+  very_steep          :   1205
+  extreme_steep       :   1026
+
+Creep Cluster (rarity: common):
+  very_flat           :   1442
+  flat                :   1422
+  normal              :   1427
+  steep               :   1287
+  very_steep          :   1235
+  extreme_steep       :   1101
 
 Glow Dust (rarity: uncommon):
-  very_flat           :   1536
-  flat                :   1423
-  normal              :   1430
-  steep               :   1417
-  very_steep          :   1369
-  extreme_steep       :   1320
+  very_flat           :   1481
+  flat                :   1466
+  normal              :   1415
+  steep               :   1382
+  very_steep          :   1391
+  extreme_steep       :   1438
+
+Purple Mountain Flower (rarity: common):
+  very_flat           :   1505
+  flat                :   1487
+  normal              :   1405
+  steep               :   1237
+  very_steep          :   1082
+  extreme_steep       :    841
+
+Deathbell (rarity: common):
+  very_flat           :   1553
+  flat                :   1439
+  normal              :   1378
+  steep               :   1294
+  very_steep          :   1079
+  extreme_steep       :    892
+
+Hanging Moss (rarity: common):
+  very_flat           :   1455
+  flat                :   1368
+  normal              :   1358
+  steep               :   1332
+  very_steep          :   1326
+  extreme_steep       :   1330
+
+Histcarp (rarity: common):
+  very_flat           :   1548
+  flat                :   1539
+  normal              :   1349
+  steep               :   1133
+  very_steep          :   1078
+  extreme_steep       :    946
+
+Crimson Nirnroot (rarity: very_rare):
+  very_flat           :   1489
+  flat                :   1420
+  normal              :   1346
+  steep               :   1136
+  very_steep          :   1713
+
+Bear Claws (rarity: common):
+  very_flat           :   1430
+  flat                :   1410
+  normal              :   1338
+  steep               :   1347
+  very_steep          :   1300
+  extreme_steep       :   1347
+
+Salt Pile (rarity: common):
+  very_flat           :   1347
+  flat                :   1380
+  normal              :   1338
+  steep               :   1277
+  very_steep          :   1237
+  extreme_steep       :   1190
+
+Small Pearl (rarity: common):
+  very_flat           :   1407
+  flat                :   1377
+  normal              :   1328
+  steep               :   1271
+  very_steep          :   1235
+  extreme_steep       :   1113
+
+Juniper Berries (rarity: common):
+  very_flat           :   1366
+  flat                :   1370
+  normal              :   1308
+  steep               :   1214
+  very_steep          :   1123
+  extreme_steep       :   1082
+
+Gleamblossom (rarity: uncommon):
+  very_flat           :   1348
+  flat                :   1356
+  normal              :   1301
+  steep               :   1268
+  very_steep          :   1291
+  extreme_steep       :   1281
+
+Chaurus Eggs (rarity: uncommon):
+  very_flat           :   1441
+  flat                :   1316
+  normal              :   1295
+  steep               :   1060
+  very_steep          :    907
+  extreme_steep       :    751
+
+Garlic (rarity: common):
+  very_flat           :   1308
+  flat                :   1288
+  normal              :   1276
+  steep               :   1185
+  very_steep          :   1120
+  extreme_steep       :   1127
+
+Human Heart (rarity: very_rare):
+  very_flat           :   1361
+  flat                :   1286
+  normal              :   1272
+  steep               :   1201
+  very_steep          :    544
+
+Human Flesh (rarity: very_rare):
+  very_flat           :   1234
+  flat                :   1266
+  normal              :   1249
+  steep               :   1297
+  very_steep          :    529
+
+Hawk's Egg (rarity: rare):
+  very_flat           :   1564
+  flat                :   1389
+  normal              :   1242
+  steep               :   1129
+  very_steep          :   1020
+  extreme_steep       :    876
+
+Wisp Wrappings (rarity: rare):
+  very_flat           :   1251
+  flat                :   1244
+  normal              :   1237
+  steep               :   1133
+  very_steep          :   1077
+  extreme_steep       :    845
+
+Nordic Barnacle (rarity: common):
+  very_flat           :   1407
+  flat                :   1389
+  normal              :   1233
+  steep               :   1023
+  very_steep          :   1006
+  extreme_steep       :    982
+
+Nightshade (rarity: uncommon):
+  very_flat           :   1450
+  flat                :   1341
+  normal              :   1228
+  steep               :   1181
+  very_steep          :   1185
+  extreme_steep       :   1184
+
+Moon Sugar (rarity: uncommon):
+  very_flat           :   1279
+  flat                :   1385
+  normal              :   1223
+  steep               :   1058
+  very_steep          :    934
+  extreme_steep       :    862
+
+Blue Mountain Flower (rarity: common):
+  very_flat           :   1279
+  flat                :   1248
+  normal              :   1210
+  steep               :   1201
+  very_steep          :   1168
+  extreme_steep       :   1198
+
+Boar Tusk (rarity: uncommon):
+  very_flat           :   1260
+  flat                :   1233
+  normal              :   1209
+  steep               :   1180
+  very_steep          :   1155
+  extreme_steep       :   1103
+
+Luna Moth Wing (rarity: uncommon):
+  very_flat           :   1270
+  flat                :   1251
+  normal              :   1205
+  steep               :   1082
+  very_steep          :   1058
+  extreme_steep       :    942
+
+Chicken Egg (rarity: common):
+  very_flat           :   1585
+  flat                :   1421
+  normal              :   1199
+  steep               :   1026
+  very_steep          :    916
+  extreme_steep       :    908
+
+Abecean Longfin (rarity: common):
+  very_flat           :   1286
+  flat                :   1200
+  normal              :   1189
+  steep               :   1069
+  very_steep          :   1009
+  extreme_steep       :    838
+
+Scaly Pholiota (rarity: common):
+  very_flat           :   1102
+  flat                :   1149
+  normal              :   1161
+  steep               :   1080
+  very_steep          :   1094
+  extreme_steep       :   1057
+
+Chaurus Hunter Antennae (rarity: rare):
+  very_flat           :   1222
+  flat                :   1197
+  normal              :   1160
+  steep               :   1109
+  very_steep          :   1137
+  extreme_steep       :   1001
+
+Canis Root (rarity: common):
+  very_flat           :   1185
+  flat                :   1160
+  normal              :   1151
+  steep               :   1167
+  very_steep          :   1234
+  extreme_steep       :   1255
+
+Wheat (rarity: common):
+  very_flat           :   1117
+  flat                :   1128
+  normal              :   1150
+  steep               :   1085
+  very_steep          :   1071
+  extreme_steep       :    950
+
+Ancestor Moth Wing (rarity: rare):
+  very_flat           :   1213
+  flat                :   1154
+  normal              :   1134
+  steep               :   1037
+  very_steep          :   1063
+  extreme_steep       :   1161
+
+Beehive Husk (rarity: common):
+  very_flat           :   1145
+  flat                :   1140
+  normal              :   1124
+  steep               :   1049
+  very_steep          :    974
+  extreme_steep       :    866
+
+Spider Egg (rarity: common):
+  very_flat           :   1213
+  flat                :   1154
+  normal              :   1124
+  steep               :   1106
+  very_steep          :   1098
+  extreme_steep       :   1133
+
+Hagraven Feathers (rarity: rare):
+  very_flat           :   1295
+  flat                :   1183
+  normal              :   1119
+  steep               :   1034
+  very_steep          :    914
+  extreme_steep       :    683
+
+Thistle Branch (rarity: common):
+  very_flat           :   1095
+  flat                :   1116
+  normal              :   1116
+  steep               :   1007
+  very_steep          :    911
+  extreme_steep       :    823
+
+Bee (rarity: common):
+  very_flat           :   1199
+  flat                :   1159
+  normal              :   1105
+  steep               :    992
+  very_steep          :    945
+  extreme_steep       :    749
+
+Blue Butterfly Wing (rarity: common):
+  very_flat           :   1227
+  flat                :   1172
+  normal              :   1088
+  steep               :   1042
+  very_steep          :   1042
+  extreme_steep       :   1045
+
+Ash Creep Cluster (rarity: common):
+  very_flat           :   1195
+  flat                :   1145
+  normal              :   1079
+  steep               :    955
+  very_steep          :    867
+  extreme_steep       :    744
+
+Briar Heart (rarity: rare):
+  very_flat           :   1066
+  flat                :   1059
+  normal              :   1067
+  steep               :   1104
+  very_steep          :    991
+  extreme_steep       :   1199
+
+Daedra Heart (rarity: very_rare):
+  very_flat           :   1152
+  flat                :   1258
+  normal              :   1065
+  steep               :    883
+  very_steep          :    891
+
+Vampire Dust (rarity: rare):
+  very_flat           :   1145
+  flat                :   1143
+  normal              :   1048
+  steep               :   1003
+  very_steep          :    969
+  extreme_steep       :    774
+
+Aloe Vera Leaves (rarity: uncommon):
+  very_flat           :   1201
+  flat                :   1138
+  normal              :   1028
+  steep               :    943
+  very_steep          :    820
+  extreme_steep       :    772
+
+Namira's Rot (rarity: rare):
+  very_flat           :   1025
+  flat                :   1038
+  normal              :    999
+  steep               :    964
+  very_steep          :    871
+  extreme_steep       :    868
+
+Void Salts (rarity: rare):
+  very_flat           :   1176
+  flat                :   1090
+  normal              :    999
+  steep               :    861
+  very_steep          :    606
+  extreme_steep       :    512
+
+Glowing Mushroom (rarity: common):
+  very_flat           :   1032
+  flat                :    985
+  normal              :    986
+  steep               :    883
+  very_steep          :    836
+  extreme_steep       :    751
+
+Snowberries (rarity: common):
+  very_flat           :   1087
+  flat                :   1040
+  normal              :    986
+  steep               :    932
+  very_steep          :    879
+  extreme_steep       :    749
+
+Hawk Feathers (rarity: uncommon):
+  very_flat           :    959
+  flat                :    928
+  normal              :    985
+  steep               :    891
+  very_steep          :    859
+  extreme_steep       :    826
+
+Spriggan Sap (rarity: rare):
+  very_flat           :   1126
+  flat                :   1046
+  normal              :    975
+  steep               :    945
+  very_steep          :    825
+  extreme_steep       :    718
+
+Swamp Fungal Pod (rarity: common):
+  very_flat           :   1013
+  flat                :    981
+  normal              :    966
+  steep               :    951
+  very_steep          :    916
+  extreme_steep       :    891
+
+Pine Thrush Egg (rarity: common):
+  very_flat           :    985
+  flat                :    949
+  normal              :    943
+  steep               :    828
+  very_steep          :    720
+  extreme_steep       :    583
+
+Slaughterfish Scales (rarity: common):
+  very_flat           :    991
+  flat                :    987
+  normal              :    943
+  steep               :    843
+  very_steep          :    857
+  extreme_steep       :    707
+
+Taproot (rarity: uncommon):
+  very_flat           :   1000
+  flat                :    979
+  normal              :    942
+  steep               :    863
+  very_steep          :    882
+  extreme_steep       :    881
+
+Dwarven Oil (rarity: uncommon):
+  very_flat           :    947
+  flat                :    971
+  normal              :    925
+  steep               :    898
+  very_steep          :    873
+  extreme_steep       :    796
+
+Nirnroot (rarity: rare):
+  very_flat           :   1100
+  flat                :   1024
+  normal              :    920
+  steep               :    827
+  very_steep          :    775
+  extreme_steep       :    757
+
+Frost Salts (rarity: rare):
+  very_flat           :    990
+  flat                :    961
+  normal              :    905
+  steep               :    763
+  very_steep          :    593
+  extreme_steep       :    566
+
+Powdered Mammoth Tusk (rarity: uncommon):
+  very_flat           :    983
+  flat                :    964
+  normal              :    877
+  steep               :    847
+  very_steep          :    779
+  extreme_steep       :    661
+
+Imp Stool (rarity: common):
+  very_flat           :    913
+  flat                :    871
+  normal              :    873
+  steep               :    840
+  very_steep          :    841
+  extreme_steep       :    818
+
+Fire Salts (rarity: rare):
+  very_flat           :    937
+  flat                :    895
+  normal              :    869
+  steep               :    795
+  very_steep          :    825
+  extreme_steep       :   1059
+
+Jazbay Grapes (rarity: common):
+  very_flat           :    848
+  flat                :    884
+  normal              :    866
+  steep               :    785
+  very_steep          :    764
+  extreme_steep       :    735
+
+Bleeding Crown (rarity: uncommon):
+  very_flat           :    968
+  flat                :    907
+  normal              :    859
+  steep               :    752
+  very_steep          :    644
+  extreme_steep       :    541
+
+Cyrodilic Spadetail (rarity: common):
+  very_flat           :    829
+  flat                :    825
+  normal              :    858
+  steep               :    835
+  very_steep          :    808
+  extreme_steep       :    761
+
+Small Antlers (rarity: common):
+  very_flat           :    943
+  flat                :    927
+  normal              :    852
+  steep               :    802
+  very_steep          :    762
+  extreme_steep       :    647
+
+Emperor Parasol Moss (rarity: common):
+  very_flat           :    926
+  flat                :    910
+  normal              :    846
+  steep               :    829
+  very_steep          :    799
+  extreme_steep       :    779
+
+Skeever Tail (rarity: common):
+  very_flat           :    904
+  flat                :    886
+  normal              :    832
+  steep               :    808
+  very_steep          :    748
+  extreme_steep       :    672
+
+Fly Amanita (rarity: common):
+  very_flat           :    824
+  flat                :    834
+  normal              :    815
+  steep               :    804
+  very_steep          :    789
+  extreme_steep       :    772
+
+Slaughterfish Egg (rarity: common):
+  very_flat           :    744
+  flat                :    767
+  normal              :    809
+  steep               :    841
+  very_steep          :    872
+  extreme_steep       :    898
+
+Mora Tapinella (rarity: common):
+  very_flat           :    734
+  flat                :    767
+  normal              :    786
+  steep               :    793
+  very_steep          :    795
+  extreme_steep       :    775
+
+Ice Wraith Teeth (rarity: rare):
+  very_flat           :    814
+  flat                :    794
+  normal              :    766
+  steep               :    701
+  very_steep          :    711
+  extreme_steep       :    325
+
+Blue Dartwing (rarity: common):
+  very_flat           :    747
+  flat                :    756
+  normal              :    742
+  steep               :    706
+  very_steep          :    668
+  extreme_steep       :    628
+
+Mudcrab Chitin (rarity: common):
+  very_flat           :    689
+  flat                :    714
+  normal              :    734
+  steep               :    745
+  very_steep          :    748
+  extreme_steep       :    757
+
+Troll Fat (rarity: uncommon):
+  very_flat           :    762
+  flat                :    759
+  normal              :    734
+  steep               :    744
+  very_steep          :    718
+  extreme_steep       :    743
+
+Sabre Cat Tooth (rarity: uncommon):
+  very_flat           :    820
+  flat                :    792
+  normal              :    730
+  steep               :    671
+  very_steep          :    550
+  extreme_steep       :    433
+
+Ectoplasm (rarity: rare):
+  very_flat           :    791
+  flat                :    753
+  normal              :    701
+  steep               :    628
+  very_steep          :    605
+  extreme_steep       :    798
+
+Rock Warbler Egg (rarity: common):
+  very_flat           :    713
+  flat                :    721
+  normal              :    699
+  steep               :    749
+  very_steep          :    780
+  extreme_steep       :    848
+
+Bone Meal (rarity: common):
+  very_flat           :    718
+  flat                :    678
+  normal              :    684
+  steep               :    680
+  very_steep          :    686
+  extreme_steep       :    694
+
+Dragon's Tongue (rarity: uncommon):
+  very_flat           :    645
+  flat                :    676
+  normal              :    680
+  steep               :    700
+  very_steep          :    711
+  extreme_steep       :    783
+
+Pearl (rarity: uncommon):
+  very_flat           :    693
+  flat                :    729
+  normal              :    676
+  steep               :    670
+  very_steep          :    649
+  extreme_steep       :    648
+
+Elves Ear (rarity: common):
+  very_flat           :    663
+  flat                :    670
+  normal              :    672
+  steep               :    699
+  very_steep          :    700
+  extreme_steep       :    727
+
+Orange Dartwing (rarity: common):
+  very_flat           :    590
+  flat                :    576
+  normal              :    648
+  steep               :    638
+  very_steep          :    652
+  extreme_steep       :    652
+
+Falmer Ear (rarity: rare):
+  very_flat           :    650
+  flat                :    654
+  normal              :    600
+  steep               :    618
+  very_steep          :    596
+  extreme_steep       :    678
+
+Charred Skeever Hide (rarity: common):
+  very_flat           :    540
+  flat                :    552
+  normal              :    591
+  steep               :    596
+  very_steep          :    601
+  extreme_steep       :    609
+
+Tundra Cotton (rarity: common):
+  very_flat           :    643
+  flat                :    598
+  normal              :    574
+  steep               :    499
+  very_steep          :    470
+  extreme_steep       :    432
+
+Grass Pod (rarity: common):
+  very_flat           :    560
+  flat                :    564
+  normal              :    562
+  steep               :    548
+  very_steep          :    526
+  extreme_steep       :    492
+
+Lavender (rarity: common):
+  very_flat           :    571
+  flat                :    554
+  normal              :    541
+  steep               :    511
+  very_steep          :    476
+  extreme_steep       :    469
+
+Ash Hopper Jelly (rarity: uncommon):
+  very_flat           :    525
+  flat                :    520
+  normal              :    538
+  steep               :    539
+  very_steep          :    538
+  extreme_steep       :    522
+
+Honeycomb (rarity: common):
+  very_flat           :    507
+  flat                :    507
+  normal              :    509
+  steep               :    517
+  very_steep          :    496
+  extreme_steep       :    488
+
+Torchbug Thorax (rarity: common):
+  very_flat           :    490
+  flat                :    495
+  normal              :    498
+  steep               :    488
+  very_steep          :    503
+  extreme_steep       :    486
+
+Spawn Ash (rarity: uncommon):
+  very_flat           :    483
+  flat                :    499
+  normal              :    484
+  steep               :    464
+  very_steep          :    500
+  extreme_steep       :    487
+
+Eye of Sabre Cat (rarity: uncommon):
+  very_flat           :    465
+  flat                :    431
+  normal              :    449
+  steep               :    412
+  very_steep          :    423
+  extreme_steep       :    432
+
+Red Mountain Flower (rarity: common):
+  very_flat           :    479
+  flat                :    462
+  normal              :    431
+  steep               :    387
+  very_steep          :    365
+  extreme_steep       :    332
+
+Blisterwort (rarity: common):
+  very_flat           :    532
+  flat                :    458
+  normal              :    389
+  steep               :    325
+  very_steep          :    306
+  extreme_steep       :    281
+
+Hagraven Claw (rarity: rare):
+  very_flat           :    383
+  flat                :    380
+  normal              :    369
+  steep               :    341
+  very_steep          :    328
+  extreme_steep       :    392
+
+White Cap (rarity: common):
+  very_flat           :    385
+  flat                :    366
+  normal              :    361
+  steep               :    324
+  very_steep          :    302
+  extreme_steep       :    283
+
+Felsaad Tern Feathers (rarity: uncommon):
+  very_flat           :    378
+  flat                :    382
+  normal              :    354
+  steep               :    354
+  very_steep          :    347
+  extreme_steep       :    343
+
+Butterfly Wing (rarity: common):
+  very_flat           :    358
+  flat                :    328
+  normal              :    316
+  steep               :    306
+  very_steep          :    305
+  extreme_steep       :    312
+
+Scathecraw (rarity: common):
+  very_flat           :    298
+  flat                :    269
+  normal              :    285
+  steep               :    301
+  very_steep          :    266
+  extreme_steep       :    239
 
 ================================================================================
+Results saved to /Users/jackblackburn/code/main/esv-alchemy/analysis/results/rarity_20260319_181128.json

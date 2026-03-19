@@ -1,0 +1,3533 @@
+{
+  "metadata": {
+    "num_simulations": 10000,
+    "timestamp": "20260319_181128",
+    "distributions": {
+      "very_flat": {
+        "common": 0.30005281715035004,
+        "uncommon": 0.2574204728749922,
+        "rare": 0.20909039596386778,
+        "very_rare": 0.14064513192043454,
+        "unique": 0.09279118209035535
+      },
+      "flat": {
+        "common": 0.364088721304568,
+        "uncommon": 0.28202191083090905,
+        "rare": 0.19941960559172361,
+        "very_rare": 0.10297984151519961,
+        "unique": 0.051489920757599804
+      },
+      "normal": {
+        "common": 0.5,
+        "uncommon": 0.3,
+        "rare": 0.15,
+        "very_rare": 0.04,
+        "unique": 0.01
+      },
+      "steep": {
+        "common": 0.6864360241625481,
+        "uncommon": 0.24711696869851732,
+        "rare": 0.06177924217462933,
+        "very_rare": 0.0043931905546403084,
+        "unique": 0.0002745744096650193
+      },
+      "very_steep": {
+        "common": 0.8041688111168297,
+        "uncommon": 0.1737004632012352,
+        "rare": 0.0217125579001544,
+        "very_rare": 0.00041173443129181685,
+        "unique": 6.433350488934638e-06
+      },
+      "extreme_steep": {
+        "common": 0.9257602491287484,
+        "uncommon": 0.07198711697225146,
+        "rare": 0.0022495974053828582,
+        "very_rare": 3.0335311843450836e-06,
+        "unique": 2.9624327972119957e-09
+      }
+    }
+  },
+  "distribution_comparison": {
+    "very_flat": {
+      "avg_potions": 38.3882,
+      "total_potions": 383882
+    },
+    "flat": {
+      "avg_potions": 38.3973,
+      "total_potions": 383973
+    },
+    "normal": {
+      "avg_potions": 38.3072,
+      "total_potions": 383072
+    },
+    "steep": {
+      "avg_potions": 38.2008,
+      "total_potions": 382008
+    },
+    "very_steep": {
+      "avg_potions": 38.1616,
+      "total_potions": 381616
+    },
+    "extreme_steep": {
+      "avg_potions": 38.0673,
+      "total_potions": 380673
+    }
+  },
+  "ingredient_performance": {
+    "very_flat": {
+      "Frost Mirriam": {
+        "avg_value": 5985,
+        "appearance_rate": 0.2044
+      },
+      "Giant Lichen": {
+        "avg_value": 4566,
+        "appearance_rate": 0.2158
+      },
+      "Jarrin Root": {
+        "avg_value": 3220,
+        "appearance_rate": 0.0818
+      },
+      "Salmon Roe": {
+        "avg_value": 3194,
+        "appearance_rate": 0.1764
+      },
+      "Trama Root": {
+        "avg_value": 1972,
+        "appearance_rate": 0.2437
+      },
+      "River Betty": {
+        "avg_value": 1858,
+        "appearance_rate": 0.2127
+      },
+      "Hawk Beak": {
+        "avg_value": 1657,
+        "appearance_rate": 0.211
+      },
+      "Poison Bloom": {
+        "avg_value": 1632,
+        "appearance_rate": 0.2066
+      },
+      "Silverside Perch": {
+        "avg_value": 1617,
+        "appearance_rate": 0.2384
+      },
+      "Giant's Toe": {
+        "avg_value": 1610,
+        "appearance_rate": 0.1715
+      },
+      "Chicken Egg": {
+        "avg_value": 1585,
+        "appearance_rate": 0.2379
+      },
+      "Large Antlers": {
+        "avg_value": 1576,
+        "appearance_rate": 0.2187
+      },
+      "Hawk's Egg": {
+        "avg_value": 1564,
+        "appearance_rate": 0.1734
+      },
+      "Deathbell": {
+        "avg_value": 1553,
+        "appearance_rate": 0.2387
+      },
+      "Histcarp": {
+        "avg_value": 1548,
+        "appearance_rate": 0.2401
+      },
+      "Burnt Spriggan Wood": {
+        "avg_value": 1539,
+        "appearance_rate": 0.1752
+      },
+      "Ashen Grass Pod": {
+        "avg_value": 1524,
+        "appearance_rate": 0.2419
+      },
+      "Yellow Mountain Flower": {
+        "avg_value": 1514,
+        "appearance_rate": 0.2387
+      },
+      "Purple Mountain Flower": {
+        "avg_value": 1505,
+        "appearance_rate": 0.239
+      },
+      "Crimson Nirnroot": {
+        "avg_value": 1489,
+        "appearance_rate": 0.1187
+      },
+      "Netch Jelly": {
+        "avg_value": 1488,
+        "appearance_rate": 0.2105
+      },
+      "Glow Dust": {
+        "avg_value": 1481,
+        "appearance_rate": 0.2134
+      },
+      "Hanging Moss": {
+        "avg_value": 1455,
+        "appearance_rate": 0.2406
+      },
+      "Nightshade": {
+        "avg_value": 1450,
+        "appearance_rate": 0.2106
+      },
+      "Creep Cluster": {
+        "avg_value": 1442,
+        "appearance_rate": 0.2444
+      },
+      "Chaurus Eggs": {
+        "avg_value": 1441,
+        "appearance_rate": 0.208
+      },
+      "Bear Claws": {
+        "avg_value": 1430,
+        "appearance_rate": 0.2378
+      },
+      "Nordic Barnacle": {
+        "avg_value": 1407,
+        "appearance_rate": 0.2293
+      },
+      "Small Pearl": {
+        "avg_value": 1407,
+        "appearance_rate": 0.2393
+      },
+      "Juniper Berries": {
+        "avg_value": 1366,
+        "appearance_rate": 0.2425
+      },
+      "Human Heart": {
+        "avg_value": 1361,
+        "appearance_rate": 0.1215
+      },
+      "Gleamblossom": {
+        "avg_value": 1348,
+        "appearance_rate": 0.2096
+      },
+      "Salt Pile": {
+        "avg_value": 1347,
+        "appearance_rate": 0.2451
+      },
+      "Garlic": {
+        "avg_value": 1308,
+        "appearance_rate": 0.2406
+      },
+      "Hagraven Feathers": {
+        "avg_value": 1295,
+        "appearance_rate": 0.1691
+      },
+      "Abecean Longfin": {
+        "avg_value": 1286,
+        "appearance_rate": 0.2396
+      },
+      "Blue Mountain Flower": {
+        "avg_value": 1279,
+        "appearance_rate": 0.2445
+      },
+      "Moon Sugar": {
+        "avg_value": 1279,
+        "appearance_rate": 0.2126
+      },
+      "Luna Moth Wing": {
+        "avg_value": 1270,
+        "appearance_rate": 0.2006
+      },
+      "Boar Tusk": {
+        "avg_value": 1260,
+        "appearance_rate": 0.2094
+      },
+      "Wisp Wrappings": {
+        "avg_value": 1251,
+        "appearance_rate": 0.1728
+      },
+      "Human Flesh": {
+        "avg_value": 1234,
+        "appearance_rate": 0.1218
+      },
+      "Blue Butterfly Wing": {
+        "avg_value": 1227,
+        "appearance_rate": 0.2332
+      },
+      "Chaurus Hunter Antennae": {
+        "avg_value": 1222,
+        "appearance_rate": 0.1737
+      },
+      "Ancestor Moth Wing": {
+        "avg_value": 1213,
+        "appearance_rate": 0.1724
+      },
+      "Spider Egg": {
+        "avg_value": 1213,
+        "appearance_rate": 0.2412
+      },
+      "Aloe Vera Leaves": {
+        "avg_value": 1201,
+        "appearance_rate": 0.2069
+      },
+      "Bee": {
+        "avg_value": 1199,
+        "appearance_rate": 0.2378
+      },
+      "Ash Creep Cluster": {
+        "avg_value": 1195,
+        "appearance_rate": 0.2424
+      },
+      "Canis Root": {
+        "avg_value": 1185,
+        "appearance_rate": 0.2393
+      },
+      "Void Salts": {
+        "avg_value": 1176,
+        "appearance_rate": 0.1667
+      },
+      "Daedra Heart": {
+        "avg_value": 1152,
+        "appearance_rate": 0.1218
+      },
+      "Beehive Husk": {
+        "avg_value": 1145,
+        "appearance_rate": 0.2431
+      },
+      "Vampire Dust": {
+        "avg_value": 1145,
+        "appearance_rate": 0.1738
+      },
+      "Spriggan Sap": {
+        "avg_value": 1126,
+        "appearance_rate": 0.1689
+      },
+      "Wheat": {
+        "avg_value": 1117,
+        "appearance_rate": 0.2426
+      },
+      "Scaly Pholiota": {
+        "avg_value": 1102,
+        "appearance_rate": 0.2365
+      },
+      "Nirnroot": {
+        "avg_value": 1100,
+        "appearance_rate": 0.1745
+      },
+      "Thistle Branch": {
+        "avg_value": 1095,
+        "appearance_rate": 0.2396
+      },
+      "Snowberries": {
+        "avg_value": 1087,
+        "appearance_rate": 0.235
+      },
+      "Briar Heart": {
+        "avg_value": 1066,
+        "appearance_rate": 0.1734
+      },
+      "Glowing Mushroom": {
+        "avg_value": 1032,
+        "appearance_rate": 0.2391
+      },
+      "Namira's Rot": {
+        "avg_value": 1025,
+        "appearance_rate": 0.1734
+      },
+      "Swamp Fungal Pod": {
+        "avg_value": 1013,
+        "appearance_rate": 0.2376
+      },
+      "Taproot": {
+        "avg_value": 1000,
+        "appearance_rate": 0.2003
+      },
+      "Slaughterfish Scales": {
+        "avg_value": 991,
+        "appearance_rate": 0.2387
+      },
+      "Frost Salts": {
+        "avg_value": 990,
+        "appearance_rate": 0.1737
+      },
+      "Pine Thrush Egg": {
+        "avg_value": 985,
+        "appearance_rate": 0.2427
+      },
+      "Powdered Mammoth Tusk": {
+        "avg_value": 983,
+        "appearance_rate": 0.206
+      },
+      "Bleeding Crown": {
+        "avg_value": 968,
+        "appearance_rate": 0.2006
+      },
+      "Hawk Feathers": {
+        "avg_value": 959,
+        "appearance_rate": 0.2018
+      },
+      "Dwarven Oil": {
+        "avg_value": 947,
+        "appearance_rate": 0.2048
+      },
+      "Small Antlers": {
+        "avg_value": 943,
+        "appearance_rate": 0.2318
+      },
+      "Fire Salts": {
+        "avg_value": 937,
+        "appearance_rate": 0.1693
+      },
+      "Emperor Parasol Moss": {
+        "avg_value": 926,
+        "appearance_rate": 0.2389
+      },
+      "Imp Stool": {
+        "avg_value": 913,
+        "appearance_rate": 0.2484
+      },
+      "Skeever Tail": {
+        "avg_value": 904,
+        "appearance_rate": 0.2425
+      },
+      "Jazbay Grapes": {
+        "avg_value": 848,
+        "appearance_rate": 0.2383
+      },
+      "Cyrodilic Spadetail": {
+        "avg_value": 829,
+        "appearance_rate": 0.2357
+      },
+      "Fly Amanita": {
+        "avg_value": 824,
+        "appearance_rate": 0.2385
+      },
+      "Sabre Cat Tooth": {
+        "avg_value": 820,
+        "appearance_rate": 0.207
+      },
+      "Ice Wraith Teeth": {
+        "avg_value": 814,
+        "appearance_rate": 0.166
+      },
+      "Ectoplasm": {
+        "avg_value": 791,
+        "appearance_rate": 0.1774
+      },
+      "Troll Fat": {
+        "avg_value": 762,
+        "appearance_rate": 0.2085
+      },
+      "Blue Dartwing": {
+        "avg_value": 747,
+        "appearance_rate": 0.2405
+      },
+      "Slaughterfish Egg": {
+        "avg_value": 744,
+        "appearance_rate": 0.2311
+      },
+      "Mora Tapinella": {
+        "avg_value": 734,
+        "appearance_rate": 0.2338
+      },
+      "Bone Meal": {
+        "avg_value": 718,
+        "appearance_rate": 0.2369
+      },
+      "Rock Warbler Egg": {
+        "avg_value": 713,
+        "appearance_rate": 0.2398
+      },
+      "Pearl": {
+        "avg_value": 693,
+        "appearance_rate": 0.2105
+      },
+      "Mudcrab Chitin": {
+        "avg_value": 689,
+        "appearance_rate": 0.2402
+      },
+      "Elves Ear": {
+        "avg_value": 663,
+        "appearance_rate": 0.2385
+      },
+      "Falmer Ear": {
+        "avg_value": 650,
+        "appearance_rate": 0.1692
+      },
+      "Dragon's Tongue": {
+        "avg_value": 645,
+        "appearance_rate": 0.1968
+      },
+      "Tundra Cotton": {
+        "avg_value": 643,
+        "appearance_rate": 0.2267
+      },
+      "Orange Dartwing": {
+        "avg_value": 590,
+        "appearance_rate": 0.2347
+      },
+      "Lavender": {
+        "avg_value": 571,
+        "appearance_rate": 0.2387
+      },
+      "Grass Pod": {
+        "avg_value": 560,
+        "appearance_rate": 0.2372
+      },
+      "Charred Skeever Hide": {
+        "avg_value": 540,
+        "appearance_rate": 0.2354
+      },
+      "Blisterwort": {
+        "avg_value": 532,
+        "appearance_rate": 0.2362
+      },
+      "Ash Hopper Jelly": {
+        "avg_value": 525,
+        "appearance_rate": 0.2083
+      },
+      "Honeycomb": {
+        "avg_value": 507,
+        "appearance_rate": 0.234
+      },
+      "Torchbug Thorax": {
+        "avg_value": 490,
+        "appearance_rate": 0.2403
+      },
+      "Spawn Ash": {
+        "avg_value": 483,
+        "appearance_rate": 0.1987
+      },
+      "Red Mountain Flower": {
+        "avg_value": 479,
+        "appearance_rate": 0.231
+      },
+      "Eye of Sabre Cat": {
+        "avg_value": 465,
+        "appearance_rate": 0.2071
+      },
+      "White Cap": {
+        "avg_value": 385,
+        "appearance_rate": 0.2338
+      },
+      "Hagraven Claw": {
+        "avg_value": 383,
+        "appearance_rate": 0.1577
+      },
+      "Felsaad Tern Feathers": {
+        "avg_value": 378,
+        "appearance_rate": 0.2049
+      },
+      "Butterfly Wing": {
+        "avg_value": 358,
+        "appearance_rate": 0.2288
+      },
+      "Scathecraw": {
+        "avg_value": 298,
+        "appearance_rate": 0.2303
+      }
+    },
+    "flat": {
+      "Frost Mirriam": {
+        "avg_value": 5957,
+        "appearance_rate": 0.2031
+      },
+      "Giant Lichen": {
+        "avg_value": 4423,
+        "appearance_rate": 0.2037
+      },
+      "Salmon Roe": {
+        "avg_value": 3218,
+        "appearance_rate": 0.1469
+      },
+      "Jarrin Root": {
+        "avg_value": 3156,
+        "appearance_rate": 0.0416
+      },
+      "Trama Root": {
+        "avg_value": 1915,
+        "appearance_rate": 0.2545
+      },
+      "River Betty": {
+        "avg_value": 1788,
+        "appearance_rate": 0.2089
+      },
+      "Poison Bloom": {
+        "avg_value": 1618,
+        "appearance_rate": 0.2047
+      },
+      "Hawk Beak": {
+        "avg_value": 1606,
+        "appearance_rate": 0.2093
+      },
+      "Burnt Spriggan Wood": {
+        "avg_value": 1581,
+        "appearance_rate": 0.1484
+      },
+      "Large Antlers": {
+        "avg_value": 1581,
+        "appearance_rate": 0.2021
+      },
+      "Giant's Toe": {
+        "avg_value": 1565,
+        "appearance_rate": 0.1494
+      },
+      "Histcarp": {
+        "avg_value": 1539,
+        "appearance_rate": 0.2612
+      },
+      "Ashen Grass Pod": {
+        "avg_value": 1505,
+        "appearance_rate": 0.2483
+      },
+      "Silverside Perch": {
+        "avg_value": 1499,
+        "appearance_rate": 0.2615
+      },
+      "Yellow Mountain Flower": {
+        "avg_value": 1488,
+        "appearance_rate": 0.2577
+      },
+      "Purple Mountain Flower": {
+        "avg_value": 1487,
+        "appearance_rate": 0.2575
+      },
+      "Netch Jelly": {
+        "avg_value": 1485,
+        "appearance_rate": 0.2072
+      },
+      "Glow Dust": {
+        "avg_value": 1466,
+        "appearance_rate": 0.2022
+      },
+      "Deathbell": {
+        "avg_value": 1439,
+        "appearance_rate": 0.2584
+      },
+      "Creep Cluster": {
+        "avg_value": 1422,
+        "appearance_rate": 0.2569
+      },
+      "Chicken Egg": {
+        "avg_value": 1421,
+        "appearance_rate": 0.2594
+      },
+      "Crimson Nirnroot": {
+        "avg_value": 1420,
+        "appearance_rate": 0.0826
+      },
+      "Bear Claws": {
+        "avg_value": 1410,
+        "appearance_rate": 0.25
+      },
+      "Hawk's Egg": {
+        "avg_value": 1389,
+        "appearance_rate": 0.1495
+      },
+      "Nordic Barnacle": {
+        "avg_value": 1389,
+        "appearance_rate": 0.2497
+      },
+      "Moon Sugar": {
+        "avg_value": 1385,
+        "appearance_rate": 0.2022
+      },
+      "Salt Pile": {
+        "avg_value": 1380,
+        "appearance_rate": 0.2479
+      },
+      "Small Pearl": {
+        "avg_value": 1377,
+        "appearance_rate": 0.2587
+      },
+      "Juniper Berries": {
+        "avg_value": 1370,
+        "appearance_rate": 0.2496
+      },
+      "Hanging Moss": {
+        "avg_value": 1368,
+        "appearance_rate": 0.2578
+      },
+      "Gleamblossom": {
+        "avg_value": 1356,
+        "appearance_rate": 0.2001
+      },
+      "Nightshade": {
+        "avg_value": 1341,
+        "appearance_rate": 0.2025
+      },
+      "Chaurus Eggs": {
+        "avg_value": 1316,
+        "appearance_rate": 0.2055
+      },
+      "Garlic": {
+        "avg_value": 1288,
+        "appearance_rate": 0.2526
+      },
+      "Human Heart": {
+        "avg_value": 1286,
+        "appearance_rate": 0.0804
+      },
+      "Human Flesh": {
+        "avg_value": 1266,
+        "appearance_rate": 0.0758
+      },
+      "Daedra Heart": {
+        "avg_value": 1258,
+        "appearance_rate": 0.0812
+      },
+      "Luna Moth Wing": {
+        "avg_value": 1251,
+        "appearance_rate": 0.2043
+      },
+      "Blue Mountain Flower": {
+        "avg_value": 1248,
+        "appearance_rate": 0.2592
+      },
+      "Wisp Wrappings": {
+        "avg_value": 1244,
+        "appearance_rate": 0.1433
+      },
+      "Boar Tusk": {
+        "avg_value": 1233,
+        "appearance_rate": 0.2049
+      },
+      "Abecean Longfin": {
+        "avg_value": 1200,
+        "appearance_rate": 0.2542
+      },
+      "Chaurus Hunter Antennae": {
+        "avg_value": 1197,
+        "appearance_rate": 0.1487
+      },
+      "Hagraven Feathers": {
+        "avg_value": 1183,
+        "appearance_rate": 0.1442
+      },
+      "Blue Butterfly Wing": {
+        "avg_value": 1172,
+        "appearance_rate": 0.2526
+      },
+      "Canis Root": {
+        "avg_value": 1160,
+        "appearance_rate": 0.2518
+      },
+      "Bee": {
+        "avg_value": 1159,
+        "appearance_rate": 0.2523
+      },
+      "Ancestor Moth Wing": {
+        "avg_value": 1154,
+        "appearance_rate": 0.1503
+      },
+      "Spider Egg": {
+        "avg_value": 1154,
+        "appearance_rate": 0.2513
+      },
+      "Scaly Pholiota": {
+        "avg_value": 1149,
+        "appearance_rate": 0.2506
+      },
+      "Ash Creep Cluster": {
+        "avg_value": 1145,
+        "appearance_rate": 0.2592
+      },
+      "Vampire Dust": {
+        "avg_value": 1143,
+        "appearance_rate": 0.1532
+      },
+      "Beehive Husk": {
+        "avg_value": 1140,
+        "appearance_rate": 0.2567
+      },
+      "Aloe Vera Leaves": {
+        "avg_value": 1138,
+        "appearance_rate": 0.2026
+      },
+      "Wheat": {
+        "avg_value": 1128,
+        "appearance_rate": 0.2493
+      },
+      "Thistle Branch": {
+        "avg_value": 1116,
+        "appearance_rate": 0.2556
+      },
+      "Void Salts": {
+        "avg_value": 1090,
+        "appearance_rate": 0.1487
+      },
+      "Briar Heart": {
+        "avg_value": 1059,
+        "appearance_rate": 0.1418
+      },
+      "Spriggan Sap": {
+        "avg_value": 1046,
+        "appearance_rate": 0.1478
+      },
+      "Snowberries": {
+        "avg_value": 1040,
+        "appearance_rate": 0.2532
+      },
+      "Namira's Rot": {
+        "avg_value": 1038,
+        "appearance_rate": 0.1447
+      },
+      "Nirnroot": {
+        "avg_value": 1024,
+        "appearance_rate": 0.1491
+      },
+      "Slaughterfish Scales": {
+        "avg_value": 987,
+        "appearance_rate": 0.2584
+      },
+      "Glowing Mushroom": {
+        "avg_value": 985,
+        "appearance_rate": 0.2497
+      },
+      "Swamp Fungal Pod": {
+        "avg_value": 981,
+        "appearance_rate": 0.2587
+      },
+      "Taproot": {
+        "avg_value": 979,
+        "appearance_rate": 0.1957
+      },
+      "Dwarven Oil": {
+        "avg_value": 971,
+        "appearance_rate": 0.1977
+      },
+      "Powdered Mammoth Tusk": {
+        "avg_value": 964,
+        "appearance_rate": 0.2001
+      },
+      "Frost Salts": {
+        "avg_value": 961,
+        "appearance_rate": 0.1456
+      },
+      "Pine Thrush Egg": {
+        "avg_value": 949,
+        "appearance_rate": 0.2599
+      },
+      "Hawk Feathers": {
+        "avg_value": 928,
+        "appearance_rate": 0.1933
+      },
+      "Small Antlers": {
+        "avg_value": 927,
+        "appearance_rate": 0.2484
+      },
+      "Emperor Parasol Moss": {
+        "avg_value": 910,
+        "appearance_rate": 0.2526
+      },
+      "Bleeding Crown": {
+        "avg_value": 907,
+        "appearance_rate": 0.2042
+      },
+      "Fire Salts": {
+        "avg_value": 895,
+        "appearance_rate": 0.1414
+      },
+      "Skeever Tail": {
+        "avg_value": 886,
+        "appearance_rate": 0.2541
+      },
+      "Jazbay Grapes": {
+        "avg_value": 884,
+        "appearance_rate": 0.2512
+      },
+      "Imp Stool": {
+        "avg_value": 871,
+        "appearance_rate": 0.251
+      },
+      "Fly Amanita": {
+        "avg_value": 834,
+        "appearance_rate": 0.2469
+      },
+      "Cyrodilic Spadetail": {
+        "avg_value": 825,
+        "appearance_rate": 0.258
+      },
+      "Ice Wraith Teeth": {
+        "avg_value": 794,
+        "appearance_rate": 0.1373
+      },
+      "Sabre Cat Tooth": {
+        "avg_value": 792,
+        "appearance_rate": 0.2115
+      },
+      "Mora Tapinella": {
+        "avg_value": 767,
+        "appearance_rate": 0.2462
+      },
+      "Slaughterfish Egg": {
+        "avg_value": 767,
+        "appearance_rate": 0.2485
+      },
+      "Troll Fat": {
+        "avg_value": 759,
+        "appearance_rate": 0.1964
+      },
+      "Blue Dartwing": {
+        "avg_value": 756,
+        "appearance_rate": 0.2472
+      },
+      "Ectoplasm": {
+        "avg_value": 753,
+        "appearance_rate": 0.1438
+      },
+      "Pearl": {
+        "avg_value": 729,
+        "appearance_rate": 0.2076
+      },
+      "Rock Warbler Egg": {
+        "avg_value": 721,
+        "appearance_rate": 0.2516
+      },
+      "Mudcrab Chitin": {
+        "avg_value": 714,
+        "appearance_rate": 0.2503
+      },
+      "Bone Meal": {
+        "avg_value": 678,
+        "appearance_rate": 0.256
+      },
+      "Dragon's Tongue": {
+        "avg_value": 676,
+        "appearance_rate": 0.1913
+      },
+      "Elves Ear": {
+        "avg_value": 670,
+        "appearance_rate": 0.253
+      },
+      "Falmer Ear": {
+        "avg_value": 654,
+        "appearance_rate": 0.1471
+      },
+      "Tundra Cotton": {
+        "avg_value": 598,
+        "appearance_rate": 0.2484
+      },
+      "Orange Dartwing": {
+        "avg_value": 576,
+        "appearance_rate": 0.258
+      },
+      "Grass Pod": {
+        "avg_value": 564,
+        "appearance_rate": 0.2477
+      },
+      "Lavender": {
+        "avg_value": 554,
+        "appearance_rate": 0.253
+      },
+      "Charred Skeever Hide": {
+        "avg_value": 552,
+        "appearance_rate": 0.2603
+      },
+      "Ash Hopper Jelly": {
+        "avg_value": 520,
+        "appearance_rate": 0.2038
+      },
+      "Honeycomb": {
+        "avg_value": 507,
+        "appearance_rate": 0.2596
+      },
+      "Spawn Ash": {
+        "avg_value": 499,
+        "appearance_rate": 0.1986
+      },
+      "Torchbug Thorax": {
+        "avg_value": 495,
+        "appearance_rate": 0.252
+      },
+      "Red Mountain Flower": {
+        "avg_value": 462,
+        "appearance_rate": 0.2471
+      },
+      "Blisterwort": {
+        "avg_value": 458,
+        "appearance_rate": 0.252
+      },
+      "Eye of Sabre Cat": {
+        "avg_value": 431,
+        "appearance_rate": 0.2094
+      },
+      "Felsaad Tern Feathers": {
+        "avg_value": 382,
+        "appearance_rate": 0.202
+      },
+      "Hagraven Claw": {
+        "avg_value": 380,
+        "appearance_rate": 0.1335
+      },
+      "White Cap": {
+        "avg_value": 366,
+        "appearance_rate": 0.2356
+      },
+      "Butterfly Wing": {
+        "avg_value": 328,
+        "appearance_rate": 0.2421
+      },
+      "Scathecraw": {
+        "avg_value": 269,
+        "appearance_rate": 0.2492
+      }
+    },
+    "normal": {
+      "Frost Mirriam": {
+        "avg_value": 6227,
+        "appearance_rate": 0.187
+      },
+      "Giant Lichen": {
+        "avg_value": 4491,
+        "appearance_rate": 0.1864
+      },
+      "Salmon Roe": {
+        "avg_value": 3423,
+        "appearance_rate": 0.095
+      },
+      "Jarrin Root": {
+        "avg_value": 2937,
+        "appearance_rate": 0.0068
+      },
+      "Trama Root": {
+        "avg_value": 1887,
+        "appearance_rate": 0.2821
+      },
+      "River Betty": {
+        "avg_value": 1682,
+        "appearance_rate": 0.1936
+      },
+      "Hawk Beak": {
+        "avg_value": 1621,
+        "appearance_rate": 0.1802
+      },
+      "Silverside Perch": {
+        "avg_value": 1615,
+        "appearance_rate": 0.2824
+      },
+      "Yellow Mountain Flower": {
+        "avg_value": 1574,
+        "appearance_rate": 0.288
+      },
+      "Giant's Toe": {
+        "avg_value": 1561,
+        "appearance_rate": 0.0946
+      },
+      "Poison Bloom": {
+        "avg_value": 1556,
+        "appearance_rate": 0.1834
+      },
+      "Large Antlers": {
+        "avg_value": 1547,
+        "appearance_rate": 0.1828
+      },
+      "Netch Jelly": {
+        "avg_value": 1480,
+        "appearance_rate": 0.1866
+      },
+      "Burnt Spriggan Wood": {
+        "avg_value": 1444,
+        "appearance_rate": 0.0947
+      },
+      "Ashen Grass Pod": {
+        "avg_value": 1429,
+        "appearance_rate": 0.2862
+      },
+      "Creep Cluster": {
+        "avg_value": 1427,
+        "appearance_rate": 0.2847
+      },
+      "Glow Dust": {
+        "avg_value": 1415,
+        "appearance_rate": 0.1903
+      },
+      "Purple Mountain Flower": {
+        "avg_value": 1405,
+        "appearance_rate": 0.2946
+      },
+      "Deathbell": {
+        "avg_value": 1378,
+        "appearance_rate": 0.2808
+      },
+      "Hanging Moss": {
+        "avg_value": 1358,
+        "appearance_rate": 0.2874
+      },
+      "Histcarp": {
+        "avg_value": 1349,
+        "appearance_rate": 0.2892
+      },
+      "Crimson Nirnroot": {
+        "avg_value": 1346,
+        "appearance_rate": 0.0286
+      },
+      "Bear Claws": {
+        "avg_value": 1338,
+        "appearance_rate": 0.2808
+      },
+      "Salt Pile": {
+        "avg_value": 1338,
+        "appearance_rate": 0.2916
+      },
+      "Small Pearl": {
+        "avg_value": 1328,
+        "appearance_rate": 0.2883
+      },
+      "Juniper Berries": {
+        "avg_value": 1308,
+        "appearance_rate": 0.2894
+      },
+      "Gleamblossom": {
+        "avg_value": 1301,
+        "appearance_rate": 0.1834
+      },
+      "Chaurus Eggs": {
+        "avg_value": 1295,
+        "appearance_rate": 0.1783
+      },
+      "Garlic": {
+        "avg_value": 1276,
+        "appearance_rate": 0.2916
+      },
+      "Human Heart": {
+        "avg_value": 1272,
+        "appearance_rate": 0.0236
+      },
+      "Human Flesh": {
+        "avg_value": 1249,
+        "appearance_rate": 0.026
+      },
+      "Hawk's Egg": {
+        "avg_value": 1242,
+        "appearance_rate": 0.0963
+      },
+      "Wisp Wrappings": {
+        "avg_value": 1237,
+        "appearance_rate": 0.0988
+      },
+      "Nordic Barnacle": {
+        "avg_value": 1233,
+        "appearance_rate": 0.2823
+      },
+      "Nightshade": {
+        "avg_value": 1228,
+        "appearance_rate": 0.1814
+      },
+      "Moon Sugar": {
+        "avg_value": 1223,
+        "appearance_rate": 0.1837
+      },
+      "Blue Mountain Flower": {
+        "avg_value": 1210,
+        "appearance_rate": 0.2837
+      },
+      "Boar Tusk": {
+        "avg_value": 1209,
+        "appearance_rate": 0.1848
+      },
+      "Luna Moth Wing": {
+        "avg_value": 1205,
+        "appearance_rate": 0.1748
+      },
+      "Chicken Egg": {
+        "avg_value": 1199,
+        "appearance_rate": 0.2784
+      },
+      "Abecean Longfin": {
+        "avg_value": 1189,
+        "appearance_rate": 0.2829
+      },
+      "Scaly Pholiota": {
+        "avg_value": 1161,
+        "appearance_rate": 0.2857
+      },
+      "Chaurus Hunter Antennae": {
+        "avg_value": 1160,
+        "appearance_rate": 0.0941
+      },
+      "Canis Root": {
+        "avg_value": 1151,
+        "appearance_rate": 0.2881
+      },
+      "Wheat": {
+        "avg_value": 1150,
+        "appearance_rate": 0.2929
+      },
+      "Ancestor Moth Wing": {
+        "avg_value": 1134,
+        "appearance_rate": 0.096
+      },
+      "Beehive Husk": {
+        "avg_value": 1124,
+        "appearance_rate": 0.2867
+      },
+      "Spider Egg": {
+        "avg_value": 1124,
+        "appearance_rate": 0.2731
+      },
+      "Hagraven Feathers": {
+        "avg_value": 1119,
+        "appearance_rate": 0.0927
+      },
+      "Thistle Branch": {
+        "avg_value": 1116,
+        "appearance_rate": 0.2906
+      },
+      "Bee": {
+        "avg_value": 1105,
+        "appearance_rate": 0.2859
+      },
+      "Blue Butterfly Wing": {
+        "avg_value": 1088,
+        "appearance_rate": 0.2977
+      },
+      "Ash Creep Cluster": {
+        "avg_value": 1079,
+        "appearance_rate": 0.2892
+      },
+      "Briar Heart": {
+        "avg_value": 1067,
+        "appearance_rate": 0.0993
+      },
+      "Daedra Heart": {
+        "avg_value": 1065,
+        "appearance_rate": 0.0263
+      },
+      "Vampire Dust": {
+        "avg_value": 1048,
+        "appearance_rate": 0.0992
+      },
+      "Aloe Vera Leaves": {
+        "avg_value": 1028,
+        "appearance_rate": 0.1883
+      },
+      "Namira's Rot": {
+        "avg_value": 999,
+        "appearance_rate": 0.0973
+      },
+      "Void Salts": {
+        "avg_value": 999,
+        "appearance_rate": 0.0985
+      },
+      "Glowing Mushroom": {
+        "avg_value": 986,
+        "appearance_rate": 0.2869
+      },
+      "Snowberries": {
+        "avg_value": 986,
+        "appearance_rate": 0.286
+      },
+      "Hawk Feathers": {
+        "avg_value": 985,
+        "appearance_rate": 0.1729
+      },
+      "Spriggan Sap": {
+        "avg_value": 975,
+        "appearance_rate": 0.0921
+      },
+      "Swamp Fungal Pod": {
+        "avg_value": 966,
+        "appearance_rate": 0.2822
+      },
+      "Pine Thrush Egg": {
+        "avg_value": 943,
+        "appearance_rate": 0.2898
+      },
+      "Slaughterfish Scales": {
+        "avg_value": 943,
+        "appearance_rate": 0.2782
+      },
+      "Taproot": {
+        "avg_value": 942,
+        "appearance_rate": 0.1849
+      },
+      "Dwarven Oil": {
+        "avg_value": 925,
+        "appearance_rate": 0.1767
+      },
+      "Nirnroot": {
+        "avg_value": 920,
+        "appearance_rate": 0.0946
+      },
+      "Frost Salts": {
+        "avg_value": 905,
+        "appearance_rate": 0.0977
+      },
+      "Powdered Mammoth Tusk": {
+        "avg_value": 877,
+        "appearance_rate": 0.1799
+      },
+      "Imp Stool": {
+        "avg_value": 873,
+        "appearance_rate": 0.2956
+      },
+      "Fire Salts": {
+        "avg_value": 869,
+        "appearance_rate": 0.0961
+      },
+      "Jazbay Grapes": {
+        "avg_value": 866,
+        "appearance_rate": 0.2805
+      },
+      "Bleeding Crown": {
+        "avg_value": 859,
+        "appearance_rate": 0.1748
+      },
+      "Cyrodilic Spadetail": {
+        "avg_value": 858,
+        "appearance_rate": 0.2824
+      },
+      "Small Antlers": {
+        "avg_value": 852,
+        "appearance_rate": 0.2716
+      },
+      "Emperor Parasol Moss": {
+        "avg_value": 846,
+        "appearance_rate": 0.2815
+      },
+      "Skeever Tail": {
+        "avg_value": 832,
+        "appearance_rate": 0.2868
+      },
+      "Fly Amanita": {
+        "avg_value": 815,
+        "appearance_rate": 0.2775
+      },
+      "Slaughterfish Egg": {
+        "avg_value": 809,
+        "appearance_rate": 0.2953
+      },
+      "Mora Tapinella": {
+        "avg_value": 786,
+        "appearance_rate": 0.2789
+      },
+      "Ice Wraith Teeth": {
+        "avg_value": 766,
+        "appearance_rate": 0.0908
+      },
+      "Blue Dartwing": {
+        "avg_value": 742,
+        "appearance_rate": 0.2876
+      },
+      "Mudcrab Chitin": {
+        "avg_value": 734,
+        "appearance_rate": 0.293
+      },
+      "Troll Fat": {
+        "avg_value": 734,
+        "appearance_rate": 0.1774
+      },
+      "Sabre Cat Tooth": {
+        "avg_value": 730,
+        "appearance_rate": 0.1805
+      },
+      "Ectoplasm": {
+        "avg_value": 701,
+        "appearance_rate": 0.0984
+      },
+      "Rock Warbler Egg": {
+        "avg_value": 699,
+        "appearance_rate": 0.2828
+      },
+      "Bone Meal": {
+        "avg_value": 684,
+        "appearance_rate": 0.2863
+      },
+      "Dragon's Tongue": {
+        "avg_value": 680,
+        "appearance_rate": 0.183
+      },
+      "Pearl": {
+        "avg_value": 676,
+        "appearance_rate": 0.1877
+      },
+      "Elves Ear": {
+        "avg_value": 672,
+        "appearance_rate": 0.2773
+      },
+      "Orange Dartwing": {
+        "avg_value": 648,
+        "appearance_rate": 0.2866
+      },
+      "Falmer Ear": {
+        "avg_value": 600,
+        "appearance_rate": 0.0958
+      },
+      "Charred Skeever Hide": {
+        "avg_value": 591,
+        "appearance_rate": 0.2824
+      },
+      "Tundra Cotton": {
+        "avg_value": 574,
+        "appearance_rate": 0.2689
+      },
+      "Grass Pod": {
+        "avg_value": 562,
+        "appearance_rate": 0.284
+      },
+      "Lavender": {
+        "avg_value": 541,
+        "appearance_rate": 0.2789
+      },
+      "Ash Hopper Jelly": {
+        "avg_value": 538,
+        "appearance_rate": 0.1839
+      },
+      "Honeycomb": {
+        "avg_value": 509,
+        "appearance_rate": 0.2827
+      },
+      "Torchbug Thorax": {
+        "avg_value": 498,
+        "appearance_rate": 0.2876
+      },
+      "Spawn Ash": {
+        "avg_value": 484,
+        "appearance_rate": 0.1825
+      },
+      "Eye of Sabre Cat": {
+        "avg_value": 449,
+        "appearance_rate": 0.1829
+      },
+      "Red Mountain Flower": {
+        "avg_value": 431,
+        "appearance_rate": 0.2847
+      },
+      "Blisterwort": {
+        "avg_value": 389,
+        "appearance_rate": 0.2816
+      },
+      "Hagraven Claw": {
+        "avg_value": 369,
+        "appearance_rate": 0.0883
+      },
+      "White Cap": {
+        "avg_value": 361,
+        "appearance_rate": 0.2715
+      },
+      "Felsaad Tern Feathers": {
+        "avg_value": 354,
+        "appearance_rate": 0.1776
+      },
+      "Butterfly Wing": {
+        "avg_value": 316,
+        "appearance_rate": 0.283
+      },
+      "Scathecraw": {
+        "avg_value": 285,
+        "appearance_rate": 0.2807
+      }
+    },
+    "steep": {
+      "Frost Mirriam": {
+        "avg_value": 6328,
+        "appearance_rate": 0.1378
+      },
+      "Giant Lichen": {
+        "avg_value": 4665,
+        "appearance_rate": 0.1375
+      },
+      "Salmon Roe": {
+        "avg_value": 3540,
+        "appearance_rate": 0.0355
+      },
+      "Jarrin Root": {
+        "avg_value": 2179,
+        "appearance_rate": 0.0002
+      },
+      "River Betty": {
+        "avg_value": 1696,
+        "appearance_rate": 0.1367
+      },
+      "Trama Root": {
+        "avg_value": 1616,
+        "appearance_rate": 0.3362
+      },
+      "Large Antlers": {
+        "avg_value": 1513,
+        "appearance_rate": 0.1287
+      },
+      "Poison Bloom": {
+        "avg_value": 1494,
+        "appearance_rate": 0.1298
+      },
+      "Hawk Beak": {
+        "avg_value": 1466,
+        "appearance_rate": 0.1396
+      },
+      "Yellow Mountain Flower": {
+        "avg_value": 1454,
+        "appearance_rate": 0.3412
+      },
+      "Burnt Spriggan Wood": {
+        "avg_value": 1446,
+        "appearance_rate": 0.0379
+      },
+      "Glow Dust": {
+        "avg_value": 1382,
+        "appearance_rate": 0.1339
+      },
+      "Netch Jelly": {
+        "avg_value": 1366,
+        "appearance_rate": 0.1388
+      },
+      "Giant's Toe": {
+        "avg_value": 1360,
+        "appearance_rate": 0.0362
+      },
+      "Silverside Perch": {
+        "avg_value": 1350,
+        "appearance_rate": 0.335
+      },
+      "Bear Claws": {
+        "avg_value": 1347,
+        "appearance_rate": 0.3327
+      },
+      "Ashen Grass Pod": {
+        "avg_value": 1346,
+        "appearance_rate": 0.3313
+      },
+      "Hanging Moss": {
+        "avg_value": 1332,
+        "appearance_rate": 0.3299
+      },
+      "Human Flesh": {
+        "avg_value": 1297,
+        "appearance_rate": 0.0023
+      },
+      "Deathbell": {
+        "avg_value": 1294,
+        "appearance_rate": 0.3374
+      },
+      "Creep Cluster": {
+        "avg_value": 1287,
+        "appearance_rate": 0.3357
+      },
+      "Salt Pile": {
+        "avg_value": 1277,
+        "appearance_rate": 0.3319
+      },
+      "Small Pearl": {
+        "avg_value": 1271,
+        "appearance_rate": 0.3357
+      },
+      "Gleamblossom": {
+        "avg_value": 1268,
+        "appearance_rate": 0.1319
+      },
+      "Purple Mountain Flower": {
+        "avg_value": 1237,
+        "appearance_rate": 0.336
+      },
+      "Juniper Berries": {
+        "avg_value": 1214,
+        "appearance_rate": 0.3243
+      },
+      "Blue Mountain Flower": {
+        "avg_value": 1201,
+        "appearance_rate": 0.3313
+      },
+      "Human Heart": {
+        "avg_value": 1201,
+        "appearance_rate": 0.002
+      },
+      "Garlic": {
+        "avg_value": 1185,
+        "appearance_rate": 0.3313
+      },
+      "Nightshade": {
+        "avg_value": 1181,
+        "appearance_rate": 0.1382
+      },
+      "Boar Tusk": {
+        "avg_value": 1180,
+        "appearance_rate": 0.1361
+      },
+      "Canis Root": {
+        "avg_value": 1167,
+        "appearance_rate": 0.3304
+      },
+      "Crimson Nirnroot": {
+        "avg_value": 1136,
+        "appearance_rate": 0.0034
+      },
+      "Histcarp": {
+        "avg_value": 1133,
+        "appearance_rate": 0.3361
+      },
+      "Wisp Wrappings": {
+        "avg_value": 1133,
+        "appearance_rate": 0.0338
+      },
+      "Hawk's Egg": {
+        "avg_value": 1129,
+        "appearance_rate": 0.0358
+      },
+      "Chaurus Hunter Antennae": {
+        "avg_value": 1109,
+        "appearance_rate": 0.0354
+      },
+      "Spider Egg": {
+        "avg_value": 1106,
+        "appearance_rate": 0.3283
+      },
+      "Briar Heart": {
+        "avg_value": 1104,
+        "appearance_rate": 0.0343
+      },
+      "Wheat": {
+        "avg_value": 1085,
+        "appearance_rate": 0.338
+      },
+      "Luna Moth Wing": {
+        "avg_value": 1082,
+        "appearance_rate": 0.1334
+      },
+      "Scaly Pholiota": {
+        "avg_value": 1080,
+        "appearance_rate": 0.328
+      },
+      "Abecean Longfin": {
+        "avg_value": 1069,
+        "appearance_rate": 0.3209
+      },
+      "Chaurus Eggs": {
+        "avg_value": 1060,
+        "appearance_rate": 0.1357
+      },
+      "Moon Sugar": {
+        "avg_value": 1058,
+        "appearance_rate": 0.1315
+      },
+      "Beehive Husk": {
+        "avg_value": 1049,
+        "appearance_rate": 0.3371
+      },
+      "Blue Butterfly Wing": {
+        "avg_value": 1042,
+        "appearance_rate": 0.3338
+      },
+      "Ancestor Moth Wing": {
+        "avg_value": 1037,
+        "appearance_rate": 0.0364
+      },
+      "Hagraven Feathers": {
+        "avg_value": 1034,
+        "appearance_rate": 0.0321
+      },
+      "Chicken Egg": {
+        "avg_value": 1026,
+        "appearance_rate": 0.3233
+      },
+      "Nordic Barnacle": {
+        "avg_value": 1023,
+        "appearance_rate": 0.3264
+      },
+      "Thistle Branch": {
+        "avg_value": 1007,
+        "appearance_rate": 0.3282
+      },
+      "Vampire Dust": {
+        "avg_value": 1003,
+        "appearance_rate": 0.0355
+      },
+      "Bee": {
+        "avg_value": 992,
+        "appearance_rate": 0.3258
+      },
+      "Namira's Rot": {
+        "avg_value": 964,
+        "appearance_rate": 0.0378
+      },
+      "Ash Creep Cluster": {
+        "avg_value": 955,
+        "appearance_rate": 0.3379
+      },
+      "Swamp Fungal Pod": {
+        "avg_value": 951,
+        "appearance_rate": 0.337
+      },
+      "Spriggan Sap": {
+        "avg_value": 945,
+        "appearance_rate": 0.0341
+      },
+      "Aloe Vera Leaves": {
+        "avg_value": 943,
+        "appearance_rate": 0.1377
+      },
+      "Snowberries": {
+        "avg_value": 932,
+        "appearance_rate": 0.3266
+      },
+      "Dwarven Oil": {
+        "avg_value": 898,
+        "appearance_rate": 0.1302
+      },
+      "Hawk Feathers": {
+        "avg_value": 891,
+        "appearance_rate": 0.1288
+      },
+      "Daedra Heart": {
+        "avg_value": 883,
+        "appearance_rate": 0.0021
+      },
+      "Glowing Mushroom": {
+        "avg_value": 883,
+        "appearance_rate": 0.333
+      },
+      "Taproot": {
+        "avg_value": 863,
+        "appearance_rate": 0.1348
+      },
+      "Void Salts": {
+        "avg_value": 861,
+        "appearance_rate": 0.0337
+      },
+      "Powdered Mammoth Tusk": {
+        "avg_value": 847,
+        "appearance_rate": 0.131
+      },
+      "Slaughterfish Scales": {
+        "avg_value": 843,
+        "appearance_rate": 0.3262
+      },
+      "Slaughterfish Egg": {
+        "avg_value": 841,
+        "appearance_rate": 0.3304
+      },
+      "Imp Stool": {
+        "avg_value": 840,
+        "appearance_rate": 0.3276
+      },
+      "Cyrodilic Spadetail": {
+        "avg_value": 835,
+        "appearance_rate": 0.3215
+      },
+      "Emperor Parasol Moss": {
+        "avg_value": 829,
+        "appearance_rate": 0.3345
+      },
+      "Pine Thrush Egg": {
+        "avg_value": 828,
+        "appearance_rate": 0.3371
+      },
+      "Nirnroot": {
+        "avg_value": 827,
+        "appearance_rate": 0.0349
+      },
+      "Skeever Tail": {
+        "avg_value": 808,
+        "appearance_rate": 0.3287
+      },
+      "Fly Amanita": {
+        "avg_value": 804,
+        "appearance_rate": 0.3233
+      },
+      "Small Antlers": {
+        "avg_value": 802,
+        "appearance_rate": 0.331
+      },
+      "Fire Salts": {
+        "avg_value": 795,
+        "appearance_rate": 0.0381
+      },
+      "Mora Tapinella": {
+        "avg_value": 793,
+        "appearance_rate": 0.3176
+      },
+      "Jazbay Grapes": {
+        "avg_value": 785,
+        "appearance_rate": 0.3305
+      },
+      "Frost Salts": {
+        "avg_value": 763,
+        "appearance_rate": 0.031
+      },
+      "Bleeding Crown": {
+        "avg_value": 752,
+        "appearance_rate": 0.1352
+      },
+      "Rock Warbler Egg": {
+        "avg_value": 749,
+        "appearance_rate": 0.3337
+      },
+      "Mudcrab Chitin": {
+        "avg_value": 745,
+        "appearance_rate": 0.3324
+      },
+      "Troll Fat": {
+        "avg_value": 744,
+        "appearance_rate": 0.1354
+      },
+      "Blue Dartwing": {
+        "avg_value": 706,
+        "appearance_rate": 0.3363
+      },
+      "Ice Wraith Teeth": {
+        "avg_value": 701,
+        "appearance_rate": 0.0338
+      },
+      "Dragon's Tongue": {
+        "avg_value": 700,
+        "appearance_rate": 0.1378
+      },
+      "Elves Ear": {
+        "avg_value": 699,
+        "appearance_rate": 0.3275
+      },
+      "Bone Meal": {
+        "avg_value": 680,
+        "appearance_rate": 0.3361
+      },
+      "Sabre Cat Tooth": {
+        "avg_value": 671,
+        "appearance_rate": 0.1354
+      },
+      "Pearl": {
+        "avg_value": 670,
+        "appearance_rate": 0.1341
+      },
+      "Orange Dartwing": {
+        "avg_value": 638,
+        "appearance_rate": 0.3347
+      },
+      "Ectoplasm": {
+        "avg_value": 628,
+        "appearance_rate": 0.0379
+      },
+      "Falmer Ear": {
+        "avg_value": 618,
+        "appearance_rate": 0.0376
+      },
+      "Charred Skeever Hide": {
+        "avg_value": 596,
+        "appearance_rate": 0.3355
+      },
+      "Grass Pod": {
+        "avg_value": 548,
+        "appearance_rate": 0.3343
+      },
+      "Ash Hopper Jelly": {
+        "avg_value": 539,
+        "appearance_rate": 0.1346
+      },
+      "Honeycomb": {
+        "avg_value": 517,
+        "appearance_rate": 0.339
+      },
+      "Lavender": {
+        "avg_value": 511,
+        "appearance_rate": 0.3215
+      },
+      "Tundra Cotton": {
+        "avg_value": 499,
+        "appearance_rate": 0.3183
+      },
+      "Torchbug Thorax": {
+        "avg_value": 488,
+        "appearance_rate": 0.333
+      },
+      "Spawn Ash": {
+        "avg_value": 464,
+        "appearance_rate": 0.1304
+      },
+      "Eye of Sabre Cat": {
+        "avg_value": 412,
+        "appearance_rate": 0.1332
+      },
+      "Red Mountain Flower": {
+        "avg_value": 387,
+        "appearance_rate": 0.3292
+      },
+      "Felsaad Tern Feathers": {
+        "avg_value": 354,
+        "appearance_rate": 0.1321
+      },
+      "Hagraven Claw": {
+        "avg_value": 341,
+        "appearance_rate": 0.0341
+      },
+      "Blisterwort": {
+        "avg_value": 325,
+        "appearance_rate": 0.323
+      },
+      "White Cap": {
+        "avg_value": 324,
+        "appearance_rate": 0.3102
+      },
+      "Butterfly Wing": {
+        "avg_value": 306,
+        "appearance_rate": 0.3149
+      },
+      "Scathecraw": {
+        "avg_value": 301,
+        "appearance_rate": 0.3303
+      }
+    },
+    "very_steep": {
+      "Frost Mirriam": {
+        "avg_value": 6515,
+        "appearance_rate": 0.0973
+      },
+      "Giant Lichen": {
+        "avg_value": 4837,
+        "appearance_rate": 0.0944
+      },
+      "Salmon Roe": {
+        "avg_value": 3989,
+        "appearance_rate": 0.0106
+      },
+      "Crimson Nirnroot": {
+        "avg_value": 1713,
+        "appearance_rate": 0.0003
+      },
+      "River Betty": {
+        "avg_value": 1608,
+        "appearance_rate": 0.0904
+      },
+      "Burnt Spriggan Wood": {
+        "avg_value": 1496,
+        "appearance_rate": 0.014
+      },
+      "Trama Root": {
+        "avg_value": 1475,
+        "appearance_rate": 0.3535
+      },
+      "Large Antlers": {
+        "avg_value": 1437,
+        "appearance_rate": 0.0933
+      },
+      "Yellow Mountain Flower": {
+        "avg_value": 1410,
+        "appearance_rate": 0.3648
+      },
+      "Giant's Toe": {
+        "avg_value": 1394,
+        "appearance_rate": 0.0116
+      },
+      "Glow Dust": {
+        "avg_value": 1391,
+        "appearance_rate": 0.0919
+      },
+      "Poison Bloom": {
+        "avg_value": 1360,
+        "appearance_rate": 0.095
+      },
+      "Hanging Moss": {
+        "avg_value": 1326,
+        "appearance_rate": 0.368
+      },
+      "Netch Jelly": {
+        "avg_value": 1304,
+        "appearance_rate": 0.0883
+      },
+      "Bear Claws": {
+        "avg_value": 1300,
+        "appearance_rate": 0.3598
+      },
+      "Gleamblossom": {
+        "avg_value": 1291,
+        "appearance_rate": 0.0889
+      },
+      "Hawk Beak": {
+        "avg_value": 1286,
+        "appearance_rate": 0.0929
+      },
+      "Salt Pile": {
+        "avg_value": 1237,
+        "appearance_rate": 0.361
+      },
+      "Creep Cluster": {
+        "avg_value": 1235,
+        "appearance_rate": 0.3649
+      },
+      "Small Pearl": {
+        "avg_value": 1235,
+        "appearance_rate": 0.3551
+      },
+      "Canis Root": {
+        "avg_value": 1234,
+        "appearance_rate": 0.3633
+      },
+      "Ashen Grass Pod": {
+        "avg_value": 1205,
+        "appearance_rate": 0.3669
+      },
+      "Nightshade": {
+        "avg_value": 1185,
+        "appearance_rate": 0.0946
+      },
+      "Silverside Perch": {
+        "avg_value": 1183,
+        "appearance_rate": 0.3719
+      },
+      "Blue Mountain Flower": {
+        "avg_value": 1168,
+        "appearance_rate": 0.3643
+      },
+      "Boar Tusk": {
+        "avg_value": 1155,
+        "appearance_rate": 0.0913
+      },
+      "Chaurus Hunter Antennae": {
+        "avg_value": 1137,
+        "appearance_rate": 0.0113
+      },
+      "Juniper Berries": {
+        "avg_value": 1123,
+        "appearance_rate": 0.3691
+      },
+      "Garlic": {
+        "avg_value": 1120,
+        "appearance_rate": 0.3584
+      },
+      "Spider Egg": {
+        "avg_value": 1098,
+        "appearance_rate": 0.3619
+      },
+      "Scaly Pholiota": {
+        "avg_value": 1094,
+        "appearance_rate": 0.3572
+      },
+      "Purple Mountain Flower": {
+        "avg_value": 1082,
+        "appearance_rate": 0.3674
+      },
+      "Deathbell": {
+        "avg_value": 1079,
+        "appearance_rate": 0.3684
+      },
+      "Histcarp": {
+        "avg_value": 1078,
+        "appearance_rate": 0.3636
+      },
+      "Wisp Wrappings": {
+        "avg_value": 1077,
+        "appearance_rate": 0.0138
+      },
+      "Wheat": {
+        "avg_value": 1071,
+        "appearance_rate": 0.3592
+      },
+      "Ancestor Moth Wing": {
+        "avg_value": 1063,
+        "appearance_rate": 0.0132
+      },
+      "Luna Moth Wing": {
+        "avg_value": 1058,
+        "appearance_rate": 0.095
+      },
+      "Blue Butterfly Wing": {
+        "avg_value": 1042,
+        "appearance_rate": 0.3527
+      },
+      "Hawk's Egg": {
+        "avg_value": 1020,
+        "appearance_rate": 0.0113
+      },
+      "Abecean Longfin": {
+        "avg_value": 1009,
+        "appearance_rate": 0.3528
+      },
+      "Nordic Barnacle": {
+        "avg_value": 1006,
+        "appearance_rate": 0.3564
+      },
+      "Briar Heart": {
+        "avg_value": 991,
+        "appearance_rate": 0.0131
+      },
+      "Beehive Husk": {
+        "avg_value": 974,
+        "appearance_rate": 0.3655
+      },
+      "Vampire Dust": {
+        "avg_value": 969,
+        "appearance_rate": 0.0118
+      },
+      "Bee": {
+        "avg_value": 945,
+        "appearance_rate": 0.3654
+      },
+      "Moon Sugar": {
+        "avg_value": 934,
+        "appearance_rate": 0.0905
+      },
+      "Chicken Egg": {
+        "avg_value": 916,
+        "appearance_rate": 0.3628
+      },
+      "Swamp Fungal Pod": {
+        "avg_value": 916,
+        "appearance_rate": 0.3705
+      },
+      "Hagraven Feathers": {
+        "avg_value": 914,
+        "appearance_rate": 0.0128
+      },
+      "Thistle Branch": {
+        "avg_value": 911,
+        "appearance_rate": 0.3629
+      },
+      "Chaurus Eggs": {
+        "avg_value": 907,
+        "appearance_rate": 0.0865
+      },
+      "Daedra Heart": {
+        "avg_value": 891,
+        "appearance_rate": 0.0002
+      },
+      "Taproot": {
+        "avg_value": 882,
+        "appearance_rate": 0.091
+      },
+      "Snowberries": {
+        "avg_value": 879,
+        "appearance_rate": 0.358
+      },
+      "Dwarven Oil": {
+        "avg_value": 873,
+        "appearance_rate": 0.088
+      },
+      "Slaughterfish Egg": {
+        "avg_value": 872,
+        "appearance_rate": 0.3581
+      },
+      "Namira's Rot": {
+        "avg_value": 871,
+        "appearance_rate": 0.0113
+      },
+      "Ash Creep Cluster": {
+        "avg_value": 867,
+        "appearance_rate": 0.3566
+      },
+      "Hawk Feathers": {
+        "avg_value": 859,
+        "appearance_rate": 0.0892
+      },
+      "Slaughterfish Scales": {
+        "avg_value": 857,
+        "appearance_rate": 0.3605
+      },
+      "Imp Stool": {
+        "avg_value": 841,
+        "appearance_rate": 0.3636
+      },
+      "Glowing Mushroom": {
+        "avg_value": 836,
+        "appearance_rate": 0.3553
+      },
+      "Fire Salts": {
+        "avg_value": 825,
+        "appearance_rate": 0.0102
+      },
+      "Spriggan Sap": {
+        "avg_value": 825,
+        "appearance_rate": 0.0112
+      },
+      "Aloe Vera Leaves": {
+        "avg_value": 820,
+        "appearance_rate": 0.0846
+      },
+      "Cyrodilic Spadetail": {
+        "avg_value": 808,
+        "appearance_rate": 0.3577
+      },
+      "Emperor Parasol Moss": {
+        "avg_value": 799,
+        "appearance_rate": 0.3595
+      },
+      "Mora Tapinella": {
+        "avg_value": 795,
+        "appearance_rate": 0.3567
+      },
+      "Fly Amanita": {
+        "avg_value": 789,
+        "appearance_rate": 0.3498
+      },
+      "Rock Warbler Egg": {
+        "avg_value": 780,
+        "appearance_rate": 0.3558
+      },
+      "Powdered Mammoth Tusk": {
+        "avg_value": 779,
+        "appearance_rate": 0.0921
+      },
+      "Nirnroot": {
+        "avg_value": 775,
+        "appearance_rate": 0.012
+      },
+      "Jazbay Grapes": {
+        "avg_value": 764,
+        "appearance_rate": 0.3583
+      },
+      "Small Antlers": {
+        "avg_value": 762,
+        "appearance_rate": 0.3501
+      },
+      "Mudcrab Chitin": {
+        "avg_value": 748,
+        "appearance_rate": 0.3588
+      },
+      "Skeever Tail": {
+        "avg_value": 748,
+        "appearance_rate": 0.3685
+      },
+      "Pine Thrush Egg": {
+        "avg_value": 720,
+        "appearance_rate": 0.362
+      },
+      "Troll Fat": {
+        "avg_value": 718,
+        "appearance_rate": 0.0922
+      },
+      "Dragon's Tongue": {
+        "avg_value": 711,
+        "appearance_rate": 0.0889
+      },
+      "Ice Wraith Teeth": {
+        "avg_value": 711,
+        "appearance_rate": 0.0113
+      },
+      "Elves Ear": {
+        "avg_value": 700,
+        "appearance_rate": 0.367
+      },
+      "Bone Meal": {
+        "avg_value": 686,
+        "appearance_rate": 0.3646
+      },
+      "Blue Dartwing": {
+        "avg_value": 668,
+        "appearance_rate": 0.3575
+      },
+      "Orange Dartwing": {
+        "avg_value": 652,
+        "appearance_rate": 0.3633
+      },
+      "Pearl": {
+        "avg_value": 649,
+        "appearance_rate": 0.0942
+      },
+      "Bleeding Crown": {
+        "avg_value": 644,
+        "appearance_rate": 0.0932
+      },
+      "Void Salts": {
+        "avg_value": 606,
+        "appearance_rate": 0.011
+      },
+      "Ectoplasm": {
+        "avg_value": 605,
+        "appearance_rate": 0.0132
+      },
+      "Charred Skeever Hide": {
+        "avg_value": 601,
+        "appearance_rate": 0.3606
+      },
+      "Falmer Ear": {
+        "avg_value": 596,
+        "appearance_rate": 0.012
+      },
+      "Frost Salts": {
+        "avg_value": 593,
+        "appearance_rate": 0.0085
+      },
+      "Sabre Cat Tooth": {
+        "avg_value": 550,
+        "appearance_rate": 0.0875
+      },
+      "Human Heart": {
+        "avg_value": 544,
+        "appearance_rate": 0.0001
+      },
+      "Ash Hopper Jelly": {
+        "avg_value": 538,
+        "appearance_rate": 0.0909
+      },
+      "Human Flesh": {
+        "avg_value": 529,
+        "appearance_rate": 0.0002
+      },
+      "Grass Pod": {
+        "avg_value": 526,
+        "appearance_rate": 0.3551
+      },
+      "Torchbug Thorax": {
+        "avg_value": 503,
+        "appearance_rate": 0.3571
+      },
+      "Spawn Ash": {
+        "avg_value": 500,
+        "appearance_rate": 0.0883
+      },
+      "Honeycomb": {
+        "avg_value": 496,
+        "appearance_rate": 0.3602
+      },
+      "Lavender": {
+        "avg_value": 476,
+        "appearance_rate": 0.356
+      },
+      "Tundra Cotton": {
+        "avg_value": 470,
+        "appearance_rate": 0.3374
+      },
+      "Eye of Sabre Cat": {
+        "avg_value": 423,
+        "appearance_rate": 0.0914
+      },
+      "Red Mountain Flower": {
+        "avg_value": 365,
+        "appearance_rate": 0.3637
+      },
+      "Felsaad Tern Feathers": {
+        "avg_value": 347,
+        "appearance_rate": 0.0876
+      },
+      "Hagraven Claw": {
+        "avg_value": 328,
+        "appearance_rate": 0.0111
+      },
+      "Blisterwort": {
+        "avg_value": 306,
+        "appearance_rate": 0.3538
+      },
+      "Butterfly Wing": {
+        "avg_value": 305,
+        "appearance_rate": 0.3464
+      },
+      "White Cap": {
+        "avg_value": 302,
+        "appearance_rate": 0.3285
+      },
+      "Scathecraw": {
+        "avg_value": 266,
+        "appearance_rate": 0.3626
+      },
+      "Jarrin Root": {
+        "avg_value": null,
+        "appearance_rate": 0.0
+      }
+    },
+    "extreme_steep": {
+      "Frost Mirriam": {
+        "avg_value": 6257,
+        "appearance_rate": 0.0354
+      },
+      "Giant Lichen": {
+        "avg_value": 4975,
+        "appearance_rate": 0.0354
+      },
+      "Salmon Roe": {
+        "avg_value": 3018,
+        "appearance_rate": 0.0006
+      },
+      "Burnt Spriggan Wood": {
+        "avg_value": 1789,
+        "appearance_rate": 0.0014
+      },
+      "River Betty": {
+        "avg_value": 1544,
+        "appearance_rate": 0.0376
+      },
+      "Glow Dust": {
+        "avg_value": 1438,
+        "appearance_rate": 0.0377
+      },
+      "Giant's Toe": {
+        "avg_value": 1400,
+        "appearance_rate": 0.0011
+      },
+      "Large Antlers": {
+        "avg_value": 1378,
+        "appearance_rate": 0.0358
+      },
+      "Bear Claws": {
+        "avg_value": 1347,
+        "appearance_rate": 0.3988
+      },
+      "Hanging Moss": {
+        "avg_value": 1330,
+        "appearance_rate": 0.3894
+      },
+      "Yellow Mountain Flower": {
+        "avg_value": 1307,
+        "appearance_rate": 0.383
+      },
+      "Poison Bloom": {
+        "avg_value": 1293,
+        "appearance_rate": 0.0388
+      },
+      "Gleamblossom": {
+        "avg_value": 1281,
+        "appearance_rate": 0.0349
+      },
+      "Netch Jelly": {
+        "avg_value": 1258,
+        "appearance_rate": 0.0373
+      },
+      "Canis Root": {
+        "avg_value": 1255,
+        "appearance_rate": 0.39
+      },
+      "Trama Root": {
+        "avg_value": 1207,
+        "appearance_rate": 0.3829
+      },
+      "Briar Heart": {
+        "avg_value": 1199,
+        "appearance_rate": 0.0011
+      },
+      "Blue Mountain Flower": {
+        "avg_value": 1198,
+        "appearance_rate": 0.3955
+      },
+      "Salt Pile": {
+        "avg_value": 1190,
+        "appearance_rate": 0.394
+      },
+      "Nightshade": {
+        "avg_value": 1184,
+        "appearance_rate": 0.0369
+      },
+      "Ancestor Moth Wing": {
+        "avg_value": 1161,
+        "appearance_rate": 0.0011
+      },
+      "Spider Egg": {
+        "avg_value": 1133,
+        "appearance_rate": 0.388
+      },
+      "Garlic": {
+        "avg_value": 1127,
+        "appearance_rate": 0.3955
+      },
+      "Small Pearl": {
+        "avg_value": 1113,
+        "appearance_rate": 0.3981
+      },
+      "Hawk Beak": {
+        "avg_value": 1104,
+        "appearance_rate": 0.0396
+      },
+      "Boar Tusk": {
+        "avg_value": 1103,
+        "appearance_rate": 0.0414
+      },
+      "Creep Cluster": {
+        "avg_value": 1101,
+        "appearance_rate": 0.3831
+      },
+      "Juniper Berries": {
+        "avg_value": 1082,
+        "appearance_rate": 0.3976
+      },
+      "Fire Salts": {
+        "avg_value": 1059,
+        "appearance_rate": 0.0008
+      },
+      "Scaly Pholiota": {
+        "avg_value": 1057,
+        "appearance_rate": 0.3836
+      },
+      "Blue Butterfly Wing": {
+        "avg_value": 1045,
+        "appearance_rate": 0.3871
+      },
+      "Ashen Grass Pod": {
+        "avg_value": 1026,
+        "appearance_rate": 0.3812
+      },
+      "Chaurus Hunter Antennae": {
+        "avg_value": 1001,
+        "appearance_rate": 0.0004
+      },
+      "Nordic Barnacle": {
+        "avg_value": 982,
+        "appearance_rate": 0.3946
+      },
+      "Silverside Perch": {
+        "avg_value": 971,
+        "appearance_rate": 0.399
+      },
+      "Wheat": {
+        "avg_value": 950,
+        "appearance_rate": 0.3858
+      },
+      "Histcarp": {
+        "avg_value": 946,
+        "appearance_rate": 0.3968
+      },
+      "Luna Moth Wing": {
+        "avg_value": 942,
+        "appearance_rate": 0.0355
+      },
+      "Chicken Egg": {
+        "avg_value": 908,
+        "appearance_rate": 0.3882
+      },
+      "Slaughterfish Egg": {
+        "avg_value": 898,
+        "appearance_rate": 0.3924
+      },
+      "Deathbell": {
+        "avg_value": 892,
+        "appearance_rate": 0.3907
+      },
+      "Swamp Fungal Pod": {
+        "avg_value": 891,
+        "appearance_rate": 0.3935
+      },
+      "Taproot": {
+        "avg_value": 881,
+        "appearance_rate": 0.0373
+      },
+      "Hawk's Egg": {
+        "avg_value": 876,
+        "appearance_rate": 0.0012
+      },
+      "Namira's Rot": {
+        "avg_value": 868,
+        "appearance_rate": 0.0011
+      },
+      "Beehive Husk": {
+        "avg_value": 866,
+        "appearance_rate": 0.3916
+      },
+      "Moon Sugar": {
+        "avg_value": 862,
+        "appearance_rate": 0.0383
+      },
+      "Rock Warbler Egg": {
+        "avg_value": 848,
+        "appearance_rate": 0.3909
+      },
+      "Wisp Wrappings": {
+        "avg_value": 845,
+        "appearance_rate": 0.001
+      },
+      "Purple Mountain Flower": {
+        "avg_value": 841,
+        "appearance_rate": 0.3889
+      },
+      "Abecean Longfin": {
+        "avg_value": 838,
+        "appearance_rate": 0.377
+      },
+      "Hawk Feathers": {
+        "avg_value": 826,
+        "appearance_rate": 0.038
+      },
+      "Thistle Branch": {
+        "avg_value": 823,
+        "appearance_rate": 0.3902
+      },
+      "Imp Stool": {
+        "avg_value": 818,
+        "appearance_rate": 0.3967
+      },
+      "Ectoplasm": {
+        "avg_value": 798,
+        "appearance_rate": 0.0011
+      },
+      "Dwarven Oil": {
+        "avg_value": 796,
+        "appearance_rate": 0.0367
+      },
+      "Dragon's Tongue": {
+        "avg_value": 783,
+        "appearance_rate": 0.0404
+      },
+      "Emperor Parasol Moss": {
+        "avg_value": 779,
+        "appearance_rate": 0.3922
+      },
+      "Mora Tapinella": {
+        "avg_value": 775,
+        "appearance_rate": 0.3887
+      },
+      "Vampire Dust": {
+        "avg_value": 774,
+        "appearance_rate": 0.0009
+      },
+      "Aloe Vera Leaves": {
+        "avg_value": 772,
+        "appearance_rate": 0.0386
+      },
+      "Fly Amanita": {
+        "avg_value": 772,
+        "appearance_rate": 0.3907
+      },
+      "Cyrodilic Spadetail": {
+        "avg_value": 761,
+        "appearance_rate": 0.3882
+      },
+      "Mudcrab Chitin": {
+        "avg_value": 757,
+        "appearance_rate": 0.3892
+      },
+      "Nirnroot": {
+        "avg_value": 757,
+        "appearance_rate": 0.0008
+      },
+      "Chaurus Eggs": {
+        "avg_value": 751,
+        "appearance_rate": 0.038
+      },
+      "Glowing Mushroom": {
+        "avg_value": 751,
+        "appearance_rate": 0.3866
+      },
+      "Bee": {
+        "avg_value": 749,
+        "appearance_rate": 0.3942
+      },
+      "Snowberries": {
+        "avg_value": 749,
+        "appearance_rate": 0.3965
+      },
+      "Ash Creep Cluster": {
+        "avg_value": 744,
+        "appearance_rate": 0.3951
+      },
+      "Troll Fat": {
+        "avg_value": 743,
+        "appearance_rate": 0.039
+      },
+      "Jazbay Grapes": {
+        "avg_value": 735,
+        "appearance_rate": 0.3876
+      },
+      "Elves Ear": {
+        "avg_value": 727,
+        "appearance_rate": 0.3859
+      },
+      "Spriggan Sap": {
+        "avg_value": 718,
+        "appearance_rate": 0.0008
+      },
+      "Slaughterfish Scales": {
+        "avg_value": 707,
+        "appearance_rate": 0.4019
+      },
+      "Bone Meal": {
+        "avg_value": 694,
+        "appearance_rate": 0.3937
+      },
+      "Hagraven Feathers": {
+        "avg_value": 683,
+        "appearance_rate": 0.0019
+      },
+      "Falmer Ear": {
+        "avg_value": 678,
+        "appearance_rate": 0.0009
+      },
+      "Skeever Tail": {
+        "avg_value": 672,
+        "appearance_rate": 0.3937
+      },
+      "Powdered Mammoth Tusk": {
+        "avg_value": 661,
+        "appearance_rate": 0.0347
+      },
+      "Orange Dartwing": {
+        "avg_value": 652,
+        "appearance_rate": 0.392
+      },
+      "Pearl": {
+        "avg_value": 648,
+        "appearance_rate": 0.0369
+      },
+      "Small Antlers": {
+        "avg_value": 647,
+        "appearance_rate": 0.3913
+      },
+      "Blue Dartwing": {
+        "avg_value": 628,
+        "appearance_rate": 0.3911
+      },
+      "Charred Skeever Hide": {
+        "avg_value": 609,
+        "appearance_rate": 0.3886
+      },
+      "Pine Thrush Egg": {
+        "avg_value": 583,
+        "appearance_rate": 0.3847
+      },
+      "Frost Salts": {
+        "avg_value": 566,
+        "appearance_rate": 0.0013
+      },
+      "Bleeding Crown": {
+        "avg_value": 541,
+        "appearance_rate": 0.0362
+      },
+      "Ash Hopper Jelly": {
+        "avg_value": 522,
+        "appearance_rate": 0.0405
+      },
+      "Void Salts": {
+        "avg_value": 512,
+        "appearance_rate": 0.0012
+      },
+      "Grass Pod": {
+        "avg_value": 492,
+        "appearance_rate": 0.3798
+      },
+      "Honeycomb": {
+        "avg_value": 488,
+        "appearance_rate": 0.3997
+      },
+      "Spawn Ash": {
+        "avg_value": 487,
+        "appearance_rate": 0.0356
+      },
+      "Torchbug Thorax": {
+        "avg_value": 486,
+        "appearance_rate": 0.3906
+      },
+      "Lavender": {
+        "avg_value": 469,
+        "appearance_rate": 0.3809
+      },
+      "Sabre Cat Tooth": {
+        "avg_value": 433,
+        "appearance_rate": 0.0375
+      },
+      "Eye of Sabre Cat": {
+        "avg_value": 432,
+        "appearance_rate": 0.0417
+      },
+      "Tundra Cotton": {
+        "avg_value": 432,
+        "appearance_rate": 0.3722
+      },
+      "Hagraven Claw": {
+        "avg_value": 392,
+        "appearance_rate": 0.0011
+      },
+      "Felsaad Tern Feathers": {
+        "avg_value": 343,
+        "appearance_rate": 0.0379
+      },
+      "Red Mountain Flower": {
+        "avg_value": 332,
+        "appearance_rate": 0.3851
+      },
+      "Ice Wraith Teeth": {
+        "avg_value": 325,
+        "appearance_rate": 0.0006
+      },
+      "Butterfly Wing": {
+        "avg_value": 312,
+        "appearance_rate": 0.3743
+      },
+      "White Cap": {
+        "avg_value": 283,
+        "appearance_rate": 0.3661
+      },
+      "Blisterwort": {
+        "avg_value": 281,
+        "appearance_rate": 0.3751
+      },
+      "Scathecraw": {
+        "avg_value": 239,
+        "appearance_rate": 0.3929
+      },
+      "Crimson Nirnroot": {
+        "avg_value": null,
+        "appearance_rate": 0.0
+      },
+      "Daedra Heart": {
+        "avg_value": null,
+        "appearance_rate": 0.0
+      },
+      "Human Flesh": {
+        "avg_value": null,
+        "appearance_rate": 0.0
+      },
+      "Human Heart": {
+        "avg_value": null,
+        "appearance_rate": 0.0
+      },
+      "Jarrin Root": {
+        "avg_value": null,
+        "appearance_rate": 0.0
+      }
+    }
+  },
+  "tolerance_scores": {
+    "Frost Mirriam": {
+      "avg": 6211.5,
+      "std_dev": 193.2474665638164,
+      "cv": 0.031111239887920212,
+      "min": 5957,
+      "max": 6515
+    },
+    "Giant Lichen": {
+      "avg": 4659.5,
+      "std_dev": 193.28023696177527,
+      "cv": 0.04148089643991314,
+      "min": 4423,
+      "max": 4975
+    },
+    "Salmon Roe": {
+      "avg": 3397.0,
+      "std_dev": 313.1772660970141,
+      "cv": 0.09219230676980104,
+      "min": 3018,
+      "max": 3989
+    },
+    "Jarrin Root": {
+      "avg": 2873.0,
+      "std_dev": 414.19500238414275,
+      "cv": 0.1441681177807667,
+      "min": 2179,
+      "max": 3220
+    },
+    "Trama Root": {
+      "avg": 1678.6666666666667,
+      "std_dev": 274.82640985821496,
+      "cv": 0.16371708291791995,
+      "min": 1207,
+      "max": 1972
+    },
+    "River Betty": {
+      "avg": 1696.0,
+      "std_dev": 104.6836504267341,
+      "cv": 0.061723850487461145,
+      "min": 1544,
+      "max": 1858
+    },
+    "Hawk Beak": {
+      "avg": 1456.6666666666667,
+      "std_dev": 201.25743602549338,
+      "cv": 0.13816299955983527,
+      "min": 1104,
+      "max": 1657
+    },
+    "Silverside Perch": {
+      "avg": 1372.5,
+      "std_dev": 235.30388153761226,
+      "cv": 0.17144180804197615,
+      "min": 971,
+      "max": 1617
+    },
+    "Yellow Mountain Flower": {
+      "avg": 1457.8333333333333,
+      "std_dev": 84.27418874654853,
+      "cv": 0.05780783496962287,
+      "min": 1307,
+      "max": 1574
+    },
+    "Giant's Toe": {
+      "avg": 1481.6666666666667,
+      "std_dev": 99.04993129169192,
+      "cv": 0.06685034732847599,
+      "min": 1360,
+      "max": 1610
+    },
+    "Poison Bloom": {
+      "avg": 1492.1666666666667,
+      "std_dev": 126.88632270220809,
+      "cv": 0.08503495322386334,
+      "min": 1293,
+      "max": 1632
+    },
+    "Large Antlers": {
+      "avg": 1505.3333333333333,
+      "std_dev": 74.6071191122015,
+      "cv": 0.04956185946337567,
+      "min": 1378,
+      "max": 1581
+    },
+    "Netch Jelly": {
+      "avg": 1396.8333333333333,
+      "std_dev": 92.95593340694049,
+      "cv": 0.06654761966849337,
+      "min": 1258,
+      "max": 1488
+    },
+    "Burnt Spriggan Wood": {
+      "avg": 1549.1666666666667,
+      "std_dev": 117.73333805209504,
+      "cv": 0.07599785135154064,
+      "min": 1444,
+      "max": 1789
+    },
+    "Ashen Grass Pod": {
+      "avg": 1339.1666666666667,
+      "std_dev": 175.99944760014318,
+      "cv": 0.1314246030617124,
+      "min": 1026,
+      "max": 1524
+    },
+    "Creep Cluster": {
+      "avg": 1319.0,
+      "std_dev": 124.50301201175817,
+      "cv": 0.09439197271551036,
+      "min": 1101,
+      "max": 1442
+    },
+    "Glow Dust": {
+      "avg": 1428.8333333333333,
+      "std_dev": 36.52130276366871,
+      "cv": 0.02556022589315435,
+      "min": 1382,
+      "max": 1481
+    },
+    "Purple Mountain Flower": {
+      "avg": 1259.5,
+      "std_dev": 238.17063211067816,
+      "cv": 0.18909935062380162,
+      "min": 841,
+      "max": 1505
+    },
+    "Deathbell": {
+      "avg": 1272.5,
+      "std_dev": 223.68784052782127,
+      "cv": 0.1757861222222564,
+      "min": 892,
+      "max": 1553
+    },
+    "Hanging Moss": {
+      "avg": 1361.5,
+      "std_dev": 44.571104241799226,
+      "cv": 0.03273676404098364,
+      "min": 1326,
+      "max": 1455
+    },
+    "Histcarp": {
+      "avg": 1265.5,
+      "std_dev": 229.62777851703103,
+      "cv": 0.18145221534336708,
+      "min": 946,
+      "max": 1548
+    },
+    "Crimson Nirnroot": {
+      "avg": 1420.8,
+      "std_dev": 188.0099997340567,
+      "cv": 0.13232685792092955,
+      "min": 1136,
+      "max": 1713
+    },
+    "Bear Claws": {
+      "avg": 1362.0,
+      "std_dev": 44.343357262766354,
+      "cv": 0.032557531029931246,
+      "min": 1300,
+      "max": 1430
+    },
+    "Salt Pile": {
+      "avg": 1294.8333333333333,
+      "std_dev": 66.4465114877289,
+      "cv": 0.05131665194058095,
+      "min": 1190,
+      "max": 1380
+    },
+    "Small Pearl": {
+      "avg": 1288.5,
+      "std_dev": 97.81232028737485,
+      "cv": 0.07591177360292964,
+      "min": 1113,
+      "max": 1407
+    },
+    "Juniper Berries": {
+      "avg": 1243.8333333333333,
+      "std_dev": 113.01978686151475,
+      "cv": 0.09086409234477938,
+      "min": 1082,
+      "max": 1370
+    },
+    "Gleamblossom": {
+      "avg": 1307.5,
+      "std_dev": 33.089525029330154,
+      "cv": 0.025307476121858626,
+      "min": 1268,
+      "max": 1356
+    },
+    "Chaurus Eggs": {
+      "avg": 1128.3333333333333,
+      "std_dev": 243.85628736796778,
+      "cv": 0.2161207864413304,
+      "min": 751,
+      "max": 1441
+    },
+    "Garlic": {
+      "avg": 1217.3333333333333,
+      "std_dev": 76.7412680519564,
+      "cv": 0.06304047211277908,
+      "min": 1120,
+      "max": 1308
+    },
+    "Human Heart": {
+      "avg": 1132.8,
+      "std_dev": 298.7503305437502,
+      "cv": 0.26372733981616364,
+      "min": 544,
+      "max": 1361
+    },
+    "Human Flesh": {
+      "avg": 1115.0,
+      "std_dev": 293.7475106277498,
+      "cv": 0.2634506821773541,
+      "min": 529,
+      "max": 1297
+    },
+    "Hawk's Egg": {
+      "avg": 1203.3333333333333,
+      "std_dev": 228.15613562256488,
+      "cv": 0.18960343680545558,
+      "min": 876,
+      "max": 1564
+    },
+    "Wisp Wrappings": {
+      "avg": 1131.1666666666667,
+      "std_dev": 143.24852141955563,
+      "cv": 0.1266378559772114,
+      "min": 845,
+      "max": 1251
+    },
+    "Nordic Barnacle": {
+      "avg": 1173.3333333333333,
+      "std_dev": 178.83014908628306,
+      "cv": 0.1524120588803549,
+      "min": 982,
+      "max": 1407
+    },
+    "Nightshade": {
+      "avg": 1261.5,
+      "std_dev": 101.08865745802872,
+      "cv": 0.08013369596355824,
+      "min": 1181,
+      "max": 1450
+    },
+    "Moon Sugar": {
+      "avg": 1123.5,
+      "std_dev": 187.54799385757235,
+      "cv": 0.16693190374505773,
+      "min": 862,
+      "max": 1385
+    },
+    "Blue Mountain Flower": {
+      "avg": 1217.3333333333333,
+      "std_dev": 36.22000674887967,
+      "cv": 0.029753565237305317,
+      "min": 1168,
+      "max": 1279
+    },
+    "Boar Tusk": {
+      "avg": 1190.0,
+      "std_dev": 51.64623251829056,
+      "cv": 0.04340019539352148,
+      "min": 1103,
+      "max": 1260
+    },
+    "Luna Moth Wing": {
+      "avg": 1134.6666666666667,
+      "std_dev": 117.30823595222213,
+      "cv": 0.10338563685565992,
+      "min": 942,
+      "max": 1270
+    },
+    "Chicken Egg": {
+      "avg": 1175.8333333333333,
+      "std_dev": 254.87213569858034,
+      "cv": 0.21675872632055027,
+      "min": 908,
+      "max": 1585
+    },
+    "Abecean Longfin": {
+      "avg": 1098.5,
+      "std_dev": 147.41636046698932,
+      "cv": 0.13419787024760066,
+      "min": 838,
+      "max": 1286
+    },
+    "Scaly Pholiota": {
+      "avg": 1107.1666666666667,
+      "std_dev": 36.74877171038812,
+      "cv": 0.03319172516368037,
+      "min": 1057,
+      "max": 1161
+    },
+    "Chaurus Hunter Antennae": {
+      "avg": 1137.6666666666667,
+      "std_dev": 71.45083779930242,
+      "cv": 0.06280472118309617,
+      "min": 1001,
+      "max": 1222
+    },
+    "Canis Root": {
+      "avg": 1192.0,
+      "std_dev": 38.97007398846795,
+      "cv": 0.032693015090996605,
+      "min": 1151,
+      "max": 1255
+    },
+    "Wheat": {
+      "avg": 1083.5,
+      "std_dev": 65.19905418536888,
+      "cv": 0.060174484711923285,
+      "min": 950,
+      "max": 1150
+    },
+    "Ancestor Moth Wing": {
+      "avg": 1127.0,
+      "std_dev": 59.897134043847764,
+      "cv": 0.05314741263872916,
+      "min": 1037,
+      "max": 1213
+    },
+    "Beehive Husk": {
+      "avg": 1049.6666666666667,
+      "std_dev": 101.84410744968126,
+      "cv": 0.09702518969483764,
+      "min": 866,
+      "max": 1145
+    },
+    "Spider Egg": {
+      "avg": 1138.0,
+      "std_dev": 38.13572253587616,
+      "cv": 0.03351117973275585,
+      "min": 1098,
+      "max": 1213
+    },
+    "Hagraven Feathers": {
+      "avg": 1038.0,
+      "std_dev": 197.92759618944837,
+      "cv": 0.1906816918973491,
+      "min": 683,
+      "max": 1295
+    },
+    "Thistle Branch": {
+      "avg": 1011.3333333333334,
+      "std_dev": 111.40416908217075,
+      "cv": 0.11015573739173112,
+      "min": 823,
+      "max": 1116
+    },
+    "Bee": {
+      "avg": 1024.8333333333333,
+      "std_dev": 151.82052635339605,
+      "cv": 0.14814167476343737,
+      "min": 749,
+      "max": 1199
+    },
+    "Blue Butterfly Wing": {
+      "avg": 1102.6666666666667,
+      "std_dev": 72.07326519282691,
+      "cv": 0.0653626951567354,
+      "min": 1042,
+      "max": 1227
+    },
+    "Ash Creep Cluster": {
+      "avg": 997.5,
+      "std_dev": 158.37902849388448,
+      "cv": 0.15877596841492178,
+      "min": 744,
+      "max": 1195
+    },
+    "Briar Heart": {
+      "avg": 1081.0,
+      "std_dev": 62.527327359056905,
+      "cv": 0.05784211596582507,
+      "min": 991,
+      "max": 1199
+    },
+    "Daedra Heart": {
+      "avg": 1049.8,
+      "std_dev": 146.33031128238605,
+      "cv": 0.13938875145969332,
+      "min": 883,
+      "max": 1258
+    },
+    "Vampire Dust": {
+      "avg": 1013.6666666666666,
+      "std_dev": 125.63394799531252,
+      "cv": 0.1239400999624918,
+      "min": 774,
+      "max": 1145
+    },
+    "Aloe Vera Leaves": {
+      "avg": 983.6666666666666,
+      "std_dev": 156.13099912858078,
+      "cv": 0.15872348267900452,
+      "min": 772,
+      "max": 1201
+    },
+    "Namira's Rot": {
+      "avg": 960.8333333333334,
+      "std_dev": 68.58915528144534,
+      "cv": 0.07138507054443574,
+      "min": 868,
+      "max": 1038
+    },
+    "Void Salts": {
+      "avg": 874.0,
+      "std_dev": 243.76286290846957,
+      "cv": 0.2789048774696448,
+      "min": 512,
+      "max": 1176
+    },
+    "Glowing Mushroom": {
+      "avg": 912.1666666666666,
+      "std_dev": 98.10099671030643,
+      "cv": 0.10754722825906059,
+      "min": 751,
+      "max": 1032
+    },
+    "Snowberries": {
+      "avg": 945.5,
+      "std_dev": 110.912503052331,
+      "cv": 0.11730566161008038,
+      "min": 749,
+      "max": 1087
+    },
+    "Hawk Feathers": {
+      "avg": 908.0,
+      "std_dev": 55.293158105983906,
+      "cv": 0.060895548574872144,
+      "min": 826,
+      "max": 985
+    },
+    "Spriggan Sap": {
+      "avg": 939.1666666666666,
+      "std_dev": 135.1461143437806,
+      "cv": 0.14390003301910978,
+      "min": 718,
+      "max": 1126
+    },
+    "Swamp Fungal Pod": {
+      "avg": 953.0,
+      "std_dev": 40.352612472222084,
+      "cv": 0.04234272032762024,
+      "min": 891,
+      "max": 1013
+    },
+    "Pine Thrush Egg": {
+      "avg": 834.6666666666666,
+      "std_dev": 143.7227268813886,
+      "cv": 0.17219176543297357,
+      "min": 583,
+      "max": 985
+    },
+    "Slaughterfish Scales": {
+      "avg": 888.0,
+      "std_dev": 99.31599401237781,
+      "cv": 0.11184233559952457,
+      "min": 707,
+      "max": 991
+    },
+    "Taproot": {
+      "avg": 924.5,
+      "std_dev": 52.372861929310936,
+      "cv": 0.05664993177859485,
+      "min": 863,
+      "max": 1000
+    },
+    "Dwarven Oil": {
+      "avg": 901.6666666666666,
+      "std_dev": 56.8731532056695,
+      "cv": 0.06307558581035436,
+      "min": 796,
+      "max": 971
+    },
+    "Nirnroot": {
+      "avg": 900.5,
+      "std_dev": 127.26448836969408,
+      "cv": 0.14132647237056534,
+      "min": 757,
+      "max": 1100
+    },
+    "Frost Salts": {
+      "avg": 796.3333333333334,
+      "std_dev": 169.2824726767528,
+      "cv": 0.21257740394736643,
+      "min": 566,
+      "max": 990
+    },
+    "Powdered Mammoth Tusk": {
+      "avg": 851.8333333333334,
+      "std_dev": 109.6698327810443,
+      "cv": 0.12874564599613889,
+      "min": 661,
+      "max": 983
+    },
+    "Imp Stool": {
+      "avg": 859.3333333333334,
+      "std_dev": 30.608640755330658,
+      "cv": 0.03561905440884095,
+      "min": 818,
+      "max": 913
+    },
+    "Fire Salts": {
+      "avg": 896.6666666666666,
+      "std_dev": 85.8480569895958,
+      "cv": 0.09574132749769049,
+      "min": 795,
+      "max": 1059
+    },
+    "Jazbay Grapes": {
+      "avg": 813.6666666666666,
+      "std_dev": 55.28913897764089,
+      "cv": 0.06795060095572417,
+      "min": 735,
+      "max": 884
+    },
+    "Bleeding Crown": {
+      "avg": 778.5,
+      "std_dev": 149.5,
+      "cv": 0.1920359666024406,
+      "min": 541,
+      "max": 968
+    },
+    "Cyrodilic Spadetail": {
+      "avg": 819.3333333333334,
+      "std_dev": 29.992591677871978,
+      "cv": 0.03660609236518142,
+      "min": 761,
+      "max": 858
+    },
+    "Small Antlers": {
+      "avg": 822.1666666666666,
+      "std_dev": 100.98748547331111,
+      "cv": 0.12283091685381445,
+      "min": 647,
+      "max": 943
+    },
+    "Emperor Parasol Moss": {
+      "avg": 848.1666666666666,
+      "std_dev": 53.936433779856905,
+      "cv": 0.06359178673199871,
+      "min": 779,
+      "max": 926
+    },
+    "Skeever Tail": {
+      "avg": 808.3333333333334,
+      "std_dev": 79.55221904859447,
+      "cv": 0.09841511634877666,
+      "min": 672,
+      "max": 904
+    },
+    "Fly Amanita": {
+      "avg": 806.3333333333334,
+      "std_dev": 20.96558025802185,
+      "cv": 0.026001133019456613,
+      "min": 772,
+      "max": 834
+    },
+    "Slaughterfish Egg": {
+      "avg": 821.8333333333334,
+      "std_dev": 54.64252515720293,
+      "cv": 0.0664885724889916,
+      "min": 744,
+      "max": 898
+    },
+    "Mora Tapinella": {
+      "avg": 775.0,
+      "std_dev": 20.77658938966323,
+      "cv": 0.026808502438275133,
+      "min": 734,
+      "max": 795
+    },
+    "Ice Wraith Teeth": {
+      "avg": 685.1666666666666,
+      "std_dev": 166.13991760628215,
+      "cv": 0.24248102788559792,
+      "min": 325,
+      "max": 814
+    },
+    "Blue Dartwing": {
+      "avg": 707.8333333333334,
+      "std_dev": 46.52030619943176,
+      "cv": 0.06572211848283271,
+      "min": 628,
+      "max": 756
+    },
+    "Mudcrab Chitin": {
+      "avg": 731.1666666666666,
+      "std_dev": 23.17625700774154,
+      "cv": 0.03169763894379969,
+      "min": 689,
+      "max": 757
+    },
+    "Troll Fat": {
+      "avg": 743.3333333333334,
+      "std_dev": 14.851112939963642,
+      "cv": 0.01997907570398696,
+      "min": 718,
+      "max": 762
+    },
+    "Sabre Cat Tooth": {
+      "avg": 666.0,
+      "std_dev": 136.29502314220184,
+      "cv": 0.20464718189519795,
+      "min": 433,
+      "max": 820
+    },
+    "Ectoplasm": {
+      "avg": 712.6666666666666,
+      "std_dev": 75.21229213957577,
+      "cv": 0.10553642489182756,
+      "min": 605,
+      "max": 798
+    },
+    "Rock Warbler Egg": {
+      "avg": 751.6666666666666,
+      "std_dev": 50.49642451588913,
+      "cv": 0.0671792787351075,
+      "min": 699,
+      "max": 848
+    },
+    "Bone Meal": {
+      "avg": 690.0,
+      "std_dev": 13.515423288475528,
+      "cv": 0.019587569983297866,
+      "min": 678,
+      "max": 718
+    },
+    "Dragon's Tongue": {
+      "avg": 699.1666666666666,
+      "std_dev": 42.83073922105737,
+      "cv": 0.06125969852832997,
+      "min": 645,
+      "max": 783
+    },
+    "Pearl": {
+      "avg": 677.5,
+      "std_dev": 27.789386463180506,
+      "cv": 0.041017544595100375,
+      "min": 648,
+      "max": 729
+    },
+    "Elves Ear": {
+      "avg": 688.5,
+      "std_dev": 22.321514285549714,
+      "cv": 0.03242050005163357,
+      "min": 663,
+      "max": 727
+    },
+    "Orange Dartwing": {
+      "avg": 626.0,
+      "std_dev": 31.026870075253587,
+      "cv": 0.049563690216060045,
+      "min": 576,
+      "max": 652
+    },
+    "Falmer Ear": {
+      "avg": 632.6666666666666,
+      "std_dev": 30.103525079668366,
+      "cv": 0.047581967986830925,
+      "min": 596,
+      "max": 678
+    },
+    "Charred Skeever Hide": {
+      "avg": 581.5,
+      "std_dev": 25.914924914676742,
+      "cv": 0.044565649036417444,
+      "min": 540,
+      "max": 609
+    },
+    "Tundra Cotton": {
+      "avg": 536.0,
+      "std_dev": 74.47370900749695,
+      "cv": 0.13894348695428535,
+      "min": 432,
+      "max": 643
+    },
+    "Grass Pod": {
+      "avg": 542.0,
+      "std_dev": 25.81988897471611,
+      "cv": 0.04763817154006662,
+      "min": 492,
+      "max": 564
+    },
+    "Lavender": {
+      "avg": 520.3333333333334,
+      "std_dev": 38.33043467301437,
+      "cv": 0.07366515311918201,
+      "min": 469,
+      "max": 571
+    },
+    "Ash Hopper Jelly": {
+      "avg": 530.3333333333334,
+      "std_dev": 8.137703743822469,
+      "cv": 0.015344507373643875,
+      "min": 520,
+      "max": 539
+    },
+    "Honeycomb": {
+      "avg": 504.0,
+      "std_dev": 9.41629792788369,
+      "cv": 0.018683130809293035,
+      "min": 488,
+      "max": 517
+    },
+    "Torchbug Thorax": {
+      "avg": 493.3333333333333,
+      "std_dev": 5.934831271588285,
+      "cv": 0.012030063388354632,
+      "min": 486,
+      "max": 503
+    },
+    "Spawn Ash": {
+      "avg": 486.1666666666667,
+      "std_dev": 11.991895411299899,
+      "cv": 0.024666222992046415,
+      "min": 464,
+      "max": 500
+    },
+    "Eye of Sabre Cat": {
+      "avg": 435.3333333333333,
+      "std_dev": 17.288403306519918,
+      "cv": 0.03971302444070425,
+      "min": 412,
+      "max": 465
+    },
+    "Red Mountain Flower": {
+      "avg": 409.3333333333333,
+      "std_dev": 52.506084303525135,
+      "cv": 0.12827219292392134,
+      "min": 332,
+      "max": 479
+    },
+    "Blisterwort": {
+      "avg": 381.8333333333333,
+      "std_dev": 89.0232491481236,
+      "cv": 0.2331468768610832,
+      "min": 281,
+      "max": 532
+    },
+    "Hagraven Claw": {
+      "avg": 365.5,
+      "std_dev": 23.228933107943924,
+      "cv": 0.06355385255251415,
+      "min": 328,
+      "max": 392
+    },
+    "White Cap": {
+      "avg": 336.8333333333333,
+      "std_dev": 36.585136629814876,
+      "cv": 0.10861495288416094,
+      "min": 283,
+      "max": 385
+    },
+    "Felsaad Tern Feathers": {
+      "avg": 359.6666666666667,
+      "std_dev": 14.92946378437246,
+      "cv": 0.041509167148394234,
+      "min": 343,
+      "max": 382
+    },
+    "Butterfly Wing": {
+      "avg": 320.8333333333333,
+      "std_dev": 18.279466318492148,
+      "cv": 0.056974959953741765,
+      "min": 305,
+      "max": 358
+    },
+    "Scathecraw": {
+      "avg": 276.3333333333333,
+      "std_dev": 21.24199195513976,
+      "cv": 0.0768708997170317,
+      "min": 239,
+      "max": 301
+    }
+  }
+}
