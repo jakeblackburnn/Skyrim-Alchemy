@@ -60,6 +60,11 @@ class MonteCarloResult(ABC):
         print(self.to_dataframe())
         print(f"analysis:\n{self.aggregated_stats}\n")
 
+    def save_to_json(self, filepath):
+        import json
+        with open(filepath, 'w') as f:
+            json.dump(self.aggregated_stats, f, indent=2)
+
     def _average_and_total_simtime(self):
         total = sum([run["simulation_time"] for run in self.run_results])
         return {
