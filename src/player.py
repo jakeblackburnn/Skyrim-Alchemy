@@ -20,20 +20,16 @@ class Player:
         self.poisoner_perk = 0
         self.seeker_of_shadows = 0
 
-
-
-        for i in range(0, alchemist_perk_level):
+        # skyrim's formulas use these funky numeric values to incorporate perks
+        # so this is probably the simplest way to make realizing effects easy.
+        for i in range(alchemist_perk_level):
             self.alchemist_perk += 20
-
         if is_physician:
             self.physician_perk += 25
-
         if is_benefactor:
             self.benefactor_perk += 25
-
         if is_poisoner:
             self.poisoner_perk += 25
-
         if is_seeker:
             self.seeker_of_shadows = 10
 
@@ -48,17 +44,11 @@ class Player:
                    dict["seeker_of_shadows"],
                    dict.get("purity_perk", False))
 
-
-    def print_self(self):
-        print(self.alchemy_skill, 
-              self.fortify_alchemy, 
-              self.alchemist_perk, 
-              self.physician_perk,
-              self.benefactor_perk, 
-              self.poisoner_perk, 
-              self.seeker_of_shadows)
+    def __repr__(self):
+        return (f"Player(skill={self.alchemy_skill}, fortify={self.fortify_alchemy}, "
+                f"alchemist={self.alchemist_perk}%, physician={self.physician_perk > 0}, "
+                f"benefactor={self.benefactor_perk > 0}, poisoner={self.poisoner_perk > 0})")
 
 if __name__ == "__main__":
     player = Player()
-    player.print_self()
-
+    print(player)

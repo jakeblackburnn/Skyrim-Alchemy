@@ -50,6 +50,11 @@ class Ingredient:
     def get_effect_names(self):
         return [self.effect1, self.effect2, self.effect3, self.effect4]
 
+    def __repr__(self):
+        effects = [self.effect1, self.effect2, self.effect3, self.effect4]
+        return (f"Ingredient('{self.name}', value={self.value}, weight={self.weight}, "
+                f"effects={effects})")
+
 
 if __name__ == "__main__":
 
