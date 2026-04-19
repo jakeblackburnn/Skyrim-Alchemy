@@ -7,8 +7,9 @@ class EffectType(Enum):
     RESTORE = 2
     POISON = 3
 
+# class for actual effects (in a potion)
+#   NOT the same as a generic effect (in an ingredinent)
 class RealizedEffect:
-    """Computed effect stats for a specific player state"""
     def __init__(self, base_effect, player):
         self.name = base_effect.name
         self.base = base_effect  # Reference for type checks
@@ -22,11 +23,9 @@ class RealizedEffect:
             self.magnitude = base_effect._scale_mag(player)
             self.duration = base_effect.base_dur
 
-        # Store value directly
         self.value = base_effect.value(player)
 
     def get_description(self):
-        """Returns formatted description with magnitude and duration values"""
         if self.description_template:
             return self.description_template.format(mag=self.magnitude, dur=self.duration)
         else:
@@ -118,6 +117,7 @@ class Effect:
 
         return math.floor(self.base_cost * pow(magnitude, 1.1) * pow(duration / 10, 1.1))
 
+    # formula for scaling the magnitude or duration from actual game logic
     def _scale_factor(self, player):
         factor = 4 * (1 + player.alchemy_skill / 200)
         factor *= 1 + player.fortify_alchemy / 100
@@ -136,7 +136,6 @@ class Effect:
         return round(self.base_dur * self._scale_factor(player))
 
     def realize(self, player):
-        """Create a RealizedEffect with computed stats for this player"""
         return RealizedEffect(self, player)
 
     def __repr__(self):
@@ -157,7 +156,6 @@ if __name__ == "__main__":
     beginner = Player(15)
     advanced = Player(100)
 
-    # Test with description template
     csv_line = "Damage Health,00073f32,5,0,3,destruction,false,false,Causes {mag} points of poison damage."
     effect_from_csv = Effect.from_csv_line(csv_line)
 
@@ -175,11 +173,3 @@ if __name__ == "__main__":
     print(f"  Description: {realized_beginner.get_description()}")
     print(f"Advanced realized: mag={realized_advanced.magnitude}, dur={realized_advanced.duration}, value={realized_advanced.value}")
     print(f"  Description: {realized_advanced.get_description()}")
-    print(f"Type checks: is_poison={realized_beginner.is_poison}, is_fortify={realized_beginner.is_fortify}")
-
-    # Test backward compatibility (no template)
-    print("\n--- Backward Compatibility Test (No Template) ---")
-    csv_line_no_template = "Damage Health,00073f32,5,0,3,destruction,false,false,"
-    effect_no_template = Effect.from_csv_line(csv_line_no_template)
-    realized_no_template = effect_no_template.realize(beginner)
-    print(f"Effect without template: {realized_no_template.get_description()}")

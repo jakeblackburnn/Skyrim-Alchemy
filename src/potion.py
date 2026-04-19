@@ -74,6 +74,7 @@ class Potion:
 
         # Benefactor/poisoner perks only apply to effects in potions/poisons respectively
         # Check if we need to create a modified player (only if there's a perk mismatch)
+        # TODO: find a better way to manage this (in RealizedEffect?)
         needs_modified_player = False
         if dominant_base.is_poison and player.benefactor_perk > 0:
             # Check if any non-poison effects exist
@@ -112,49 +113,40 @@ class Potion:
 
     @property
     def value(self) -> int:
-        """Alias for total_value (more Pythonic)"""
         return self.total_value
 
     @property
     def num_ingredients(self) -> int:
-        """Number of ingredients (2 or 3)"""
         return len(self.ingredients)
 
     @property
     def num_effects(self) -> int:
-        """Number of realized effects"""
         return len(self.realized_effects)
 
     @property
     def is_poison(self) -> bool:
-        """True if dominant effect is harmful"""
         return self.dominant_effect.is_poison
 
     @property
     def is_beneficial(self) -> bool:
-        """True if dominant effect is helpful"""
         return not self.dominant_effect.is_poison
 
     @property
     def effect_names(self) -> list[str]:
-        """List of all effect names in this potion"""
         return [e.name for e in self.realized_effects]
 
     @property 
     def effects(self) -> list[Effect]:
-        """list of realized effects"""
         return self.realized_effects
 
     @property 
     def recipie(self) -> Set[Ingredient]:
-        """list of ingredients used"""
         return self.ingredients
 
     def __repr__(self):
         return f"{self.name}\nIngredients: {', '.join(self.ingredient_names)}\nValue: {self.total_value}"
 
     def to_dict(self):
-        """Serialize potion to JSON-compatible dict for API responses."""
         return {
             "name": self.name,
             "ingredients": self.ingredient_names,

@@ -12,7 +12,6 @@ class IngredientsDatabase:
         self._load_effects(data_dir)
 
     def _load_ingredients(self, data_dir):
-        """Load all ingredients from CSV into dictionary (called once)."""
         with open(f"{data_dir}/master_ingredients.csv", newline='') as f:
             reader = csv.reader(f)
             next(reader)  # Skip header
@@ -23,7 +22,6 @@ class IngredientsDatabase:
                 self._ingredients[ingredient.name] = ingredient
 
     def _load_effects(self, data_dir):
-        """Load all effects from CSV into dictionary (called once)."""
         with open(f"{data_dir}/effects.csv", newline='') as f:
             reader = csv.reader(f)
             next(reader)  # Skip header
@@ -34,41 +32,22 @@ class IngredientsDatabase:
                 self._effects[effect.name] = effect
 
     def get_ingredient(self, name):
-        """O(1) lookup by name from in-memory dictionary."""
         return self._ingredients.get(name)
 
     def get_all_ingredients(self):
-        """Return list of all ingredients from in-memory dictionary.
-
-        Returns:
-            List of all Ingredient objects from the database
-        """
         return list(self._ingredients.values())
 
     def ingredient_effect(self, effect_name, ingredient):
-        """Get an Effect object with ingredient-specific magnitude and duration.
-
-        Args:
-            effect_name: Name of the effect (e.g., "Restore Health")
-            ingredient: Ingredient object containing effect data
-
-        Returns:
-            Effect object with ingredient-specific base_mag and base_dur,
-            or None if effect not found or ingredient doesn't have this effect
-        """
-        # Get default effect template from in-memory dictionary (O(1))
         default_effect = self._effects.get(effect_name)
         if default_effect is None:
             return None
 
-        # Get ingredient-specific magnitude/duration
         effect_data = ingredient.get_effect_data(effect_name)
         if effect_data is None:
             return None
 
         mag, dur = effect_data
 
-        # Determine effect type from default effect flags
         if default_effect.is_fortify:
             effect_type = EffectType.FORTIFY
         elif default_effect.is_restore:
@@ -89,36 +68,23 @@ class IngredientsDatabase:
             variable_duration=default_effect.variable_duration,
             description_template=default_effect.description_template
         )
-
         return ingredient_effect
-
-
-    def print_self(self):
-        """Debug helper to print all ingredients."""
-        for name, ingredient in self._ingredients.items():
-            print(f"{name}: {ingredient}")
 
     def __repr__(self):
         return f"IngredientsDatabase({len(self._ingredients)} ingredients loaded)"
 
     def __len__(self):
-        """Returns total number of ingredients in database."""
         return len(self._ingredients)
 
     def __contains__(self, name: str) -> bool:
-        """Support: if 'ingredient' in db"""
         return name in self._ingredients
 
     def __getitem__(self, name: str):
-        """Support: ingredient = db['name']
-        Raises KeyError if ingredient not found (alternative to get_ingredient() which returns None)."""
         if name not in self._ingredients:
             raise KeyError(f"Ingredient '{name}' not found in database")
         return self._ingredients[name]
 
     def __iter__(self):
-        """Support: for ingredient in db
-        Yields Ingredient objects (not names)."""
         return iter(self._ingredients.values())
 
 
@@ -157,10 +123,6 @@ class EffectsDatabase:
         default_effect.base_dur = dur
 
         return default_effect
-
-    def print_self(self):
-        for row in self.effects_reader:
-            print(row)
 
     def __del__(self):
         self.effects_file.close()

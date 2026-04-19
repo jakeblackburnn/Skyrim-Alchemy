@@ -61,10 +61,6 @@ class Alembic:
         # Remove potions containing any of the available ingredients
         self.valid_potions = [pot for pot in self.valid_potions 
                              if not any(ing in pot.recipie for ing in exhausted_ings)]
-
-
-            
-
     
 
     def exhaust_inventory(self, strategy=None):
@@ -73,8 +69,6 @@ class Alembic:
         if strategy == "lazy":
             self._lazy_strategy()
         elif strategy == None:
-            pass
-        elif strategy == "greedy":
             pass
         elif strategy == "random":
             pass
@@ -104,31 +98,26 @@ class Alembic:
             self._lazy_potionmaking()
 
     ### Random algorithm
+    # TODO: implement this
     def _random_strategy(self):
         pass
 
-    ### Greedy Algorithm
-    def _greedy_strategy(self):
-        while not self.inventory.is_empty():
-            if not self.valid_potions:
-                break
-            best = self._get_best_potion()
-            self._update_valid_potions(best.recipie)
-            if self.inventory.consume_recipe(best.recipie):
-                self.realized_potions.append(best)
-            else:
-                break  
     
     ### Smart algorithm
+    # TODO: implement this 
+    # is there an efficient algorithm better than lazy (greedy) strategy?
     def _smart_potionmaking(self):
         pass
 
-    def _lookahead(self):
-        pass
+    ### potionmaking helpers
+
     def _get_best_potion(self):
         if not self.valid_potions:
             return None
         return max(self.valid_potions, key=lambda p: p.total_value)
+
+    def _get_random_potion(self):
+        pass
 
     def _get_value_sorted_potions(self):
         return sorted(self.potions, key=lambda p: p.total_value, reverse=True)
@@ -136,10 +125,16 @@ class Alembic:
     def _filter_realized_by_ingredient(self, ingredient=None):
         return filter(lambda p: any([i is ingredient for i in p.recipie]), self.realized_potions)
 
+    ### data aggregation stuff
+
     # maps each ingredient to a list of potions participated in.
     def _set_ingredients_map(self):
         for ing in self.ing_db:
             self.ingredients_map[ing] = list(self._filter_realized_by_ingredient(ing))
+
+
+
+    ### end of business logic.
 
     def fancy_print(self):
         # should print realized_potions and ingredients_map
@@ -158,7 +153,6 @@ class Alembic:
         for ing, count in sorted(usage.items(), key=lambda x: x[1], reverse=True):
             if count > 0:
                 print(f"  {ing.name:<30} used in {count} potion{'s' if count != 1 else ''}")
-
 
 
 # Practical Test
@@ -182,9 +176,6 @@ def main():
 
     print("Printing the entire alembic\n================\n")
     alembic.fancy_print()
-
-
-
 
 if __name__ == "__main__":
     main()
