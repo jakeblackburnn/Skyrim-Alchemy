@@ -1,0 +1,1129 @@
+================================================================================
+PERK SYNERGY ANALYSIS
+================================================================================
+Running 10000 simulations per perk configuration
+
+
+================================================================================
+Testing: baseline
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=False, benefactor=False, poisoner=False)
+================================================================================
+
+Completed in 88.74s
+Average potions: 38.26
+
+================================================================================
+Testing: benefactor
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=False, benefactor=True, poisoner=False)
+================================================================================
+
+Completed in 97.31s
+Average potions: 38.29
+
+================================================================================
+Testing: physician
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=True, benefactor=False, poisoner=False)
+================================================================================
+
+Completed in 102.35s
+Average potions: 38.16
+
+================================================================================
+Testing: poisoner
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=False, benefactor=False, poisoner=True)
+================================================================================
+
+Completed in 110.58s
+Average potions: 38.25
+
+================================================================================
+Testing: benefactor+physician
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=True, benefactor=True, poisoner=False)
+================================================================================
+
+Completed in 116.95s
+Average potions: 38.26
+
+================================================================================
+Testing: benefactor+poisoner
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=False, benefactor=True, poisoner=True)
+================================================================================
+
+Completed in 123.55s
+Average potions: 38.28
+
+================================================================================
+Testing: physician+poisoner
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=True, benefactor=False, poisoner=True)
+================================================================================
+
+Completed in 128.53s
+Average potions: 38.29
+
+================================================================================
+Testing: all_perks
+Player: Player(skill=15, fortify=0, alchemist=0%, physician=True, benefactor=True, poisoner=True)
+================================================================================
+
+Completed in 132.29s
+Average potions: 38.23
+
+================================================================================
+PERK COMPARISON SUMMARY
+================================================================================
+
+baseline                 : avg= 38.26  total=    382637
+
+benefactor               : avg= 38.29  total=    382927
+
+physician                : avg= 38.16  total=    381559
+
+poisoner                 : avg= 38.25  total=    382537
+
+benefactor+physician     : avg= 38.26  total=    382613
+
+benefactor+poisoner      : avg= 38.28  total=    382827
+
+physician+poisoner       : avg= 38.29  total=    382868
+
+all_perks                : avg= 38.23  total=    382323
+
+================================================================================
+INGREDIENT SYNERGY WITH PERKS
+================================================================================
+All ingredients by average value for each perk configuration:
+
+
+baseline:
+----------------------------------------
+   1. Frost Mirriam                    6212
+   2. Giant Lichen                     4636
+   3. Salmon Roe                       3190
+   4. Jarrin Root                      2845
+   5. Trama Root                       1816
+   6. River Betty                      1696
+   7. Hawk Beak                        1599
+   8. Large Antlers                    1538
+   9. Poison Bloom                     1525
+  10. Ashen Grass Pod                  1502
+  11. Yellow Mountain Flower           1498
+  12. Netch Jelly                      1482
+  13. Giant's Toe                      1481
+  14. Silverside Perch                 1475
+  15. Burnt Spriggan Wood              1454
+  16. Purple Mountain Flower           1440
+  17. Glow Dust                        1435
+  18. Creep Cluster                    1380
+  19. Deathbell                        1376
+  20. Gleamblossom                     1372
+  21. Small Pearl                      1370
+  22. Salt Pile                        1358
+  23. Bear Claws                       1342
+  24. Hanging Moss                     1341
+  25. Histcarp                         1341
+  26. Juniper Berries                  1320
+  27. Hawk's Egg                       1279
+  28. Crimson Nirnroot                 1268
+  29. Human Flesh                      1261
+  30. Nightshade                       1259
+  31. Garlic                           1256
+  32. Boar Tusk                        1243
+  33. Nordic Barnacle                  1243
+  34. Moon Sugar                       1225
+  35. Blue Mountain Flower             1213
+  36. Luna Moth Wing                   1209
+  37. Chicken Egg                      1197
+  38. Abecean Longfin                  1194
+  39. Chaurus Eggs                     1185
+  40. Chaurus Hunter Antennae          1168
+  41. Canis Root                       1164
+  42. Daedra Heart                     1154
+  43. Wheat                            1148
+  44. Wisp Wrappings                   1146
+  45. Scaly Pholiota                   1133
+  46. Ancestor Moth Wing               1130
+  47. Human Heart                      1118
+  48. Bee                              1117
+  49. Hagraven Feathers                1093
+  50. Spriggan Sap                     1092
+  51. Spider Egg                       1075
+  52. Blue Butterfly Wing              1074
+  53. Beehive Husk                     1070
+  54. Thistle Branch                   1066
+  55. Briar Heart                      1063
+  56. Vampire Dust                     1057
+  57. Namira's Rot                     1042
+  58. Void Salts                       1035
+  59. Ash Creep Cluster                1028
+  60. Aloe Vera Leaves                 1026
+  61. Glowing Mushroom                  997
+  62. Snowberries                       993
+  63. Swamp Fungal Pod                  973
+  64. Pine Thrush Egg                   960
+  65. Nirnroot                          953
+  66. Slaughterfish Scales              950
+  67. Powdered Mammoth Tusk             937
+  68. Bleeding Crown                    925
+  69. Frost Salts                       924
+  70. Dwarven Oil                       916
+  71. Hawk Feathers                     906
+  72. Taproot                           902
+  73. Small Antlers                     890
+  74. Emperor Parasol Moss              880
+  75. Fire Salts                        873
+  76. Imp Stool                         867
+  77. Jazbay Grapes                     863
+  78. Skeever Tail                      848
+  79. Cyrodilic Spadetail               817
+  80. Fly Amanita                       796
+  81. Slaughterfish Egg                 795
+  82. Ice Wraith Teeth                  748
+  83. Blue Dartwing                     747
+  84. Mora Tapinella                    744
+  85. Ectoplasm                         733
+  86. Sabre Cat Tooth                   727
+  87. Troll Fat                         725
+  88. Rock Warbler Egg                  720
+  89. Mudcrab Chitin                    711
+  90. Pearl                             702
+  91. Bone Meal                         691
+  92. Elves Ear                         674
+  93. Dragon's Tongue                   652
+  94. Orange Dartwing                   613
+  95. Falmer Ear                        605
+  96. Grass Pod                         574
+  97. Charred Skeever Hide              563
+  98. Lavender                          557
+  99. Tundra Cotton                     555
+  100. Honeycomb                         521
+  101. Ash Hopper Jelly                  512
+  102. Torchbug Thorax                   501
+  103. Spawn Ash                         487
+  104. Eye of Sabre Cat                  426
+  105. Red Mountain Flower               413
+  106. Blisterwort                       396
+  107. Hagraven Claw                     382
+  108. Felsaad Tern Feathers             361
+  109. White Cap                         352
+  110. Butterfly Wing                    314
+  111. Scathecraw                        295
+
+benefactor:
+----------------------------------------
+   1. Frost Mirriam                    6123
+   2. Giant Lichen                     4468
+   3. Salmon Roe                       3178
+   4. Jarrin Root                      3154
+   5. Trama Root                       1872
+   6. Giant's Toe                      1728
+   7. River Betty                      1711
+   8. Hawk Beak                        1681
+   9. Poison Bloom                     1623
+  10. Yellow Mountain Flower           1532
+  11. Purple Mountain Flower           1495
+  12. Silverside Perch                 1483
+  13. Large Antlers                    1478
+  14. Creep Cluster                    1475
+  15. Netch Jelly                      1475
+  16. Burnt Spriggan Wood              1455
+  17. Small Pearl                      1445
+  18. Glow Dust                        1410
+  19. Abecean Longfin                  1404
+  20. Ashen Grass Pod                  1391
+  21. Salt Pile                        1388
+  22. Bear Claws                       1377
+  23. Human Flesh                      1368
+  24. Beehive Husk                     1359
+  25. Hanging Moss                     1352
+  26. Histcarp                         1347
+  27. Crimson Nirnroot                 1343
+  28. Deathbell                        1342
+  29. Garlic                           1341
+  30. Scaly Pholiota                   1332
+  31. Wisp Wrappings                   1319
+  32. Gleamblossom                     1296
+  33. Hawk's Egg                       1283
+  34. Juniper Berries                  1282
+  35. Chaurus Eggs                     1281
+  36. Boar Tusk                        1276
+  37. Nightshade                       1262
+  38. Nordic Barnacle                  1258
+  39. Canis Root                       1224
+  40. Blue Mountain Flower             1218
+  41. Moon Sugar                       1207
+  42. Luna Moth Wing                   1200
+  43. Hawk Feathers                    1172
+  44. Bee                              1171
+  45. Chicken Egg                      1151
+  46. Spider Egg                       1150
+  47. Hagraven Feathers                1138
+  48. Ash Creep Cluster                1135
+  49. Chaurus Hunter Antennae          1119
+  50. Ancestor Moth Wing               1116
+  51. Human Heart                      1113
+  52. Thistle Branch                   1113
+  53. Blue Butterfly Wing              1089
+  54. Wheat                            1084
+  55. Glowing Mushroom                 1073
+  56. Powdered Mammoth Tusk            1071
+  57. Briar Heart                      1051
+  58. Daedra Heart                     1050
+  59. Vampire Dust                     1046
+  60. Aloe Vera Leaves                 1045
+  61. Void Salts                       1038
+  62. Slaughterfish Scales             1020
+  63. Spriggan Sap                      996
+  64. Namira's Rot                      994
+  65. Snowberries                       994
+  66. Taproot                           969
+  67. Bleeding Crown                    968
+  68. Fire Salts                        967
+  69. Cyrodilic Spadetail               963
+  70. Nirnroot                          958
+  71. Swamp Fungal Pod                  954
+  72. Dwarven Oil                       943
+  73. Pine Thrush Egg                   937
+  74. Jazbay Grapes                     936
+  75. Small Antlers                     936
+  76. Frost Salts                       934
+  77. Emperor Parasol Moss              921
+  78. Slaughterfish Egg                 891
+  79. Fly Amanita                       870
+  80. Mora Tapinella                    870
+  81. Imp Stool                         842
+  82. Dragon's Tongue                   799
+  83. Skeever Tail                      794
+  84. Ectoplasm                         788
+  85. Rock Warbler Egg                  788
+  86. Sabre Cat Tooth                   787
+  87. Troll Fat                         781
+  88. Ice Wraith Teeth                  772
+  89. Blue Dartwing                     771
+  90. Pearl                             758
+  91. Mudcrab Chitin                    728
+  92. Bone Meal                         706
+  93. Elves Ear                         702
+  94. Orange Dartwing                   657
+  95. Tundra Cotton                     653
+  96. Falmer Ear                        626
+  97. Honeycomb                         600
+  98. Lavender                          599
+  99. Charred Skeever Hide              588
+  100. Ash Hopper Jelly                  567
+  101. Grass Pod                         562
+  102. Torchbug Thorax                   555
+  103. Red Mountain Flower               498
+  104. Spawn Ash                         495
+  105. Blisterwort                       442
+  106. Eye of Sabre Cat                  432
+  107. Felsaad Tern Feathers             401
+  108. Hagraven Claw                     396
+  109. White Cap                         388
+  110. Butterfly Wing                    338
+  111. Scathecraw                        295
+
+physician:
+----------------------------------------
+   1. Frost Mirriam                    6324
+   2. Giant Lichen                     4747
+   3. Salmon Roe                       3450
+   4. Jarrin Root                      2673
+   5. Trama Root                       1845
+   6. River Betty                      1707
+   7. Large Antlers                    1596
+   8. Hawk Beak                        1549
+   9. Yellow Mountain Flower           1527
+  10. Burnt Spriggan Wood              1507
+  11. Poison Bloom                     1500
+  12. Silverside Perch                 1500
+  13. Ashen Grass Pod                  1476
+  14. Netch Jelly                      1469
+  15. Giant's Toe                      1458
+  16. Small Pearl                      1430
+  17. Glow Dust                        1423
+  18. Purple Mountain Flower           1420
+  19. Creep Cluster                    1398
+  20. Bear Claws                       1379
+  21. Hanging Moss                     1376
+  22. Histcarp                         1366
+  23. Salt Pile                        1363
+  24. Deathbell                        1356
+  25. Gleamblossom                     1328
+  26. Chaurus Eggs                     1311
+  27. Juniper Berries                  1295
+  28. Garlic                           1268
+  29. Chicken Egg                      1261
+  30. Crimson Nirnroot                 1259
+  31. Nightshade                       1245
+  32. Human Heart                      1238
+  33. Abecean Longfin                  1232
+  34. Boar Tusk                        1230
+  35. Moon Sugar                       1221
+  36. Hawk's Egg                       1212
+  37. Blue Mountain Flower             1207
+  38. Bee                              1198
+  39. Wheat                            1186
+  40. Chaurus Hunter Antennae          1176
+  41. Luna Moth Wing                   1176
+  42. Nordic Barnacle                  1173
+  43. Wisp Wrappings                   1173
+  44. Canis Root                       1167
+  45. Hagraven Feathers                1154
+  46. Daedra Heart                     1146
+  47. Ancestor Moth Wing               1133
+  48. Beehive Husk                     1118
+  49. Scaly Pholiota                   1113
+  50. Blue Butterfly Wing              1106
+  51. Spider Egg                       1103
+  52. Aloe Vera Leaves                 1088
+  53. Thistle Branch                   1085
+  54. Human Flesh                      1070
+  55. Ash Creep Cluster                1064
+  56. Briar Heart                      1053
+  57. Vampire Dust                     1050
+  58. Void Salts                       1030
+  59. Snowberries                      1024
+  60. Pine Thrush Egg                  1007
+  61. Fire Salts                       1001
+  62. Slaughterfish Scales             1001
+  63. Frost Salts                       990
+  64. Spriggan Sap                      989
+  65. Swamp Fungal Pod                  983
+  66. Namira's Rot                      971
+  67. Glowing Mushroom                  970
+  68. Dwarven Oil                       958
+  69. Taproot                           952
+  70. Powdered Mammoth Tusk             947
+  71. Hawk Feathers                     945
+  72. Small Antlers                     919
+  73. Nirnroot                          914
+  74. Imp Stool                         872
+  75. Jazbay Grapes                     872
+  76. Skeever Tail                      865
+  77. Emperor Parasol Moss              853
+  78. Bleeding Crown                    850
+  79. Cyrodilic Spadetail               822
+  80. Fly Amanita                       820
+  81. Slaughterfish Egg                 813
+  82. Mora Tapinella                    789
+  83. Sabre Cat Tooth                   783
+  84. Ice Wraith Teeth                  760
+  85. Mudcrab Chitin                    744
+  86. Blue Dartwing                     740
+  87. Rock Warbler Egg                  739
+  88. Troll Fat                         731
+  89. Pearl                             730
+  90. Ectoplasm                         705
+  91. Elves Ear                         696
+  92. Bone Meal                         680
+  93. Orange Dartwing                   662
+  94. Dragon's Tongue                   659
+  95. Charred Skeever Hide              614
+  96. Falmer Ear                        595
+  97. Grass Pod                         558
+  98. Tundra Cotton                     553
+  99. Honeycomb                         548
+  100. Lavender                          539
+  101. Ash Hopper Jelly                  535
+  102. Torchbug Thorax                   505
+  103. Spawn Ash                         479
+  104. Red Mountain Flower               477
+  105. Eye of Sabre Cat                  465
+  106. Blisterwort                       394
+  107. Hagraven Claw                     387
+  108. White Cap                         377
+  109. Felsaad Tern Feathers             368
+  110. Butterfly Wing                    341
+  111. Scathecraw                        291
+
+poisoner:
+----------------------------------------
+   1. Frost Mirriam                    6368
+   2. Giant Lichen                     5811
+   3. Jarrin Root                      3986
+   4. Salmon Roe                       3153
+   5. Trama Root                       2335
+   6. River Betty                      2068
+   7. Large Antlers                    1828
+   8. Burnt Spriggan Wood              1824
+   9. Ashen Grass Pod                  1811
+  10. Poison Bloom                     1804
+  11. Deathbell                        1737
+  12. Netch Jelly                      1674
+  13. Giant's Toe                      1635
+  14. Glow Dust                        1612
+  15. Hawk Beak                        1606
+  16. Silverside Perch                 1606
+  17. Hanging Moss                     1583
+  18. Yellow Mountain Flower           1582
+  19. Salt Pile                        1574
+  20. Bear Claws                       1561
+  21. Creep Cluster                    1522
+  22. Gleamblossom                     1515
+  23. Purple Mountain Flower           1510
+  24. Human Heart                      1502
+  25. Nightshade                       1469
+  26. Histcarp                         1457
+  27. Hawk's Egg                       1436
+  28. Crimson Nirnroot                 1429
+  29. Boar Tusk                        1427
+  30. Small Pearl                      1427
+  31. Juniper Berries                  1423
+  32. Chicken Egg                      1412
+  33. Blue Mountain Flower             1395
+  34. Canis Root                       1387
+  35. Chaurus Eggs                     1383
+  36. Human Flesh                      1381
+  37. Hagraven Feathers                1379
+  38. Abecean Longfin                  1361
+  39. Chaurus Hunter Antennae          1333
+  40. Wheat                            1330
+  41. Spider Egg                       1324
+  42. Ancestor Moth Wing               1307
+  43. Blue Butterfly Wing              1297
+  44. Moon Sugar                       1274
+  45. Bee                              1268
+  46. Garlic                           1260
+  47. Briar Heart                      1251
+  48. Nordic Barnacle                  1247
+  49. Daedra Heart                     1234
+  50. Spriggan Sap                     1187
+  51. Wisp Wrappings                   1182
+  52. Swamp Fungal Pod                 1162
+  53. Luna Moth Wing                   1156
+  54. Namira's Rot                     1139
+  55. Beehive Husk                     1137
+  56. Scaly Pholiota                   1124
+  57. Ash Creep Cluster                1104
+  58. Void Salts                       1103
+  59. Thistle Branch                   1094
+  60. Slaughterfish Scales             1080
+  61. Imp Stool                        1064
+  62. Aloe Vera Leaves                 1047
+  63. Small Antlers                    1046
+  64. Vampire Dust                     1034
+  65. Pine Thrush Egg                  1031
+  66. Snowberries                      1029
+  67. Powdered Mammoth Tusk            1013
+  68. Glowing Mushroom                 1010
+  69. Frost Salts                       958
+  70. Nirnroot                          957
+  71. Dwarven Oil                       951
+  72. Hawk Feathers                     951
+  73. Skeever Tail                      949
+  74. Fire Salts                        947
+  75. Cyrodilic Spadetail               931
+  76. Bleeding Crown                    929
+  77. Taproot                           929
+  78. Slaughterfish Egg                 858
+  79. Jazbay Grapes                     856
+  80. Emperor Parasol Moss              854
+  81. Fly Amanita                       831
+  82. Sabre Cat Tooth                   829
+  83. Rock Warbler Egg                  803
+  84. Blue Dartwing                     796
+  85. Mora Tapinella                    771
+  86. Ectoplasm                         767
+  87. Troll Fat                         767
+  88. Bone Meal                         759
+  89. Ice Wraith Teeth                  750
+  90. Mudcrab Chitin                    732
+  91. Pearl                             718
+  92. Elves Ear                         700
+  93. Orange Dartwing                   659
+  94. Dragon's Tongue                   655
+  95. Falmer Ear                        631
+  96. Charred Skeever Hide              598
+  97. Tundra Cotton                     579
+  98. Grass Pod                         559
+  99. Lavender                          553
+  100. Ash Hopper Jelly                  550
+  101. Honeycomb                         540
+  102. Torchbug Thorax                   531
+  103. Spawn Ash                         501
+  104. Eye of Sabre Cat                  493
+  105. Red Mountain Flower               461
+  106. Blisterwort                       451
+  107. Hagraven Claw                     425
+  108. Butterfly Wing                    376
+  109. White Cap                         376
+  110. Felsaad Tern Feathers             354
+  111. Scathecraw                        310
+
+benefactor+physician:
+----------------------------------------
+   1. Frost Mirriam                    6074
+   2. Giant Lichen                     4706
+   3. Salmon Roe                       3515
+   4. Jarrin Root                      2980
+   5. Trama Root                       1853
+   6. River Betty                      1752
+   7. Hawk Beak                        1744
+   8. Giant's Toe                      1626
+   9. Purple Mountain Flower           1579
+  10. Poison Bloom                     1574
+  11. Silverside Perch                 1542
+  12. Large Antlers                    1538
+  13. Netch Jelly                      1537
+  14. Yellow Mountain Flower           1531
+  15. Creep Cluster                    1519
+  16. Burnt Spriggan Wood              1496
+  17. Small Pearl                      1484
+  18. Ashen Grass Pod                  1451
+  19. Glow Dust                        1447
+  20. Bear Claws                       1434
+  21. Abecean Longfin                  1432
+  22. Histcarp                         1412
+  23. Crimson Nirnroot                 1411
+  24. Beehive Husk                     1408
+  25. Human Flesh                      1407
+  26. Hawk's Egg                       1398
+  27. Deathbell                        1384
+  28. Salt Pile                        1377
+  29. Hanging Moss                     1365
+  30. Wisp Wrappings                   1319
+  31. Moon Sugar                       1313
+  32. Gleamblossom                     1296
+  33. Garlic                           1286
+  34. Juniper Berries                  1282
+  35. Scaly Pholiota                   1281
+  36. Chaurus Eggs                     1269
+  37. Nightshade                       1263
+  38. Boar Tusk                        1262
+  39. Bee                              1253
+  40. Luna Moth Wing                   1250
+  41. Nordic Barnacle                  1243
+  42. Chicken Egg                      1236
+  43. Blue Mountain Flower             1234
+  44. Human Heart                      1229
+  45. Daedra Heart                     1188
+  46. Hawk Feathers                    1183
+  47. Canis Root                       1176
+  48. Powdered Mammoth Tusk            1152
+  49. Wheat                            1135
+  50. Chaurus Hunter Antennae          1132
+  51. Briar Heart                      1118
+  52. Ash Creep Cluster                1113
+  53. Spider Egg                       1107
+  54. Ancestor Moth Wing               1105
+  55. Blue Butterfly Wing              1102
+  56. Thistle Branch                   1097
+  57. Void Salts                       1074
+  58. Aloe Vera Leaves                 1068
+  59. Vampire Dust                     1047
+  60. Glowing Mushroom                 1030
+  61. Hagraven Feathers                1027
+  62. Taproot                          1023
+  63. Dwarven Oil                      1020
+  64. Pine Thrush Egg                  1014
+  65. Spriggan Sap                     1006
+  66. Slaughterfish Scales              998
+  67. Namira's Rot                      994
+  68. Snowberries                       986
+  69. Frost Salts                       973
+  70. Swamp Fungal Pod                  971
+  71. Bleeding Crown                    965
+  72. Fire Salts                        949
+  73. Jazbay Grapes                     929
+  74. Cyrodilic Spadetail               919
+  75. Emperor Parasol Moss              918
+  76. Nirnroot                          917
+  77. Small Antlers                     905
+  78. Slaughterfish Egg                 896
+  79. Fly Amanita                       880
+  80. Mora Tapinella                    877
+  81. Imp Stool                         870
+  82. Blue Dartwing                     824
+  83. Ectoplasm                         824
+  84. Skeever Tail                      822
+  85. Sabre Cat Tooth                   816
+  86. Ice Wraith Teeth                  813
+  87. Rock Warbler Egg                  806
+  88. Pearl                             804
+  89. Dragon's Tongue                   791
+  90. Troll Fat                         773
+  91. Mudcrab Chitin                    740
+  92. Orange Dartwing                   734
+  93. Tundra Cotton                     704
+  94. Bone Meal                         697
+  95. Elves Ear                         685
+  96. Honeycomb                         628
+  97. Lavender                          611
+  98. Falmer Ear                        610
+  99. Charred Skeever Hide              607
+  100. Ash Hopper Jelly                  577
+  101. Grass Pod                         571
+  102. Torchbug Thorax                   553
+  103. Red Mountain Flower               501
+  104. Spawn Ash                         480
+  105. Eye of Sabre Cat                  477
+  106. Blisterwort                       430
+  107. White Cap                         405
+  108. Felsaad Tern Feathers             403
+  109. Hagraven Claw                     400
+  110. Butterfly Wing                    369
+  111. Scathecraw                        292
+
+benefactor+poisoner:
+----------------------------------------
+   1. Frost Mirriam                    6230
+   2. Giant Lichen                     5911
+   3. Salmon Roe                       3499
+   4. Jarrin Root                      3419
+   5. Trama Root                       2249
+   6. River Betty                      2019
+   7. Ashen Grass Pod                  1812
+   8. Burnt Spriggan Wood              1805
+   9. Poison Bloom                     1793
+  10. Hawk Beak                        1773
+  11. Deathbell                        1767
+  12. Large Antlers                    1749
+  13. Netch Jelly                      1662
+  14. Giant's Toe                      1647
+  15. Yellow Mountain Flower           1613
+  16. Glow Dust                        1612
+  17. Human Flesh                      1596
+  18. Hanging Moss                     1595
+  19. Bear Claws                       1588
+  20. Silverside Perch                 1583
+  21. Abecean Longfin                  1575
+  22. Gleamblossom                     1566
+  23. Creep Cluster                    1554
+  24. Salt Pile                        1552
+  25. Small Pearl                      1524
+  26. Boar Tusk                        1523
+  27. Hawk's Egg                       1515
+  28. Nightshade                       1461
+  29. Chicken Egg                      1458
+  30. Crimson Nirnroot                 1439
+  31. Blue Mountain Flower             1429
+  32. Purple Mountain Flower           1427
+  33. Canis Root                       1422
+  34. Histcarp                         1412
+  35. Human Heart                      1394
+  36. Beehive Husk                     1384
+  37. Chaurus Eggs                     1373
+  38. Chaurus Hunter Antennae          1365
+  39. Wisp Wrappings                   1346
+  40. Ancestor Moth Wing               1345
+  41. Spider Egg                       1345
+  42. Bee                              1337
+  43. Hagraven Feathers                1337
+  44. Juniper Berries                  1329
+  45. Nordic Barnacle                  1328
+  46. Scaly Pholiota                   1320
+  47. Briar Heart                      1294
+  48. Void Salts                       1290
+  49. Garlic                           1277
+  50. Blue Butterfly Wing              1265
+  51. Moon Sugar                       1237
+  52. Spriggan Sap                     1230
+  53. Luna Moth Wing                   1209
+  54. Wheat                            1209
+  55. Ash Creep Cluster                1183
+  56. Hawk Feathers                    1174
+  57. Powdered Mammoth Tusk            1162
+  58. Swamp Fungal Pod                 1149
+  59. Thistle Branch                   1122
+  60. Daedra Heart                     1109
+  61. Namira's Rot                     1101
+  62. Aloe Vera Leaves                 1094
+  63. Glowing Mushroom                 1087
+  64. Small Antlers                    1086
+  65. Pine Thrush Egg                  1074
+  66. Vampire Dust                     1074
+  67. Slaughterfish Scales             1071
+  68. Bleeding Crown                   1052
+  69. Frost Salts                      1052
+  70. Imp Stool                        1051
+  71. Cyrodilic Spadetail              1038
+  72. Taproot                          1026
+  73. Snowberries                      1005
+  74. Dwarven Oil                       977
+  75. Jazbay Grapes                     955
+  76. Nirnroot                          954
+  77. Emperor Parasol Moss              946
+  78. Sabre Cat Tooth                   926
+  79. Fire Salts                        912
+  80. Slaughterfish Egg                 911
+  81. Skeever Tail                      900
+  82. Mora Tapinella                    898
+  83. Fly Amanita                       883
+  84. Rock Warbler Egg                  870
+  85. Ectoplasm                         853
+  86. Blue Dartwing                     848
+  87. Dragon's Tongue                   790
+  88. Troll Fat                         789
+  89. Pearl                             778
+  90. Ice Wraith Teeth                  760
+  91. Bone Meal                         755
+  92. Mudcrab Chitin                    748
+  93. Orange Dartwing                   719
+  94. Elves Ear                         714
+  95. Tundra Cotton                     685
+  96. Honeycomb                         630
+  97. Falmer Ear                        627
+  98. Lavender                          614
+  99. Charred Skeever Hide              602
+  100. Torchbug Thorax                   591
+  101. Ash Hopper Jelly                  576
+  102. Grass Pod                         570
+  103. Eye of Sabre Cat                  516
+  104. Red Mountain Flower               510
+  105. Blisterwort                       471
+  106. Spawn Ash                         470
+  107. Hagraven Claw                     415
+  108. Butterfly Wing                    408
+  109. Felsaad Tern Feathers             401
+  110. White Cap                         379
+  111. Scathecraw                        328
+
+physician+poisoner:
+----------------------------------------
+   1. Frost Mirriam                    6081
+   2. Giant Lichen                     5767
+   3. Jarrin Root                      3522
+   4. Salmon Roe                       3129
+   5. Trama Root                       2252
+   6. River Betty                      2033
+   7. Burnt Spriggan Wood              1928
+   8. Poison Bloom                     1779
+   9. Large Antlers                    1747
+  10. Deathbell                        1716
+  11. Ashen Grass Pod                  1713
+  12. Giant's Toe                      1700
+  13. Netch Jelly                      1686
+  14. Yellow Mountain Flower           1619
+  15. Hawk Beak                        1613
+  16. Silverside Perch                 1592
+  17. Glow Dust                        1585
+  18. Hanging Moss                     1574
+  19. Human Flesh                      1563
+  20. Bear Claws                       1554
+  21. Gleamblossom                     1527
+  22. Creep Cluster                    1499
+  23. Salt Pile                        1497
+  24. Human Heart                      1480
+  25. Boar Tusk                        1464
+  26. Nightshade                       1452
+  27. Histcarp                         1449
+  28. Crimson Nirnroot                 1441
+  29. Small Pearl                      1420
+  30. Blue Mountain Flower             1404
+  31. Purple Mountain Flower           1392
+  32. Canis Root                       1383
+  33. Chicken Egg                      1380
+  34. Chaurus Hunter Antennae          1359
+  35. Chaurus Eggs                     1358
+  36. Bee                              1351
+  37. Hawk's Egg                       1349
+  38. Juniper Berries                  1344
+  39. Daedra Heart                     1334
+  40. Spider Egg                       1324
+  41. Wheat                            1313
+  42. Ancestor Moth Wing               1296
+  43. Blue Butterfly Wing              1289
+  44. Moon Sugar                       1271
+  45. Garlic                           1266
+  46. Wisp Wrappings                   1260
+  47. Abecean Longfin                  1259
+  48. Briar Heart                      1228
+  49. Nordic Barnacle                  1222
+  50. Luna Moth Wing                   1218
+  51. Hagraven Feathers                1192
+  52. Spriggan Sap                     1186
+  53. Vampire Dust                     1167
+  54. Swamp Fungal Pod                 1158
+  55. Scaly Pholiota                   1157
+  56. Void Salts                       1130
+  57. Namira's Rot                     1129
+  58. Ash Creep Cluster                1124
+  59. Aloe Vera Leaves                 1120
+  60. Beehive Husk                     1110
+  61. Thistle Branch                   1090
+  62. Pine Thrush Egg                  1063
+  63. Imp Stool                        1057
+  64. Hawk Feathers                    1015
+  65. Glowing Mushroom                 1010
+  66. Small Antlers                    1010
+  67. Slaughterfish Scales             1007
+  68. Snowberries                      1006
+  69. Bleeding Crown                    994
+  70. Nirnroot                          984
+  71. Frost Salts                       981
+  72. Taproot                           971
+  73. Powdered Mammoth Tusk             964
+  74. Fire Salts                        957
+  75. Dwarven Oil                       948
+  76. Cyrodilic Spadetail               946
+  77. Skeever Tail                      946
+  78. Emperor Parasol Moss              871
+  79. Slaughterfish Egg                 829
+  80. Jazbay Grapes                     828
+  81. Sabre Cat Tooth                   828
+  82. Rock Warbler Egg                  823
+  83. Mora Tapinella                    819
+  84. Fly Amanita                       815
+  85. Blue Dartwing                     801
+  86. Ice Wraith Teeth                  779
+  87. Pearl                             762
+  88. Ectoplasm                         756
+  89. Troll Fat                         752
+  90. Bone Meal                         738
+  91. Mudcrab Chitin                    737
+  92. Elves Ear                         715
+  93. Orange Dartwing                   688
+  94. Dragon's Tongue                   685
+  95. Falmer Ear                        645
+  96. Charred Skeever Hide              621
+  97. Grass Pod                         592
+  98. Tundra Cotton                     578
+  99. Honeycomb                         556
+  100. Eye of Sabre Cat                  555
+  101. Torchbug Thorax                   552
+  102. Ash Hopper Jelly                  550
+  103. Lavender                          540
+  104. Spawn Ash                         484
+  105. Red Mountain Flower               445
+  106. Blisterwort                       433
+  107. Hagraven Claw                     399
+  108. Butterfly Wing                    385
+  109. Felsaad Tern Feathers             385
+  110. White Cap                         381
+  111. Scathecraw                        318
+
+all_perks:
+----------------------------------------
+   1. Frost Mirriam                    6225
+   2. Giant Lichen                     5827
+   3. Jarrin Root                      4058
+   4. Salmon Roe                       3624
+   5. Trama Root                       2244
+   6. River Betty                      2046
+   7. Burnt Spriggan Wood              1845
+   8. Large Antlers                    1797
+   9. Poison Bloom                     1784
+  10. Hawk Beak                        1783
+  11. Netch Jelly                      1727
+  12. Deathbell                        1704
+  13. Ashen Grass Pod                  1656
+  14. Glow Dust                        1654
+  15. Giant's Toe                      1643
+  16. Bear Claws                       1632
+  17. Hanging Moss                     1620
+  18. Silverside Perch                 1601
+  19. Yellow Mountain Flower           1592
+  20. Purple Mountain Flower           1584
+  21. Small Pearl                      1572
+  22. Salt Pile                        1553
+  23. Creep Cluster                    1548
+  24. Gleamblossom                     1528
+  25. Hawk's Egg                       1511
+  26. Abecean Longfin                  1510
+  27. Boar Tusk                        1487
+  28. Histcarp                         1472
+  29. Nightshade                       1458
+  30. Human Flesh                      1442
+  31. Human Heart                      1438
+  32. Wisp Wrappings                   1420
+  33. Chaurus Eggs                     1413
+  34. Blue Mountain Flower             1399
+  35. Chicken Egg                      1399
+  36. Beehive Husk                     1389
+  37. Juniper Berries                  1380
+  38. Canis Root                       1379
+  39. Bee                              1373
+  40. Ancestor Moth Wing               1351
+  41. Chaurus Hunter Antennae          1331
+  42. Crimson Nirnroot                 1319
+  43. Garlic                           1319
+  44. Daedra Heart                     1307
+  45. Spider Egg                       1305
+  46. Scaly Pholiota                   1302
+  47. Blue Butterfly Wing              1292
+  48. Moon Sugar                       1292
+  49. Hagraven Feathers                1289
+  50. Nordic Barnacle                  1271
+  51. Hawk Feathers                    1250
+  52. Luna Moth Wing                   1248
+  53. Wheat                            1238
+  54. Briar Heart                      1234
+  55. Void Salts                       1210
+  56. Powdered Mammoth Tusk            1191
+  57. Swamp Fungal Pod                 1164
+  58. Spriggan Sap                     1160
+  59. Ash Creep Cluster                1155
+  60. Glowing Mushroom                 1108
+  61. Aloe Vera Leaves                 1107
+  62. Small Antlers                    1105
+  63. Vampire Dust                     1105
+  64. Namira's Rot                     1098
+  65. Thistle Branch                   1093
+  66. Slaughterfish Scales             1087
+  67. Bleeding Crown                   1069
+  68. Imp Stool                        1067
+  69. Pine Thrush Egg                  1065
+  70. Cyrodilic Spadetail              1047
+  71. Snowberries                      1047
+  72. Taproot                          1041
+  73. Dwarven Oil                      1016
+  74. Frost Salts                      1001
+  75. Nirnroot                          983
+  76. Emperor Parasol Moss              967
+  77. Jazbay Grapes                     964
+  78. Slaughterfish Egg                 933
+  79. Mora Tapinella                    917
+  80. Skeever Tail                      906
+  81. Fly Amanita                       901
+  82. Fire Salts                        899
+  83. Rock Warbler Egg                  880
+  84. Ectoplasm                         877
+  85. Sabre Cat Tooth                   877
+  86. Blue Dartwing                     872
+  87. Troll Fat                         842
+  88. Pearl                             820
+  89. Ice Wraith Teeth                  813
+  90. Bone Meal                         783
+  91. Dragon's Tongue                   767
+  92. Mudcrab Chitin                    757
+  93. Elves Ear                         734
+  94. Orange Dartwing                   717
+  95. Tundra Cotton                     682
+  96. Falmer Ear                        656
+  97. Honeycomb                         648
+  98. Lavender                          635
+  99. Charred Skeever Hide              625
+  100. Torchbug Thorax                   622
+  101. Grass Pod                         597
+  102. Ash Hopper Jelly                  594
+  103. Eye of Sabre Cat                  562
+  104. Red Mountain Flower               512
+  105. Spawn Ash                         498
+  106. Blisterwort                       472
+  107. White Cap                         424
+  108. Felsaad Tern Feathers             418
+  109. Hagraven Claw                     413
+  110. Butterfly Wing                    402
+  111. Scathecraw                        327
+
+================================================================================
+INGREDIENT PERK SENSITIVITY
+================================================================================
+Ingredients that benefit most from perks (vs baseline):
+
+All ingredients by perk benefit:
+
+   1. Giant Lichen                   +  1275 ( 27.5%)  best: benefactor+poisoner
+   2. Jarrin Root                    +  1213 ( 42.6%)  best: all_perks
+   3. Trama Root                     +   519 ( 28.6%)  best: poisoner
+   4. Burnt Spriggan Wood            +   474 ( 32.6%)  best: physician+poisoner
+   5. Salmon Roe                     +   434 ( 13.6%)  best: all_perks
+   6. Deathbell                      +   391 ( 28.4%)  best: benefactor+poisoner
+   7. Human Heart                    +   384 ( 34.3%)  best: poisoner
+   8. Abecean Longfin                +   381 ( 31.9%)  best: benefactor+poisoner
+   9. River Betty                    +   372 ( 21.9%)  best: poisoner
+  10. Hawk Feathers                  +   344 ( 38.0%)  best: all_perks
+  11. Beehive Husk                   +   338 ( 31.6%)  best: benefactor+physician
+  12. Human Flesh                    +   335 ( 26.6%)  best: benefactor+poisoner
+  13. Ashen Grass Pod                +   310 ( 20.6%)  best: benefactor+poisoner
+  14. Large Antlers                  +   290 ( 18.9%)  best: poisoner
+  15. Bear Claws                     +   290 ( 21.6%)  best: all_perks
+  16. Hagraven Feathers              +   286 ( 26.2%)  best: poisoner
+  17. Boar Tusk                      +   280 ( 22.5%)  best: benefactor+poisoner
+  18. Poison Bloom                   +   279 ( 18.3%)  best: poisoner
+  19. Hanging Moss                   +   279 ( 20.8%)  best: all_perks
+  20. Wisp Wrappings                 +   274 ( 23.9%)  best: all_perks
+  21. Spider Egg                     +   270 ( 25.1%)  best: benefactor+poisoner
+  22. Chicken Egg                    +   261 ( 21.8%)  best: benefactor+poisoner
+  23. Canis Root                     +   258 ( 22.2%)  best: benefactor+poisoner
+  24. Bee                            +   256 ( 22.9%)  best: all_perks
+  25. Void Salts                     +   255 ( 24.6%)  best: benefactor+poisoner
+  26. Powdered Mammoth Tusk          +   254 ( 27.1%)  best: all_perks
+  27. Giant's Toe                    +   247 ( 16.7%)  best: benefactor
+  28. Netch Jelly                    +   245 ( 16.5%)  best: all_perks
+  29. Hawk's Egg                     +   236 ( 18.5%)  best: benefactor+poisoner
+  30. Briar Heart                    +   231 ( 21.7%)  best: benefactor+poisoner
+  31. Cyrodilic Spadetail            +   230 ( 28.2%)  best: all_perks
+  32. Chaurus Eggs                   +   228 ( 19.2%)  best: all_perks
+  33. Blue Butterfly Wing            +   223 ( 20.8%)  best: poisoner
+  34. Ancestor Moth Wing             +   221 ( 19.6%)  best: all_perks
+  35. Glow Dust                      +   219 ( 15.3%)  best: all_perks
+  36. Salt Pile                      +   216 ( 15.9%)  best: poisoner
+  37. Blue Mountain Flower           +   216 ( 17.8%)  best: benefactor+poisoner
+  38. Small Antlers                  +   215 ( 24.2%)  best: all_perks
+  39. Nightshade                     +   210 ( 16.7%)  best: poisoner
+  40. Small Pearl                    +   202 ( 14.7%)  best: all_perks
+  41. Imp Stool                      +   200 ( 23.1%)  best: all_perks
+  42. Scaly Pholiota                 +   199 ( 17.6%)  best: benefactor
+  43. Sabre Cat Tooth                +   199 ( 27.4%)  best: benefactor+poisoner
+  44. Chaurus Hunter Antennae        +   197 ( 16.9%)  best: benefactor+poisoner
+  45. Gleamblossom                   +   194 ( 14.1%)  best: benefactor+poisoner
+  46. Swamp Fungal Pod               +   191 ( 19.6%)  best: all_perks
+  47. Hawk Beak                      +   184 ( 11.5%)  best: all_perks
+  48. Wheat                          +   182 ( 15.9%)  best: poisoner
+  49. Daedra Heart                   +   180 ( 15.6%)  best: physician+poisoner
+  50. Creep Cluster                  +   174 ( 12.6%)  best: benefactor+poisoner
+  51. Crimson Nirnroot               +   173 ( 13.6%)  best: physician+poisoner
+  52. Mora Tapinella                 +   173 ( 23.3%)  best: all_perks
+  53. Rock Warbler Egg               +   160 ( 22.2%)  best: all_perks
+  54. Frost Mirriam                  +   156 (  2.5%)  best: poisoner
+  55. Ash Creep Cluster              +   155 ( 15.1%)  best: benefactor+poisoner
+  56. Tundra Cotton                  +   149 ( 26.8%)  best: benefactor+physician
+  57. Dragon's Tongue                +   147 ( 22.5%)  best: benefactor
+  58. Purple Mountain Flower         +   144 ( 10.0%)  best: all_perks
+  59. Bleeding Crown                 +   144 ( 15.6%)  best: all_perks
+  60. Ectoplasm                      +   144 ( 19.6%)  best: all_perks
+  61. Taproot                        +   139 ( 15.4%)  best: all_perks
+  62. Spriggan Sap                   +   138 ( 12.6%)  best: benefactor+poisoner
+  63. Slaughterfish Egg              +   138 ( 17.4%)  best: all_perks
+  64. Slaughterfish Scales           +   137 ( 14.4%)  best: all_perks
+  65. Eye of Sabre Cat               +   136 ( 31.9%)  best: all_perks
+  66. Silverside Perch               +   131 (  8.9%)  best: poisoner
+  67. Histcarp                       +   131 (  9.8%)  best: all_perks
+  68. Frost Salts                    +   128 ( 13.9%)  best: benefactor+poisoner
+  69. Fire Salts                     +   128 ( 14.7%)  best: physician
+  70. Honeycomb                      +   127 ( 24.4%)  best: all_perks
+  71. Blue Dartwing                  +   125 ( 16.7%)  best: all_perks
+  72. Yellow Mountain Flower         +   121 (  8.1%)  best: physician+poisoner
+  73. Orange Dartwing                +   121 ( 19.7%)  best: benefactor+physician
+  74. Torchbug Thorax                +   121 ( 24.2%)  best: all_perks
+  75. Pearl                          +   118 ( 16.8%)  best: all_perks
+  76. Troll Fat                      +   117 ( 16.1%)  best: all_perks
+  77. Pine Thrush Egg                +   114 ( 11.9%)  best: benefactor+poisoner
+  78. Glowing Mushroom               +   111 ( 11.1%)  best: all_perks
+  79. Vampire Dust                   +   110 ( 10.4%)  best: physician+poisoner
+  80. Fly Amanita                    +   105 ( 13.2%)  best: all_perks
+  81. Dwarven Oil                    +   104 ( 11.4%)  best: benefactor+physician
+  82. Juniper Berries                +   103 (  7.8%)  best: poisoner
+  83. Jazbay Grapes                  +   101 ( 11.7%)  best: all_perks
+  84. Skeever Tail                   +   101 ( 11.9%)  best: poisoner
+  85. Red Mountain Flower            +    99 ( 24.0%)  best: all_perks
+  86. Namira's Rot                   +    97 (  9.3%)  best: poisoner
+  87. Aloe Vera Leaves               +    94 (  9.2%)  best: physician+poisoner
+  88. Butterfly Wing                 +    94 ( 29.9%)  best: benefactor+poisoner
+  89. Bone Meal                      +    92 ( 13.3%)  best: all_perks
+  90. Moon Sugar                     +    88 (  7.2%)  best: benefactor+physician
+  91. Emperor Parasol Moss           +    87 (  9.9%)  best: all_perks
+  92. Garlic                         +    85 (  6.8%)  best: benefactor
+  93. Nordic Barnacle                +    85 (  6.8%)  best: benefactor+poisoner
+  94. Ash Hopper Jelly               +    82 ( 16.0%)  best: all_perks
+  95. Lavender                       +    78 ( 14.0%)  best: all_perks
+  96. Blisterwort                    +    76 ( 19.2%)  best: all_perks
+  97. White Cap                      +    72 ( 20.5%)  best: all_perks
+  98. Ice Wraith Teeth               +    65 (  8.7%)  best: benefactor+physician
+  99. Charred Skeever Hide           +    62 ( 11.0%)  best: all_perks
+  100. Elves Ear                      +    60 (  8.9%)  best: all_perks
+  101. Felsaad Tern Feathers          +    57 ( 15.8%)  best: all_perks
+  102. Thistle Branch                 +    56 (  5.3%)  best: benefactor+poisoner
+  103. Snowberries                    +    54 (  5.4%)  best: all_perks
+  104. Falmer Ear                     +    51 (  8.4%)  best: all_perks
+  105. Mudcrab Chitin                 +    46 (  6.5%)  best: all_perks
+  106. Hagraven Claw                  +    43 ( 11.3%)  best: poisoner
+  107. Luna Moth Wing                 +    41 (  3.4%)  best: benefactor+physician
+  108. Scathecraw                     +    33 ( 11.2%)  best: benefactor+poisoner
+  109. Nirnroot                       +    31 (  3.3%)  best: physician+poisoner
+  110. Grass Pod                      +    23 (  4.0%)  best: all_perks
+  111. Spawn Ash                      +    14 (  2.9%)  best: poisoner
+
+================================================================================
+Results saved to /Users/jackblackburn/code/main/esv-alchemy/analysis/results/perks_20260319_003949.json
