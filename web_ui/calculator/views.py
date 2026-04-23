@@ -1,69 +1,132 @@
+"""
+views.py — drop-in replacement for web_ui/calculator/views.py
+Uses Alembic (main branch). No client-side alchemy logic required.
+"""
 import json
+import glob
+import os
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_exempt
-from .utils import get_all_ingredients
-from src.alchemy_simulator import AlchemySimulator
+from django.conf import settings
+
+from src.alembic import Alembic
+from src.player import Player
+from src.inventory import Inventory
+from src.database import IngredientsDatabase
 
 
+# ── Shared DB singleton (loaded once per process) ─────────────────────────────
+_DB = None
+def _get_db():
+    global _DB
+    if _DB is None:
+        _DB = IngredientsDatabase()
+    return _DB
+
+
+# ── Data serialisation helpers ─────────────────────────────────────────────────
+def _serialize_ingredients(db):
+    return [
+        {
+            "name":   ing.name,
+            "value":  ing.value,
+            "weight": ing.weight,
+            "rarity": ing.rarity,
+            "dlc":    ing.dlc,
+            "source": ing.source,
+            "effects": [
+                {"name": ing.effect1, "mag": ing.effect1_mag, "dur": ing.effect1_dur},
+                {"name": ing.effect2, "mag": ing.effect2_mag, "dur": ing.effect2_dur},
+                {"name": ing.effect3, "mag": ing.effect3_mag, "dur": ing.effect3_dur},
+                {"name": ing.effect4, "mag": ing.effect4_mag, "dur": ing.effect4_dur},
+            ],
+        }
+        for ing in db
+    ]
+
+
+def _serialize_effects(db):
+    return [
+        {
+            "name":            eff.name,
+            "base_cost":       eff.base_cost,
+            "base_magnitude":  eff.base_mag,
+            "base_duration":   eff.base_dur,
+            "is_beneficial":   not eff.is_poison,
+            "is_poison":       eff.is_poison,
+            "varies_duration": eff.variable_duration,
+        }
+        for eff in db._effects.values()
+    ]
+
+
+def _base_context():
+    """JSON-serialised ingredient + effect data injected into every page."""
+    db = _get_db()
+    return {
+        "ingredients_json": json.dumps(_serialize_ingredients(db)),
+        "effects_json":     json.dumps(_serialize_effects(db)),
+    }
+
+
+# ── Page views ─────────────────────────────────────────────────────────────────
 def calculator_view(request):
-    """Main calculator interface with player stats and inventory."""
-    ingredients = get_all_ingredients()
-    return render(request, 'calculator/calculator.html', {'ingredients': ingredients})
+    return render(request, "calculator/calculator.html", _base_context())
 
 
 def datasets_view(request):
-    """Display ingredients and effects datasets."""
-    from .utils import get_all_effects
-    ingredients = get_all_ingredients()
-    effects = get_all_effects()
-    return render(request, 'calculator/datasets.html', {
-        'ingredients': ingredients,
-        'effects': effects
-    })
+    return render(request, "calculator/datasets.html", _base_context())
 
 
 def insights_view(request):
-    """Analysis and insights section (coming soon)."""
-    return render(request, 'calculator/insights.html')
+    return render(request, "calculator/insights.html", _base_context())
 
 
+# ── Calculator API ─────────────────────────────────────────────────────────────
 @csrf_exempt
 @require_http_methods(["POST"])
 def calculate_potions(request):
-    """API endpoint to calculate potions from player stats and ingredients."""
+    """
+    POST /api/calculate
+    Body: { skill, fortify, alchemist_rank, physician, benefactor,
+            poisoner, purity, seeker, ingredients: [str, ...] }
+    """
     try:
         data = json.loads(request.body)
 
-        # Transform frontend data to player_stats dict format
-        player_stats = {
-            "alchemy_skill": data.get("skill", 15),
-            "fortify_alchemy": data.get("fortify", 0),
-            "alchemist_perk": data.get("alchemist_rank", 0),
-            "physician_perk": data.get("physician", False),
-            "benefactor_perk": data.get("benefactor", False),
-            "poisoner_perk": data.get("poisoner", False),
-            "seeker_of_shadows": data.get("seeker", False),
-            "purity_perk": data.get("purity", False),
-        }
+        ingredient_names = data.get("ingredients", [])
+        if len(ingredient_names) < 2:
+            return JsonResponse({"error": "Please select at least 2 ingredients"}, status=400)
 
-        ingredients_list = data.get("ingredients", [])
+        player = Player(
+            skill=int(data.get("skill", 15)),
+            fortify=int(data.get("fortify", 0)),
+            alchemist_perk_level=int(data.get("alchemist_rank", 0)),
+            is_physician=bool(data.get("physician", False)),
+            is_benefactor=bool(data.get("benefactor", False)),
+            is_poisoner=bool(data.get("poisoner", False)),
+            is_seeker=bool(data.get("seeker", False)),
+            has_purity=bool(data.get("purity", False)),
+        )
 
-        # Validate ingredients list
-        if not ingredients_list or len(ingredients_list) < 2:
-            return JsonResponse({
-                "error": "Please select at least 2 ingredients"
-            }, status=400)
+        db = _get_db()
+        items, missing = {}, []
+        for name in ingredient_names:
+            ing = db.get_ingredient(name)
+            if ing:
+                items[ing] = 1
+            else:
+                missing.append(name)
 
-        # Run simulation
-        sim = AlchemySimulator(player_stats, ingredients_list)
+        if missing:
+            return JsonResponse({"error": f"Unknown ingredients: {missing}"}, status=400)
 
-        # Sort potions by value and serialize
-        sorted_potions = sorted(sim.potions, key=lambda p: p.total_value, reverse=True)
-        potions_json = [potion.to_dict() for potion in sorted_potions]
+        alembic = Alembic(db=db, player=player, inventory=Inventory(items))
+        potions = sorted(alembic.valid_potions, key=lambda p: p.total_value, reverse=True)
 
-        return JsonResponse({"potions": potions_json})
+        return JsonResponse({"potions": [p.to_dict() for p in potions]})
 
     except json.JSONDecodeError:
         return JsonResponse({"error": "Invalid JSON"}, status=400)
@@ -71,27 +134,44 @@ def calculate_potions(request):
         return JsonResponse({"error": str(e)}, status=500)
 
 
-def download_ingredients_csv(request):
-    """Download ingredients dataset as CSV."""
-    from django.http import FileResponse
-    from django.conf import settings
+# ── Insights API ───────────────────────────────────────────────────────────────
+@require_http_methods(["GET"])
+def insights_api(request):
+    """
+    GET /api/insights
+    Serves the most recent pre-computed analysis JSON files from analysis/results/.
+    Returns: { perks: {...}, rarity: {...} }
+    Run analysis/perks.py and analysis/rarity.py to refresh results.
+    """
+    results_dir = settings.PROJECT_ROOT / "analysis" / "results"
 
-    file_path = settings.PROJECT_ROOT / 'data' / 'master_ingredients.csv'
-    return FileResponse(
-        open(file_path, 'rb'),
-        as_attachment=True,
-        filename='skyrim_ingredients.csv'
-    )
+    def load_latest(pattern):
+        files = sorted(glob.glob(str(results_dir / pattern)))
+        if not files:
+            return None
+        with open(files[-1]) as f:
+            return json.load(f)
+
+    perks_data  = load_latest("perks_*.json")
+    rarity_data = load_latest("rarity_*.json")
+
+    if not perks_data and not rarity_data:
+        return JsonResponse(
+            {"error": "No analysis results found. Run analysis/perks.py and analysis/rarity.py first."},
+            status=404
+        )
+
+    return JsonResponse({"perks": perks_data, "rarity": rarity_data})
+
+
+# ── CSV downloads ──────────────────────────────────────────────────────────────
+def download_ingredients_csv(request):
+    from django.http import FileResponse
+    path = settings.PROJECT_ROOT / "data" / "master_ingredients.csv"
+    return FileResponse(open(path, "rb"), as_attachment=True, filename="skyrim_ingredients.csv")
 
 
 def download_effects_csv(request):
-    """Download effects dataset as CSV."""
     from django.http import FileResponse
-    from django.conf import settings
-
-    file_path = settings.PROJECT_ROOT / 'data' / 'effects.csv'
-    return FileResponse(
-        open(file_path, 'rb'),
-        as_attachment=True,
-        filename='skyrim_effects.csv'
-    )
+    path = settings.PROJECT_ROOT / "data" / "effects.csv"
+    return FileResponse(open(path, "rb"), as_attachment=True, filename="skyrim_effects.csv")
