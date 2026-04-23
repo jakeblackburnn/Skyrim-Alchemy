@@ -155,53 +155,21 @@ class MonteCarlo: # main runner object
         }
         
         def sigint_handler(sig, frame):
-            """Handle Ctrl+C by dumping current state and exiting gracefully"""
-            print("\n" + "="*70)
-            print("MONTE CARLO INTERRUPTED (SIGINT)")
-            print("="*70)
-            
             elapsed = time.time() - state_tracker['start_time']
-            since_update = time.time() - state_tracker['last_update_time']
             current_iter = state_tracker['current_iteration']
             total_iter = state_tracker['total_iterations']
-            
-            print(f"\nProgress:")
-            print(f"  Iteration: {current_iter + 1}/{total_iter} ({(current_iter+1)/total_iter*100:.1f}%)")
-            print(f"  Total elapsed: {elapsed:.2f}s")
-            if current_iter >= 0:
-                print(f"  Average per iteration: {elapsed/(current_iter+1):.2f}s")
-            print(f"  Time since last update: {since_update:.2f}s")
-            
-            # Determine if hung or just slow
-            if since_update > 30:
-                print(f"\n⚠️  WARNING: No update in {since_update:.1f}s - possible hang!")
-            elif since_update > 10:
-                print(f"\n⚠️  SLOW: Processing for {since_update:.1f}s - might be expensive operation")
-            else:
-                print(f"\n✓ Program is actively running (last update {since_update:.1f}s ago)")
-            
-            # Get experiment-specific debug state
+            since_update = time.time() - state_tracker['last_update_time']
+
+            print(f"\nSIGINT — iter {current_iter+1}/{total_iter} | elapsed {elapsed:.1f}s | avg {elapsed/(current_iter+1):.2f}s/iter | stalled {since_update:.1f}s")
+
             debug_state = experiment.get_state()
             if debug_state:
-                print(f"\nExperiment Debug State:")
-                for key, value in debug_state.items():
-                    # Truncate long lists for readability
-                    if isinstance(value, list) and len(value) > 5:
-                        print(f"  {key}: {value[:5]} ... ({len(value)} total)")
-                    else:
-                        print(f"  {key}: {value}")
-            else:
-                print(f"\nExperiment Debug State: (none available)")
-            
-            # Show partial results
+                for k, v in debug_state.items():
+                    print(f"  {k}: {v[:5]}..." if isinstance(v, list) and len(v) > 5 else f"  {k}: {v}")
+
             if self.results.run_results:
-                print(f"\nPartial Results:")
-                print(f"  Completed runs: {len(self.results.run_results)}")
-                print(f"  Last result: {self.results.run_results[-1]}")
-            
-            print("\n" + "="*70)
-            print("Exiting gracefully.")
-            print("="*70 + "\n")
+                print(f"  completed runs: {len(self.results.run_results)}")
+
             sys.exit(0)
         
         # Register signal handler
