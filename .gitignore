@@ -4,6 +4,10 @@
 __pycache__
 CLAUDE.md
 
+*.md
+
+analysis/results
+
 writing
 docs
 data/backup/
