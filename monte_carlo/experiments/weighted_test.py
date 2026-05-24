@@ -1,8 +1,8 @@
 from ..runner import Experiment, MonteCarloResult
-from src.inventory import Inventory
-from src.alembic import Alembic
-from src.player import Player
-from src.database import IngredientsDatabase
+from alchemy.inventory import Inventory
+from alchemy.alembic import Alembic
+from alchemy.player import Player
+from alchemy.database import IngredientsDatabase
 from dataclasses import dataclass, field
 from typing import Dict
 import time

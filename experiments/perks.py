@@ -7,8 +7,8 @@ os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 
 from monte_carlo.runner import MonteCarlo, MonteCarloConfig
 from monte_carlo.experiments.weighted_test import WeightedInventoryResult, WeightedInventoryExperiment
-from src.database import IngredientsDatabase
-from src.player import Player
+from alchemy.database import IngredientsDatabase
+from alchemy.player import Player
 import time
 
 

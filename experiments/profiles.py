@@ -9,9 +9,9 @@ import networkx as nx
 
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 
-from src.database import IngredientsDatabase
-from src.player import Player
-from src.potion import Potion
+from alchemy.database import IngredientsDatabase
+from alchemy.player import Player
+from alchemy.potion import Potion
 
 
 
