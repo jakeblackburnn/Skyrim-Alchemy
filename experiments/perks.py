@@ -5,7 +5,8 @@ from datetime import datetime
 
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 
-from monte_carlo.runner import MonteCarlo, MonteCarloConfig
+from monte_carlo.runner import MonteCarloConfig
+from monte_carlo.sweep import run_sweep
 from monte_carlo.scenarios.weighted_test import WeightedInventoryResult, WeightedInventoryScenario
 from alchemy.database import IngredientsDatabase
 from alchemy.player import Player
@@ -39,48 +40,33 @@ def _run_perk_analysis_inner(results_dir):
     config = MonteCarloConfig(num_simulations=10000, progress_bar=True)
 
     perk_configurations = {
-        "baseline": Player(),
-        "benefactor": Player(is_benefactor=True),
-        "physician": Player(is_physician=True),
-        "poisoner": Player(is_poisoner=True),
-        "benefactor+physician": Player(is_benefactor=True, is_physician=True),
-        "benefactor+poisoner": Player(is_benefactor=True, is_poisoner=True),
-        "physician+poisoner": Player(is_physician=True, is_poisoner=True),
-        "all_perks": Player(is_benefactor=True, is_physician=True, is_poisoner=True),
+        "baseline":             {"player": Player()},
+        "benefactor":           {"player": Player(is_benefactor=True)},
+        "physician":            {"player": Player(is_physician=True)},
+        "poisoner":             {"player": Player(is_poisoner=True)},
+        "benefactor+physician": {"player": Player(is_benefactor=True, is_physician=True)},
+        "benefactor+poisoner":  {"player": Player(is_benefactor=True, is_poisoner=True)},
+        "physician+poisoner":   {"player": Player(is_physician=True, is_poisoner=True)},
+        "all_perks":            {"player": Player(is_benefactor=True, is_physician=True, is_poisoner=True)},
     }
 
-    results_by_perk = {}
+    for name in perk_configurations:
+        perk_configurations[name].update({"total": 128, "distinct": 24})
 
     print("="*80)
     print("PERK SYNERGY ANALYSIS")
     print("="*80)
     print(f"Running {config.num_simulations} simulations per perk configuration\n")
 
-    for perk_name, player in perk_configurations.items():
-        print(f"\n{'='*80}")
-        print(f"Testing: {perk_name}")
-        print(f"Player: {player}")
-        print(f"{'='*80}")
-
-        result = WeightedInventoryResult(config=config, db=db)
-        exp = WeightedInventoryScenario(db=db, player=player, total=128, distinct=24)
-
-        runner = MonteCarlo(config, result, verbose=False)
-        start = time.time()
-        runner.run(exp)
-        elapsed = time.time() - start
-
-        results_by_perk[perk_name] = result
-
-        print(f"\nCompleted in {elapsed:.2f}s")
-        print(f"Average potions: {result.aggregated_stats[0]['average_potions']:.2f}")
+    start = time.time()
+    results_by_perk = run_sweep(WeightedInventoryScenario, WeightedInventoryResult, perk_configurations, config, db=db)
+    print(f"\nAll configurations completed in {time.time() - start:.2f}s")
 
     print("\n" + "="*80)
     print("PERK COMPARISON SUMMARY")
     print("="*80)
 
-    for perk_name in perk_configurations.keys():
-        result = results_by_perk[perk_name]
+    for perk_name, result in results_by_perk.items():
         avg_potions = result.aggregated_stats[0]['average_potions']
         total_potions = result.aggregated_stats[0]['total_potions']
         print(f"\n{perk_name:25s}: avg={avg_potions:6.2f}  total={total_potions:10d}")
@@ -90,8 +76,7 @@ def _run_perk_analysis_inner(results_dir):
     print("="*80)
     print("All ingredients by average value for each perk configuration:\n")
 
-    for perk_name in perk_configurations.keys():
-        result = results_by_perk[perk_name]
+    for perk_name, result in results_by_perk.items():
         perf_map = result.aggregated_stats[3]['average_performance']
 
         print(f"\n{perk_name}:")
@@ -143,28 +128,26 @@ def _run_perk_analysis_inner(results_dir):
 
     print("\n" + "="*80)
 
-    # Build structured JSON output
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    perk_comparison = {}
-    for perk_name in perk_configurations.keys():
-        result = results_by_perk[perk_name]
-        perk_comparison[perk_name] = {
+    perk_comparison = {
+        perk_name: {
             "avg_potions": result.aggregated_stats[0]['average_potions'],
             "total_potions": result.aggregated_stats[0]['total_potions'],
         }
+        for perk_name, result in results_by_perk.items()
+    }
 
-    ingredient_performance = {}
-    for perk_name in perk_configurations.keys():
-        result = results_by_perk[perk_name]
-        perf_map = result.aggregated_stats[3]['average_performance']
-        ingredient_performance[perk_name] = {
+    ingredient_performance = {
+        perk_name: {
             ing_name: {
                 "avg_value": perf["avg_value"],
                 "appearance_rate": perf["appearance_rate"],
             }
-            for ing_name, perf in perf_map.items()
+            for ing_name, perf in result.aggregated_stats[3]['average_performance'].items()
         }
+        for perk_name, result in results_by_perk.items()
+    }
 
     perk_sensitivity = {
         ing_name: {

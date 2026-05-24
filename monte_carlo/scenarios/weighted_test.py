@@ -11,11 +11,12 @@ import time
 
 class WeightedInventoryScenario(Scenario):
 
-    def __init__(self, db=IngredientsDatabase(), player=Player(), total=14, distinct=7):
+    def __init__(self, db=IngredientsDatabase(), player=Player(), total=14, distinct=7, rarity_dist=None):
         self.db = db
-        self.player = player 
+        self.player = player
         self.inv_total = total
         self.inv_distinct = distinct
+        self.rarity_dist = rarity_dist
 
         # state for diagnostics
         self.running = False
@@ -39,7 +40,7 @@ class WeightedInventoryScenario(Scenario):
         self.run_idx = run_idx
         start = time.time()
         
-        self.inv = Inventory.generate_weighted(self.db, self.inv_total, self.inv_distinct)
+        self.inv = Inventory.generate_weighted(self.db, self.inv_total, self.inv_distinct, rarity_dist=self.rarity_dist)
         self.alembic = Alembic(self.db, self.player, self.inv)
         self.potions = self.alembic.exhaust_inventory(strategy="lazy")
 
