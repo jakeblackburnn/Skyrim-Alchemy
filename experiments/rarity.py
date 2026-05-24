@@ -7,7 +7,7 @@ os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 
 from monte_carlo.runner import MonteCarloConfig
 from monte_carlo.sweep import run_sweep
-from monte_carlo.scenarios.weighted_test import WeightedInventoryResult, WeightedInventoryScenario
+from monte_carlo.scenarios.rarity_weighted_inventory import RarityWeightedResult, RarityWeightedScenario
 from alchemy.inventory import Inventory
 from alchemy.database import IngredientsDatabase
 import time
@@ -90,7 +90,7 @@ def _run_rarity_analysis_inner(results_dir):
             print(f"  {rarity:15s}: {weight:6.4f}")
 
     start = time.time()
-    results_by_distribution = run_sweep(WeightedInventoryScenario, WeightedInventoryResult, rarity_configurations, config, db=db)
+    results_by_distribution = run_sweep(RarityWeightedScenario, RarityWeightedResult, rarity_configurations, config, db=db)
     print(f"\nAll distributions completed in {time.time() - start:.2f}s")
 
     print("\n" + "="*80)

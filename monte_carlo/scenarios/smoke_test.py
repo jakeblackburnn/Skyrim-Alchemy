@@ -3,20 +3,17 @@ from alchemy.inventory import Inventory
 from alchemy.alembic import Alembic
 from alchemy.player import Player
 from alchemy.database import IngredientsDatabase
-from dataclasses import dataclass, field
-from typing import Dict
+from dataclasses import dataclass
 import time
 
 
 
-class WeightedInventoryScenario(Scenario):
+class SmokeTestScenario(Scenario):
 
-    def __init__(self, db=IngredientsDatabase(), player=Player(), total=14, distinct=7, rarity_dist=None):
+    def __init__(self, db=IngredientsDatabase(), player=Player(), inv_size=7):
         self.db = db
-        self.player = player
-        self.inv_total = total
-        self.inv_distinct = distinct
-        self.rarity_dist = rarity_dist
+        self.player = player 
+        self.inv_size = inv_size
 
         # state for diagnostics
         self.running = False
@@ -40,26 +37,20 @@ class WeightedInventoryScenario(Scenario):
         self.run_idx = run_idx
         start = time.time()
         
-        self.inv = Inventory.generate_weighted(self.db, self.inv_total, self.inv_distinct, rarity_dist=self.rarity_dist)
+        self.inv = Inventory.generate_normal(self.db, self.inv_size)
         self.alembic = Alembic(self.db, self.player, self.inv)
         self.potions = self.alembic.exhaust_inventory(strategy="lazy")
-
-        ingmap = self.alembic.ingredients_map
 
         simtime = time.time() - start
         self.running = False
 
-        return {"run_idx": run_idx, 
-                "num_potions": len(self.potions), 
-                "ingredients_map": ingmap,
-                "simulation_time": simtime,
-               }
+        return {"run_idx": run_idx, "num_potions": len(self.potions), "simulation_time": simtime}
 
 @dataclass
-class WeightedInventoryResult(MonteCarloResult):
+class SmokeTestResult(MonteCarloResult):
 
     def __repr__(self):
-        return "Weighted Inventory Scenario - tests weighted inventory generation"
+        return "Smoke Test Scenario - basic functionality test for the MC runner"
 
     def aggregate_stats(self):
         start = time.time()
@@ -68,7 +59,18 @@ class WeightedInventoryResult(MonteCarloResult):
 
         simtime_stats = self._average_and_total_simtime()
         self.aggregated_stats.append(simtime_stats)
-
         self.aggregated_stats.append({"result aggregation time": time.time() - start})
 
-        self.aggregated_stats.append(self._average_ingredient_performance())
+    def _average_and_total_simtime(self):
+        total = sum([run["simulation_time"] for run in self.run_results])
+        return {
+            "total_simtime": total,
+            "average_simtime": total / self.config.num_simulations,
+        }
+
+    def _average_and_total_potions(self):
+        total = sum([run["num_potions"] for run in self.run_results])
+        return {
+            "total_potions": total,
+            "average_potions": total / self.config.num_simulations,
+        }
