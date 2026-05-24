@@ -6,7 +6,7 @@ CLAUDE.md
 
 *.md
 
-analysis/results
+experiments/results
 
 writing
 docs
