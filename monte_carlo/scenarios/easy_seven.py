@@ -1,4 +1,4 @@
-from ..runner import Experiment, MonteCarloResult
+from ..runner import Scenario, MonteCarloResult
 from alchemy.inventory import Inventory
 from alchemy.alembic import Alembic
 from alchemy.player import Player
@@ -8,7 +8,7 @@ import time
 
 
 
-class EasyExperiment(Experiment):
+class EasyScenario(Scenario):
 
     def __init__(self, db=IngredientsDatabase(), player=Player(), inv_size=7):
         self.db = db
@@ -50,7 +50,7 @@ class EasyExperiment(Experiment):
 class EasyResult(MonteCarloResult):
 
     def __repr__(self):
-        return "Easy Experiment - intended for basic functionality tests"
+        return "Easy Scenario - intended for basic functionality tests"
 
     def aggregate_stats(self):
         start = time.time()

@@ -5,7 +5,7 @@ from datetime import datetime
 
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 
-from monte_carlo.runner import MonteCarlo, MonteCarloConfig, Experiment, MonteCarloResult
+from monte_carlo.runner import MonteCarlo, MonteCarloConfig, Scenario, MonteCarloResult
 from alchemy.inventory import Inventory
 from alchemy.alembic import Alembic
 from alchemy.player import Player
@@ -23,7 +23,7 @@ class _Tee:
         for f in self.files: f.flush()
 
 
-class RarityToleranceExperiment(Experiment):
+class RarityToleranceExperiment(Scenario):
     """Weighted inventory experiment with configurable rarity distribution"""
 
     def __init__(self, db=None, player=None, total=14, distinct=7, rarity_dist=None):

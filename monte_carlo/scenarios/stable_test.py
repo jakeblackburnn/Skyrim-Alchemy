@@ -1,4 +1,4 @@
-from ..runner import Experiment, MonteCarloResult
+from ..runner import Scenario, MonteCarloResult
 from alchemy.inventory import Inventory
 from alchemy.alembic import Alembic
 from alchemy.player import Player
@@ -6,12 +6,15 @@ from alchemy.database import IngredientsDatabase
 from dataclasses import dataclass, field
 import time
 
-class AverageIngredientPerformance(Experiment):
 
-    def __init__(self, db=IngredientsDatabase(), player=Player(), inv_size=7):
+
+class StableInventoryScenario(Scenario):
+
+    def __init__(self, db=IngredientsDatabase(), player=Player(), total=14, distinct=7):
         self.db = db
         self.player = player 
-        self.inv_size = inv_size
+        self.inv_total = total
+        self.inv_distinct = distinct
 
         # state for diagnostics
         self.running = False
@@ -35,8 +38,7 @@ class AverageIngredientPerformance(Experiment):
         self.run_idx = run_idx
         start = time.time()
         
-        self.inv = Inventory.generate_normal(self.db, self.inv_size)
-
+        self.inv = Inventory.generate_stable(self.db, self.inv_total, self.inv_distinct)
         self.alembic = Alembic(self.db, self.player, self.inv)
         self.potions = self.alembic.exhaust_inventory(strategy="lazy")
 
@@ -45,16 +47,17 @@ class AverageIngredientPerformance(Experiment):
         simtime = time.time() - start
         self.running = False
 
-        return {"run_idx": run_idx,
+        return {"run_idx": run_idx, 
                 "num_potions": len(self.potions), 
                 "ingredients_map": ingmap,
-                "simulation_time": simtime}
+                "simulation_time": simtime,
+               }
 
 @dataclass
-class AverageIngredientResult(MonteCarloResult):
+class StableInventoryResult(MonteCarloResult):
 
     def __repr__(self):
-        return "Easy Experiment - intended for basic functionality tests"
+        return "Stable Inventory Scenario - intended for basic tests of stable inventory generation"
 
     def aggregate_stats(self):
         start = time.time()
@@ -63,5 +66,7 @@ class AverageIngredientResult(MonteCarloResult):
 
         simtime_stats = self._average_and_total_simtime()
         self.aggregated_stats.append(simtime_stats)
+
         self.aggregated_stats.append({"result aggregation time": time.time() - start})
+
         self.aggregated_stats.append(self._average_ingredient_performance())

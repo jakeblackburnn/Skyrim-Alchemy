@@ -107,13 +107,13 @@ class MonteCarloResult(ABC):
         return {"average_performance": performance_map}
 
 
-class Experiment:
+class Scenario:
     def get_state(self) -> Optional[Dict[str, any]]:
         """
         Override to provide current state for SIGINT debugging.
-        
+
         Returns:
-            Dict with experiment-specific state to display on Ctrl+C,
+            Dict with scenario-specific state to display on Ctrl+C,
             or None if no debug state tracking is needed.
         """
         return None
@@ -138,7 +138,7 @@ class MonteCarlo: # main runner object
         if verbose: print("loaded results object.\n" + str(results))
 
 
-    def run(self, experiment: Experiment):
+    def run(self, scenario: Scenario):
         import signal
         import sys
         
@@ -162,7 +162,7 @@ class MonteCarlo: # main runner object
 
             print(f"\nSIGINT — iter {current_iter+1}/{total_iter} | elapsed {elapsed:.1f}s | avg {elapsed/(current_iter+1):.2f}s/iter | stalled {since_update:.1f}s")
 
-            debug_state = experiment.get_state()
+            debug_state = scenario.get_state()
             if debug_state:
                 for k, v in debug_state.items():
                     print(f"  {k}: {v[:5]}..." if isinstance(v, list) and len(v) > 5 else f"  {k}: {v}")
@@ -188,7 +188,7 @@ class MonteCarlo: # main runner object
             state_tracker['current_iteration'] = run_idx
             state_tracker['last_update_time'] = time.time()
             
-            self.results.add_run(experiment.run_once(run_idx))
+            self.results.add_run(scenario.run_once(run_idx))
             if pbar:
                 pbar.update(1)
 
@@ -206,5 +206,5 @@ class MonteCarlo: # main runner object
         if self.verbose: print(f"results crunched. took {time.time() - start}.")
 
         if self.verbose:
-            print("experiments complete")
+            print("scenarios complete")
             self.results.summary()

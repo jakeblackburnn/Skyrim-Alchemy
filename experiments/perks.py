@@ -6,7 +6,7 @@ from datetime import datetime
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 
 from monte_carlo.runner import MonteCarlo, MonteCarloConfig
-from monte_carlo.experiments.weighted_test import WeightedInventoryResult, WeightedInventoryExperiment
+from monte_carlo.scenarios.weighted_test import WeightedInventoryResult, WeightedInventoryScenario
 from alchemy.database import IngredientsDatabase
 from alchemy.player import Player
 import time
@@ -63,7 +63,7 @@ def _run_perk_analysis_inner(results_dir):
         print(f"{'='*80}")
 
         result = WeightedInventoryResult(config=config, db=db)
-        exp = WeightedInventoryExperiment(db=db, player=player, total=128, distinct=24)
+        exp = WeightedInventoryScenario(db=db, player=player, total=128, distinct=24)
 
         runner = MonteCarlo(config, result, verbose=False)
         start = time.time()

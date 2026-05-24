@@ -1,4 +1,4 @@
-from ..runner import Experiment, MonteCarloResult
+from ..runner import Scenario, MonteCarloResult
 from alchemy.inventory import Inventory
 from alchemy.alembic import Alembic
 from alchemy.player import Player
@@ -9,7 +9,7 @@ import time
 
 
 
-class WeightedInventoryExperiment(Experiment):
+class WeightedInventoryScenario(Scenario):
 
     def __init__(self, db=IngredientsDatabase(), player=Player(), total=14, distinct=7):
         self.db = db
@@ -58,7 +58,7 @@ class WeightedInventoryExperiment(Experiment):
 class WeightedInventoryResult(MonteCarloResult):
 
     def __repr__(self):
-        return "Weighted Inventory Experiment - tests weighted inventory generation"
+        return "Weighted Inventory Scenario - tests weighted inventory generation"
 
     def aggregate_stats(self):
         start = time.time()
