@@ -5,7 +5,6 @@ from datetime import datetime
 
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 
-from monte_carlo.runner import MonteCarloConfig
 from monte_carlo.sweep import run_sweep
 from monte_carlo.scenarios.rarity_weighted_inventory import RarityWeightedResult, RarityWeightedScenario
 from alchemy.inventory import Inventory
@@ -55,7 +54,7 @@ def run_rarity_analysis():
 
 def _run_rarity_analysis_inner(results_dir):
     db = IngredientsDatabase()
-    config = MonteCarloConfig(num_simulations=10000, progress_bar=True)
+    num_simulations = 3200
 
     base_dist = Inventory.BASIC_RARITY_DIST.copy()
 
@@ -81,7 +80,7 @@ def _run_rarity_analysis_inner(results_dir):
     print("="*80)
     print("RARITY TOLERANCE ANALYSIS")
     print("="*80)
-    print(f"Running {config.num_simulations} simulations per rarity distribution\n")
+    print(f"Running {num_simulations} simulations per rarity distribution\n")
 
     print("Rarity Distributions:")
     for name, dist in rarity_distributions.items():
@@ -90,7 +89,7 @@ def _run_rarity_analysis_inner(results_dir):
             print(f"  {rarity:15s}: {weight:6.4f}")
 
     start = time.time()
-    results_by_distribution = run_sweep(RarityWeightedScenario, RarityWeightedResult, rarity_configurations, config, db=db)
+    results_by_distribution = run_sweep(RarityWeightedScenario, RarityWeightedResult, rarity_configurations, num_simulations, db=db, progress_bar=True)
     print(f"\nAll distributions completed in {time.time() - start:.2f}s")
 
     print("\n" + "="*80)
@@ -168,7 +167,7 @@ def _run_rarity_analysis_inner(results_dir):
 
     output = {
         "metadata": {
-            "num_simulations": config.num_simulations,
+            "num_simulations": num_simulations,
             "timestamp": timestamp,
             "distributions": rarity_distributions,
         },
