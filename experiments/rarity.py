@@ -98,26 +98,29 @@ def _run_rarity_analysis_inner(results_dir):
 
     for dist_name, result in results_by_distribution.items():
         avg_potions = result.aggregated_stats[0]['average_potions']
+        stderr_potions = result.aggregated_stats[0]['stderr_potions']
         total_potions = result.aggregated_stats[0]['total_potions']
-        print(f"\n{dist_name:20s}: avg={avg_potions:6.2f}  total={total_potions:10d}")
+        avg_value = result.aggregated_stats[1]['average_value']
+        stderr_value = result.aggregated_stats[1]['stderr_value']
+        print(f"\n{dist_name:20s}: avg_potions={avg_potions:6.2f} ±{stderr_potions:.2f}  avg_value={avg_value:8.0f} ±{stderr_value:.0f}  total_potions={total_potions:10d}")
 
     print("\n" + "="*80)
     print("INGREDIENT RARITY TOLERANCE")
     print("="*80)
     print("How ingredient performance changes across rarity distributions:\n")
 
-    baseline_perf = results_by_distribution["normal"].aggregated_stats[3]['average_performance']
+    baseline_perf = results_by_distribution["normal"].aggregated_stats[4]['average_performance']
 
     tolerance_scores = {}
     for ing_name in baseline_perf.keys():
-        if baseline_perf[ing_name]["avg_value"] is None:
+        if baseline_perf[ing_name]["avg_potion_value"] is None:
             continue
 
         values_across_distributions = [
-            results_by_distribution[dist_name].aggregated_stats[3]['average_performance'][ing_name]["avg_value"]
+            results_by_distribution[dist_name].aggregated_stats[4]['average_performance'][ing_name]["avg_potion_value"]
             for dist_name in rarity_distributions
-            if ing_name in results_by_distribution[dist_name].aggregated_stats[3]['average_performance']
-            and results_by_distribution[dist_name].aggregated_stats[3]['average_performance'][ing_name]["avg_value"] is not None
+            if ing_name in results_by_distribution[dist_name].aggregated_stats[4]['average_performance']
+            and results_by_distribution[dist_name].aggregated_stats[4]['average_performance'][ing_name]["avg_potion_value"] is not None
         ]
 
         if len(values_across_distributions) >= 2:
@@ -148,7 +151,7 @@ def _run_rarity_analysis_inner(results_dir):
     print("="*80)
 
     for ing_name in baseline_perf.keys():
-        if baseline_perf[ing_name]["avg_value"] is None:
+        if baseline_perf[ing_name]["avg_potion_value"] is None:
             continue
 
         ing_obj = next((ing for ing in db if ing.name == ing_name), None)
@@ -157,9 +160,11 @@ def _run_rarity_analysis_inner(results_dir):
 
         print(f"\n{ing_name} (rarity: {ing_obj.rarity}):")
         for dist_name, result in results_by_distribution.items():
-            perf_map = result.aggregated_stats[3]['average_performance']
-            if ing_name in perf_map and perf_map[ing_name]["avg_value"] is not None:
-                print(f"  {dist_name:20s}: {perf_map[ing_name]['avg_value']:6.0f}")
+            perf_map = result.aggregated_stats[4]['average_performance']
+            if ing_name in perf_map and perf_map[ing_name]["avg_potion_value"] is not None:
+                pv = perf_map[ing_name]["avg_potion_value"]
+                ct = perf_map[ing_name]["avg_contribution"]
+                print(f"  {dist_name:20s}: potion_val={pv:6.0f}  contribution={ct:6.0f}")
 
     print("\n" + "="*80)
 
@@ -174,17 +179,23 @@ def _run_rarity_analysis_inner(results_dir):
         "distribution_comparison": {
             dist_name: {
                 "avg_potions": result.aggregated_stats[0]['average_potions'],
+                "stderr_potions": result.aggregated_stats[0]['stderr_potions'],
                 "total_potions": result.aggregated_stats[0]['total_potions'],
+                "avg_value": result.aggregated_stats[1]['average_value'],
+                "stderr_value": result.aggregated_stats[1]['stderr_value'],
             }
             for dist_name, result in results_by_distribution.items()
         },
         "ingredient_performance": {
             dist_name: {
                 ing_name: {
-                    "avg_value": perf["avg_value"],
+                    "avg_potion_value": perf["avg_potion_value"],
+                    "stderr_potion_value": perf["stderr_potion_value"],
+                    "avg_contribution": perf["avg_contribution"],
+                    "stderr_contribution": perf["stderr_contribution"],
                     "appearance_rate": perf["appearance_rate"],
                 }
-                for ing_name, perf in result.aggregated_stats[3]['average_performance'].items()
+                for ing_name, perf in result.aggregated_stats[4]['average_performance'].items()
             }
             for dist_name, result in results_by_distribution.items()
         },
