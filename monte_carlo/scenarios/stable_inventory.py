@@ -3,17 +3,16 @@ from alchemy.inventory import Inventory
 from alchemy.alembic import Alembic
 from alchemy.player import Player
 from alchemy.database import IngredientsDatabase
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Dict
 import time
-
 
 
 class StableInventoryScenario(Scenario):
 
     def __init__(self, db=IngredientsDatabase(), player=Player(), total=14, distinct=7):
         self.db = db
-        self.player = player 
+        self.player = player
         self.inv_total = total
         self.inv_distinct = distinct
 
@@ -33,6 +32,7 @@ class StableInventoryScenario(Scenario):
                 "ingredients_map": ingmap,
                 "simulation_time": simtime,
                }
+
 
 @dataclass
 class StableInventoryResult(MonteCarloResult):

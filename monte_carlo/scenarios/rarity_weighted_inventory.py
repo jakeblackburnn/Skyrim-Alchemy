@@ -3,10 +3,9 @@ from alchemy.inventory import Inventory
 from alchemy.alembic import Alembic
 from alchemy.player import Player
 from alchemy.database import IngredientsDatabase
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Dict
 import time
-
 
 
 class RarityWeightedScenario(Scenario):
@@ -34,6 +33,7 @@ class RarityWeightedScenario(Scenario):
                 "ingredients_map": ingmap,
                 "simulation_time": simtime,
                }
+
 
 @dataclass
 class RarityWeightedResult(MonteCarloResult):

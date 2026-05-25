@@ -5,21 +5,25 @@ Created by J. Blackburn - Feb 1 2026
 Last updated - Feb 14 2026
 """
 
+import json
+import random
+import time
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
-from typing import Dict, List, Any, Optional
-import time
-from tqdm import tqdm
-import pandas as pd
+from typing import Any, Dict, List, Optional
+
 import numpy as np
+import pandas as pd
+from tqdm import tqdm
+
 
 @dataclass
 class MonteCarloResult(ABC):
-    run_results:      List[Dict[str, any]] = field(default_factory=list)
-    aggregated_stats: List[Dict[str, any]] = field(default_factory=list)
+    run_results:      List[Dict[str, Any]] = field(default_factory=list)
+    aggregated_stats: List[Dict[str, Any]] = field(default_factory=list)
     db: Optional[Any] = field(default=None)
 
-    def add_run(self, run: Dict[str, any]):
+    def add_run(self, run: Dict[str, Any]):
         self.run_results.append(run)
 
     def to_dataframe(self):
@@ -27,7 +31,6 @@ class MonteCarloResult(ABC):
 
     @abstractmethod
     def aggregate_stats(self):
-        # do number crunching here
         pass
 
     @abstractmethod
@@ -35,18 +38,17 @@ class MonteCarloResult(ABC):
         pass
 
     def summary(self):
-        print(f"Monte Carlo Summary")
+        print("Monte Carlo Summary")
         print("raw data results:")
         print(self.to_dataframe())
         print(f"analysis:\n{self.aggregated_stats}\n")
 
     def save_to_json(self, filepath):
-        import json
         with open(filepath, 'w') as f:
             json.dump(self.aggregated_stats, f, indent=2)
 
     def _average_and_total_simtime(self):
-        total = sum([run["simulation_time"] for run in self.run_results])
+        total = sum(run["simulation_time"] for run in self.run_results)
         n = len(self.run_results)
         return {
             "total_simtime": total,
@@ -122,7 +124,7 @@ class MonteCarloResult(ABC):
 
 class Scenario:
     @abstractmethod
-    def run_once(self) -> Dict[str, any]:
+    def run_once(self) -> Dict[str, Any]:
         pass
 
 
@@ -138,8 +140,6 @@ class MonteCarlo:
         if verbose: print("loaded results object.\n" + str(results))
 
     def run(self, scenario: Scenario, seed: Optional[int] = None):
-        import random
-
         if seed is not None:
             random.seed(seed)
             np.random.seed(seed)

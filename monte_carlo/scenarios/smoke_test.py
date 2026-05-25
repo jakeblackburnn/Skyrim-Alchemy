@@ -8,7 +8,6 @@ from typing import Dict
 import time
 
 
-
 class SmokeTestScenario(Scenario):
 
     def __init__(self, db=IngredientsDatabase(), player=Player(), inv_size=7):
@@ -26,6 +25,7 @@ class SmokeTestScenario(Scenario):
         simtime = time.time() - start
 
         return {"run_idx": run_idx, "num_potions": len(potions), "total_value": sum(p.value for p in potions), "simulation_time": simtime}
+
 
 @dataclass
 class SmokeTestResult(MonteCarloResult):
