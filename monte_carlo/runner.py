@@ -121,16 +121,6 @@ class MonteCarloResult(ABC):
 
 
 class Scenario:
-    def get_state(self) -> Optional[Dict[str, any]]:
-        """
-        Override to provide current state for SIGINT debugging.
-
-        Returns:
-            Dict with scenario-specific state to display on Ctrl+C,
-            or None if no debug state tracking is needed.
-        """
-        return None
-
     @abstractmethod
     def run_once(self) -> Dict[str, any]:
         pass
@@ -148,8 +138,6 @@ class MonteCarlo:
         if verbose: print("loaded results object.\n" + str(results))
 
     def run(self, scenario: Scenario, seed: Optional[int] = None):
-        import signal
-        import sys
         import random
 
         if seed is not None:
@@ -160,33 +148,6 @@ class MonteCarlo:
 
         start = time.time()
 
-        state_tracker = {
-            'current_iteration': -1,
-            'total_iterations': self.num_simulations,
-            'start_time': start,
-            'last_update_time': start
-        }
-
-        def sigint_handler(sig, frame):
-            elapsed = time.time() - state_tracker['start_time']
-            current_iter = state_tracker['current_iteration']
-            total_iter = state_tracker['total_iterations']
-            since_update = time.time() - state_tracker['last_update_time']
-
-            print(f"\nSIGINT — iter {current_iter+1}/{total_iter} | elapsed {elapsed:.1f}s | avg {elapsed/(current_iter+1):.2f}s/iter | stalled {since_update:.1f}s")
-
-            debug_state = scenario.get_state()
-            if debug_state:
-                for k, v in debug_state.items():
-                    print(f"  {k}: {v[:5]}..." if isinstance(v, list) and len(v) > 5 else f"  {k}: {v}")
-
-            if self.results.run_results:
-                print(f"  completed runs: {len(self.results.run_results)}")
-
-            sys.exit(0)
-
-        signal.signal(signal.SIGINT, sigint_handler)
-
         pbar = tqdm(
             total=self.num_simulations,
             desc="Monte Carlo",
@@ -195,9 +156,6 @@ class MonteCarlo:
         ) if self.progress_bar else None
 
         for run_idx in range(self.num_simulations):
-            state_tracker['current_iteration'] = run_idx
-            state_tracker['last_update_time'] = time.time()
-
             self.results.add_run(scenario.run_once(run_idx))
             if pbar:
                 pbar.update(1)
