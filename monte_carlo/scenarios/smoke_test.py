@@ -4,6 +4,7 @@ from alchemy.alembic import Alembic
 from alchemy.player import Player
 from alchemy.database import IngredientsDatabase
 from dataclasses import dataclass
+from typing import Dict
 import time
 
 
@@ -12,7 +13,7 @@ class SmokeTestScenario(Scenario):
 
     def __init__(self, db=IngredientsDatabase(), player=Player(), inv_size=7):
         self.db = db
-        self.player = player 
+        self.player = player
         self.inv_size = inv_size
 
         # state for diagnostics
@@ -32,11 +33,10 @@ class SmokeTestScenario(Scenario):
         }
 
     def run_once(self, run_idx) -> Dict[str, int]:
-        # set state for debugging:
         self.running = True
         self.run_idx = run_idx
         start = time.time()
-        
+
         self.inv = Inventory.generate_normal(self.db, self.inv_size)
         self.alembic = Alembic(self.db, self.player, self.inv)
         self.potions = self.alembic.exhaust_inventory(strategy="lazy")
@@ -54,23 +54,6 @@ class SmokeTestResult(MonteCarloResult):
 
     def aggregate_stats(self):
         start = time.time()
-        potion_stats = self._average_and_total_potions()
-        self.aggregated_stats.append(potion_stats)
-
-        simtime_stats = self._average_and_total_simtime()
-        self.aggregated_stats.append(simtime_stats)
+        self.aggregated_stats.append(self._average_and_total_potions())
+        self.aggregated_stats.append(self._average_and_total_simtime())
         self.aggregated_stats.append({"result aggregation time": time.time() - start})
-
-    def _average_and_total_simtime(self):
-        total = sum([run["simulation_time"] for run in self.run_results])
-        return {
-            "total_simtime": total,
-            "average_simtime": total / self.config.num_simulations,
-        }
-
-    def _average_and_total_potions(self):
-        total = sum([run["num_potions"] for run in self.run_results])
-        return {
-            "total_potions": total,
-            "average_potions": total / self.config.num_simulations,
-        }
