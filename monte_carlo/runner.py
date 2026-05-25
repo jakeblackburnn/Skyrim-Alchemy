@@ -11,31 +11,12 @@ from typing import Dict, List, Any, Optional
 import time
 from tqdm import tqdm
 import pandas as pd
-
-@dataclass
-class MonteCarloConfig:
-    num_simulations: int = 10
-    num_workers: int = 1
-    seed: Optional[int] = None
-    progress_bar: bool = False
-    checkpoints: bool = False
-    checkpoint_freq: Optional[int] = 1
-
-    def __repr__(self):
-        return str({
-            "num_simulations": self.num_simulations,
-            "num_workers": self.num_workers,
-            "seed": self.seed,
-            "checkpoints": self.checkpoints,
-            "checkpoint_freq": self.checkpoint_freq,
-        })
+import numpy as np
 
 @dataclass
 class MonteCarloResult(ABC):
     run_results:      List[Dict[str, any]] = field(default_factory=list)
     aggregated_stats: List[Dict[str, any]] = field(default_factory=list)
-
-    config: MonteCarloConfig = field(default_factory=lambda: None)
     db: Optional[Any] = field(default=None)
 
     def add_run(self, run: Dict[str, any]):
@@ -46,12 +27,11 @@ class MonteCarloResult(ABC):
 
     @abstractmethod
     def aggregate_stats(self):
-        # this is where any number crunching happens
+        # do number crunching here
         pass
 
     @abstractmethod
     def __repr__(self):
-        # implement a descriptive name and comments
         pass
 
     def summary(self):
@@ -67,20 +47,22 @@ class MonteCarloResult(ABC):
 
     def _average_and_total_simtime(self):
         total = sum([run["simulation_time"] for run in self.run_results])
+        n = len(self.run_results)
         return {
             "total_simtime": total,
-            "average_simtime": total / self.config.num_simulations,
+            "average_simtime": total / n,
         }
 
     def _average_and_total_potions(self):
         total = sum([run["num_potions"] for run in self.run_results])
+        n = len(self.run_results)
         return {
             "total_potions": total,
-            "average_potions": total / self.config.num_simulations,
+            "average_potions": total / n,
         }
 
     def _average_ingredient_performance(self):
-        n = self.config.num_simulations
+        n = len(self.run_results)
         appearances = {ing: 0 for ing in self.db}
         total_values = {ing: 0 for ing in self.db}
 
@@ -120,40 +102,40 @@ class Scenario:
 
     @abstractmethod
     def run_once(self) -> Dict[str, any]:
-        # this is where the actual potionmaking stuff happens
         pass
 
 
+class MonteCarlo:
 
-class MonteCarlo: # main runner object
-
-    def __init__(self, config: MonteCarloConfig, results: MonteCarloResult, verbose=False):
-        self.verbose = verbose
-        if verbose: print("creating monte carlo runner...")
-
-        self.config = config
-        if verbose: print("loaded config:\n" + str(config))
-
+    def __init__(self, results: MonteCarloResult, num_simulations: int, progress_bar: bool = False, verbose: bool = False):
         self.results = results
+        self.num_simulations = num_simulations
+        self.progress_bar = progress_bar
+        self.verbose = verbose
+
+        if verbose: print("creating monte carlo runner...")
         if verbose: print("loaded results object.\n" + str(results))
 
-
-    def run(self, scenario: Scenario):
+    def run(self, scenario: Scenario, seed: Optional[int] = None):
         import signal
         import sys
-        
+        import random
+
+        if seed is not None:
+            random.seed(seed)
+            np.random.seed(seed)
+
         if self.verbose: print("running monte carlo...")
 
         start = time.time()
 
-        # State tracking for SIGINT handler
         state_tracker = {
             'current_iteration': -1,
-            'total_iterations': self.config.num_simulations,
+            'total_iterations': self.num_simulations,
             'start_time': start,
             'last_update_time': start
         }
-        
+
         def sigint_handler(sig, frame):
             elapsed = time.time() - state_tracker['start_time']
             current_iter = state_tracker['current_iteration']
@@ -171,23 +153,20 @@ class MonteCarlo: # main runner object
                 print(f"  completed runs: {len(self.results.run_results)}")
 
             sys.exit(0)
-        
-        # Register signal handler
+
         signal.signal(signal.SIGINT, sigint_handler)
 
-        # Create progress bar if enabled
         pbar = tqdm(
-            total=self.config.num_simulations,
+            total=self.num_simulations,
             desc="Monte Carlo",
             unit="sim",
-            disable=not self.config.progress_bar
-        ) if self.config.progress_bar else None
+            disable=not self.progress_bar
+        ) if self.progress_bar else None
 
-        for run_idx in range(self.config.num_simulations):
-            # Update state tracker before running experiment
+        for run_idx in range(self.num_simulations):
             state_tracker['current_iteration'] = run_idx
             state_tracker['last_update_time'] = time.time()
-            
+
             self.results.add_run(scenario.run_once(run_idx))
             if pbar:
                 pbar.update(1)
@@ -195,9 +174,9 @@ class MonteCarlo: # main runner object
         if pbar:
             pbar.close()
 
-        if self.verbose: 
+        if self.verbose:
             total = time.time() - start
-            avg = total / self.config.num_simulations
+            avg = total / self.num_simulations
             print(f"total runtime: {total}\navg runtime per simultation: {avg}")
 
         if self.verbose: print("aggregating results")
