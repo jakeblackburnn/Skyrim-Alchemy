@@ -44,7 +44,7 @@ class SmokeTestScenario(Scenario):
         simtime = time.time() - start
         self.running = False
 
-        return {"run_idx": run_idx, "num_potions": len(self.potions), "simulation_time": simtime}
+        return {"run_idx": run_idx, "num_potions": len(self.potions), "total_value": sum(p.value for p in self.potions), "simulation_time": simtime}
 
 @dataclass
 class SmokeTestResult(MonteCarloResult):
@@ -55,5 +55,6 @@ class SmokeTestResult(MonteCarloResult):
     def aggregate_stats(self):
         start = time.time()
         self.aggregated_stats.append(self._average_and_total_potions())
+        self.aggregated_stats.append(self._average_and_total_value())
         self.aggregated_stats.append(self._average_and_total_simtime())
         self.aggregated_stats.append({"result aggregation time": time.time() - start})

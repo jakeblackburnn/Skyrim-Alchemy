@@ -49,8 +49,9 @@ class RarityWeightedScenario(Scenario):
         simtime = time.time() - start
         self.running = False
 
-        return {"run_idx": run_idx, 
-                "num_potions": len(self.potions), 
+        return {"run_idx": run_idx,
+                "num_potions": len(self.potions),
+                "total_value": sum(p.value for p in self.potions),
                 "ingredients_map": ingmap,
                 "simulation_time": simtime,
                }
@@ -63,12 +64,8 @@ class RarityWeightedResult(MonteCarloResult):
 
     def aggregate_stats(self):
         start = time.time()
-        potion_stats = self._average_and_total_potions()
-        self.aggregated_stats.append(potion_stats)
-
-        simtime_stats = self._average_and_total_simtime()
-        self.aggregated_stats.append(simtime_stats)
-
+        self.aggregated_stats.append(self._average_and_total_potions())
+        self.aggregated_stats.append(self._average_and_total_value())
+        self.aggregated_stats.append(self._average_and_total_simtime())
         self.aggregated_stats.append({"result aggregation time": time.time() - start})
-
         self.aggregated_stats.append(self._average_ingredient_performance())

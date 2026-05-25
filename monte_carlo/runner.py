@@ -54,17 +54,34 @@ class MonteCarloResult(ABC):
         }
 
     def _average_and_total_potions(self):
-        total = sum([run["num_potions"] for run in self.run_results])
-        n = len(self.run_results)
+        values = [run["num_potions"] for run in self.run_results]
+        n = len(values)
+        total = sum(values)
+        mean = total / n
+        variance = sum((v - mean) ** 2 for v in values) / n
         return {
             "total_potions": total,
-            "average_potions": total / n,
+            "average_potions": mean,
+            "stderr_potions": (variance / n) ** 0.5,
+        }
+
+    def _average_and_total_value(self):
+        values = [run["total_value"] for run in self.run_results]
+        n = len(values)
+        total = sum(values)
+        mean = total / n
+        variance = sum((v - mean) ** 2 for v in values) / n
+        return {
+            "total_value": total,
+            "average_value": mean,
+            "stderr_value": (variance / n) ** 0.5,
         }
 
     def _average_ingredient_performance(self):
         n = len(self.run_results)
         appearances = {ing: 0 for ing in self.db}
-        total_values = {ing: 0 for ing in self.db}
+        potion_values = {ing: [] for ing in self.db}
+        contributions = {ing: [] for ing in self.db}
 
         for run in self.run_results:
             ingmap = run["ingredients_map"]
@@ -73,17 +90,31 @@ class MonteCarloResult(ABC):
                 if potions:
                     appearances[ing] += 1
                     for potion in potions:
-                        total_values[ing] += potion.value
+                        potion_values[ing].append(potion.value)
+                        contributions[ing].append(potion.value / potion.num_ingredients)
+
+        def _mean_and_stderr(vals):
+            if not vals:
+                return None, None
+            m = sum(vals) / len(vals)
+            var = sum((v - m) ** 2 for v in vals) / len(vals)
+            return m, (var / len(vals)) ** 0.5
+
+        performance_map = {}
+        for ing in self.db:
+            avg_pv, stderr_pv = _mean_and_stderr(potion_values[ing])
+            avg_ct, stderr_ct = _mean_and_stderr(contributions[ing])
+            performance_map[ing.name] = {
+                "appearance_rate": appearances[ing] / n,
+                "avg_potion_value": avg_pv,
+                "stderr_potion_value": stderr_pv,
+                "avg_contribution": avg_ct,
+                "stderr_contribution": stderr_ct,
+            }
 
         performance_map = dict(sorted(
-            (
-                (ing.name, {
-                    "avg_value": total_values[ing] // appearances[ing] if appearances[ing] else None,
-                    "appearance_rate": appearances[ing] / n,
-                })
-                for ing in self.db
-            ),
-            key=lambda item: item[1]["avg_value"] if item[1]["avg_value"] is not None else -1,
+            performance_map.items(),
+            key=lambda item: item[1]["avg_potion_value"] if item[1]["avg_potion_value"] is not None else -1,
             reverse=True,
         ))
         return {"average_performance": performance_map}
