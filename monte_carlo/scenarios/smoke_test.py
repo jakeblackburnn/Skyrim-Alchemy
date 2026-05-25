@@ -16,35 +16,16 @@ class SmokeTestScenario(Scenario):
         self.player = player
         self.inv_size = inv_size
 
-        # state for diagnostics
-        self.running = False
-        self.run_idx = 0
-        self.inv = None
-        self.alembic = None
-        self.potions = None
-
-    def get_state(self) -> Dict[str, any]:
-        return {
-            "running": self.running,
-            "run_idx": self.run_idx,
-            "inv":     self.inv,
-            "alembic": self.alembic,
-            "potions": self.potions,
-        }
-
     def run_once(self, run_idx) -> Dict[str, int]:
-        self.running = True
-        self.run_idx = run_idx
         start = time.time()
 
-        self.inv = Inventory.generate_normal(self.db, self.inv_size)
-        self.alembic = Alembic(self.db, self.player, self.inv)
-        self.potions = self.alembic.exhaust_inventory(strategy="lazy")
+        inv = Inventory.generate_normal(self.db, self.inv_size)
+        alembic = Alembic(self.db, self.player, inv)
+        potions = alembic.exhaust_inventory(strategy="lazy")
 
         simtime = time.time() - start
-        self.running = False
 
-        return {"run_idx": run_idx, "num_potions": len(self.potions), "total_value": sum(p.value for p in self.potions), "simulation_time": simtime}
+        return {"run_idx": run_idx, "num_potions": len(potions), "total_value": sum(p.value for p in potions), "simulation_time": simtime}
 
 @dataclass
 class SmokeTestResult(MonteCarloResult):
