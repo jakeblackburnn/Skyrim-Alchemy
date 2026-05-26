@@ -36,7 +36,7 @@ def run_perk_analysis():
 
 def _run_perk_analysis_inner(results_dir):
     db = IngredientsDatabase()
-    num_simulations = 3200
+    num_simulations = 320
 
     perk_configurations = {
         "baseline":             {"player": Player()},
@@ -66,11 +66,11 @@ def _run_perk_analysis_inner(results_dir):
     print("="*80)
 
     for perk_name, result in results_by_perk.items():
-        avg_potions = result.aggregated_stats[0]['average_potions']
-        stderr_potions = result.aggregated_stats[0]['stderr_potions']
-        total_potions = result.aggregated_stats[0]['total_potions']
-        avg_value = result.aggregated_stats[1]['average_value']
-        stderr_value = result.aggregated_stats[1]['stderr_value']
+        avg_potions = result.aggregated_stats['average_potions']
+        stderr_potions = result.aggregated_stats['stderr_potions']
+        total_potions = result.aggregated_stats['total_potions']
+        avg_value = result.aggregated_stats['average_value']
+        stderr_value = result.aggregated_stats['stderr_value']
         print(f"\n{perk_name:25s}: avg_potions={avg_potions:6.2f} ±{stderr_potions:.2f}  avg_value={avg_value:8.0f} ±{stderr_value:.0f}  total_potions={total_potions:10d}")
 
     print("\n" + "="*80)
@@ -79,7 +79,7 @@ def _run_perk_analysis_inner(results_dir):
     print("All ingredients by average value for each perk configuration:\n")
 
     for perk_name, result in results_by_perk.items():
-        perf_map = result.aggregated_stats[4]['average_performance']
+        perf_map = result.aggregated_stats['average_performance']
 
         print(f"\n{perk_name}:")
         print("-" * 40)
@@ -92,7 +92,7 @@ def _run_perk_analysis_inner(results_dir):
             else:
                 print(f"  {i:2d}. {ing_name:30s} N/A")
 
-    baseline_perf = results_by_perk["baseline"].aggregated_stats[4]['average_performance']
+    baseline_perf = results_by_perk["baseline"].aggregated_stats['average_performance']
 
     print("\n" + "="*80)
     print("INGREDIENT PERK SENSITIVITY")
@@ -111,7 +111,7 @@ def _run_perk_analysis_inner(results_dir):
             if perk_name == "baseline":
                 continue
 
-            perf_map = result.aggregated_stats[4]['average_performance']
+            perf_map = result.aggregated_stats['average_performance']
             if ing_name in perf_map and perf_map[ing_name]["avg_potion_value"] is not None:
                 benefit = perf_map[ing_name]["avg_potion_value"] - baseline_perf[ing_name]["avg_potion_value"]
                 if benefit > max_benefit:
@@ -135,11 +135,11 @@ def _run_perk_analysis_inner(results_dir):
 
     perk_comparison = {
         perk_name: {
-            "avg_potions": result.aggregated_stats[0]['average_potions'],
-            "stderr_potions": result.aggregated_stats[0]['stderr_potions'],
-            "total_potions": result.aggregated_stats[0]['total_potions'],
-            "avg_value": result.aggregated_stats[1]['average_value'],
-            "stderr_value": result.aggregated_stats[1]['stderr_value'],
+            "avg_potions": result.aggregated_stats['average_potions'],
+            "stderr_potions": result.aggregated_stats['stderr_potions'],
+            "total_potions": result.aggregated_stats['total_potions'],
+            "avg_value": result.aggregated_stats['average_value'],
+            "stderr_value": result.aggregated_stats['stderr_value'],
         }
         for perk_name, result in results_by_perk.items()
     }
@@ -153,7 +153,7 @@ def _run_perk_analysis_inner(results_dir):
                 "stderr_contribution": perf["stderr_contribution"],
                 "appearance_rate": perf["appearance_rate"],
             }
-            for ing_name, perf in result.aggregated_stats[4]['average_performance'].items()
+            for ing_name, perf in result.aggregated_stats['average_performance'].items()
         }
         for perk_name, result in results_by_perk.items()
     }

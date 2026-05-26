@@ -33,7 +33,7 @@ class SmokeTestScenario(Scenario):
 
     def aggregate_stats(self):
         start = time.time()
-        self.aggregated_stats.append(self._average_and_total_potions())
-        self.aggregated_stats.append(self._average_and_total_value())
-        self.aggregated_stats.append(self._average_and_total_simtime())
-        self.aggregated_stats.append({"result aggregation time": time.time() - start})
+        self.aggregated_stats.update(self._average_and_total_potions())
+        self.aggregated_stats.update(self._average_and_total_value())
+        self.aggregated_stats.update(self._average_and_total_simtime())
+        self.aggregated_stats["result_aggregation_time"] = time.time() - start

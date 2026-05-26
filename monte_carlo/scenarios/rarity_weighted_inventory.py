@@ -11,8 +11,8 @@ import time
 @dataclass
 class RarityWeightedScenario(Scenario):
     player: Player = field(default_factory=Player)
-    inv_total: int = 14
-    inv_distinct: int = 7
+    total: int = 14
+    distinct: int = 7
     rarity_dist: Optional[dict] = None
 
     def __repr__(self):
@@ -21,7 +21,7 @@ class RarityWeightedScenario(Scenario):
     def run_once(self, run_idx) -> None:
         start = time.time()
 
-        inv = Inventory.generate_weighted(self.db, self.inv_total, self.inv_distinct, rarity_dist=self.rarity_dist)
+        inv = Inventory.generate_weighted(self.db, self.total, self.distinct, rarity_dist=self.rarity_dist)
         alembic = Alembic(self.db, self.player, inv)
         potions = alembic.exhaust_inventory(strategy="lazy")
 
@@ -38,8 +38,8 @@ class RarityWeightedScenario(Scenario):
 
     def aggregate_stats(self):
         start = time.time()
-        self.aggregated_stats.append(self._average_and_total_potions())
-        self.aggregated_stats.append(self._average_and_total_value())
-        self.aggregated_stats.append(self._average_and_total_simtime())
-        self.aggregated_stats.append({"result aggregation time": time.time() - start})
-        self.aggregated_stats.append(self._average_ingredient_performance())
+        self.aggregated_stats.update(self._average_and_total_potions())
+        self.aggregated_stats.update(self._average_and_total_value())
+        self.aggregated_stats.update(self._average_and_total_simtime())
+        self.aggregated_stats.update(self._average_ingredient_performance())
+        self.aggregated_stats["result_aggregation_time"] = time.time() - start

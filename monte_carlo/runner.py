@@ -20,7 +20,7 @@ from tqdm import tqdm
 @dataclass
 class Scenario(ABC):
     run_results:      List[Dict[str, Any]] = field(default_factory=list)
-    aggregated_stats: List[Dict[str, Any]] = field(default_factory=list)
+    aggregated_stats: Dict[str, Any] = field(default_factory=dict)
     db: Optional[Any] = field(default=None)
 
     def to_dataframe(self):
