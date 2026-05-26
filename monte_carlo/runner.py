@@ -17,6 +17,7 @@ import pandas as pd
 from tqdm import tqdm
 
 
+
 @dataclass
 class Scenario(ABC):
     run_results:      List[Dict[str, Any]] = field(default_factory=list)
@@ -27,7 +28,7 @@ class Scenario(ABC):
         return pd.DataFrame(self.run_results)
 
     @abstractmethod
-    def run_once(self, run_idx: int) -> None:
+    def run_once(self, run_idx: int) -> Dict[str, Any]:
         pass
 
     @abstractmethod
@@ -123,51 +124,41 @@ class Scenario(ABC):
         return {"average_performance": performance_map}
 
 
-class MonteCarlo:
+def run_monte_carlo(
+    scenario: Scenario,
+    n: int,
+    seed: Optional[int] = None,
+    progress_bar: bool = False,
+    verbose: bool = False,
+) -> Scenario:
+    if verbose:
+        print("running monte carlo...")
+        print(str(scenario))
 
-    def __init__(self, scenario: Scenario, num_simulations: int, progress_bar: bool = False, verbose: bool = False):
-        self.scenario = scenario
-        self.num_simulations = num_simulations
-        self.progress_bar = progress_bar
-        self.verbose = verbose
+    if seed is not None:
+        random.seed(seed)
+        np.random.seed(seed)
 
-        if verbose: print("creating monte carlo runner...")
-        if verbose: print("loaded scenario.\n" + str(scenario))
+    start = time.time()
 
-    def run(self, seed: Optional[int] = None):
-        if seed is not None:
-            random.seed(seed)
-            np.random.seed(seed)
+    pbar = tqdm(total=n, desc="Monte Carlo", unit="sim", disable=not progress_bar)
 
-        if self.verbose: print("running monte carlo...")
+    for run_idx in range(n):
+        scenario.run_results.append(scenario.run_once(run_idx))
+        pbar.update(1)
 
-        start = time.time()
+    pbar.close()
 
-        pbar = tqdm(
-            total=self.num_simulations,
-            desc="Monte Carlo",
-            unit="sim",
-            disable=not self.progress_bar
-        ) if self.progress_bar else None
+    if verbose:
+        total = time.time() - start
+        print(f"total runtime: {total}\navg runtime per simulation: {total / n}")
 
-        for run_idx in range(self.num_simulations):
-            self.scenario.run_once(run_idx)
-            if pbar:
-                pbar.update(1)
+    if verbose:
+        print("aggregating results")
+    agg_start = time.time()
+    scenario.aggregate_stats()
+    if verbose:
+        print(f"results crunched. took {time.time() - agg_start}.")
+        scenario.summary()
 
-        if pbar:
-            pbar.close()
-
-        if self.verbose:
-            total = time.time() - start
-            avg = total / self.num_simulations
-            print(f"total runtime: {total}\navg runtime per simultation: {avg}")
-
-        if self.verbose: print("aggregating results")
-        start = time.time()
-        self.scenario.aggregate_stats()
-        if self.verbose: print(f"results crunched. took {time.time() - start}.")
-
-        if self.verbose:
-            print("scenarios complete")
-            self.scenario.summary()
+    return scenario

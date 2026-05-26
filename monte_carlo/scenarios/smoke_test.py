@@ -15,21 +15,19 @@ class SmokeTestScenario(Scenario):
     def __repr__(self):
         return "Smoke Test Scenario - basic functionality test for the MC runner"
 
-    def run_once(self, run_idx) -> None:
+    def run_once(self, run_idx) -> dict:
         start = time.time()
 
         inv = Inventory.generate_normal(self.db, self.inv_size)
         alembic = Alembic(self.db, self.player, inv)
         potions = alembic.exhaust_inventory(strategy="lazy")
 
-        simtime = time.time() - start
-
-        self.run_results.append({
+        return {
             "run_idx": run_idx,
             "num_potions": len(potions),
             "total_value": sum(p.value for p in potions),
-            "simulation_time": simtime,
-        })
+            "simulation_time": time.time() - start,
+        }
 
     def aggregate_stats(self):
         start = time.time()

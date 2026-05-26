@@ -18,23 +18,20 @@ class RarityWeightedScenario(Scenario):
     def __repr__(self):
         return "Rarity Weighted Inventory Scenario - tests rarity-weighted inventory generation"
 
-    def run_once(self, run_idx) -> None:
+    def run_once(self, run_idx) -> dict:
         start = time.time()
 
         inv = Inventory.generate_weighted(self.db, self.total, self.distinct, rarity_dist=self.rarity_dist)
         alembic = Alembic(self.db, self.player, inv)
         potions = alembic.exhaust_inventory(strategy="lazy")
 
-        ingmap = alembic.ingredients_map
-        simtime = time.time() - start
-
-        self.run_results.append({
+        return {
             "run_idx": run_idx,
             "num_potions": len(potions),
             "total_value": sum(p.value for p in potions),
-            "ingredients_map": ingmap,
-            "simulation_time": simtime,
-        })
+            "ingredients_map": alembic.ingredients_map,
+            "simulation_time": time.time() - start,
+        }
 
     def aggregate_stats(self):
         start = time.time()

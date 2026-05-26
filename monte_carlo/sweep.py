@@ -1,4 +1,4 @@
-from .runner import MonteCarlo, Scenario
+from .runner import run_monte_carlo, Scenario
 from typing import Dict, Type
 import hashlib
 
@@ -12,18 +12,15 @@ def run_sweep(
     verbose: bool = False,
 ) -> Dict[str, Scenario]:
     """
-    Run MonteCarlo for each named configuration dict, returning {name: scenario}.
+    Run run_monte_carlo for each named configuration, returning {name: scenario}.
 
     Each entry in `configurations` maps a label to kwargs passed to scenario_cls.
-    `db` is forwarded to scenario_cls (pass None to omit).
+    `db` is forwarded to every scenario_cls call.
     """
     results = {}
     for name, kwargs in configurations.items():
-        seed_data = f"{name}:{num_simulations}"
-        seed = int(hashlib.sha256(seed_data.encode()).hexdigest(), 16) % (2 ** 32)
-
-        scenario = scenario_cls(db=db, **kwargs) if db is not None else scenario_cls(**kwargs)
-        runner = MonteCarlo(scenario, num_simulations, progress_bar=progress_bar, verbose=verbose)
-        runner.run(seed=seed)
+        seed = int(hashlib.sha256(f"{name}:{num_simulations}".encode()).hexdigest(), 16) % (2 ** 32)
+        scenario = scenario_cls(db=db, **kwargs)
+        run_monte_carlo(scenario, n=num_simulations, seed=seed, progress_bar=progress_bar, verbose=verbose)
         results[name] = scenario
     return results
