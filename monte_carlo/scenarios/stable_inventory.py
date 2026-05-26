@@ -1,22 +1,22 @@
-from ..runner import Scenario, MonteCarloResult
+from ..runner import Scenario
 from alchemy.inventory import Inventory
 from alchemy.alembic import Alembic
 from alchemy.player import Player
 from alchemy.database import IngredientsDatabase
-from dataclasses import dataclass
-from typing import Dict
+from dataclasses import dataclass, field
 import time
 
 
+@dataclass
 class StableInventoryScenario(Scenario):
+    player: Player = field(default_factory=Player)
+    inv_total: int = 14
+    inv_distinct: int = 7
 
-    def __init__(self, db=IngredientsDatabase(), player=Player(), total=14, distinct=7):
-        self.db = db
-        self.player = player
-        self.inv_total = total
-        self.inv_distinct = distinct
+    def __repr__(self):
+        return "Stable Inventory Scenario - intended for basic tests of stable inventory generation"
 
-    def run_once(self, run_idx) -> Dict[str, int]:
+    def run_once(self, run_idx) -> None:
         start = time.time()
 
         inv = Inventory.generate_stable(self.db, self.inv_total, self.inv_distinct)
@@ -26,19 +26,13 @@ class StableInventoryScenario(Scenario):
         ingmap = alembic.ingredients_map
         simtime = time.time() - start
 
-        return {"run_idx": run_idx,
-                "num_potions": len(potions),
-                "total_value": sum(p.value for p in potions),
-                "ingredients_map": ingmap,
-                "simulation_time": simtime,
-               }
-
-
-@dataclass
-class StableInventoryResult(MonteCarloResult):
-
-    def __repr__(self):
-        return "Stable Inventory Scenario - intended for basic tests of stable inventory generation"
+        self.run_results.append({
+            "run_idx": run_idx,
+            "num_potions": len(potions),
+            "total_value": sum(p.value for p in potions),
+            "ingredients_map": ingmap,
+            "simulation_time": simtime,
+        })
 
     def aggregate_stats(self):
         start = time.time()

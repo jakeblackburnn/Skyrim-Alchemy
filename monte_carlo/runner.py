@@ -18,16 +18,17 @@ from tqdm import tqdm
 
 
 @dataclass
-class MonteCarloResult(ABC):
+class Scenario(ABC):
     run_results:      List[Dict[str, Any]] = field(default_factory=list)
     aggregated_stats: List[Dict[str, Any]] = field(default_factory=list)
     db: Optional[Any] = field(default=None)
 
-    def add_run(self, run: Dict[str, Any]):
-        self.run_results.append(run)
-
     def to_dataframe(self):
         return pd.DataFrame(self.run_results)
+
+    @abstractmethod
+    def run_once(self, run_idx: int) -> None:
+        pass
 
     @abstractmethod
     def aggregate_stats(self):
@@ -122,24 +123,18 @@ class MonteCarloResult(ABC):
         return {"average_performance": performance_map}
 
 
-class Scenario:
-    @abstractmethod
-    def run_once(self) -> Dict[str, Any]:
-        pass
-
-
 class MonteCarlo:
 
-    def __init__(self, results: MonteCarloResult, num_simulations: int, progress_bar: bool = False, verbose: bool = False):
-        self.results = results
+    def __init__(self, scenario: Scenario, num_simulations: int, progress_bar: bool = False, verbose: bool = False):
+        self.scenario = scenario
         self.num_simulations = num_simulations
         self.progress_bar = progress_bar
         self.verbose = verbose
 
         if verbose: print("creating monte carlo runner...")
-        if verbose: print("loaded results object.\n" + str(results))
+        if verbose: print("loaded scenario.\n" + str(scenario))
 
-    def run(self, scenario: Scenario, seed: Optional[int] = None):
+    def run(self, seed: Optional[int] = None):
         if seed is not None:
             random.seed(seed)
             np.random.seed(seed)
@@ -156,7 +151,7 @@ class MonteCarlo:
         ) if self.progress_bar else None
 
         for run_idx in range(self.num_simulations):
-            self.results.add_run(scenario.run_once(run_idx))
+            self.scenario.run_once(run_idx)
             if pbar:
                 pbar.update(1)
 
@@ -170,9 +165,9 @@ class MonteCarlo:
 
         if self.verbose: print("aggregating results")
         start = time.time()
-        self.results.aggregate_stats()
+        self.scenario.aggregate_stats()
         if self.verbose: print(f"results crunched. took {time.time() - start}.")
 
         if self.verbose:
             print("scenarios complete")
-            self.results.summary()
+            self.scenario.summary()

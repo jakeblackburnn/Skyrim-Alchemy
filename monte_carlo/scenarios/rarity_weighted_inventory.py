@@ -1,23 +1,24 @@
-from ..runner import Scenario, MonteCarloResult
+from ..runner import Scenario
 from alchemy.inventory import Inventory
 from alchemy.alembic import Alembic
 from alchemy.player import Player
 from alchemy.database import IngredientsDatabase
-from dataclasses import dataclass
-from typing import Dict
+from dataclasses import dataclass, field
+from typing import Optional
 import time
 
 
+@dataclass
 class RarityWeightedScenario(Scenario):
+    player: Player = field(default_factory=Player)
+    inv_total: int = 14
+    inv_distinct: int = 7
+    rarity_dist: Optional[dict] = None
 
-    def __init__(self, db=IngredientsDatabase(), player=Player(), total=14, distinct=7, rarity_dist=None):
-        self.db = db
-        self.player = player
-        self.inv_total = total
-        self.inv_distinct = distinct
-        self.rarity_dist = rarity_dist
+    def __repr__(self):
+        return "Rarity Weighted Inventory Scenario - tests rarity-weighted inventory generation"
 
-    def run_once(self, run_idx) -> Dict[str, int]:
+    def run_once(self, run_idx) -> None:
         start = time.time()
 
         inv = Inventory.generate_weighted(self.db, self.inv_total, self.inv_distinct, rarity_dist=self.rarity_dist)
@@ -27,19 +28,13 @@ class RarityWeightedScenario(Scenario):
         ingmap = alembic.ingredients_map
         simtime = time.time() - start
 
-        return {"run_idx": run_idx,
-                "num_potions": len(potions),
-                "total_value": sum(p.value for p in potions),
-                "ingredients_map": ingmap,
-                "simulation_time": simtime,
-               }
-
-
-@dataclass
-class RarityWeightedResult(MonteCarloResult):
-
-    def __repr__(self):
-        return "Rarity Weighted Inventory Scenario - tests rarity-weighted inventory generation"
+        self.run_results.append({
+            "run_idx": run_idx,
+            "num_potions": len(potions),
+            "total_value": sum(p.value for p in potions),
+            "ingredients_map": ingmap,
+            "simulation_time": simtime,
+        })
 
     def aggregate_stats(self):
         start = time.time()

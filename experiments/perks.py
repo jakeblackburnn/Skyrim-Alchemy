@@ -6,7 +6,7 @@ from datetime import datetime
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 
 from monte_carlo.sweep import run_sweep
-from monte_carlo.scenarios.rarity_weighted_inventory import RarityWeightedResult, RarityWeightedScenario
+from monte_carlo.scenarios.rarity_weighted_inventory import RarityWeightedScenario
 from alchemy.database import IngredientsDatabase
 from alchemy.player import Player
 import time
@@ -58,7 +58,7 @@ def _run_perk_analysis_inner(results_dir):
     print(f"Running {num_simulations} simulations per perk configuration\n")
 
     start = time.time()
-    results_by_perk = run_sweep(RarityWeightedScenario, RarityWeightedResult, perk_configurations, num_simulations, db=db, progress_bar=True)
+    results_by_perk = run_sweep(RarityWeightedScenario, perk_configurations, num_simulations, db=db, progress_bar=True)
     print(f"\nAll configurations completed in {time.time() - start:.2f}s")
 
     print("\n" + "="*80)
