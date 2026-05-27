@@ -1,23 +1,15 @@
 import os
-import sys
 import json
 from datetime import datetime
 
 os.chdir(os.path.join(os.path.dirname(__file__), '..'))
 
+from experiments.utils import tee_stdout
 from monte_carlo.sweep import run_sweep
 from monte_carlo.scenarios.rarity_weighted_inventory import RarityWeightedScenario
 from alchemy.inventory import Inventory
 from alchemy.database import IngredientsDatabase
 import time
-
-
-class _Tee:
-    def __init__(self, *files): self.files = files
-    def write(self, data):
-        for f in self.files: f.write(data)
-    def flush(self):
-        for f in self.files: f.flush()
 
 
 def scale_rarity_distribution(base_dist, multiplier):
@@ -42,14 +34,8 @@ def run_rarity_analysis():
     results_dir = os.path.join(os.path.dirname(__file__), 'results')
     txt_path = os.path.join(results_dir, 'rarity.txt')
 
-    with open(txt_path, 'w') as txt_file:
-        original_stdout = sys.stdout
-        sys.stdout = _Tee(original_stdout, txt_file)
-
-        try:
-            _run_rarity_analysis_inner(results_dir)
-        finally:
-            sys.stdout = original_stdout
+    with tee_stdout(txt_path):
+        _run_rarity_analysis_inner(results_dir)
 
 
 def _run_rarity_analysis_inner(results_dir):
