@@ -7,15 +7,10 @@ from .ingredient import Ingredient
 
 class Inventory:
 
-    # Inventory class wraps a dict of ingredients to quantities
-    # and provides basic access and update methods.
     def __init__(self, items: Optional[Dict[Ingredient, int]] = None):
         self._items = items.copy() if items is not None else {}
 
-    # Defaults for ingredient sampling 
-
-    # rarity weighted sampling probabilities
-    BASIC_RARITY_DIST = { 
+    BASIC_RARITY_DIST = {
         "common": 0.50,
         "uncommon": 0.30,
         "rare": 0.15,
@@ -23,7 +18,6 @@ class Inventory:
         "unique": 0.01,
     }
 
-    # chi-squared parameters for normal sampling
     QUANTITY_PARAMS_NORMAL = {
         'df': 5,
         'scale': 1.5,
@@ -33,8 +27,6 @@ class Inventory:
 
 
 
-
-    # Access methods
 
     def get_available_ingredients(self) -> List[Ingredient]:
         return list(self._items.keys())
@@ -54,8 +46,6 @@ class Inventory:
     def is_empty(self) -> bool:
         return len(self._items) == 0
 
-
-    # Update methods
 
     def add(self, ing: Ingredient, qty: int = 1):
         if qty <= 0:
@@ -83,19 +73,11 @@ class Inventory:
 
 
 
-    # sampling methods
-    # Each accepts an optional `exclude` set to filter the ingredient pool before sampling.
-
-
-    # chi-squared distribution for sampling quantities of ingredients for nomal sampling strategy.
     @staticmethod
     def _sample_chi2_quantity(df, scale, min_qty, max_qty):
         raw_value = np.random.chisquare(df) * scale
         return max(min_qty, min(max_qty, int(raw_value)))
 
-    # normal sampling - creates inventory with a certain number of distinct ingredients, 
-    # but does not specify total quantity. quantity is randomized via chi-squared dist
-    # specified in qty_params which default to QUANTITY_PARAMS_NORMAL.
     @staticmethod
     def _build_normal_sample(
         db,
@@ -103,6 +85,8 @@ class Inventory:
         qty_params: Optional[dict] = None,
         exclude: Optional[Set[Ingredient]] = None,
     ) -> Dict[Ingredient, int]:
+        """Samples `size` distinct ingredients; quantities randomized via chi-squared dist
+        (see QUANTITY_PARAMS_NORMAL). Total item count is not fixed."""
         pool = db.get_all_ingredients()
         if exclude is not None:
             pool = [i for i in pool if i not in exclude]
@@ -125,8 +109,6 @@ class Inventory:
         return items
 
 
-    # stable sampling - creates an inventory with exact total and distinct ingredients rather 
-    # than the randomized total size in 'normal' sampling using stick-breaking algorithm
     @staticmethod
     def _build_stable_sample(
         db,
@@ -134,6 +116,8 @@ class Inventory:
         distinct: int,
         exclude: Optional[Set[Ingredient]] = None,
     ) -> Dict[Ingredient, int]:
+        """Produces exactly `total` items across exactly `distinct` ingredient types,
+        distributed via stick-breaking. Unlike normal sampling, both counts are fixed."""
         pool = db.get_all_ingredients()
         if exclude is not None:
             pool = [i for i in pool if i not in exclude]
@@ -156,9 +140,6 @@ class Inventory:
         return {ing: qty for ing, qty in zip(sampled, quantities)}
 
 
-    # weighted sampling - similar to stable sampling but using np random choice 
-    # weight ingredient probabilities by rarity according to a supplied rarity prob dist 
-    # defaults to BASIC_RARITY_DIST
     @staticmethod
     def _build_weighted_sample(
         db,
@@ -167,6 +148,8 @@ class Inventory:
         rarity_dist: Optional[Dict[str, float]] = None,
         exclude: Optional[Set[Ingredient]] = None,
     ) -> Dict[Ingredient, int]:
+        """Like stable sampling but selects ingredients by rarity-weighted probability
+        (defaults to BASIC_RARITY_DIST) rather than uniformly."""
         if rarity_dist is None:
             rarity_dist = Inventory.BASIC_RARITY_DIST
 
@@ -206,8 +189,6 @@ class Inventory:
 
 
 
-    # Generation classmethods — delegate to builders, construct and return new Inventory.
-
     @classmethod
     def generate_weighted(cls, db, total: int, distinct: int, rarity_dist: Optional[Dict[str, float]] = None):
         return cls(cls._build_weighted_sample(db, total, distinct, rarity_dist=rarity_dist))
@@ -221,9 +202,6 @@ class Inventory:
         return cls(cls._build_normal_sample(db, size, qty_params))
 
 
-
-    # Resample instance methods — delegate to builders, merge into existing inventory.
-    # exclude_existing=True: only samples ingredients not currently in inventory.
 
     def resample_weighted(self, db, total: int, distinct: int,
                           rarity_dist: Optional[Dict[str, float]] = None,
@@ -243,8 +221,6 @@ class Inventory:
         for ing, qty in self._build_normal_sample(db, size, qty_params, exclude=exclude).items():
             self.add(ing, qty)
 
-
-    # utilities and dunder methods
 
     def copy(self):
         return Inventory(self._items.copy())
@@ -275,20 +251,3 @@ class Inventory:
     def __bool__(self):
         return not self.is_empty()
 
-
-def main():
-
-    print("Generating random inventory\n")
-
-    ing_db = IngredientsDatabase()
-    inv = Inventory.generate_normal(ing_db, 7)
-    print(inv)
-
-    print("\nResampling inventory\n")
-    inv.resample_normal(ing_db, 7)
-    print(inv)
-
-
-
-if __name__ == "__main__":
-    main()

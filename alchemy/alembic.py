@@ -1,5 +1,5 @@
 from itertools import combinations
-from typing import Set
+from typing import Set, Dict, List
 from .potion import Potion
 from .player import Player
 from .inventory import Inventory
@@ -8,29 +8,26 @@ from .database import IngredientsDatabase
 
 class Alembic:
 
-    def __init__(self, db=IngredientsDatabase(), player=Player(), inventory=None): 
-            # potion making state
-        self.ing_db = db 
+    def __init__(self, db=IngredientsDatabase(), player=Player(), inventory=None):
+        """Create Alembic (alchemy table) from player, inventory, and ingredients database. 
+
+        Note: If inventory is provided, valid_potions is populated immediately,
+        otherwise it will remain empty until a inventory is added"""
+        self.ing_db = db
         self.player = player 
         self.inventory = inventory  
         self.valid_potions = []
         self.realized_potions = []
 
-            # data collection state
-        self.ingredients_map: Dict[Ingredient, filter[Potion]] = {}
+        self.ingredients_map: Dict[Ingredient, List[Potion]] = {}
 
         if inventory: 
             self._set_valid_potions()
 
 
-    # this reconstructs the whole thing from the inventory state, 
-    # really should only be used in the constructor or 
-    # after manipulating the inventory manually which probably is a 
-    # bad idea anyways. 
-    # unless inventory needs to be updated in a way 
-    # that cant be accounted for by using _update_valid_potions()
-    def _set_valid_potions(self):
 
+    def _set_valid_potions(self):
+        """populates valid potions based on ingredients in inventory"""
         ingredients_list = self.inventory.get_available_ingredients()
         valid_combos = []
         for combo in combinations(ingredients_list, 2):
@@ -42,6 +39,7 @@ class Alembic:
         self.valid_potions = [Potion(combo, self.player, self.ing_db) for combo in valid_combos]
 
     def _shared_effects(self, ingredients):
+        """Returns True only if every ingredient shares at least one effect with at least one other ingredient"""
         ingredient_effects_sets = [set(ing.get_effect_names()) for ing in ingredients]
         for i, effects_i in enumerate(ingredient_effects_sets):
             has_shared = False
@@ -54,24 +52,21 @@ class Alembic:
         return True
 
     def _update_valid_potions(self, ingredients: Set[Ingredient]):
-        # Filter ingredients to only those no longer available in inventory
+        # Filter ingredients for only those no longer available in inventory
         exhausted_ings = {ing for ing in ingredients 
                                 if not self.inventory.has_ingredient(ing)}
         
-        # Remove potions containing any of the available ingredients
+        # Remove potions containing any of the exhausted ingredients
         self.valid_potions = [pot for pot in self.valid_potions 
-                             if not any(ing in pot.recipie for ing in exhausted_ings)]
+                             if not any(ing in pot.recipe for ing in exhausted_ings)]
     
 
-    def exhaust_inventory(self, strategy=None):
-
-        # should the strategies really be strings?
+    def exhaust_inventory(self, strategy: str):
+        """Consume the entire inventory using the given strategy, returning all realized potions.
+        Mutates inventory and valid_potions in place. Currently 'lazy' is the only supported strategy 
+        (lazy is greedy: always brews the highest-value available potion)."""
         if strategy == "lazy":
             self._lazy_strategy()
-        elif strategy == None:
-            pass
-        elif strategy == "random":
-            pass
         else:
             raise ValueError(f"Unknown strategy: {strategy}")
 
@@ -79,15 +74,12 @@ class Alembic:
             self._set_ingredients_map()
         return self.realized_potions
 
-    # fundamental potionmaking method - realizing a potion
     def create_potion(self, potion):
         if self.valid_potions:
-            self.inventory.consume_recipe(potion.recipie)
-            self._update_valid_potions(potion.recipie)
+            self.inventory.consume_recipe(potion.recipe)
+            self._update_valid_potions(potion.recipe)
             self.realized_potions.append(potion)
             
-    ### Lazy Potionmaking Algorithms
-
     def _lazy_potionmaking(self):
         best = self._get_best_potion()
         if best:
@@ -97,85 +89,15 @@ class Alembic:
         while self.valid_potions:
             self._lazy_potionmaking()
 
-    ### Random algorithm
-    # TODO: implement this
-    def _random_strategy(self):
-        pass
-
-    
-    ### Smart algorithm
-    # TODO: implement this 
-    # is there an efficient algorithm better than lazy (greedy) strategy?
-    def _smart_potionmaking(self):
-        pass
-
-    ### potionmaking helpers
 
     def _get_best_potion(self):
         if not self.valid_potions:
             return None
         return max(self.valid_potions, key=lambda p: p.total_value)
 
-    def _get_random_potion(self):
-        pass
-
-    def _get_value_sorted_potions(self):
-        return sorted(self.potions, key=lambda p: p.total_value, reverse=True)
-
     def _filter_realized_by_ingredient(self, ingredient=None):
-        return filter(lambda p: any([i is ingredient for i in p.recipie]), self.realized_potions)
+        return filter(lambda p: any([i is ingredient for i in p.recipe]), self.realized_potions)
 
-    ### data aggregation stuff
-
-    # maps each ingredient to a list of potions participated in.
     def _set_ingredients_map(self):
         for ing in self.ing_db:
             self.ingredients_map[ing] = list(self._filter_realized_by_ingredient(ing))
-
-
-
-    ### end of business logic.
-
-    def fancy_print(self):
-        # should print realized_potions and ingredients_map
-        # but formatted well and concise
-        sorted_potions = sorted(self.realized_potions, key=lambda p: p.total_value, reverse=True)
-        total_gold = sum(p.total_value for p in sorted_potions)
-
-        print("=== Crafting Session Results ===\n")
-
-        print(f"Potions Crafted ({len(sorted_potions)} total | {total_gold} gold):")
-        for i, potion in enumerate(sorted_potions, 1):
-            print(f"  {i}. {potion.name:<40} {potion.total_value} gold")
-
-        print("\nIngredient Usage:")
-        usage = {ing: len(list(potions)) for ing, potions in self.ingredients_map.items()}
-        for ing, count in sorted(usage.items(), key=lambda x: x[1], reverse=True):
-            if count > 0:
-                print(f"  {ing.name:<30} used in {count} potion{'s' if count != 1 else ''}")
-
-
-# Practical Test
-def main():
-
-    print("generating state stuff...")
-
-    db = IngredientsDatabase()
-    inv = Inventory.generate_normal(db, 7)
-    player = Player()
-
-    print("building alembic...")
-    alembic = Alembic(db, player, inv)
-
-    print("creating potions...")
-    potions = alembic.exhaust_inventory("lazy")
-
-#    print("printing potions\n================\n")
-#    for potion in potions:
-    #    print(potion)
-
-    print("Printing the entire alembic\n================\n")
-    alembic.fancy_print()
-
-if __name__ == "__main__":
-    main()

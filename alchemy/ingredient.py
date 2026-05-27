@@ -32,10 +32,22 @@ class Ingredient:
 
     @classmethod
     def from_csv_line(cls, line):
+        """
+        Parse a single row from master_ingredients.csv.
+
+        Expected columns (19 total):
+            ingredient_name, ingredient_id, base_value, weight,
+            effect_1, effect_1_magnitude, effect_1_duration,
+            effect_2, effect_2_magnitude, effect_2_duration,
+            effect_3, effect_3_magnitude, effect_3_duration,
+            effect_4, effect_4_magnitude, effect_4_duration,
+            dlc, rarity, source_type
+        """
         parts = line.strip().split(',')
         return cls(*parts)
 
     def get_effect_data(self, name):
+        """Returns (magnitude, duration) for the named effect, or None if not present."""
         if self.effect1 == name:
             return (self.effect1_mag, self.effect1_dur)
         elif self.effect2 == name:
@@ -56,8 +68,3 @@ class Ingredient:
                 f"effects={effects})")
 
 
-if __name__ == "__main__":
-
-    ing = Ingredient.from_csv_line("ingredient,0,10,0.5,eff1,1,1,eff2,2,2,eff3,3,3,eff4,4,4,base,common,plant")
-
-    print(ing.name, ing.effect1, ing.effect1_mag, ing.source)

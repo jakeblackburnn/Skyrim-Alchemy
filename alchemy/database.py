@@ -1,13 +1,13 @@
 import csv
 import warnings
-from .effect import Effect, EffectType
+from .effect import Effect
 from .ingredient import Ingredient
 
 class IngredientsDatabase:
 
     def __init__(self, data_dir="data"):
-        self._ingredients = {}  # Dict[str, Ingredient]
-        self._effects = {}  # Dict[str, Effect]
+        self._ingredients = {}
+        self._effects = {}
         self._load_ingredients(data_dir)
         self._load_effects(data_dir)
 
@@ -48,23 +48,12 @@ class IngredientsDatabase:
 
         mag, dur = effect_data
 
-        if default_effect.is_fortify:
-            effect_type = EffectType.FORTIFY
-        elif default_effect.is_restore:
-            effect_type = EffectType.RESTORE
-        elif default_effect.is_poison:
-            effect_type = EffectType.POISON
-        else:
-            effect_type = None
-
-        # Create a new Effect object with ingredient-specific values
-        # (don't modify the cached default_effect)
         ingredient_effect = Effect(
             name=default_effect.name,
             mag=mag,
             dur=dur,
             cost=default_effect.base_cost,
-            effect_type=effect_type,
+            effect_type=default_effect.effect_type,
             variable_duration=default_effect.variable_duration,
             description_template=default_effect.description_template
         )
