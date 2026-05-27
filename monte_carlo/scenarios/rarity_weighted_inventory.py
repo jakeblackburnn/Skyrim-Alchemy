@@ -2,7 +2,6 @@ from ..runner import Scenario
 from alchemy.inventory import Inventory
 from alchemy.alembic import Alembic
 from alchemy.player import Player
-from alchemy.database import IngredientsDatabase
 from dataclasses import dataclass, field
 from typing import Optional
 import time
@@ -10,13 +9,24 @@ import time
 
 @dataclass
 class RarityWeightedScenario(Scenario):
+    """Exhaust a rarity-weighted random inventory and record potion yield and value.
+
+    total: total ingredient count drawn; distinct: number of unique ingredient types.
+    rarity_dist: optional override for per-ingredient rarity weights.
+    """
     player: Player = field(default_factory=Player)
     total: int = 14
     distinct: int = 7
     rarity_dist: Optional[dict] = None
 
-    def __repr__(self):
+    def __str__(self):
         return "Rarity Weighted Inventory Scenario - tests rarity-weighted inventory generation"
+
+    def __repr__(self):
+        return (
+            f"RarityWeightedScenario(total={self.total}, distinct={self.distinct}, "
+            f"rarity_dist={self.rarity_dist!r}, player={self.player!r})"
+        )
 
     def run_once(self, run_idx) -> dict:
         start = time.time()

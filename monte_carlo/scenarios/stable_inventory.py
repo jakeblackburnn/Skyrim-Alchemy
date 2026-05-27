@@ -2,19 +2,25 @@ from ..runner import Scenario
 from alchemy.inventory import Inventory
 from alchemy.alembic import Alembic
 from alchemy.player import Player
-from alchemy.database import IngredientsDatabase
 from dataclasses import dataclass, field
 import time
 
 
 @dataclass
 class StableInventoryScenario(Scenario):
+    """Exhaust a uniformly-distributed random inventory and record potion yield and value.
+
+    total: total ingredient count; distinct: number of unique ingredient types.
+    """
     player: Player = field(default_factory=Player)
     total: int = 14
     distinct: int = 7
 
-    def __repr__(self):
+    def __str__(self):
         return "Stable Inventory Scenario - intended for basic tests of stable inventory generation"
+
+    def __repr__(self):
+        return f"StableInventoryScenario(total={self.total}, distinct={self.distinct}, player={self.player!r})"
 
     def run_once(self, run_idx) -> dict:
         start = time.time()

@@ -1,11 +1,3 @@
-"""
-Monte Carlo Runner Module for ESV Skyrim alchemy analysis with random inventory generation
-Created by J. Blackburn - Feb 1 2026
-
-Last updated - Feb 14 2026
-"""
-
-import json
 import random
 import time
 from abc import ABC, abstractmethod
@@ -20,12 +12,14 @@ from tqdm import tqdm
 
 @dataclass
 class Scenario(ABC):
+    """Base class for a Monte Carlo scenario.
+
+    Subclasses must implement run_once(), aggregate_stats(), and __str__().
+    db is the IngredientsDatabase forwarded from the runner.
+    """
     run_results:      List[Dict[str, Any]] = field(default_factory=list)
     aggregated_stats: Dict[str, Any] = field(default_factory=dict)
     db: Optional[Any] = field(default=None)
-
-    def to_dataframe(self):
-        return pd.DataFrame(self.run_results)
 
     @abstractmethod
     def run_once(self, run_idx: int) -> Dict[str, Any]:
@@ -36,18 +30,11 @@ class Scenario(ABC):
         pass
 
     @abstractmethod
-    def __repr__(self):
+    def __str__(self):
         pass
 
-    def summary(self):
-        print("Monte Carlo Summary")
-        print("raw data results:")
-        print(self.to_dataframe())
-        print(f"analysis:\n{self.aggregated_stats}\n")
-
-    def save_to_json(self, filepath):
-        with open(filepath, 'w') as f:
-            json.dump(self.aggregated_stats, f, indent=2)
+    def to_dataframe(self):
+        return pd.DataFrame(self.run_results)
 
     def _average_and_total_simtime(self):
         total = sum(run["simulation_time"] for run in self.run_results)
@@ -152,13 +139,12 @@ def run_monte_carlo(
     if verbose:
         total = time.time() - start
         print(f"total runtime: {total}\navg runtime per simulation: {total / n}")
-
-    if verbose:
         print("aggregating results")
+
     agg_start = time.time()
     scenario.aggregate_stats()
+
     if verbose:
         print(f"results crunched. took {time.time() - agg_start}.")
-        scenario.summary()
 
     return scenario

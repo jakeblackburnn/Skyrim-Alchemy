@@ -14,8 +14,8 @@ def run_sweep(
     """
     Run run_monte_carlo for each named configuration, returning {name: scenario}.
 
-    Each entry in `configurations` maps a label to kwargs passed to scenario_cls.
-    `db` is forwarded to every scenario_cls call.
+    `db` is forwarded to every scenario_cls call. Seeds are derived deterministically
+    from each configuration name and num_simulations, so results are reproducible.
     """
     results = {}
     for name, kwargs in configurations.items():
