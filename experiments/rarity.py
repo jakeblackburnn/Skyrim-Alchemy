@@ -1,10 +1,7 @@
-import os
 import json
 from datetime import datetime
 
-os.chdir(os.path.join(os.path.dirname(__file__), '..'))
-
-from experiments.utils import tee_stdout
+from experiments.utils import tee_stdout, RESULTS_DIR
 from monte_carlo.sweep import run_sweep
 from monte_carlo.scenarios.rarity_weighted_inventory import RarityWeightedScenario
 from alchemy.inventory import Inventory
@@ -31,14 +28,12 @@ def scale_rarity_distribution(base_dist, multiplier):
 
 
 def run_rarity_analysis():
-    results_dir = os.path.join(os.path.dirname(__file__), 'results')
-    txt_path = os.path.join(results_dir, 'rarity.txt')
-
-    with tee_stdout(txt_path):
-        _run_rarity_analysis_inner(results_dir)
+    RESULTS_DIR.mkdir(exist_ok=True)
+    with tee_stdout(RESULTS_DIR / 'rarity.txt'):
+        _run_rarity_analysis_inner()
 
 
-def _run_rarity_analysis_inner(results_dir):
+def _run_rarity_analysis_inner():
     db = IngredientsDatabase()
     num_simulations = 320
 
@@ -188,7 +183,7 @@ def _run_rarity_analysis_inner(results_dir):
         "tolerance_scores": tolerance_scores,
     }
 
-    json_path = os.path.join(results_dir, f'rarity_{timestamp}.json')
+    json_path = RESULTS_DIR / f'rarity_{timestamp}.json'
     with open(json_path, 'w') as f:
         json.dump(output, f, indent=2)
 

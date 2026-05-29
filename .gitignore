@@ -1,17 +1,12 @@
 # personal files & project stuff
-.gitignore
 .DS_Store
 __pycache__
 CLAUDE.md
-
 *.md
-
-experiments/results
-
-writing
-docs
 data/backup/
-monte_carlo/*.md
+
+# experimental results
+results/
 
 # env stuff 
 .env

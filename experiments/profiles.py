@@ -1,4 +1,3 @@
-import os
 import re
 import json
 from itertools import combinations
@@ -6,9 +5,7 @@ from datetime import datetime
 
 import networkx as nx
 
-os.chdir(os.path.join(os.path.dirname(__file__), '..'))
-
-from experiments.utils import tee_stdout
+from experiments.utils import tee_stdout, RESULTS_DIR
 from alchemy.database import IngredientsDatabase
 from alchemy.player import Player
 from alchemy.potion import Potion
@@ -64,12 +61,11 @@ def _slugify(name):
     return s.strip('_')
 
 
-def _save_per_ingredient_files(profiles, results_dir, timestamp):
-    ingredients_dir = os.path.join(results_dir, 'ingredients')
-    os.makedirs(ingredients_dir, exist_ok=True)
-    for fname in os.listdir(ingredients_dir):
-        if fname.endswith('.json'):
-            os.remove(os.path.join(ingredients_dir, fname))
+def _save_per_ingredient_files(profiles, timestamp):
+    ingredients_dir = RESULTS_DIR / 'ingredients'
+    ingredients_dir.mkdir(parents=True, exist_ok=True)
+    for f in ingredients_dir.glob('*.json'):
+        f.unlink()
 
     for name, profile in profiles.items():
         payload = {
@@ -79,7 +75,7 @@ def _save_per_ingredient_files(profiles, results_dir, timestamp):
             },
             "profile": profile,
         }
-        path = os.path.join(ingredients_dir, f'{_slugify(name)}.json')
+        path = ingredients_dir / f'{_slugify(name)}.json'
         with open(path, 'w') as f:
             json.dump(payload, f, indent=2)
 
@@ -146,11 +142,9 @@ def _print_profiles_table(profiles, sort_key, title):
 
 
 def run_profiles():
-    results_dir = os.path.join(os.path.dirname(__file__), 'results')
-    txt_path = os.path.join(results_dir, 'profiles.txt')
-
-    with tee_stdout(txt_path):
-        _run_profiles_inner(results_dir)
+    RESULTS_DIR.mkdir(exist_ok=True)
+    with tee_stdout(RESULTS_DIR / 'profiles.txt'):
+        _run_profiles_inner()
 
 
 def _build_effect_sharing(ingredients):
@@ -200,7 +194,7 @@ def _build_ingredient_profile(ing, G, effect_sharing, effects_db, base_potions_b
     }
 
 
-def _save_results(profiles, base_potions, results_dir):
+def _save_results(profiles, base_potions):
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
     output = {
@@ -212,12 +206,12 @@ def _save_results(profiles, base_potions, results_dir):
         "profiles": profiles,
     }
 
-    json_path = os.path.join(results_dir, f'profiles_{timestamp}.json')
+    json_path = RESULTS_DIR / f'profiles_{timestamp}.json'
     with open(json_path, 'w') as f:
         json.dump(output, f, indent=2)
 
     print(f"\nResults saved to {json_path}")
-    _save_per_ingredient_files(profiles, results_dir, timestamp)
+    _save_per_ingredient_files(profiles, timestamp)
 
 
 def _print_profiles_report(profiles):
@@ -227,7 +221,7 @@ def _print_profiles_report(profiles):
     _print_profiles_table(profiles, 'total_synergy_weight', "Sorted by total_synergy_weight")
 
 
-def _run_profiles_inner(results_dir):
+def _run_profiles_inner():
     db = IngredientsDatabase()
     ingredients = db.get_all_ingredients()
     effects_db = db._effects
@@ -248,7 +242,7 @@ def _run_profiles_inner(results_dir):
         for ing in ingredients
     }
 
-    _save_results(profiles, base_potions, results_dir)
+    _save_results(profiles, base_potions)
     _print_profiles_report(profiles)
 
 

@@ -1,5 +1,8 @@
 import sys
+from pathlib import Path
 from contextlib import contextmanager
+
+RESULTS_DIR = Path(__file__).parent.parent / "results"
 
 
 class _Tee:

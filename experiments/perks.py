@@ -1,10 +1,7 @@
-import os
 import json
 from datetime import datetime
 
-os.chdir(os.path.join(os.path.dirname(__file__), '..'))
-
-from experiments.utils import tee_stdout
+from experiments.utils import tee_stdout, RESULTS_DIR
 from monte_carlo.sweep import run_sweep
 from monte_carlo.scenarios.rarity_weighted_inventory import RarityWeightedScenario
 from alchemy.database import IngredientsDatabase
@@ -13,14 +10,12 @@ import time
 
 
 def run_perk_analysis():
-    results_dir = os.path.join(os.path.dirname(__file__), 'results')
-    txt_path = os.path.join(results_dir, 'perks.txt')
-
-    with tee_stdout(txt_path):
-        _run_perk_analysis_inner(results_dir)
+    RESULTS_DIR.mkdir(exist_ok=True)
+    with tee_stdout(RESULTS_DIR / 'perks.txt'):
+        _run_perk_analysis_inner()
 
 
-def _run_perk_analysis_inner(results_dir):
+def _run_perk_analysis_inner():
     db = IngredientsDatabase()
     num_simulations = 320
 
@@ -164,7 +159,7 @@ def _run_perk_analysis_inner(results_dir):
         "perk_sensitivity": perk_sensitivity,
     }
 
-    json_path = os.path.join(results_dir, f'perks_{timestamp}.json')
+    json_path = RESULTS_DIR / f'perks_{timestamp}.json'
     with open(json_path, 'w') as f:
         json.dump(output, f, indent=2)
 
