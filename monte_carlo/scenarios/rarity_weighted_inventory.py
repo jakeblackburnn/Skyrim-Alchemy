@@ -12,12 +12,12 @@ class RarityWeightedScenario(Scenario):
     """Exhaust a rarity-weighted random inventory and record potion yield and value.
 
     total: total ingredient count drawn; distinct: number of unique ingredient types.
-    rarity_dist: optional override for per-ingredient rarity weights.
+    rarity_weights: optional override for per-ingredient rarity weights.
     """
     player: Player = field(default_factory=Player)
     total: int = 14
     distinct: int = 7
-    rarity_dist: Optional[dict] = None
+    rarity_weights: Optional[dict] = None
 
     def __str__(self):
         return "Rarity Weighted Inventory Scenario - tests rarity-weighted inventory generation"
@@ -25,13 +25,13 @@ class RarityWeightedScenario(Scenario):
     def __repr__(self):
         return (
             f"RarityWeightedScenario(total={self.total}, distinct={self.distinct}, "
-            f"rarity_dist={self.rarity_dist!r}, player={self.player!r})"
+            f"rarity_weights={self.rarity_weights!r}, player={self.player!r})"
         )
 
     def run_once(self, run_idx) -> dict:
         start = time.time()
 
-        inv = Inventory.generate_weighted(self.db, self.total, self.distinct, rarity_dist=self.rarity_dist)
+        inv = Inventory.generate_weighted(self.db, self.total, self.distinct, rarity_weights=self.rarity_weights)
         alembic = Alembic(self.db, self.player, inv)
         potions = alembic.exhaust_inventory(strategy="lazy")
 
