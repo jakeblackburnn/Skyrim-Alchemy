@@ -10,14 +10,22 @@ class Inventory:
     def __init__(self, items: Optional[Dict[Ingredient, int]] = None):
         self._items = items.copy() if items is not None else {}
 
-    BASIC_RARITY_DIST = {
-        "common": 0.50,
-        "uncommon": 0.30,
-        "rare": 0.15,
-        "very_rare": 0.04,
-        "unique": 0.01,
+    # Relative weights (normalized at sample time)
+    # Each tier is half as likely as the one above it (multiplier=2).
+    # 'unique' only applies to Jarrin Root, which is excluded by default anyway.
+    BASE_WEIGHTS = {
+        "common": 1.0,
+        "uncommon": 0.5,
+        "rare": 0.25,
+        "very_rare": 0.125,
+        "unique": 0.0,
     }
 
+    # Jarrin Root is Skyrim's one truly unique ingredient: a fixed-quantity quest
+    # item, not something you forage. We exclude it from random sampling by default.
+    JARRIN_ROOT = "Jarrin Root"
+
+    # Parameters for chi-squared distribution
     QUANTITY_PARAMS_NORMAL = {
         'df': 5,
         'scale': 1.5,
@@ -79,17 +87,32 @@ class Inventory:
         return max(min_qty, min(max_qty, int(raw_value)))
 
     @staticmethod
+    def _eligible_pool(
+        db,
+        exclude: Optional[Set[Ingredient]] = None,
+        include_jarrin_root: bool = False,
+    ) -> List[Ingredient]:
+        """The ingredients available to a sampler. Jarrin Root (see JARRIN_ROOT) is
+        dropped unless `include_jarrin_root` is set, as are any ingredients in
+        `exclude` (e.g. ones a resample wants to leave untouched)."""
+        skip = set(exclude) if exclude else set()
+        if not include_jarrin_root:
+            jarrin_root = db.get_ingredient(Inventory.JARRIN_ROOT)
+            if jarrin_root is not None:
+                skip.add(jarrin_root)
+        return [i for i in db.get_all_ingredients() if i not in skip]
+
+    @staticmethod
     def _build_normal_sample(
         db,
         size: int = 0,
         qty_params: Optional[dict] = None,
         exclude: Optional[Set[Ingredient]] = None,
+        include_jarrin_root: bool = False,
     ) -> Dict[Ingredient, int]:
         """Samples `size` distinct ingredients; quantities randomized via chi-squared dist
         (see QUANTITY_PARAMS_NORMAL). Total item count is not fixed."""
-        pool = db.get_all_ingredients()
-        if exclude is not None:
-            pool = [i for i in pool if i not in exclude]
+        pool = Inventory._eligible_pool(db, exclude, include_jarrin_root)
 
         size = min(size, len(pool))
         sampled = random.sample(pool, size)
@@ -115,12 +138,11 @@ class Inventory:
         total: int,
         distinct: int,
         exclude: Optional[Set[Ingredient]] = None,
+        include_jarrin_root: bool = False,
     ) -> Dict[Ingredient, int]:
         """Produces exactly `total` items across exactly `distinct` ingredient types,
         distributed via stick-breaking. Unlike normal sampling, both counts are fixed."""
-        pool = db.get_all_ingredients()
-        if exclude is not None:
-            pool = [i for i in pool if i not in exclude]
+        pool = Inventory._eligible_pool(db, exclude, include_jarrin_root)
 
         if total < distinct:
             raise ValueError("stable gen: more distinct than total ingredients is impossible!")
@@ -145,17 +167,16 @@ class Inventory:
         db,
         total: int,
         distinct: int,
-        rarity_dist: Optional[Dict[str, float]] = None,
+        rarity_weights: Optional[Dict[str, float]] = None,
         exclude: Optional[Set[Ingredient]] = None,
+        include_jarrin_root: bool = False,
     ) -> Dict[Ingredient, int]:
         """Like stable sampling but selects ingredients by rarity-weighted probability
-        (defaults to BASIC_RARITY_DIST) rather than uniformly."""
-        if rarity_dist is None:
-            rarity_dist = Inventory.BASIC_RARITY_DIST
+        (defaults to BASE_WEIGHTS) rather than uniformly."""
+        if rarity_weights is None:
+            rarity_weights = Inventory.BASE_WEIGHTS
 
-        pool = db.get_all_ingredients()
-        if exclude is not None:
-            pool = [i for i in pool if i not in exclude]
+        pool = Inventory._eligible_pool(db, exclude, include_jarrin_root)
 
         if total < distinct:
             raise ValueError("weighted gen: more distinct than total ingredients is impossible!")
@@ -164,12 +185,12 @@ class Inventory:
 
         weights = []
         for ing in pool:
-            if ing.rarity not in rarity_dist:
+            if ing.rarity not in rarity_weights:
                 raise ValueError(
                     f"weighted gen: ingredient '{ing.name}' has rarity '{ing.rarity}' "
-                    f"not found in rarity_dist. Available rarities: {list(rarity_dist.keys())}"
+                    f"not found in rarity_weights. Available rarities: {list(rarity_weights.keys())}"
                 )
-            weights.append(rarity_dist[ing.rarity])
+            weights.append(rarity_weights[ing.rarity])
 
         weights_array = np.array(weights)
         probabilities = weights_array / weights_array.sum()
@@ -190,35 +211,42 @@ class Inventory:
 
 
     @classmethod
-    def generate_weighted(cls, db, total: int, distinct: int, rarity_dist: Optional[Dict[str, float]] = None):
-        return cls(cls._build_weighted_sample(db, total, distinct, rarity_dist=rarity_dist))
+    def generate_weighted(cls, db, total: int, distinct: int, rarity_weights: Optional[Dict[str, float]] = None,
+                          include_jarrin_root: bool = False):
+        return cls(cls._build_weighted_sample(db, total, distinct, rarity_weights=rarity_weights,
+                                              include_jarrin_root=include_jarrin_root))
 
     @classmethod
-    def generate_stable(cls, db, total: int, distinct: int):
-        return cls(cls._build_stable_sample(db, total, distinct))
+    def generate_stable(cls, db, total: int, distinct: int, include_jarrin_root: bool = False):
+        return cls(cls._build_stable_sample(db, total, distinct, include_jarrin_root=include_jarrin_root))
 
     @classmethod
-    def generate_normal(cls, db, size: int = 0, qty_params: Optional[dict] = None):
-        return cls(cls._build_normal_sample(db, size, qty_params))
+    def generate_normal(cls, db, size: int = 0, qty_params: Optional[dict] = None,
+                        include_jarrin_root: bool = False):
+        return cls(cls._build_normal_sample(db, size, qty_params, include_jarrin_root=include_jarrin_root))
 
 
 
     def resample_weighted(self, db, total: int, distinct: int,
-                          rarity_dist: Optional[Dict[str, float]] = None,
-                          exclude_existing: bool = False):
+                          rarity_weights: Optional[Dict[str, float]] = None,
+                          exclude_existing: bool = False, include_jarrin_root: bool = False):
         exclude = set(self._items.keys()) if exclude_existing else None
-        for ing, qty in self._build_weighted_sample(db, total, distinct, rarity_dist=rarity_dist, exclude=exclude).items():
+        for ing, qty in self._build_weighted_sample(db, total, distinct, rarity_weights=rarity_weights,
+                                                    exclude=exclude, include_jarrin_root=include_jarrin_root).items():
             self.add(ing, qty)
 
-    def resample_stable(self, db, total: int, distinct: int, exclude_existing: bool = False):
+    def resample_stable(self, db, total: int, distinct: int, exclude_existing: bool = False,
+                        include_jarrin_root: bool = False):
         exclude = set(self._items.keys()) if exclude_existing else None
-        for ing, qty in self._build_stable_sample(db, total, distinct, exclude=exclude).items():
+        for ing, qty in self._build_stable_sample(db, total, distinct, exclude=exclude,
+                                                  include_jarrin_root=include_jarrin_root).items():
             self.add(ing, qty)
 
     def resample_normal(self, db, size: int = 0, qty_params: Optional[dict] = None,
-                        exclude_existing: bool = False):
+                        exclude_existing: bool = False, include_jarrin_root: bool = False):
         exclude = set(self._items.keys()) if exclude_existing else None
-        for ing, qty in self._build_normal_sample(db, size, qty_params, exclude=exclude).items():
+        for ing, qty in self._build_normal_sample(db, size, qty_params, exclude=exclude,
+                                                  include_jarrin_root=include_jarrin_root).items():
             self.add(ing, qty)
 
 
