@@ -21,13 +21,14 @@ class Alembic:
 
         self.ingredients_map: Dict[Ingredient, List[Potion]] = {}
 
-        if inventory: 
-            self._set_valid_potions()
+        if inventory:
+            self.set_valid_potions()
 
 
 
-    def _set_valid_potions(self):
-        """populates valid potions based on ingredients in inventory"""
+    def set_valid_potions(self):
+        """Rebuild valid_potions from the current inventory. Runs at construction, and can be
+        re-called to refresh after the inventory changes underneath the Alembic (e.g. a resample)."""
         ingredients_list = self.inventory.get_available_ingredients()
         valid_combos = []
         for combo in combinations(ingredients_list, 2):
@@ -61,12 +62,17 @@ class Alembic:
                              if not any(ing in pot.recipe for ing in exhausted_ings)]
     
 
-    def exhaust_inventory(self, strategy: str):
-        """Consume the entire inventory using the given strategy, returning all realized potions.
-        Mutates inventory and valid_potions in place. Currently 'lazy' is the only supported strategy 
-        (lazy is greedy: always brews the highest-value available potion)."""
+    def exhaust_inventory(self, strategy: str, proportion: float = 1.0):
+        """Consume the inventory using the given strategy, returning all realized potions.
+        Mutates inventory and valid_potions in place. Currently 'lazy' is the only supported strategy
+        (lazy is greedy: always brews the highest-value available potion).
+
+        `proportion` is the fraction of the original inventory to consume before stopping
+        (1.0, the default, exhausts as much as possible)."""
+        if not 0.0 < proportion <= 1.0:
+            raise ValueError(f"proportion must be in (0, 1], got {proportion}")
         if strategy == "lazy":
-            self._lazy_strategy()
+            self._lazy_strategy(proportion)
         else:
             raise ValueError(f"Unknown strategy: {strategy}")
 
@@ -85,8 +91,12 @@ class Alembic:
         if best:
             self.create_potion(best)
 
-    def _lazy_strategy(self):
+    def _lazy_strategy(self, proportion: float = 1.0):
+        starting_items = self.inventory.total_items()
+        target_consumed = proportion * starting_items
         while self.valid_potions:
+            if (starting_items - self.inventory.total_items()) >= target_consumed:
+                break
             self._lazy_potionmaking()
 
 
