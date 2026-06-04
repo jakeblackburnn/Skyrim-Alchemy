@@ -91,7 +91,7 @@ function CalculatorTab({ theme }) {
               <button key={r} onClick={()=>setRank(r)} style={{ flex:1, padding:'4px 0', fontSize:'11px', fontFamily:'Space Grotesk', background: alchemistRank >= r && r > 0 ? t.accent : t.surfaceAlt, color: alchemistRank >= r && r > 0 ? '#0d1117' : t.textMuted, border:`1px solid ${alchemistRank===r ? t.accent : t.border}`, borderRadius:4, cursor:'pointer', fontWeight:600 }}>{r}</button>
             ))}
           </div>
-          <div style={{ fontSize:'10px', color:t.textMuted, marginTop:4 }}>+{[0,0,20,40,60,80,100][alchemistRank]}% strength</div>
+          <div style={{ fontSize:'10px', color:t.textMuted, marginTop:4 }}>+{[0,20,40,60,80,100][alchemistRank]}% strength</div>
         </div>
 
         <div>
