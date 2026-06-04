@@ -20,6 +20,10 @@ import warnings
 BASE_DIR = Path(__file__).resolve().parent.parent
 PROJECT_ROOT = BASE_DIR.parent  # Points to esv-skyrim-alchemy/
 
+# Project data (CSV sources) and precomputed experiment results live at the repo root.
+DATA_DIR = PROJECT_ROOT / "data"
+RESULTS_DIR = PROJECT_ROOT / "results"
+
 # Environment-based configuration system
 # Automatically loads the correct .env file based on ENVIRONMENT variable
 ENVIRONMENT = os.environ.get('ENVIRONMENT', 'development')

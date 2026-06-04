@@ -20,12 +20,6 @@ function CalculatorTab({ theme }) {
 
   const togglePerk = k => setPerks(p => ({ ...p, [k]: !p[k] }));
 
-  const allEffects = React.useMemo(() => {
-    const s = new Set();
-    ingredients.forEach(i => i.effects.forEach(e => s.add(e.name)));
-    return ['all', ...Array.from(s).sort()];
-  }, []);
-
   const filtered = React.useMemo(() =>
     ingredients.filter(ing =>
       ing.name.toLowerCase().includes(search.toLowerCase()) &&
@@ -35,8 +29,6 @@ function CalculatorTab({ theme }) {
   const toggle   = name => setSelected(p => { const n = new Set(p); n.has(name) ? n.delete(name) : n.add(name); return n; });
   const selectAll = () => setSelected(new Set(filtered.map(i => i.name)));
   const clearAll  = () => setSelected(new Set());
-
-  const getCsrf = () => document.cookie.split(';').map(c=>c.trim()).find(c=>c.startsWith('csrftoken='))?.split('=')[1] || '';
 
   const calculate = async () => {
     if (selected.size < 2) return;
@@ -131,7 +123,7 @@ function CalculatorTab({ theme }) {
               <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Search ingredients…" style={{ width:'100%', background:t.surfaceAlt, border:`1px solid ${t.border}`, borderRadius:6, padding:'7px 10px 7px 28px', color:t.text, fontSize:'12px', outline:'none', boxSizing:'border-box' }}/>
             </div>
             <select value={effectFilter} onChange={e=>setEffectFilter(e.target.value)} style={{ background:t.surfaceAlt, border:`1px solid ${t.border}`, borderRadius:6, color:t.text, fontSize:'11px', padding:'7px 10px', outline:'none', maxWidth:170 }}>
-              {allEffects.map(e => <option key={e} value={e}>{e === 'all' ? 'All Effects' : e}</option>)}
+              {EFFECT_OPTIONS.map(e => <option key={e} value={e}>{e === 'all' ? 'All Effects' : e}</option>)}
             </select>
           </div>
           <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center' }}>
@@ -147,7 +139,7 @@ function CalculatorTab({ theme }) {
           <div style={{ display:'flex', flexWrap:'wrap', gap:6, alignContent:'flex-start' }}>
             {filtered.map(ing => {
               const isSel = selected.has(ing.name);
-              const rc = { common:t.textMuted, uncommon:'#79c0ff', rare:t.accent, very_rare:t.amber, unique:'#f85149' }[ing.rarity] || t.textMuted;
+              const rc = rarityColor(t, ing.rarity);
               return (
                 <button key={ing.name} onClick={()=>toggle(ing.name)} title={ing.effects.map(e=>e.name).join(' · ')} style={{ padding:'5px 10px', borderRadius:20, fontSize:'11px', cursor:'pointer', background: isSel ? t.accentDim : t.surfaceAlt, border:`1px solid ${isSel ? t.accent : t.border}`, color: isSel ? t.accent : t.text, transition:'all 0.15s', display:'flex', alignItems:'center', gap:4 }}>
                   <span style={{ width:5, height:5, borderRadius:'50%', background:rc, display:'inline-block', flexShrink:0 }}/>

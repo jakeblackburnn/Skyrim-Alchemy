@@ -24,7 +24,7 @@ function InsightsTab({ theme }) {
   if (error) return (
     <div style={{ padding:32, background:`#f8514918`, border:`1px solid #f85149`, borderRadius:8, color:'#f85149', fontSize:'13px', lineHeight:1.6 }}>
       <strong>Could not load analysis data.</strong><br/>
-      Run <code style={{ background:'#ffffff18', padding:'1px 6px', borderRadius:3 }}>python analysis/perks.py</code> and <code style={{ background:'#ffffff18', padding:'1px 6px', borderRadius:3 }}>python analysis/rarity.py</code> from the project root to generate results, then restart the server.
+      Run <code style={{ background:'#ffffff18', padding:'1px 6px', borderRadius:3 }}>python experiments/perks.py</code> and <code style={{ background:'#ffffff18', padding:'1px 6px', borderRadius:3 }}>python experiments/rarity.py</code> from the project root to generate results, then restart the server.
       <div style={{ marginTop:8, fontSize:'11px', opacity:0.7 }}>Error: {error}</div>
     </div>
   );
@@ -77,7 +77,6 @@ function InsightsTab({ theme }) {
 
   // Rarity stability
   const heroCV = rarity.tolerance_scores?.[heroName]?.cv ?? null;
-  const cvToLabel = cv => cv < 0.05 ? 'Very Stable' : cv < 0.12 ? 'Stable' : cv < 0.2 ? 'Moderate' : 'Volatile';
   const stabilityLabel = heroCV !== null ? cvToLabel(heroCV) : '—';
 
   // Rarity sparkline: avg_value across 6 distributions
@@ -89,48 +88,15 @@ function InsightsTab({ theme }) {
   const sparkMax = Math.max(...sparkValues, 1);
 
   // ── Component helpers ────────────────────────────────────────────────────────
-
-  const HBar = ({ label, value, maxVal, color, right, sub }) => (
-    <div style={{ marginBottom:7 }}>
-      <div style={{ display:'flex', justifyContent:'space-between', marginBottom:3, alignItems:'baseline', gap:8 }}>
-        <span style={{ fontSize:'11px', color:t.text, fontFamily:'IBM Plex Sans', whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis', maxWidth:180 }}>{label}</span>
-        <div style={{ display:'flex', alignItems:'center', gap:6, flexShrink:0 }}>
-          {sub && <span style={{ fontSize:'9px', color:t.textMuted }}>{sub}</span>}
-          <span style={{ fontSize:'11px', color, fontFamily:'Space Grotesk', fontWeight:600 }}>{right}</span>
-        </div>
-      </div>
-      <div style={{ height:5, background:t.surfaceAlt, borderRadius:3, overflow:'hidden' }}>
-        <div style={{ height:'100%', width:`${Math.max((value / maxVal) * 100, 2)}%`, background:color, borderRadius:3, transition:'width 0.5s ease' }}/>
-      </div>
-    </div>
-  );
-
-  const Card = ({ title, subtitle, children, style={} }) => (
-    <div style={{ background:t.surface, borderRadius:10, padding:'20px 24px', border:`1px solid ${t.border}`, ...style }}>
-      <div style={{ marginBottom:16 }}>
-        <div style={{ fontSize:'13px', fontWeight:700, color:t.text, fontFamily:'Space Grotesk', marginBottom:4 }}>{title}</div>
-        <div style={{ fontSize:'11px', color:t.textMuted, lineHeight:1.55 }}>{subtitle}</div>
-      </div>
-      {children}
-    </div>
-  );
-
-  const perkColor = p => ({
-    benefactor:'#79c0ff', physician:t.accent, poisoner:'#f85149',
-    'benefactor+physician':'#a78bfa', 'benefactor+poisoner':'#fb923c',
-    'physician+poisoner':'#60a5fa', all_perks:t.amber, none:t.textMuted
-  })[p] || t.textMuted;
-
+  // Thin wrappers inject the theme into the shared components so the JSX below
+  // (and the one-arg perkColor) reads exactly as before.
+  const Shared = window;
+  const HBar     = (props) => <Shared.HBar theme={t} {...props}/>;
+  const Card     = (props) => <Shared.Card theme={t} {...props}/>;
+  const StatChip = (props) => <Shared.StatChip theme={t} {...props}/>;
+  const perkColor = p => Shared.perkColor(t, p);
   const PerkBadge = ({ name }) => (
-    <span style={{ fontSize:'9px', padding:'2px 7px', borderRadius:10, background:`${perkColor(name)}22`, color:perkColor(name), border:`1px solid ${perkColor(name)}44`, whiteSpace:'nowrap' }}>{name}</span>
-  );
-
-  const StatChip = ({ label, value, color, sub }) => (
-    <div style={{ display:'flex', flexDirection:'column', gap:2, minWidth:90 }}>
-      <div style={{ fontSize:'20px', fontWeight:700, color: color || t.accent, fontFamily:'Space Grotesk', lineHeight:1.1 }}>{value}</div>
-      {sub && <div style={{ fontSize:'9px', color:t.textMuted, letterSpacing:'0.04em' }}>{sub}</div>}
-      <div style={{ fontSize:'10px', color:t.textMuted, marginTop:1 }}>{label}</div>
-    </div>
+    <Shared.Badge theme={t} color={perkColor(name)} style={{ whiteSpace:'nowrap' }}>{name}</Shared.Badge>
   );
 
   return (
