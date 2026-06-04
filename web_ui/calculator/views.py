@@ -139,11 +139,11 @@ def calculate_potions(request):
 def insights_api(request):
     """
     GET /api/insights
-    Serves the most recent pre-computed analysis JSON files from analysis/results/.
+    Serves the most recent pre-computed analysis JSON files from results/.
     Returns: { perks: {...}, rarity: {...} }
-    Run analysis/perks.py and analysis/rarity.py to refresh results.
+    Run experiments/perks.py and experiments/rarity.py to refresh results.
     """
-    results_dir = settings.PROJECT_ROOT / "analysis" / "results"
+    results_dir = settings.PROJECT_ROOT / "results"
 
     def load_latest(pattern):
         files = sorted(glob.glob(str(results_dir / pattern)))
@@ -157,7 +157,7 @@ def insights_api(request):
 
     if not perks_data and not rarity_data:
         return JsonResponse(
-            {"error": "No analysis results found. Run analysis/perks.py and analysis/rarity.py first."},
+            {"error": "No analysis results found. Run experiments/perks.py and experiments/rarity.py first."},
             status=404
         )
 
