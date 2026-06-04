@@ -5,8 +5,6 @@ CLAUDE.md
 *.md
 data/backup/
 
-# experimental results
-results/
 
 # env stuff 
 .env
