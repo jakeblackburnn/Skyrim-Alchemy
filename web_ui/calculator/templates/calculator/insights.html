@@ -1,63 +1,7 @@
 {% extends "calculator/base.html" %}
-
-{% block content %}
-<h2 class="section-title">Analysis & Insights</h2>
-
-<div style="
-    background-color: #3a3a3a;
-    padding: 60px;
-    border-radius: 5px;
-    text-align: center;
-">
-    <h3 style="color: #4a9eff; margin-bottom: 20px; font-size: 1.8em;">Coming Soon</h3>
-
-    <p style="color: #b0b0b0; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto;">
-        This section will include analytical measures and Monte Carlo analysis for Skyrim's alchemy system.
-    </p>
-
-    <div style="
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        max-width: 900px;
-        margin: 0 auto;
-        text-align: left;
-    ">
-        <div style="background-color: #2d2d2d; padding: 20px; border-radius: 5px; border-left: 4px solid #4a9eff;">
-            <h4 style="color: #4a9eff; margin-bottom: 10px;">Ingredient Analysis</h4>
-            <ul style="color: #888; list-style: none; padding-left: 0;">
-                <li>• Ingredient importance metrics</li>
-                <li>• Value contribution scores</li>
-                <li>• Effect synergy analysis</li>
-            </ul>
-        </div>
-
-        <div style="background-color: #2d2d2d; padding: 20px; border-radius: 5px; border-left: 4px solid #4a9eff;">
-            <h4 style="color: #4a9eff; margin-bottom: 10px;">Effect Analysis</h4>
-            <ul style="color: #888; list-style: none; padding-left: 0;">
-                <li>• Total value generation</li>
-                <li>• Perk sensitivity metrics</li>
-                <li>• Accessibility analysis</li>
-            </ul>
-        </div>
-
-        <div style="background-color: #2d2d2d; padding: 20px; border-radius: 5px; border-left: 4px solid #4a9eff;">
-            <h4 style="color: #4a9eff; margin-bottom: 10px;">Monte Carlo Simulation</h4>
-            <ul style="color: #888; list-style: none; padding-left: 0;">
-                <li>• Random availability scenarios</li>
-                <li>• Robustness testing</li>
-                <li>• Confidence intervals</li>
-            </ul>
-        </div>
-
-        <div style="background-color: #2d2d2d; padding: 20px; border-radius: 5px; border-left: 4px solid #4a9eff;">
-            <h4 style="color: #4a9eff; margin-bottom: 10px;">Potion Archetypes</h4>
-            <ul style="color: #888; list-style: none; padding-left: 0;">
-                <li>• Clustering by value/weight</li>
-                <li>• Ingredient rarity profiles</li>
-                <li>• Optimal strategies</li>
-            </ul>
-        </div>
-    </div>
-</div>
+{% block app_script %}
+<script type="text/babel">
+window.__INITIAL_TAB__ = 'insights';
+{% include "calculator/app.html" %}
+</script>
 {% endblock %}

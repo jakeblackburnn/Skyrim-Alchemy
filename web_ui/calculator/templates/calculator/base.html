@@ -2,39 +2,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skyrim Alchemy Calculator</title>
-    <link rel="stylesheet" href="{% static 'calculator/css/styles.css' %}">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>ESV: Skyrim — Alchemy Analysis</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"/>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+{# Inject ingredient + effect data from Django — no client-side alchemy code needed #}
+<script>
+window.__INGREDIENTS__ = {{ ingredients_json|safe }};
+window.__EFFECTS__     = {{ effects_json|safe }};
+</script>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'IBM Plex Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+  :root {
+    --bg: #0d1117; --surface: #161b22; --surface-alt: #1f2937;
+    --border: #30363d; --text: #e6edf3; --text-muted: #8b949e;
+    --accent: #50c9a5; --accent-dim: #50c9a515; --amber: #f5c542;
+  }
+  input[type="range"].styled-range {
+    -webkit-appearance: none; appearance: none;
+    height: 4px; border-radius: 2px; background: var(--border); outline: none; cursor: pointer;
+  }
+  input[type="range"].styled-range::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 14px; height: 14px; border-radius: 50%;
+    background: var(--accent); cursor: pointer; transition: transform 0.15s;
+  }
+  input[type="range"].styled-range::-webkit-slider-thumb:hover { transform: scale(1.2); }
+  input[type="range"].styled-range::-moz-range-thumb {
+    width: 14px; height: 14px; border-radius: 50%; background: var(--accent); border: none;
+  }
+  .spinner {
+    width: 28px; height: 28px; border: 3px solid var(--border);
+    border-top-color: var(--accent); border-radius: 50%; animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+  input, select, button { font-family: inherit; }
+  tr:hover td { background: #ffffff06 !important; }
+</style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <h1>Skyrim Alchemy Calculator</h1>
-                <div class="portfolio-attribution">
-                    Created by - <a href="https://j-blackburn-portfolio.web.app/" target="_blank" rel="noopener noreferrer" class="portfolio-link">J. Blackburn</a>
-                </div>
-            </div>
-            <nav class="tab-navigation">
-                <a href="{% url 'calculator:calculator' %}" class="tab-button {% if request.resolver_match.url_name == 'calculator' %}active{% endif %}">
-                    Calculator
-                </a>
-                <a href="{% url 'calculator:datasets' %}" class="tab-button {% if request.resolver_match.url_name == 'datasets' %}active{% endif %}">
-                    Datasets
-                </a>
-                <a href="{% url 'calculator:insights' %}" class="tab-button {% if request.resolver_match.url_name == 'insights' %}active{% endif %}">
-                    Analysis & Insights
-                </a>
-            </nav>
-        </div>
-    </header>
+<div id="root"></div>
 
-    <div class="container">
-        <div class="content">
-            {% block content %}
-            {% endblock %}
-        </div>
-    </div>
+<script type="text/babel" src="{% static 'calculator/js/alchemy-calculator.js' %}"></script>
+<script type="text/babel" src="{% static 'calculator/js/alchemy-datasets.js' %}"></script>
+<script type="text/babel" src="{% static 'calculator/js/alchemy-insights.js' %}"></script>
+
+{% block app_script %}{% endblock %}
 </body>
 </html>
