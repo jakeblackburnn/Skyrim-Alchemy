@@ -1,3 +1,18 @@
+""" 
+Inventory Scaling Experiment - Tracking value efficiency at different inventory scales 
+
+    >>> Notes:
+inventory setup is driven in terms of total number of ingredients and number of distinct ingredients.
+This should give some idea of when to perform alchemy and when to continue stockpiling ingredients
+
+Based on my intuition about the alchemy system, I expect rapid improvement in gold value in the number of distinct ingredients 
+and diminishing returns in the higher ranges, due to the intense connectivity of the ingredient compatability graph. 
+
+Results from this experiment could be connected to compatability graph connectivity, and reframed in terms of perk progression as well, 
+i.e., waiting to accumulate more ingredients increases efficiency, but also slows perk progression and could hamper overall progression
+in the long run
+"""
+
 import json
 import time
 from datetime import datetime
@@ -8,12 +23,11 @@ from monte_carlo.scenarios.stable_inventory import StableInventoryScenario
 from alchemy.database import IngredientsDatabase
 
 
-# Grid axes. `distinct` is the diversity lever (drives recipe variety, and the
-# combinatorial cost of enumerating valid potions). `stack_depth` sets total as a
-# multiple of distinct (total = distinct * stack_depth), so the `total >= distinct`
-# constraint always holds and each row shares a common "stack depth" interpretation.
-DISTINCT_LEVELS = [4, 8, 16, 24, 32, 48, 64, 96, 111]
-STACK_DEPTHS = [1, 2, 4, 8]
+# Grid axes: 
+#   DISTINCT_INGS - number of distinct ingredients
+#   SIZE_MULTS - multiplier to get total inventory size
+DISTINCT_INGS = [4, 8, 16, 24, 32, 48, 64, 96, 111] # 111 maxxes 
+SIZE_MULTS = [1, 2, 4, 8]
 NUM_SIMULATIONS = 240
 
 
@@ -24,8 +38,8 @@ def _config_name(distinct, depth):
 def _build_configurations():
     """Return {name: {"total", "distinct"}} for every (distinct, stack_depth) cell."""
     configs = {}
-    for distinct in DISTINCT_LEVELS:
-        for depth in STACK_DEPTHS:
+    for distinct in DISTINCT_INGS:
+        for depth in SIZE_MULTS:
             configs[_config_name(distinct, depth)] = {
                 "total": distinct * depth,
                 "distinct": distinct,
@@ -42,13 +56,13 @@ def run_inventory_scaling():
 def _print_matrix(title, cell_value, fmt):
     """Print a distinct x stack_depth matrix; cell_value(distinct, depth) -> float."""
     print(f"\n{title}")
-    header = f"{'distinct \\ depth':>16}" + "".join(f"{('x' + str(d)):>12}" for d in STACK_DEPTHS)
+    header = f"{'distinct \\ depth':>16}" + "".join(f"{('x' + str(d)):>12}" for d in SIZE_MULTS)
     print("-" * len(header))
     print(header)
     print("-" * len(header))
-    for distinct in DISTINCT_LEVELS:
+    for distinct in DISTINCT_INGS:
         row = f"{distinct:>16}"
-        for depth in STACK_DEPTHS:
+        for depth in SIZE_MULTS:
             row += f"{fmt % cell_value(distinct, depth):>12}"
         print(row)
 
@@ -57,23 +71,19 @@ def _run_inventory_scaling_inner():
     db = IngredientsDatabase()
     configurations = _build_configurations()
 
-    print("=" * 80)
-    print("INVENTORY SCALING ANALYSIS")
-    print("=" * 80)
-    print(f"Grid: {len(DISTINCT_LEVELS)} distinct levels x {len(STACK_DEPTHS)} stack depths "
-          f"= {len(configurations)} cells")
-    print(f"distinct levels: {DISTINCT_LEVELS}")
-    print(f"stack depths:    {STACK_DEPTHS}  (total = distinct * depth)")
-    print(f"Running {NUM_SIMULATIONS} simulations per cell (uniform sampling, default player)\n")
+    print("INVENTORY SCALING ANALYSIS\n")
+    print(f"distinct ingredients: {DISTINCT_INGS}")
+    print(f"total inventory size multipliers:    {SIZE_MULTS}")
+    print(f"Running {NUM_SIMULATIONS} simulations per grid cell\n")
 
     start = time.time()
     results = run_sweep(StableInventoryScenario, configurations, NUM_SIMULATIONS, db=db, progress_bar=True)
     print(f"\nAll cells completed in {time.time() - start:.2f}s")
 
-    # Index aggregated stats by (distinct, depth) for matrix rendering and JSON.
+    # Index aggregated stats by (distinct, size) for matrix rendering and JSON.
     cells = {}
-    for distinct in DISTINCT_LEVELS:
-        for depth in STACK_DEPTHS:
+    for distinct in DISTINCT_INGS:
+        for depth in SIZE_MULTS:
             stats = results[_config_name(distinct, depth)].aggregated_stats
             total = distinct * depth
             cells[(distinct, depth)] = {
@@ -86,9 +96,7 @@ def _run_inventory_scaling_inner():
                 "gold_per_ingredient": stats["average_value"] / total,
             }
 
-    print("\n" + "=" * 80)
     print("RESULTS")
-    print("=" * 80)
 
     _print_matrix(
         "Total gold (avg total_value per inventory)",
@@ -111,13 +119,13 @@ def _run_inventory_scaling_inner():
         "metadata": {
             "num_simulations": NUM_SIMULATIONS,
             "timestamp": timestamp,
-            "distinct_levels": DISTINCT_LEVELS,
-            "stack_depths": STACK_DEPTHS,
+            "distinct_ings": DISTINCT_INGS,
+            "size_mults": SIZE_MULTS,
         },
         "cells": {
             _config_name(d, x): cells[(d, x)]
-            for d in DISTINCT_LEVELS
-            for x in STACK_DEPTHS
+            for d in DISTINCT_INGS
+            for x in SIZE_MULTS
         },
     }
 

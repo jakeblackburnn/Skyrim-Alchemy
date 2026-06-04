@@ -9,16 +9,16 @@ from alchemy.database import IngredientsDatabase
 import time
 
 
-def scale_rarity_distribution(base_dist, multiplier):
+def scale_rarity_distribution(base_weights, multiplier):
     """
     Scale rarity distribution to favor/penalize rare ingredients.
     multiplier < 1: rare ingredients become MORE likely (flattening)
     multiplier > 1: rare ingredients become LESS likely (steepening)
     """
-    common_weight = base_dist["common"]
+    common_weight = base_weights["common"]
     scaled = {}
 
-    for rarity, weight in base_dist.items():
+    for rarity, weight in base_weights.items():
         ratio = weight / common_weight
         new_ratio = ratio ** multiplier
         scaled[rarity] = new_ratio
@@ -35,9 +35,9 @@ def run_rarity_analysis():
 
 def _run_rarity_analysis_inner():
     db = IngredientsDatabase()
-    num_simulations = 320
+    num_simulations = 640
 
-    base_dist = Inventory.BASIC_RARITY_DIST.copy()
+    base_weights = Inventory.BASE_WEIGHTS.copy()
 
     rarity_multipliers = {
         "very_flat":    0.3,
@@ -49,33 +49,29 @@ def _run_rarity_analysis_inner():
     }
 
     rarity_distributions = {
-        name: scale_rarity_distribution(base_dist, mult)
+        name: scale_rarity_distribution(base_weights, mult)
         for name, mult in rarity_multipliers.items()
     }
 
     rarity_configurations = {
-        name: {"total": 128, "distinct": 24, "rarity_dist": dist}
-        for name, dist in rarity_distributions.items()
+        name: {"total": 128, "distinct": 24, "rarity_weights": weights}
+        for name, weights in rarity_distributions.items()
     }
 
-    print("="*80)
-    print("RARITY TOLERANCE ANALYSIS")
-    print("="*80)
+    print("RARITY TOLERANCE ANALYSIS\n")
     print(f"Running {num_simulations} simulations per rarity distribution\n")
 
     print("Rarity Distributions:")
-    for name, dist in rarity_distributions.items():
+    for name, weights in rarity_distributions.items():
         print(f"\n{name}:")
-        for rarity, weight in dist.items():
+        for rarity, weight in weights.items():
             print(f"  {rarity:15s}: {weight:6.4f}")
 
     start = time.time()
     results_by_distribution = run_sweep(RarityWeightedScenario, rarity_configurations, num_simulations, db=db, progress_bar=True)
     print(f"\nAll distributions completed in {time.time() - start:.2f}s")
 
-    print("\n" + "="*80)
-    print("RARITY DISTRIBUTION COMPARISON")
-    print("="*80)
+    print("\nRARITY DISTRIBUTION COMPARISON\n")
 
     for dist_name, result in results_by_distribution.items():
         avg_potions = result.aggregated_stats['average_potions']
