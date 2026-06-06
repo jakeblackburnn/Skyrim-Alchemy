@@ -91,20 +91,20 @@ def calculate_potions(request):
 def insights_api(request):
     """
     GET /api/insights
-    Serves the most recent perk + rarity analysis JSON.
-    Returns: { perks: {...}, rarity: {...} }
-    Run experiments/perks.py and experiments/rarity.py to refresh results.
+    Serves the most recent base ingredient performance analysis JSON. The
+    payload carries run-level stats plus `average_performance` (per-ingredient
+    appearance rate, avg potion value, and avg session contribution).
+    Run experiments/base_perf.py to refresh results.
     """
-    perks_data  = results.load_experiment("perks")
-    rarity_data = results.load_experiment("rarity")
+    base_perf = results.load_experiment("base_perf")
 
-    if not perks_data and not rarity_data:
+    if not base_perf:
         return JsonResponse(
-            {"error": "No analysis results found. Run experiments/perks.py and experiments/rarity.py first."},
+            {"error": "No analysis results found. Run experiments/base_perf.py first."},
             status=404
         )
 
-    return JsonResponse({"perks": perks_data, "rarity": rarity_data})
+    return JsonResponse(base_perf)
 
 
 @require_http_methods(["GET"])
