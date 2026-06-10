@@ -62,7 +62,7 @@ Imp Stool,60,0,0.1,Damage Health,2,1,Lingering Damage Health,1,10,Paralysis,0,1,
 Jarrin Root,61,1,0.1,Damage Health,200,1,Damage Magicka,3,0,Damage Stamina,3,0,Damage Magicka Regen,100,5,base,unique,plant
 Jazbay Grapes,62,1,0.1,Weakness to Magic,2,30,Fortify Magicka,4,60,Regenerate Magicka,5,300,Ravage Health,2,10,base,common,plant
 Juniper Berries,63,1,0.1,Weakness to Fire,3,30,Fortify Marksman,4,60,Regenerate Health,5,300,Damage Stamina Regen,100,5,base,common,plant
-Large Antlers,64,2,1.0,Restore Stamina,5,0,Fortify Stamina,4,60,Slow,50,30,Damage Stamina Regen,100,5,base,uncommon,creature
+Large Antlers,64,2,1.0,Restore Stamina,5,0,Fortify Stamina,4,60,Slow,50,5,Damage Stamina Regen,100,5,base,uncommon,creature
 Lavender,65,3,0.1,Resist Magic,2,60,Fortify Stamina,4,60,Ravage Magicka,2,10,Fortify Conjuration,5,60,base,common,plant
 Luna Moth Wing,66,5,0.1,Damage Magicka,3,0,Fortify Light Armor,2,60,Regenerate Health,5,300,Invisibility,0,4,base,uncommon,creature
 Moon Sugar,67,50,0.3,Weakness to Fire,3,30,Resist Frost,3,60,Restore Magicka,5,0,Regenerate Magicka,5,300,base,uncommon,drug
