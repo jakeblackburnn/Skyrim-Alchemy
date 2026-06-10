@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "name": "Nordic Barnacle",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 25,
+    "synergy_by_order": {
+      "1": 23,
+      "2": 2,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Blue Dartwing",
+        "Butterfly Wing",
+        "Chaurus Eggs",
+        "Chicken Egg",
+        "Daedra Heart",
+        "Emperor Parasol Moss",
+        "Eye of Sabre Cat",
+        "Garlic",
+        "Gleamblossom",
+        "Glow Dust",
+        "Hagraven Feathers",
+        "Hanging Moss",
+        "Hawk's Egg",
+        "Histcarp",
+        "Human Heart",
+        "Jarrin Root",
+        "Juniper Berries",
+        "Orange Dartwing",
+        "Salmon Roe",
+        "Slaughterfish Egg",
+        "Trama Root",
+        "Vampire Dust"
+      ],
+      "2": [
+        "Luna Moth Wing",
+        "Namira's Rot"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 27,
+    "unique_effects": [],
+    "substitutability": 6.75,
+    "effect_type_balance": {
+      "beneficial": 3,
+      "poison": 1
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 775,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Nordic Barnacle",
+        "Salmon Roe"
+      ],
+      "total_value": 1071,
+      "effects": [
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Garlic",
+        "Nordic Barnacle",
+        "Salmon Roe"
+      ],
+      "total_value": 1323,
+      "effects": [
+        {
+          "name": "Regenerate Magicka",
+          "description": "Magicka regenerates 22% faster for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 126,
+          "is_poison": false
+        },
+        {
+          "name": "Regenerate Health",
+          "description": "Health regenerates 22% faster for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 126,
+          "is_poison": false
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

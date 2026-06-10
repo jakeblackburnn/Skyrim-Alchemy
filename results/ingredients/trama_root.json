@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "name": "Trama Root",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 29,
+    "synergy_by_order": {
+      "1": 26,
+      "2": 3,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Ashen Grass Pod",
+        "Bee",
+        "Burnt Spriggan Wood",
+        "Butterfly Wing",
+        "Chaurus Eggs",
+        "Creep Cluster",
+        "Daedra Heart",
+        "Deathbell",
+        "Eye of Sabre Cat",
+        "Giant Lichen",
+        "Giant's Toe",
+        "Glow Dust",
+        "Hanging Moss",
+        "Hawk Beak",
+        "Human Heart",
+        "Jarrin Root",
+        "Large Antlers",
+        "Luna Moth Wing",
+        "Namira's Rot",
+        "Netch Jelly",
+        "Nordic Barnacle",
+        "Salt Pile",
+        "Scaly Pholiota",
+        "Void Salts",
+        "Wisp Wrappings"
+      ],
+      "2": [
+        "Hagraven Feathers",
+        "Poison Bloom",
+        "River Betty"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 32,
+    "unique_effects": [],
+    "substitutability": 8.0,
+    "effect_type_balance": {
+      "beneficial": 1,
+      "poison": 3
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 955,
+    "ideal_2_ingredient_potion": {
+      "name": "Poison of Slow",
+      "ingredients": [
+        "Poison Bloom",
+        "Trama Root"
+      ],
+      "total_value": 318,
+      "effects": [
+        {
+          "name": "Slow",
+          "description": "Target moves at 50% speed for 22 seconds.",
+          "magnitude": 50,
+          "duration": 22,
+          "value": 176,
+          "is_poison": true
+        },
+        {
+          "name": "Fortify Carry Weight",
+          "description": "Carrying capacity increases by 17 for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 142,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Nordic Barnacle",
+        "Salmon Roe",
+        "Trama Root"
+      ],
+      "total_value": 1107,
+      "effects": [
+        {
+          "name": "Damage Magicka",
+          "description": "Does 13 points of Magicka damage.",
+          "magnitude": 13,
+          "duration": 0,
+          "value": 36,
+          "is_poison": true
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": true
+  }
+}

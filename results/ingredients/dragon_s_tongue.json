@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "name": "Dragon's Tongue",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 18,
+    "synergy_by_order": {
+      "1": 17,
+      "2": 1,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Ash Creep Cluster",
+        "Ashen Grass Pod",
+        "Bone Meal",
+        "Butterfly Wing",
+        "Dwarven Oil",
+        "Elves Ear",
+        "Emperor Parasol Moss",
+        "Fire Salts",
+        "Hagraven Claw",
+        "Mora Tapinella",
+        "Mudcrab Chitin",
+        "Scaly Pholiota",
+        "Snowberries",
+        "Spawn Ash",
+        "Taproot",
+        "Troll Fat",
+        "Tundra Cotton"
+      ],
+      "2": [
+        "Fly Amanita"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 19,
+    "unique_effects": [],
+    "substitutability": 4.75,
+    "effect_type_balance": {
+      "beneficial": 4,
+      "poison": 0
+    },
+    "perk_alignment": [
+      "benefactor"
+    ],
+    "valid_potion_count": 520,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Two-Handed",
+      "ingredients": [
+        "Dragon's Tongue",
+        "Fly Amanita"
+      ],
+      "total_value": 140,
+      "effects": [
+        {
+          "name": "Resist Fire",
+          "description": "Resist 13% of fire damage for 60 seconds.",
+          "magnitude": 13,
+          "duration": 60,
+          "value": 60,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Two-Handed",
+          "description": "Two-handed weapons do 17% more damage for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Invisibility",
+      "ingredients": [
+        "Ash Creep Cluster",
+        "Crimson Nirnroot",
+        "Dragon's Tongue"
+      ],
+      "total_value": 340,
+      "effects": [
+        {
+          "name": "Damage Stamina",
+          "description": "Does 39 points of Stamina damage.",
+          "magnitude": 39,
+          "duration": 0,
+          "value": 101,
+          "is_poison": true
+        },
+        {
+          "name": "Invisibility",
+          "description": "Invisibility for 17 seconds.",
+          "magnitude": 0,
+          "duration": 17,
+          "value": 179,
+          "is_poison": false
+        },
+        {
+          "name": "Resist Fire",
+          "description": "Resist 13% of fire damage for 60 seconds.",
+          "magnitude": 13,
+          "duration": 60,
+          "value": 60,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "uncommon",
+    "dlc": false
+  }
+}

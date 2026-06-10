@@ -1,0 +1,139 @@
+{
+  "metadata": {
+    "name": "Large Antlers",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 40,
+    "synergy_by_order": {
+      "1": 37,
+      "2": 3,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Bear Claws",
+        "Bee",
+        "Boar Tusk",
+        "Burnt Spriggan Wood",
+        "Charred Skeever Hide",
+        "Chaurus Eggs",
+        "Creep Cluster",
+        "Daedra Heart",
+        "Deathbell",
+        "Eye of Sabre Cat",
+        "Frost Mirriam",
+        "Garlic",
+        "Giant's Toe",
+        "Hawk Beak",
+        "Honeycomb",
+        "Juniper Berries",
+        "Lavender",
+        "Mudcrab Chitin",
+        "Netch Jelly",
+        "Orange Dartwing",
+        "Pearl",
+        "Pine Thrush Egg",
+        "Poison Bloom",
+        "Powdered Mammoth Tusk",
+        "Purple Mountain Flower",
+        "River Betty",
+        "Sabre Cat Tooth",
+        "Salmon Roe",
+        "Salt Pile",
+        "Skeever Tail",
+        "Slaughterfish Egg",
+        "Small Pearl",
+        "Trama Root",
+        "Wheat",
+        "Wisp Wrappings",
+        "Yellow Mountain Flower"
+      ],
+      "2": [
+        "Histcarp",
+        "Silverside Perch",
+        "Torchbug Thorax"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 43,
+    "unique_effects": [],
+    "substitutability": 10.75,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "benefactor",
+      "physician",
+      "poisoner"
+    ],
+    "valid_potion_count": 1405,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Stamina",
+      "ingredients": [
+        "Boar Tusk",
+        "Large Antlers"
+      ],
+      "total_value": 378,
+      "effects": [
+        {
+          "name": "Fortify Stamina",
+          "description": "Stamina is increased by 22 points for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 378,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Histcarp",
+        "Large Antlers",
+        "Salmon Roe"
+      ],
+      "total_value": 1252,
+      "effects": [
+        {
+          "name": "Restore Stamina",
+          "description": "Restore 22 Stamina.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 17,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Magicka",
+          "description": "Magicka is increased by 215 points for 5 seconds.",
+          "magnitude": 215,
+          "duration": 5,
+          "value": 51,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Stamina Regen",
+          "description": "Decrease the target's Stamina regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 113,
+          "is_poison": true
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "uncommon",
+    "dlc": false
+  }
+}

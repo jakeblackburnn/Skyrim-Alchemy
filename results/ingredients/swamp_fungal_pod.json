@@ -1,0 +1,133 @@
+{
+  "metadata": {
+    "name": "Swamp Fungal Pod",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 27,
+    "synergy_by_order": {
+      "1": 23,
+      "2": 4,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Blisterwort",
+        "Blue Mountain Flower",
+        "Briar Heart",
+        "Butterfly Wing",
+        "Canis Root",
+        "Charred Skeever Hide",
+        "Daedra Heart",
+        "Eye of Sabre Cat",
+        "Felsaad Tern Feathers",
+        "Gleamblossom",
+        "Glow Dust",
+        "Glowing Mushroom",
+        "Hagraven Claw",
+        "Hawk Beak",
+        "Human Flesh",
+        "Netch Jelly",
+        "Pearl",
+        "Pine Thrush Egg",
+        "Purple Mountain Flower",
+        "Rock Warbler Egg",
+        "Snowberries",
+        "Torchbug Thorax"
+      ],
+      "2": [
+        "Ash Hopper Jelly",
+        "Blue Dartwing",
+        "Imp Stool",
+        "Wheat"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 31,
+    "unique_effects": [],
+    "substitutability": 7.75,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "physician",
+      "poisoner"
+    ],
+    "valid_potion_count": 915,
+    "ideal_2_ingredient_potion": {
+      "name": "Poison of Paralysis",
+      "ingredients": [
+        "Imp Stool",
+        "Swamp Fungal Pod"
+      ],
+      "total_value": 196,
+      "effects": [
+        {
+          "name": "Paralysis",
+          "description": "Target is paralyzed for 4 seconds.",
+          "magnitude": 0,
+          "duration": 4,
+          "value": 182,
+          "is_poison": true
+        },
+        {
+          "name": "Restore Health",
+          "description": "Restore 22 points of Health.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 14,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Health",
+      "ingredients": [
+        "Giant's Toe",
+        "Swamp Fungal Pod",
+        "Wheat"
+      ],
+      "total_value": 504,
+      "effects": [
+        {
+          "name": "Fortify Health",
+          "description": "Health is increased by 17 points for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 332,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Stamina Regen",
+          "description": "Decrease the target's Stamina regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 113,
+          "is_poison": true
+        },
+        {
+          "name": "Lingering Damage Magicka",
+          "description": "Drains the target's Magicka by 4 points per second for 10 seconds.",
+          "magnitude": 4,
+          "duration": 10,
+          "value": 45,
+          "is_poison": true
+        },
+        {
+          "name": "Restore Health",
+          "description": "Restore 22 points of Health.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 14,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

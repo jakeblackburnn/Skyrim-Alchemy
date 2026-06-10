@@ -1,0 +1,34 @@
+# personal files & project stuff
+.DS_Store
+__pycache__
+CLAUDE.md
+*.md
+data/backup/
+
+
+# env stuff 
+.env
+.env.local
+.env.*.local
+.env.production
+.env.production.example
+
+# Django
+*.log
+*.pot
+*.pyc
+db.sqlite3
+db.sqlite3-journal
+/web_ui/staticfiles/
+/web_ui/media/
+
+# Python virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+

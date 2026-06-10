@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "name": "Small Antlers",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 30,
+    "synergy_by_order": {
+      "1": 27,
+      "2": 3,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Bleeding Crown",
+        "Butterfly Wing",
+        "Chaurus Eggs",
+        "Chicken Egg",
+        "Crimson Nirnroot",
+        "Cyrodilic Spadetail",
+        "Ectoplasm",
+        "Emperor Parasol Moss",
+        "Falmer Ear",
+        "Giant Lichen",
+        "Hawk's Egg",
+        "Human Flesh",
+        "Human Heart",
+        "Imp Stool",
+        "Jarrin Root",
+        "Nirnroot",
+        "Pine Thrush Egg",
+        "Poison Bloom",
+        "Red Mountain Flower",
+        "River Betty",
+        "Sabre Cat Tooth",
+        "Salt Pile",
+        "Skeever Tail",
+        "Small Pearl",
+        "Troll Fat",
+        "Void Salts",
+        "Yellow Mountain Flower"
+      ],
+      "2": [
+        "Abecean Longfin",
+        "Deathbell",
+        "Nightshade"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 33,
+    "unique_effects": [],
+    "substitutability": 8.25,
+    "effect_type_balance": {
+      "beneficial": 1,
+      "poison": 3
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 970,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Restoration",
+      "ingredients": [
+        "Abecean Longfin",
+        "Small Antlers"
+      ],
+      "total_value": 117,
+      "effects": [
+        {
+          "name": "Weakness to Poison",
+          "description": "Target is 9% weaker to poison for 30 seconds.",
+          "magnitude": 9,
+          "duration": 30,
+          "value": 37,
+          "is_poison": true
+        },
+        {
+          "name": "Fortify Restoration",
+          "description": "Restoration spells are 17% stronger for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Chicken Egg",
+        "Salmon Roe",
+        "Small Antlers"
+      ],
+      "total_value": 1079,
+      "effects": [
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        },
+        {
+          "name": "Lingering Damage Stamina",
+          "description": "Drain the target's Stamina by 4 points per second for 10 seconds.",
+          "magnitude": 4,
+          "duration": 10,
+          "value": 8,
+          "is_poison": true
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

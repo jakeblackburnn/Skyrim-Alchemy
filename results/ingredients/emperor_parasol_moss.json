@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "name": "Emperor Parasol Moss",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 31,
+    "synergy_by_order": {
+      "1": 27,
+      "2": 4,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Briar Heart",
+        "Crimson Nirnroot",
+        "Deathbell",
+        "Dragon's Tongue",
+        "Falmer Ear",
+        "Fly Amanita",
+        "Garlic",
+        "Gleamblossom",
+        "Histcarp",
+        "Human Flesh",
+        "Human Heart",
+        "Imp Stool",
+        "Jarrin Root",
+        "Jazbay Grapes",
+        "Juniper Berries",
+        "Luna Moth Wing",
+        "Namira's Rot",
+        "Nightshade",
+        "Nirnroot",
+        "Nordic Barnacle",
+        "Poison Bloom",
+        "River Betty",
+        "Salmon Roe",
+        "Skeever Tail",
+        "Small Antlers",
+        "Tundra Cotton",
+        "Vampire Dust"
+      ],
+      "2": [
+        "Ectoplasm",
+        "Red Mountain Flower",
+        "Troll Fat",
+        "Void Salts"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 35,
+    "unique_effects": [],
+    "substitutability": 8.75,
+    "effect_type_balance": {
+      "beneficial": 3,
+      "poison": 1
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 970,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Regenerate Health",
+      "ingredients": [
+        "Emperor Parasol Moss",
+        "Garlic"
+      ],
+      "total_value": 126,
+      "effects": [
+        {
+          "name": "Regenerate Health",
+          "description": "Health regenerates 22% faster for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 126,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Emperor Parasol Moss",
+        "Nordic Barnacle",
+        "Salmon Roe"
+      ],
+      "total_value": 1248,
+      "effects": [
+        {
+          "name": "Fortify Magicka",
+          "description": "Magicka is increased by 215 points for 5 seconds.",
+          "magnitude": 215,
+          "duration": 5,
+          "value": 51,
+          "is_poison": false
+        },
+        {
+          "name": "Regenerate Health",
+          "description": "Health regenerates 22% faster for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 126,
+          "is_poison": false
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": true
+  }
+}

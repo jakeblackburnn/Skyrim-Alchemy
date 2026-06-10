@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "name": "Silverside Perch",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 38,
+    "synergy_by_order": {
+      "1": 30,
+      "2": 8,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Bear Claws",
+        "Bee",
+        "Charred Skeever Hide",
+        "Creep Cluster",
+        "Cyrodilic Spadetail",
+        "Daedra Heart",
+        "Frost Salts",
+        "Giant Lichen",
+        "Giant's Toe",
+        "Honeycomb",
+        "Jazbay Grapes",
+        "Juniper Berries",
+        "Moon Sugar",
+        "Mudcrab Chitin",
+        "Netch Jelly",
+        "Orange Dartwing",
+        "Pearl",
+        "Pine Thrush Egg",
+        "Powdered Mammoth Tusk",
+        "Sabre Cat Tooth",
+        "Salmon Roe",
+        "Scathecraw",
+        "Slaughterfish Scales",
+        "Snowberries",
+        "Thistle Branch",
+        "Torchbug Thorax",
+        "Wheat",
+        "Wisp Wrappings",
+        "Yellow Mountain Flower"
+      ],
+      "2": [
+        "Eye of Sabre Cat",
+        "Frost Mirriam",
+        "Hawk Beak",
+        "Histcarp",
+        "Large Antlers",
+        "Purple Mountain Flower",
+        "Skeever Tail",
+        "Small Pearl"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 46,
+    "unique_effects": [],
+    "substitutability": 11.5,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "physician",
+      "poisoner"
+    ],
+    "valid_potion_count": 1290,
+    "ideal_2_ingredient_potion": {
+      "name": "Poison of Damage Stamina Regen",
+      "ingredients": [
+        "Frost Mirriam",
+        "Silverside Perch"
+      ],
+      "total_value": 173,
+      "effects": [
+        {
+          "name": "Resist Frost",
+          "description": "Resist 13% of frost damage for 60 seconds.",
+          "magnitude": 13,
+          "duration": 60,
+          "value": 60,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Stamina Regen",
+          "description": "Decrease the target's Stamina regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 113,
+          "is_poison": true
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Histcarp",
+        "Salmon Roe",
+        "Silverside Perch"
+      ],
+      "total_value": 1252,
+      "effects": [
+        {
+          "name": "Restore Stamina",
+          "description": "Restore 22 Stamina.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 17,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Magicka",
+          "description": "Magicka is increased by 215 points for 5 seconds.",
+          "magnitude": 215,
+          "duration": 5,
+          "value": 51,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Stamina Regen",
+          "description": "Decrease the target's Stamina regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 113,
+          "is_poison": true
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

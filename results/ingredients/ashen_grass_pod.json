@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "name": "Ashen Grass Pod",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 25,
+    "synergy_by_order": {
+      "1": 25,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Abecean Longfin",
+        "Ash Creep Cluster",
+        "Bee",
+        "Beehive Husk",
+        "Bone Meal",
+        "Dragon's Tongue",
+        "Elves Ear",
+        "Falmer Ear",
+        "Fire Salts",
+        "Fly Amanita",
+        "Frost Mirriam",
+        "Giant Lichen",
+        "Hagraven Feathers",
+        "Hawk Feathers",
+        "Human Flesh",
+        "Mudcrab Chitin",
+        "Namira's Rot",
+        "Pine Thrush Egg",
+        "Powdered Mammoth Tusk",
+        "Purple Mountain Flower",
+        "Snowberries",
+        "Spawn Ash",
+        "Spider Egg",
+        "Trama Root",
+        "Void Salts"
+      ],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 25,
+    "unique_effects": [],
+    "substitutability": 6.25,
+    "effect_type_balance": {
+      "beneficial": 3,
+      "poison": 1
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 817,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Sneak",
+      "ingredients": [
+        "Abecean Longfin",
+        "Ashen Grass Pod"
+      ],
+      "total_value": 80,
+      "effects": [
+        {
+          "name": "Fortify Sneak",
+          "description": "You are 17% harder to detect for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Invisibility",
+      "ingredients": [
+        "Ash Creep Cluster",
+        "Ashen Grass Pod",
+        "Crimson Nirnroot"
+      ],
+      "total_value": 360,
+      "effects": [
+        {
+          "name": "Damage Stamina",
+          "description": "Does 39 points of Stamina damage.",
+          "magnitude": 39,
+          "duration": 0,
+          "value": 101,
+          "is_poison": true
+        },
+        {
+          "name": "Invisibility",
+          "description": "Invisibility for 17 seconds.",
+          "magnitude": 0,
+          "duration": 17,
+          "value": 179,
+          "is_poison": false
+        },
+        {
+          "name": "Resist Fire",
+          "description": "Resist 17% of fire damage for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": true
+  }
+}

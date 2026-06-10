@@ -1,0 +1,144 @@
+{
+  "metadata": {
+    "name": "Jarrin Root",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 46,
+    "synergy_by_order": {
+      "1": 36,
+      "2": 9,
+      "3": 1,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Ash Creep Cluster",
+        "Bear Claws",
+        "Blisterwort",
+        "Blue Mountain Flower",
+        "Bone Meal",
+        "Burnt Spriggan Wood",
+        "Butterfly Wing",
+        "Canis Root",
+        "Chaurus Eggs",
+        "Chicken Egg",
+        "Cyrodilic Spadetail",
+        "Daedra Heart",
+        "Deathbell",
+        "Ectoplasm",
+        "Emperor Parasol Moss",
+        "Eye of Sabre Cat",
+        "Falmer Ear",
+        "Giant's Toe",
+        "Hagraven Feathers",
+        "Hawk's Egg",
+        "Human Flesh",
+        "Imp Stool",
+        "Luna Moth Wing",
+        "Namira's Rot",
+        "Nordic Barnacle",
+        "Poison Bloom",
+        "Red Mountain Flower",
+        "River Betty",
+        "Rock Warbler Egg",
+        "Skeever Tail",
+        "Small Antlers",
+        "Spriggan Sap",
+        "Trama Root",
+        "Troll Fat",
+        "Void Salts"
+      ],
+      "2": [
+        "Ancestor Moth Wing",
+        "Blue Butterfly Wing",
+        "Chaurus Hunter Antennae",
+        "Crimson Nirnroot",
+        "Glow Dust",
+        "Hanging Moss",
+        "Nightshade",
+        "Nirnroot",
+        "Spider Egg"
+      ],
+      "3": [
+        "Human Heart"
+      ],
+      "4": []
+    },
+    "total_synergy_weight": 57,
+    "unique_effects": [],
+    "substitutability": 14.25,
+    "effect_type_balance": {
+      "beneficial": 0,
+      "poison": 4
+    },
+    "perk_alignment": [
+      "poisoner"
+    ],
+    "valid_potion_count": 1613,
+    "ideal_2_ingredient_potion": {
+      "name": "Poison of Damage Health",
+      "ingredients": [
+        "Jarrin Root",
+        "Human Heart"
+      ],
+      "total_value": 626,
+      "effects": [
+        {
+          "name": "Damage Health",
+          "description": "Causes 860 points of poison damage.",
+          "magnitude": 860,
+          "duration": 1,
+          "value": 402,
+          "is_poison": true
+        },
+        {
+          "name": "Damage Magicka",
+          "description": "Does 13 points of Magicka damage.",
+          "magnitude": 13,
+          "duration": 0,
+          "value": 36,
+          "is_poison": true
+        },
+        {
+          "name": "Damage Magicka Regen",
+          "description": "Decrease the target's Magicka regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 188,
+          "is_poison": true
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Jarrin Root",
+        "Chicken Egg",
+        "Salmon Roe"
+      ],
+      "total_value": 1259,
+      "effects": [
+        {
+          "name": "Damage Magicka Regen",
+          "description": "Decrease the target's Magicka regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 188,
+          "is_poison": true
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "unique",
+    "dlc": false
+  }
+}

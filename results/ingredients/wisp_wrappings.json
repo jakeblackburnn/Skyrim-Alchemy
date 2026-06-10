@@ -1,0 +1,142 @@
+{
+  "metadata": {
+    "name": "Wisp Wrappings",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 44,
+    "synergy_by_order": {
+      "1": 42,
+      "2": 2,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Ash Creep Cluster",
+        "Bear Claws",
+        "Bee",
+        "Beehive Husk",
+        "Bleeding Crown",
+        "Charred Skeever Hide",
+        "Chicken Egg",
+        "Creep Cluster",
+        "Crimson Nirnroot",
+        "Ectoplasm",
+        "Eye of Sabre Cat",
+        "Felsaad Tern Feathers",
+        "Giant's Toe",
+        "Gleamblossom",
+        "Glow Dust",
+        "Glowing Mushroom",
+        "Hagraven Claw",
+        "Hawk's Egg",
+        "Histcarp",
+        "Honeycomb",
+        "Large Antlers",
+        "Lavender",
+        "Mudcrab Chitin",
+        "Nightshade",
+        "Nirnroot",
+        "Orange Dartwing",
+        "Pearl",
+        "Pine Thrush Egg",
+        "Poison Bloom",
+        "Powdered Mammoth Tusk",
+        "Purple Mountain Flower",
+        "River Betty",
+        "Sabre Cat Tooth",
+        "Salmon Roe",
+        "Scaly Pholiota",
+        "Silverside Perch",
+        "Small Pearl",
+        "Torchbug Thorax",
+        "Trama Root",
+        "Tundra Cotton",
+        "Void Salts"
+      ],
+      "2": [
+        "Hawk Beak",
+        "Netch Jelly"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 46,
+    "unique_effects": [],
+    "substitutability": 11.5,
+    "effect_type_balance": {
+      "beneficial": 4,
+      "poison": 0
+    },
+    "perk_alignment": [
+      "benefactor",
+      "physician"
+    ],
+    "valid_potion_count": 1643,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Carry Weight",
+      "ingredients": [
+        "Netch Jelly",
+        "Wisp Wrappings"
+      ],
+      "total_value": 179,
+      "effects": [
+        {
+          "name": "Fortify Carry Weight",
+          "description": "Carrying capacity increases by 17 for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 142,
+          "is_poison": false
+        },
+        {
+          "name": "Restore Stamina",
+          "description": "Restore 43 Stamina.",
+          "magnitude": 43,
+          "duration": 0,
+          "value": 37,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Chicken Egg",
+        "Salmon Roe",
+        "Wisp Wrappings"
+      ],
+      "total_value": 1168,
+      "effects": [
+        {
+          "name": "Resist Magic",
+          "description": "Resist 9% of magic for 60 seconds.",
+          "magnitude": 9,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        },
+        {
+          "name": "Restore Stamina",
+          "description": "Restore 22 Stamina.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 17,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "rare",
+    "dlc": false
+  }
+}

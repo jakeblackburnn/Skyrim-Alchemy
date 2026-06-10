@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "name": "Butterfly Wing",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 30,
+    "synergy_by_order": {
+      "1": 27,
+      "2": 3,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Ash Hopper Jelly",
+        "Blisterwort",
+        "Blue Dartwing",
+        "Blue Mountain Flower",
+        "Charred Skeever Hide",
+        "Chaurus Eggs",
+        "Chicken Egg",
+        "Dragon's Tongue",
+        "Felsaad Tern Feathers",
+        "Glow Dust",
+        "Hagraven Claw",
+        "Hagraven Feathers",
+        "Hanging Moss",
+        "Hawk's Egg",
+        "Human Heart",
+        "Imp Stool",
+        "Jarrin Root",
+        "Luna Moth Wing",
+        "Namira's Rot",
+        "Nightshade",
+        "Nordic Barnacle",
+        "Rock Warbler Egg",
+        "Small Antlers",
+        "Swamp Fungal Pod",
+        "Trama Root",
+        "Tundra Cotton",
+        "Wheat"
+      ],
+      "2": [
+        "Aloe Vera Leaves",
+        "Daedra Heart",
+        "Eye of Sabre Cat"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 33,
+    "unique_effects": [],
+    "substitutability": 8.25,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "benefactor",
+      "physician",
+      "poisoner"
+    ],
+    "valid_potion_count": 926,
+    "ideal_2_ingredient_potion": {
+      "name": "Poison of Damage Magicka",
+      "ingredients": [
+        "Aloe Vera Leaves",
+        "Butterfly Wing"
+      ],
+      "total_value": 79,
+      "effects": [
+        {
+          "name": "Restore Health",
+          "description": "Restore 22 points of Health.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 14,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Magicka",
+          "description": "Does 22 points of Magicka damage.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 65,
+          "is_poison": true
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Butterfly Wing",
+        "Nordic Barnacle",
+        "Salmon Roe"
+      ],
+      "total_value": 1107,
+      "effects": [
+        {
+          "name": "Damage Magicka",
+          "description": "Does 13 points of Magicka damage.",
+          "magnitude": 13,
+          "duration": 0,
+          "value": 36,
+          "is_poison": true
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

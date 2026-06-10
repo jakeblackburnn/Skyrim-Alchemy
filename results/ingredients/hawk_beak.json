@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "name": "Hawk Beak",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 38,
+    "synergy_by_order": {
+      "1": 30,
+      "2": 8,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Ash Hopper Jelly",
+        "Bear Claws",
+        "Bee",
+        "Blue Dartwing",
+        "Charred Skeever Hide",
+        "Creep Cluster",
+        "Eye of Sabre Cat",
+        "Frost Mirriam",
+        "Frost Salts",
+        "Giant's Toe",
+        "Glow Dust",
+        "Glowing Mushroom",
+        "Histcarp",
+        "Honeycomb",
+        "Large Antlers",
+        "Moon Sugar",
+        "Mudcrab Chitin",
+        "Orange Dartwing",
+        "Poison Bloom",
+        "Powdered Mammoth Tusk",
+        "River Betty",
+        "Sabre Cat Tooth",
+        "Salmon Roe",
+        "Scaly Pholiota",
+        "Slaughterfish Scales",
+        "Swamp Fungal Pod",
+        "Thistle Branch",
+        "Torchbug Thorax",
+        "Trama Root"
+      ],
+      "2": [
+        "Netch Jelly",
+        "Pearl",
+        "Pine Thrush Egg",
+        "Purple Mountain Flower",
+        "Silverside Perch",
+        "Small Pearl",
+        "Snowberries",
+        "Wisp Wrappings"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 46,
+    "unique_effects": [],
+    "substitutability": 11.5,
+    "effect_type_balance": {
+      "beneficial": 4,
+      "poison": 0
+    },
+    "perk_alignment": [
+      "benefactor",
+      "physician"
+    ],
+    "valid_potion_count": 1295,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Carry Weight",
+      "ingredients": [
+        "Hawk Beak",
+        "Netch Jelly"
+      ],
+      "total_value": 179,
+      "effects": [
+        {
+          "name": "Restore Stamina",
+          "description": "Restore 43 Stamina.",
+          "magnitude": 43,
+          "duration": 0,
+          "value": 37,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Carry Weight",
+          "description": "Carrying capacity increases by 17 for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 142,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Hawk Beak",
+        "Histcarp",
+        "Salmon Roe"
+      ],
+      "total_value": 1139,
+      "effects": [
+        {
+          "name": "Restore Stamina",
+          "description": "Restore 22 Stamina.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 17,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Magicka",
+          "description": "Magicka is increased by 215 points for 5 seconds.",
+          "magnitude": 215,
+          "duration": 5,
+          "value": 51,
+          "is_poison": false
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "uncommon",
+    "dlc": false
+  }
+}

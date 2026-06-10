@@ -6,7 +6,7 @@ function CalculatorTab({ theme }) {
   const t = theme;
   const ingredients = window.__INGREDIENTS__ || [];
 
-  const [skill, setSkill]               = React.useState(50);
+  const [skill, setSkill]               = React.useState(15);
   const [fortify, setFortify]           = React.useState(0);
   const [alchemistRank, setRank]        = React.useState(0);
   const [perks, setPerks]               = React.useState({ physician:false, benefactor:false, poisoner:false, purity:false, seeker:false });
@@ -20,12 +20,6 @@ function CalculatorTab({ theme }) {
 
   const togglePerk = k => setPerks(p => ({ ...p, [k]: !p[k] }));
 
-  const allEffects = React.useMemo(() => {
-    const s = new Set();
-    ingredients.forEach(i => i.effects.forEach(e => s.add(e.name)));
-    return ['all', ...Array.from(s).sort()];
-  }, []);
-
   const filtered = React.useMemo(() =>
     ingredients.filter(ing =>
       ing.name.toLowerCase().includes(search.toLowerCase()) &&
@@ -35,8 +29,6 @@ function CalculatorTab({ theme }) {
   const toggle   = name => setSelected(p => { const n = new Set(p); n.has(name) ? n.delete(name) : n.add(name); return n; });
   const selectAll = () => setSelected(new Set(filtered.map(i => i.name)));
   const clearAll  = () => setSelected(new Set());
-
-  const getCsrf = () => document.cookie.split(';').map(c=>c.trim()).find(c=>c.startsWith('csrftoken='))?.split('=')[1] || '';
 
   const calculate = async () => {
     if (selected.size < 2) return;
@@ -74,7 +66,7 @@ function CalculatorTab({ theme }) {
   }, [results, sortBy]);
 
   return (
-    <div style={{ display:'grid', gridTemplateColumns:'260px 1fr 300px', gap:16, height:'calc(100vh - 140px)', minHeight:600 }}>
+    <div style={{ display:'grid', gridTemplateColumns:'260px 1fr 400px', gap:16, height:'calc(100vh - 140px)', minHeight:600 }}>
 
       {/* ── Left: Player Config ── */}
       <div style={{ background:t.surface, borderRadius:8, padding:20, overflowY:'auto', display:'flex', flexDirection:'column', gap:20 }}>
@@ -84,8 +76,8 @@ function CalculatorTab({ theme }) {
             ['Fortify Alchemy', fortify, setFortify, 0, 143, v => `${v}%`]].map(([label, val, set, min, max, fmt]) => (
             <div key={label} style={{ marginBottom:14 }}>
               <div style={{ display:'flex', justifyContent:'space-between', marginBottom:6 }}>
-                <span style={{ fontSize:'12px', color:t.text }}>{label}</span>
-                <span style={{ fontSize:'12px', color:t.accent, fontWeight:600, fontFamily:'Space Grotesk' }}>{fmt(val)}</span>
+                <span style={{ fontSize:'13px', color:t.text }}>{label}</span>
+                <span style={{ fontSize:'13px', color:t.accent, fontWeight:600, fontFamily:'Space Grotesk' }}>{fmt(val)}</span>
               </div>
               <input type="range" min={min} max={max} value={val} onChange={e=>set(+e.target.value)} className="styled-range" style={{ width:'100%' }}/>
             </div>
@@ -99,19 +91,19 @@ function CalculatorTab({ theme }) {
               <button key={r} onClick={()=>setRank(r)} style={{ flex:1, padding:'4px 0', fontSize:'11px', fontFamily:'Space Grotesk', background: alchemistRank >= r && r > 0 ? t.accent : t.surfaceAlt, color: alchemistRank >= r && r > 0 ? '#0d1117' : t.textMuted, border:`1px solid ${alchemistRank===r ? t.accent : t.border}`, borderRadius:4, cursor:'pointer', fontWeight:600 }}>{r}</button>
             ))}
           </div>
-          <div style={{ fontSize:'10px', color:t.textMuted, marginTop:4 }}>+{[0,0,20,40,60,80,100][alchemistRank]}% strength</div>
+          <div style={{ fontSize:'10px', color:t.textMuted, marginTop:4 }}>+{[0,20,40,60,80,100][alchemistRank]}% strength</div>
         </div>
 
         <div>
           <div style={{ color:t.textMuted, fontSize:'10px', fontWeight:700, letterSpacing:'0.12em', textTransform:'uppercase', marginBottom:10, fontFamily:'Space Grotesk' }}>Perks</div>
-          {[['physician','Physician','+25% restore'],['benefactor','Benefactor','+25% beneficial'],['poisoner','Poisoner','+25% harmful'],['purity','Purity','Pure effects only'],['seeker','Seeker of Shadows','+15% all']].map(([k,l,d]) => (
+          {[['physician','Physician','+25% restore'],['benefactor','Benefactor','+25% beneficial'],['poisoner','Poisoner','+25% harmful'],['purity','Purity','Pure effects only'],['seeker','Seeker of Shadows','+10% all']].map(([k,l,d]) => (
             <div key={k} onClick={()=>togglePerk(k)} style={{ display:'flex', alignItems:'center', gap:10, padding:'7px 8px', borderRadius:6, cursor:'pointer', marginBottom:2, background: perks[k] ? t.accentDim : 'transparent', transition:'background 0.15s' }}>
               <div style={{ width:14, height:14, borderRadius:3, border:`2px solid ${perks[k] ? t.accent : t.border}`, background: perks[k] ? t.accent : 'transparent', flexShrink:0, display:'flex', alignItems:'center', justifyContent:'center' }}>
                 {perks[k] && <svg width="8" height="6" viewBox="0 0 8 6"><polyline points="1,3 3,5 7,1" stroke="#0d1117" strokeWidth="1.5" fill="none"/></svg>}
               </div>
               <div>
-                <div style={{ fontSize:'12px', color: perks[k] ? t.accent : t.text, fontWeight: perks[k] ? 600 : 400 }}>{l}</div>
-                <div style={{ fontSize:'10px', color:t.textMuted }}>{d}</div>
+                <div style={{ fontSize:'13px', color: perks[k] ? t.accent : t.text, fontWeight: perks[k] ? 600 : 400 }}>{l}</div>
+                <div style={{ fontSize:'11px', color:t.textMuted }}>{d}</div>
               </div>
             </div>
           ))}
@@ -128,14 +120,14 @@ function CalculatorTab({ theme }) {
           <div style={{ display:'flex', gap:8, marginBottom:8 }}>
             <div style={{ flex:1, position:'relative' }}>
               <svg width="13" height="13" viewBox="0 0 13 13" style={{ position:'absolute', left:10, top:'50%', transform:'translateY(-50%)', color:t.textMuted }} fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="5.5" cy="5.5" r="4"/><line x1="9" y1="9" x2="12" y2="12"/></svg>
-              <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Search ingredients…" style={{ width:'100%', background:t.surfaceAlt, border:`1px solid ${t.border}`, borderRadius:6, padding:'7px 10px 7px 28px', color:t.text, fontSize:'12px', outline:'none', boxSizing:'border-box' }}/>
+              <input value={search} onChange={e=>setSearch(e.target.value)} placeholder="Search ingredients…" style={{ width:'100%', background:t.surfaceAlt, border:`1px solid ${t.border}`, borderRadius:6, padding:'7px 10px 7px 28px', color:t.text, fontSize:'13px', outline:'none', boxSizing:'border-box' }}/>
             </div>
             <select value={effectFilter} onChange={e=>setEffectFilter(e.target.value)} style={{ background:t.surfaceAlt, border:`1px solid ${t.border}`, borderRadius:6, color:t.text, fontSize:'11px', padding:'7px 10px', outline:'none', maxWidth:170 }}>
-              {allEffects.map(e => <option key={e} value={e}>{e === 'all' ? 'All Effects' : e}</option>)}
+              {EFFECT_OPTIONS.map(e => <option key={e} value={e}>{e === 'all' ? 'All Effects' : e}</option>)}
             </select>
           </div>
           <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center' }}>
-            <span style={{ fontSize:'11px', color:t.textMuted }}>{filtered.length} shown · {selected.size} selected</span>
+            <span style={{ fontSize:'12px', color:t.textMuted }}>{filtered.length} shown · {selected.size} selected</span>
             <div style={{ display:'flex', gap:8 }}>
               <button onClick={selectAll} style={{ fontSize:'11px', color:t.accent, background:'none', border:'none', cursor:'pointer', padding:0 }}>Select all</button>
               <button onClick={clearAll}  style={{ fontSize:'11px', color:t.textMuted, background:'none', border:'none', cursor:'pointer', padding:0 }}>Clear</button>
@@ -147,9 +139,9 @@ function CalculatorTab({ theme }) {
           <div style={{ display:'flex', flexWrap:'wrap', gap:6, alignContent:'flex-start' }}>
             {filtered.map(ing => {
               const isSel = selected.has(ing.name);
-              const rc = { common:t.textMuted, uncommon:'#79c0ff', rare:t.accent, very_rare:t.amber, unique:'#f85149' }[ing.rarity] || t.textMuted;
+              const rc = rarityColor(t, ing.rarity);
               return (
-                <button key={ing.name} onClick={()=>toggle(ing.name)} title={ing.effects.map(e=>e.name).join(' · ')} style={{ padding:'5px 10px', borderRadius:20, fontSize:'11px', cursor:'pointer', background: isSel ? t.accentDim : t.surfaceAlt, border:`1px solid ${isSel ? t.accent : t.border}`, color: isSel ? t.accent : t.text, transition:'all 0.15s', display:'flex', alignItems:'center', gap:4 }}>
+                <button key={ing.name} onClick={()=>toggle(ing.name)} title={ing.effects.map(e=>e.name).join(' · ')} style={{ padding:'5px 10px', borderRadius:20, fontSize:'12px', cursor:'pointer', background: isSel ? t.accentDim : t.surfaceAlt, border:`1px solid ${isSel ? t.accent : t.border}`, color: isSel ? t.accent : t.text, transition:'all 0.15s', display:'flex', alignItems:'center', gap:4 }}>
                   <span style={{ width:5, height:5, borderRadius:'50%', background:rc, display:'inline-block', flexShrink:0 }}/>
                   {ing.name}
                 </button>
@@ -198,7 +190,7 @@ function CalculatorTab({ theme }) {
             return (
               <div key={i} style={{ padding:'10px 12px', borderRadius:6, marginBottom:6, background:t.surfaceAlt, border:`1px solid ${t.border}`, borderLeft:`3px solid ${tc}` }}>
                 <div style={{ display:'flex', justifyContent:'space-between', alignItems:'flex-start', marginBottom:4 }}>
-                  <div style={{ fontSize:'12px', fontWeight:600, color:t.text, fontFamily:'Space Grotesk', lineHeight:1.3 }}>{p.name}</div>
+                  <div style={{ fontSize:'13px', fontWeight:600, color:t.text, fontFamily:'Space Grotesk', lineHeight:1.3 }}>{p.name}</div>
                   <div style={{ fontSize:'13px', fontWeight:700, color:tc, fontFamily:'Space Grotesk', flexShrink:0, marginLeft:8 }}>{p.total_value}g</div>
                 </div>
                 <div style={{ fontSize:'10px', color:t.textMuted, marginBottom:5, fontStyle:'italic' }}>{p.ingredients.join(' + ')}</div>
@@ -207,6 +199,9 @@ function CalculatorTab({ theme }) {
                     const c = ef.is_poison ? '#f85149' : t.accent;
                     return <span key={j} style={{ fontSize:'9px', padding:'2px 6px', borderRadius:10, background:`${c}18`, color:c, border:`1px solid ${c}33` }}>{ef.name}</span>;
                   })}
+                </div>
+                <div style={{ fontSize:'10px', color:t.textMuted, lineHeight:1.4, marginTop:5 }}>
+                  {p.effects.map(ef => ef.description).join(' · ')}
                 </div>
               </div>
             );

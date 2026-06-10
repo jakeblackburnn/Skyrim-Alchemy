@@ -1,0 +1,140 @@
+{
+  "metadata": {
+    "name": "Poison Bloom",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 33,
+    "synergy_by_order": {
+      "1": 29,
+      "2": 3,
+      "3": 1,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Blue Dartwing",
+        "Burnt Spriggan Wood",
+        "Creep Cluster",
+        "Crimson Nirnroot",
+        "Cyrodilic Spadetail",
+        "Daedra Heart",
+        "Ectoplasm",
+        "Emperor Parasol Moss",
+        "Falmer Ear",
+        "Giant's Toe",
+        "Gleamblossom",
+        "Hawk Beak",
+        "Human Flesh",
+        "Human Heart",
+        "Imp Stool",
+        "Jarrin Root",
+        "Large Antlers",
+        "Namira's Rot",
+        "Nightshade",
+        "Nirnroot",
+        "Powdered Mammoth Tusk",
+        "Red Mountain Flower",
+        "Salt Pile",
+        "Scaly Pholiota",
+        "Skeever Tail",
+        "Small Antlers",
+        "Troll Fat",
+        "Void Salts",
+        "Wisp Wrappings"
+      ],
+      "2": [
+        "Deathbell",
+        "Netch Jelly",
+        "Trama Root"
+      ],
+      "3": [
+        "River Betty"
+      ],
+      "4": []
+    },
+    "total_synergy_weight": 38,
+    "unique_effects": [],
+    "substitutability": 9.5,
+    "effect_type_balance": {
+      "beneficial": 1,
+      "poison": 3
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 1092,
+    "ideal_2_ingredient_potion": {
+      "name": "Poison of Slow",
+      "ingredients": [
+        "Poison Bloom",
+        "River Betty"
+      ],
+      "total_value": 325,
+      "effects": [
+        {
+          "name": "Damage Health",
+          "description": "Causes 22 points of poison damage.",
+          "magnitude": 22,
+          "duration": 1,
+          "value": 7,
+          "is_poison": true
+        },
+        {
+          "name": "Slow",
+          "description": "Target moves at 50% speed for 22 seconds.",
+          "magnitude": 50,
+          "duration": 22,
+          "value": 176,
+          "is_poison": true
+        },
+        {
+          "name": "Fortify Carry Weight",
+          "description": "Carrying capacity increases by 17 for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 142,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Health",
+      "ingredients": [
+        "Giant's Toe",
+        "Poison Bloom",
+        "Wheat"
+      ],
+      "total_value": 587,
+      "effects": [
+        {
+          "name": "Fortify Health",
+          "description": "Health is increased by 17 points for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 332,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Carry Weight",
+          "description": "Carrying capacity increases by 17 for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 142,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Stamina Regen",
+          "description": "Decrease the target's Stamina regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 113,
+          "is_poison": true
+        }
+      ]
+    },
+    "rarity": "uncommon",
+    "dlc": true
+  }
+}

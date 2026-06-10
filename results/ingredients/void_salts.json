@@ -1,0 +1,133 @@
+{
+  "metadata": {
+    "name": "Void Salts",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 35,
+    "synergy_by_order": {
+      "1": 29,
+      "2": 6,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Ashen Grass Pod",
+        "Bee",
+        "Bleeding Crown",
+        "Briar Heart",
+        "Chicken Egg",
+        "Deathbell",
+        "Falmer Ear",
+        "Felsaad Tern Feathers",
+        "Giant Lichen",
+        "Gleamblossom",
+        "Hagraven Claw",
+        "Hagraven Feathers",
+        "Hawk's Egg",
+        "Histcarp",
+        "Human Flesh",
+        "Human Heart",
+        "Imp Stool",
+        "Jarrin Root",
+        "Jazbay Grapes",
+        "Lavender",
+        "Nightshade",
+        "Poison Bloom",
+        "River Betty",
+        "Salmon Roe",
+        "Skeever Tail",
+        "Small Antlers",
+        "Trama Root",
+        "Troll Fat",
+        "Wisp Wrappings"
+      ],
+      "2": [
+        "Crimson Nirnroot",
+        "Ectoplasm",
+        "Emperor Parasol Moss",
+        "Nirnroot",
+        "Red Mountain Flower",
+        "Tundra Cotton"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 41,
+    "unique_effects": [],
+    "substitutability": 10.25,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 1142,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Resist Magic",
+      "ingredients": [
+        "Tundra Cotton",
+        "Void Salts"
+      ],
+      "total_value": 128,
+      "effects": [
+        {
+          "name": "Resist Magic",
+          "description": "Resist 9% of magic for 60 seconds.",
+          "magnitude": 9,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Magicka",
+          "description": "Magicka is increased by 17 points for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 48,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Chicken Egg",
+        "Salmon Roe",
+        "Void Salts"
+      ],
+      "total_value": 1202,
+      "effects": [
+        {
+          "name": "Resist Magic",
+          "description": "Resist 9% of magic for 60 seconds.",
+          "magnitude": 9,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Magicka",
+          "description": "Magicka is increased by 215 points for 5 seconds.",
+          "magnitude": 215,
+          "duration": 5,
+          "value": 51,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "rare",
+    "dlc": false
+  }
+}

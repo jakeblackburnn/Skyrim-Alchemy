@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "name": "White Cap",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 27,
+    "synergy_by_order": {
+      "1": 22,
+      "2": 5,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Abecean Longfin",
+        "Ash Hopper Jelly",
+        "Briar Heart",
+        "Creep Cluster",
+        "Dwarven Oil",
+        "Ectoplasm",
+        "Frost Mirriam",
+        "Frost Salts",
+        "Giant Lichen",
+        "Human Flesh",
+        "Lavender",
+        "Moon Sugar",
+        "Mora Tapinella",
+        "Orange Dartwing",
+        "Pearl",
+        "Sabre Cat Tooth",
+        "Scathecraw",
+        "Slaughterfish Scales",
+        "Spawn Ash",
+        "Taproot",
+        "Thistle Branch",
+        "Vampire Dust"
+      ],
+      "2": [
+        "Elves Ear",
+        "Fire Salts",
+        "Grass Pod",
+        "Ice Wraith Teeth",
+        "Red Mountain Flower"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 32,
+    "unique_effects": [],
+    "substitutability": 8.0,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "benefactor",
+      "physician",
+      "poisoner"
+    ],
+    "valid_potion_count": 806,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Heavy Armor",
+      "ingredients": [
+        "Ice Wraith Teeth",
+        "White Cap"
+      ],
+      "total_value": 68,
+      "effects": [
+        {
+          "name": "Weakness to Frost",
+          "description": "Target is 13% weaker to frost damage for 30 seconds.",
+          "magnitude": 13,
+          "duration": 30,
+          "value": 28,
+          "is_poison": true
+        },
+        {
+          "name": "Fortify Heavy Armor",
+          "description": "Increase Heavy Armor skill by 9 points for 60 seconds.",
+          "magnitude": 9,
+          "duration": 60,
+          "value": 40,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Stamina",
+      "ingredients": [
+        "Boar Tusk",
+        "Lavender",
+        "White Cap"
+      ],
+      "total_value": 389,
+      "effects": [
+        {
+          "name": "Fortify Stamina",
+          "description": "Stamina is increased by 22 points for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 378,
+          "is_poison": false
+        },
+        {
+          "name": "Ravage Magicka",
+          "description": "Concentrated poison damages maximum magicka by 9 points.",
+          "magnitude": 9,
+          "duration": 10,
+          "value": 11,
+          "is_poison": true
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

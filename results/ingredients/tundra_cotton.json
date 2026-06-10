@@ -1,0 +1,121 @@
+{
+  "metadata": {
+    "name": "Tundra Cotton",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 24,
+    "synergy_by_order": {
+      "1": 20,
+      "2": 4,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Boar Tusk",
+        "Butterfly Wing",
+        "Chicken Egg",
+        "Crimson Nirnroot",
+        "Dragon's Tongue",
+        "Ectoplasm",
+        "Emperor Parasol Moss",
+        "Felsaad Tern Feathers",
+        "Gleamblossom",
+        "Hawk's Egg",
+        "Histcarp",
+        "Honeycomb",
+        "Jazbay Grapes",
+        "Lavender",
+        "Nirnroot",
+        "Pearl",
+        "Red Mountain Flower",
+        "Salmon Roe",
+        "Slaughterfish Scales",
+        "Wisp Wrappings"
+      ],
+      "2": [
+        "Bleeding Crown",
+        "Briar Heart",
+        "Hagraven Claw",
+        "Void Salts"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 28,
+    "unique_effects": [],
+    "substitutability": 7.0,
+    "effect_type_balance": {
+      "beneficial": 4,
+      "poison": 0
+    },
+    "perk_alignment": [
+      "benefactor"
+    ],
+    "valid_potion_count": 791,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Block",
+      "ingredients": [
+        "Bleeding Crown",
+        "Tundra Cotton"
+      ],
+      "total_value": 160,
+      "effects": [
+        {
+          "name": "Fortify Block",
+          "description": "Blocking absorbs 17% more damage for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        },
+        {
+          "name": "Resist Magic",
+          "description": "Resist 9% of magic for 60 seconds.",
+          "magnitude": 9,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Chicken Egg",
+        "Salmon Roe",
+        "Tundra Cotton"
+      ],
+      "total_value": 1202,
+      "effects": [
+        {
+          "name": "Resist Magic",
+          "description": "Resist 9% of magic for 60 seconds.",
+          "magnitude": 9,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Magicka",
+          "description": "Magicka is increased by 215 points for 5 seconds.",
+          "magnitude": 215,
+          "duration": 5,
+          "value": 51,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

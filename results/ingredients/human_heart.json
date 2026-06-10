@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "name": "Human Heart",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 42,
+    "synergy_by_order": {
+      "1": 35,
+      "2": 6,
+      "3": 1,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Ancestor Moth Wing",
+        "Bear Claws",
+        "Blisterwort",
+        "Blue Butterfly Wing",
+        "Blue Mountain Flower",
+        "Boar Tusk",
+        "Burnt Spriggan Wood",
+        "Butterfly Wing",
+        "Chaurus Eggs",
+        "Chaurus Hunter Antennae",
+        "Chicken Egg",
+        "Crimson Nirnroot",
+        "Daedra Heart",
+        "Deathbell",
+        "Ectoplasm",
+        "Emperor Parasol Moss",
+        "Eye of Sabre Cat",
+        "Fly Amanita",
+        "Hawk's Egg",
+        "Human Flesh",
+        "Imp Stool",
+        "Luna Moth Wing",
+        "Namira's Rot",
+        "Nirnroot",
+        "Nordic Barnacle",
+        "Poison Bloom",
+        "Red Mountain Flower",
+        "River Betty",
+        "Skeever Tail",
+        "Small Antlers",
+        "Spider Egg",
+        "Spriggan Sap",
+        "Trama Root",
+        "Void Salts"
+      ],
+      "2": [
+        "Falmer Ear",
+        "Glow Dust",
+        "Hagraven Feathers",
+        "Hanging Moss",
+        "Nightshade",
+        "Troll Fat"
+      ],
+      "3": [
+        "Jarrin Root"
+      ],
+      "4": []
+    },
+    "total_synergy_weight": 50,
+    "unique_effects": [],
+    "substitutability": 12.5,
+    "effect_type_balance": {
+      "beneficial": 0,
+      "poison": 4
+    },
+    "perk_alignment": [
+      "poisoner"
+    ],
+    "valid_potion_count": 1406,
+    "ideal_2_ingredient_potion": {
+      "name": "Poison of Damage Magicka Regen",
+      "ingredients": [
+        "Glow Dust",
+        "Human Heart"
+      ],
+      "total_value": 224,
+      "effects": [
+        {
+          "name": "Damage Magicka",
+          "description": "Does 13 points of Magicka damage.",
+          "magnitude": 13,
+          "duration": 0,
+          "value": 36,
+          "is_poison": true
+        },
+        {
+          "name": "Damage Magicka Regen",
+          "description": "Decrease the target's Magicka regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 188,
+          "is_poison": true
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Chicken Egg",
+        "Human Heart",
+        "Salmon Roe"
+      ],
+      "total_value": 1259,
+      "effects": [
+        {
+          "name": "Damage Magicka Regen",
+          "description": "Decrease the target's Magicka regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 188,
+          "is_poison": true
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "very_rare",
+    "dlc": false
+  }
+}

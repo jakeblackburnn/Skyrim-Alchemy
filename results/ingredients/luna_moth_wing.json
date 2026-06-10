@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "name": "Luna Moth Wing",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 28,
+    "synergy_by_order": {
+      "1": 23,
+      "2": 5,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Ash Creep Cluster",
+        "Ash Hopper Jelly",
+        "Beehive Husk",
+        "Butterfly Wing",
+        "Crimson Nirnroot",
+        "Daedra Heart",
+        "Emperor Parasol Moss",
+        "Eye of Sabre Cat",
+        "Felsaad Tern Feathers",
+        "Garlic",
+        "Gleamblossom",
+        "Glow Dust",
+        "Hagraven Feathers",
+        "Hanging Moss",
+        "Hawk Feathers",
+        "Honeycomb",
+        "Human Heart",
+        "Ice Wraith Teeth",
+        "Jarrin Root",
+        "Juniper Berries",
+        "Nirnroot",
+        "Skeever Tail",
+        "Trama Root"
+      ],
+      "2": [
+        "Aloe Vera Leaves",
+        "Chaurus Eggs",
+        "Namira's Rot",
+        "Nordic Barnacle",
+        "Vampire Dust"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 33,
+    "unique_effects": [],
+    "substitutability": 8.25,
+    "effect_type_balance": {
+      "beneficial": 3,
+      "poison": 1
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 891,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Invisibility",
+      "ingredients": [
+        "Luna Moth Wing",
+        "Vampire Dust"
+      ],
+      "total_value": 305,
+      "effects": [
+        {
+          "name": "Regenerate Health",
+          "description": "Health regenerates 22% faster for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 126,
+          "is_poison": false
+        },
+        {
+          "name": "Invisibility",
+          "description": "Invisibility for 17 seconds.",
+          "magnitude": 0,
+          "duration": 17,
+          "value": 179,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Luna Moth Wing",
+        "Nordic Barnacle",
+        "Salmon Roe"
+      ],
+      "total_value": 1233,
+      "effects": [
+        {
+          "name": "Damage Magicka",
+          "description": "Does 13 points of Magicka damage.",
+          "magnitude": 13,
+          "duration": 0,
+          "value": 36,
+          "is_poison": true
+        },
+        {
+          "name": "Regenerate Health",
+          "description": "Health regenerates 22% faster for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 126,
+          "is_poison": false
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "uncommon",
+    "dlc": false
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "name": "Boar Tusk",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 25,
+    "synergy_by_order": {
+      "1": 25,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Bear Claws",
+        "Bleeding Crown",
+        "Blisterwort",
+        "Blue Mountain Flower",
+        "Briar Heart",
+        "Chaurus Eggs",
+        "Falmer Ear",
+        "Fly Amanita",
+        "Garlic",
+        "Giant's Toe",
+        "Glowing Mushroom",
+        "Hagraven Feathers",
+        "Hanging Moss",
+        "Honeycomb",
+        "Human Heart",
+        "Large Antlers",
+        "Lavender",
+        "Pearl",
+        "Slaughterfish Egg",
+        "Slaughterfish Scales",
+        "Torchbug Thorax",
+        "Troll Fat",
+        "Tundra Cotton",
+        "Wheat",
+        "Yellow Mountain Flower"
+      ],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 25,
+    "unique_effects": [],
+    "substitutability": 6.25,
+    "effect_type_balance": {
+      "beneficial": 3,
+      "poison": 1
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 872,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Stamina",
+      "ingredients": [
+        "Boar Tusk",
+        "Chaurus Eggs"
+      ],
+      "total_value": 378,
+      "effects": [
+        {
+          "name": "Fortify Stamina",
+          "description": "Stamina is increased by 22 points for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 378,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Stamina",
+      "ingredients": [
+        "Boar Tusk",
+        "Giant's Toe",
+        "Large Antlers"
+      ],
+      "total_value": 823,
+      "effects": [
+        {
+          "name": "Fortify Stamina",
+          "description": "Stamina is increased by 22 points for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 378,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Health",
+          "description": "Health is increased by 17 points for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 332,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Stamina Regen",
+          "description": "Decrease the target's Stamina regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 113,
+          "is_poison": true
+        }
+      ]
+    },
+    "rarity": "uncommon",
+    "dlc": true
+  }
+}

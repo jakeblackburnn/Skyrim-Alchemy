@@ -1,0 +1,107 @@
+{
+  "metadata": {
+    "name": "Spawn Ash",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 25,
+    "synergy_by_order": {
+      "1": 22,
+      "2": 3,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Ancestor Moth Wing",
+        "Ash Creep Cluster",
+        "Ashen Grass Pod",
+        "Bee",
+        "Blue Butterfly Wing",
+        "Chaurus Hunter Antennae",
+        "Deathbell",
+        "Dragon's Tongue",
+        "Elves Ear",
+        "Fire Salts",
+        "Fly Amanita",
+        "Frost Mirriam",
+        "Grass Pod",
+        "Hagraven Claw",
+        "Honeycomb",
+        "Lavender",
+        "Mudcrab Chitin",
+        "Orange Dartwing",
+        "Red Mountain Flower",
+        "Spriggan Sap",
+        "Thistle Branch",
+        "White Cap"
+      ],
+      "2": [
+        "Bone Meal",
+        "Scathecraw",
+        "Snowberries"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 28,
+    "unique_effects": [],
+    "substitutability": 7.0,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 785,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Resist Fire",
+      "ingredients": [
+        "Ashen Grass Pod",
+        "Spawn Ash"
+      ],
+      "total_value": 80,
+      "effects": [
+        {
+          "name": "Resist Fire",
+          "description": "Resist 17% of fire damage for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Stamina",
+      "ingredients": [
+        "Boar Tusk",
+        "Lavender",
+        "Spawn Ash"
+      ],
+      "total_value": 389,
+      "effects": [
+        {
+          "name": "Fortify Stamina",
+          "description": "Stamina is increased by 22 points for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 378,
+          "is_poison": false
+        },
+        {
+          "name": "Ravage Magicka",
+          "description": "Concentrated poison damages maximum magicka by 9 points.",
+          "magnitude": 9,
+          "duration": 10,
+          "value": 11,
+          "is_poison": true
+        }
+      ]
+    },
+    "rarity": "uncommon",
+    "dlc": true
+  }
+}

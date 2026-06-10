@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "name": "Snowberries",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 30,
+    "synergy_by_order": {
+      "1": 28,
+      "2": 2,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Ancestor Moth Wing",
+        "Ash Creep Cluster",
+        "Ash Hopper Jelly",
+        "Ashen Grass Pod",
+        "Blue Butterfly Wing",
+        "Blue Dartwing",
+        "Bone Meal",
+        "Chaurus Hunter Antennae",
+        "Dragon's Tongue",
+        "Elves Ear",
+        "Fire Salts",
+        "Fly Amanita",
+        "Frost Mirriam",
+        "Frost Salts",
+        "Glow Dust",
+        "Glowing Mushroom",
+        "Hagraven Claw",
+        "Moon Sugar",
+        "Mudcrab Chitin",
+        "Pearl",
+        "Pine Thrush Egg",
+        "Purple Mountain Flower",
+        "Silverside Perch",
+        "Slaughterfish Scales",
+        "Small Pearl",
+        "Spriggan Sap",
+        "Swamp Fungal Pod",
+        "Thistle Branch"
+      ],
+      "2": [
+        "Hawk Beak",
+        "Spawn Ash"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 32,
+    "unique_effects": [],
+    "substitutability": 8.0,
+    "effect_type_balance": {
+      "beneficial": 4,
+      "poison": 0
+    },
+    "perk_alignment": [
+      "benefactor"
+    ],
+    "valid_potion_count": 1003,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Resist Frost",
+      "ingredients": [
+        "Hawk Beak",
+        "Snowberries"
+      ],
+      "total_value": 120,
+      "effects": [
+        {
+          "name": "Resist Frost",
+          "description": "Resist 13% of frost damage for 60 seconds.",
+          "magnitude": 13,
+          "duration": 60,
+          "value": 60,
+          "is_poison": false
+        },
+        {
+          "name": "Resist Shock",
+          "description": "Resist 13% of shock damage for 60 seconds.",
+          "magnitude": 13,
+          "duration": 60,
+          "value": 60,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Health",
+      "ingredients": [
+        "Boar Tusk",
+        "Glowing Mushroom",
+        "Snowberries"
+      ],
+      "total_value": 392,
+      "effects": [
+        {
+          "name": "Fortify Health",
+          "description": "Health is increased by 17 points for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 332,
+          "is_poison": false
+        },
+        {
+          "name": "Resist Shock",
+          "description": "Resist 13% of shock damage for 60 seconds.",
+          "magnitude": 13,
+          "duration": 60,
+          "value": 60,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

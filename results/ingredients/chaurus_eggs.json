@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "name": "Chaurus Eggs",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 31,
+    "synergy_by_order": {
+      "1": 29,
+      "2": 2,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Abecean Longfin",
+        "Ash Creep Cluster",
+        "Bleeding Crown",
+        "Boar Tusk",
+        "Butterfly Wing",
+        "Crimson Nirnroot",
+        "Daedra Heart",
+        "Deathbell",
+        "Eye of Sabre Cat",
+        "Garlic",
+        "Giant Lichen",
+        "Glow Dust",
+        "Hagraven Feathers",
+        "Hanging Moss",
+        "Human Heart",
+        "Ice Wraith Teeth",
+        "Jarrin Root",
+        "Large Antlers",
+        "Lavender",
+        "Namira's Rot",
+        "Nirnroot",
+        "Nordic Barnacle",
+        "Pine Thrush Egg",
+        "Sabre Cat Tooth",
+        "Slaughterfish Egg",
+        "Small Antlers",
+        "Torchbug Thorax",
+        "Trama Root",
+        "Vampire Dust"
+      ],
+      "2": [
+        "Aloe Vera Leaves",
+        "Luna Moth Wing"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 33,
+    "unique_effects": [],
+    "substitutability": 8.25,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 1051,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Stamina",
+      "ingredients": [
+        "Boar Tusk",
+        "Chaurus Eggs"
+      ],
+      "total_value": 378,
+      "effects": [
+        {
+          "name": "Fortify Stamina",
+          "description": "Stamina is increased by 22 points for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 378,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Chaurus Eggs",
+        "Nordic Barnacle",
+        "Salmon Roe"
+      ],
+      "total_value": 1107,
+      "effects": [
+        {
+          "name": "Damage Magicka",
+          "description": "Does 13 points of Magicka damage.",
+          "magnitude": 13,
+          "duration": 0,
+          "value": 36,
+          "is_poison": true
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "uncommon",
+    "dlc": false
+  }
+}

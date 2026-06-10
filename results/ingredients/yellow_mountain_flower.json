@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "name": "Yellow Mountain Flower",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 29,
+    "synergy_by_order": {
+      "1": 27,
+      "2": 2,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Abecean Longfin",
+        "Bear Claws",
+        "Beehive Husk",
+        "Blue Mountain Flower",
+        "Boar Tusk",
+        "Charred Skeever Hide",
+        "Creep Cluster",
+        "Cyrodilic Spadetail",
+        "Daedra Heart",
+        "Falmer Ear",
+        "Frost Mirriam",
+        "Garlic",
+        "Glowing Mushroom",
+        "Grass Pod",
+        "Hanging Moss",
+        "Histcarp",
+        "Juniper Berries",
+        "Large Antlers",
+        "Mudcrab Chitin",
+        "Salt Pile",
+        "Silverside Perch",
+        "Skeever Tail",
+        "Slaughterfish Egg",
+        "Small Antlers",
+        "Small Pearl",
+        "Thistle Branch",
+        "Troll Fat"
+      ],
+      "2": [
+        "Giant's Toe",
+        "Wheat"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 31,
+    "unique_effects": [],
+    "substitutability": 7.75,
+    "effect_type_balance": {
+      "beneficial": 3,
+      "poison": 1
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 999,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Health",
+      "ingredients": [
+        "Giant's Toe",
+        "Yellow Mountain Flower"
+      ],
+      "total_value": 445,
+      "effects": [
+        {
+          "name": "Fortify Health",
+          "description": "Health is increased by 17 points for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 332,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Stamina Regen",
+          "description": "Decrease the target's Stamina regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 113,
+          "is_poison": true
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Histcarp",
+        "Salmon Roe",
+        "Yellow Mountain Flower"
+      ],
+      "total_value": 1252,
+      "effects": [
+        {
+          "name": "Restore Stamina",
+          "description": "Restore 22 Stamina.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 17,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Magicka",
+          "description": "Magicka is increased by 215 points for 5 seconds.",
+          "magnitude": 215,
+          "duration": 5,
+          "value": 51,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Stamina Regen",
+          "description": "Decrease the target's Stamina regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 113,
+          "is_poison": true
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": true
+  }
+}

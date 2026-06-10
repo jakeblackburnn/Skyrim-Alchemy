@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "name": "Fire Salts",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 31,
+    "synergy_by_order": {
+      "1": 26,
+      "2": 4,
+      "3": 1,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Abecean Longfin",
+        "Ash Creep Cluster",
+        "Ash Hopper Jelly",
+        "Ashen Grass Pod",
+        "Bone Meal",
+        "Briar Heart",
+        "Creep Cluster",
+        "Dragon's Tongue",
+        "Ectoplasm",
+        "Fly Amanita",
+        "Frost Salts",
+        "Garlic",
+        "Giant Lichen",
+        "Grass Pod",
+        "Human Flesh",
+        "Ice Wraith Teeth",
+        "Jazbay Grapes",
+        "Mora Tapinella",
+        "Mudcrab Chitin",
+        "Pearl",
+        "Red Mountain Flower",
+        "Salmon Roe",
+        "Salt Pile",
+        "Snowberries",
+        "Spawn Ash",
+        "Vampire Dust"
+      ],
+      "2": [
+        "Dwarven Oil",
+        "Moon Sugar",
+        "Taproot",
+        "White Cap"
+      ],
+      "3": [
+        "Elves Ear"
+      ],
+      "4": []
+    },
+    "total_synergy_weight": 37,
+    "unique_effects": [],
+    "substitutability": 9.25,
+    "effect_type_balance": {
+      "beneficial": 3,
+      "poison": 1
+    },
+    "perk_alignment": [
+      "physician",
+      "poisoner"
+    ],
+    "valid_potion_count": 950,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Regenerate Magicka",
+      "ingredients": [
+        "Dwarven Oil",
+        "Fire Salts"
+      ],
+      "total_value": 143,
+      "effects": [
+        {
+          "name": "Regenerate Magicka",
+          "description": "Magicka regenerates 22% faster for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 126,
+          "is_poison": false
+        },
+        {
+          "name": "Restore Magicka",
+          "description": "Restore 22 points of Magicka.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 17,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Fire Salts",
+        "Histcarp",
+        "Salmon Roe"
+      ],
+      "total_value": 1265,
+      "effects": [
+        {
+          "name": "Regenerate Magicka",
+          "description": "Magicka regenerates 22% faster for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 126,
+          "is_poison": false
+        },
+        {
+          "name": "Restore Stamina",
+          "description": "Restore 22 Stamina.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 17,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Magicka",
+          "description": "Magicka is increased by 215 points for 5 seconds.",
+          "magnitude": 215,
+          "duration": 5,
+          "value": 51,
+          "is_poison": false
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "rare",
+    "dlc": false
+  }
+}

@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "name": "Blue Butterfly Wing",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 29,
+    "synergy_by_order": {
+      "1": 22,
+      "2": 5,
+      "3": 0,
+      "4": 2
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Ash Creep Cluster",
+        "Bear Claws",
+        "Blisterwort",
+        "Burnt Spriggan Wood",
+        "Canis Root",
+        "Chicken Egg",
+        "Crimson Nirnroot",
+        "Cyrodilic Spadetail",
+        "Frost Salts",
+        "Giant's Toe",
+        "Glow Dust",
+        "Hagraven Claw",
+        "Hagraven Feathers",
+        "Hanging Moss",
+        "Hawk's Egg",
+        "Human Heart",
+        "Lavender",
+        "Nightshade",
+        "Nirnroot",
+        "Rock Warbler Egg",
+        "Snowberries",
+        "Spawn Ash"
+      ],
+      "2": [
+        "Blue Mountain Flower",
+        "Bone Meal",
+        "Jarrin Root",
+        "Spider Egg",
+        "Spriggan Sap"
+      ],
+      "3": [],
+      "4": [
+        "Ancestor Moth Wing",
+        "Chaurus Hunter Antennae"
+      ]
+    },
+    "total_synergy_weight": 40,
+    "unique_effects": [],
+    "substitutability": 10.0,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 831,
+    "ideal_2_ingredient_potion": {
+      "name": "Poison of Damage Magicka Regen",
+      "ingredients": [
+        "Ancestor Moth Wing",
+        "Blue Butterfly Wing"
+      ],
+      "total_value": 280,
+      "effects": [
+        {
+          "name": "Damage Stamina",
+          "description": "Does 13 points of Stamina damage.",
+          "magnitude": 13,
+          "duration": 0,
+          "value": 30,
+          "is_poison": true
+        },
+        {
+          "name": "Fortify Conjuration",
+          "description": "Conjuration spells last 22% longer for 60 seconds.",
+          "magnitude": 22,
+          "duration": 60,
+          "value": 53,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Magicka Regen",
+          "description": "Decrease the target's Magicka regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 188,
+          "is_poison": true
+        },
+        {
+          "name": "Fortify Enchanting",
+          "description": "Items are enchanted 4% stronger for 30 seconds.",
+          "magnitude": 4,
+          "duration": 30,
+          "value": 9,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Blue Butterfly Wing",
+        "Chicken Egg",
+        "Salmon Roe"
+      ],
+      "total_value": 1259,
+      "effects": [
+        {
+          "name": "Damage Magicka Regen",
+          "description": "Decrease the target's Magicka regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 188,
+          "is_poison": true
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

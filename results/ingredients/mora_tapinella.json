@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "name": "Mora Tapinella",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 25,
+    "synergy_by_order": {
+      "1": 22,
+      "2": 3,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Bee",
+        "Briar Heart",
+        "Creep Cluster",
+        "Dragon's Tongue",
+        "Ectoplasm",
+        "Elves Ear",
+        "Fire Salts",
+        "Fly Amanita",
+        "Frost Salts",
+        "Giant Lichen",
+        "Grass Pod",
+        "Human Flesh",
+        "Imp Stool",
+        "Moon Sugar",
+        "Orange Dartwing",
+        "Pearl",
+        "Red Mountain Flower",
+        "Scathecraw",
+        "Slaughterfish Egg",
+        "Slaughterfish Scales",
+        "Vampire Dust",
+        "White Cap"
+      ],
+      "2": [
+        "Dwarven Oil",
+        "Scaly Pholiota",
+        "Taproot"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 28,
+    "unique_effects": [],
+    "substitutability": 7.0,
+    "effect_type_balance": {
+      "beneficial": 3,
+      "poison": 1
+    },
+    "perk_alignment": [
+      "benefactor",
+      "physician",
+      "poisoner"
+    ],
+    "valid_potion_count": 734,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Regenerate Stamina",
+      "ingredients": [
+        "Mora Tapinella",
+        "Scaly Pholiota"
+      ],
+      "total_value": 190,
+      "effects": [
+        {
+          "name": "Regenerate Stamina",
+          "description": "Stamina regenerates 22% faster for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 126,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Illusion",
+          "description": "Illusion spells are 17% stronger for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 64,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Stamina",
+      "ingredients": [
+        "Boar Tusk",
+        "Mora Tapinella",
+        "Slaughterfish Egg"
+      ],
+      "total_value": 433,
+      "effects": [
+        {
+          "name": "Fortify Stamina",
+          "description": "Stamina is increased by 22 points for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 378,
+          "is_poison": false
+        },
+        {
+          "name": "Lingering Damage Health",
+          "description": "Causes 4 points of poison damage for 10 seconds.",
+          "magnitude": 4,
+          "duration": 10,
+          "value": 55,
+          "is_poison": true
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

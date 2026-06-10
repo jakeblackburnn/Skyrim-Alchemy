@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "esv-alchemy"
+version = "0.1.0"
+dependencies = [
+    "numpy",
+    "pandas",
+    "networkx",
+    "jupyter",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["alchemy", "monte_carlo", "experiments"]

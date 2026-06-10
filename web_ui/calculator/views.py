@@ -1,87 +1,39 @@
 """
-views.py — drop-in replacement for web_ui/calculator/views.py
-Uses Alembic (main branch). No client-side alchemy logic required.
+views.py — HTTP layer for the calculator app.
+
+Page views render the React SPA shell; the API endpoints wrap the alchemy engine
+(/api/calculate) and serve precomputed experiment results (/api/insights,
+/api/results/<experiment>). Domain concerns live in sibling modules: db (engine
+singleton), serializers (JSON shapes), results (results-file loader).
 """
 import json
-import glob
-import os
+
 from django.shortcuts import render
-from django.http import JsonResponse
+from django.http import JsonResponse, FileResponse
 from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_exempt
 from django.conf import settings
 
-from src.alembic import Alembic
-from src.player import Player
-from src.inventory import Inventory
-from src.database import IngredientsDatabase
+from alchemy.alembic import Alembic
+from alchemy.player import Player
+from alchemy.inventory import Inventory
 
-
-# ── Shared DB singleton (loaded once per process) ─────────────────────────────
-_DB = None
-def _get_db():
-    global _DB
-    if _DB is None:
-        _DB = IngredientsDatabase()
-    return _DB
-
-
-# ── Data serialisation helpers ─────────────────────────────────────────────────
-def _serialize_ingredients(db):
-    return [
-        {
-            "name":   ing.name,
-            "value":  ing.value,
-            "weight": ing.weight,
-            "rarity": ing.rarity,
-            "dlc":    ing.dlc,
-            "source": ing.source,
-            "effects": [
-                {"name": ing.effect1, "mag": ing.effect1_mag, "dur": ing.effect1_dur},
-                {"name": ing.effect2, "mag": ing.effect2_mag, "dur": ing.effect2_dur},
-                {"name": ing.effect3, "mag": ing.effect3_mag, "dur": ing.effect3_dur},
-                {"name": ing.effect4, "mag": ing.effect4_mag, "dur": ing.effect4_dur},
-            ],
-        }
-        for ing in db
-    ]
-
-
-def _serialize_effects(db):
-    return [
-        {
-            "name":            eff.name,
-            "base_cost":       eff.base_cost,
-            "base_magnitude":  eff.base_mag,
-            "base_duration":   eff.base_dur,
-            "is_beneficial":   not eff.is_poison,
-            "is_poison":       eff.is_poison,
-            "varies_duration": eff.variable_duration,
-        }
-        for eff in db._effects.values()
-    ]
-
-
-def _base_context():
-    """JSON-serialised ingredient + effect data injected into every page."""
-    db = _get_db()
-    return {
-        "ingredients_json": json.dumps(_serialize_ingredients(db)),
-        "effects_json":     json.dumps(_serialize_effects(db)),
-    }
+from .db import get_db
+from .serializers import base_context
+from . import results
 
 
 # ── Page views ─────────────────────────────────────────────────────────────────
 def calculator_view(request):
-    return render(request, "calculator/calculator.html", _base_context())
+    return render(request, "calculator/calculator.html", base_context(get_db()))
 
 
 def datasets_view(request):
-    return render(request, "calculator/datasets.html", _base_context())
+    return render(request, "calculator/datasets.html", base_context(get_db()))
 
 
 def insights_view(request):
-    return render(request, "calculator/insights.html", _base_context())
+    return render(request, "calculator/insights.html", base_context(get_db()))
 
 
 # ── Calculator API ─────────────────────────────────────────────────────────────
@@ -111,7 +63,7 @@ def calculate_potions(request):
             has_purity=bool(data.get("purity", False)),
         )
 
-        db = _get_db()
+        db = get_db()
         items, missing = {}, []
         for name in ingredient_names:
             ing = db.get_ingredient(name)
@@ -134,44 +86,70 @@ def calculate_potions(request):
         return JsonResponse({"error": str(e)}, status=500)
 
 
-# ── Insights API ───────────────────────────────────────────────────────────────
+# ── Insights / results API ──────────────────────────────────────────────────────
 @require_http_methods(["GET"])
 def insights_api(request):
     """
     GET /api/insights
-    Serves the most recent pre-computed analysis JSON files from analysis/results/.
-    Returns: { perks: {...}, rarity: {...} }
-    Run analysis/perks.py and analysis/rarity.py to refresh results.
+    Serves the most recent base ingredient performance analysis JSON. The
+    payload carries run-level stats plus `average_performance` (per-ingredient
+    appearance rate, avg potion value, and avg session contribution).
+    Run experiments/base_perf.py to refresh results.
     """
-    results_dir = settings.PROJECT_ROOT / "analysis" / "results"
+    base_perf = results.load_experiment("base_perf")
 
-    def load_latest(pattern):
-        files = sorted(glob.glob(str(results_dir / pattern)))
-        if not files:
-            return None
-        with open(files[-1]) as f:
-            return json.load(f)
-
-    perks_data  = load_latest("perks_*.json")
-    rarity_data = load_latest("rarity_*.json")
-
-    if not perks_data and not rarity_data:
+    if not base_perf:
         return JsonResponse(
-            {"error": "No analysis results found. Run analysis/perks.py and analysis/rarity.py first."},
+            {"error": "No analysis results found. Run experiments/base_perf.py first."},
             status=404
         )
 
-    return JsonResponse({"perks": perks_data, "rarity": rarity_data})
+    return JsonResponse(base_perf)
+
+
+@require_http_methods(["GET"])
+def ingredient_profile_api(request, slug):
+    """
+    GET /api/ingredient/<slug>
+    Serves one ingredient's precomputed profile (synergies, ideal recipes,
+    substitutability, ...) from results/ingredients/<slug>.json. The browser
+    lazy-fetches this when an ingredient is selected. 404 if no profile exists
+    (e.g. profiles.py hasn't been run, or the dataset changed).
+    Run experiments/profiles.py to refresh.
+    """
+    profile = results.load_ingredient_profile(slug)
+    if profile is None:
+        return JsonResponse(
+            {"error": f"No profile for '{slug}'. Run experiments/profiles.py."},
+            status=404,
+        )
+    return JsonResponse(profile)
+
+
+@require_http_methods(["GET"])
+def results_api(request, experiment):
+    """
+    GET /api/results/<experiment>
+    Serves the most recent results JSON for a named experiment (see
+    results.EXPERIMENT_PATTERNS). 404 if the experiment is unknown or has no
+    results on disk yet.
+    """
+    data = results.load_experiment(experiment)
+    if data is None:
+        return JsonResponse(
+            {"error": f"No results found for experiment '{experiment}'.",
+             "available": results.available_experiments()},
+            status=404,
+        )
+    return JsonResponse(data)
 
 
 # ── CSV downloads ──────────────────────────────────────────────────────────────
 def download_ingredients_csv(request):
-    from django.http import FileResponse
-    path = settings.PROJECT_ROOT / "data" / "master_ingredients.csv"
+    path = settings.DATA_DIR / "master_ingredients.csv"
     return FileResponse(open(path, "rb"), as_attachment=True, filename="skyrim_ingredients.csv")
 
 
 def download_effects_csv(request):
-    from django.http import FileResponse
-    path = settings.PROJECT_ROOT / "data" / "effects.csv"
+    path = settings.DATA_DIR / "effects.csv"
     return FileResponse(open(path, "rb"), as_attachment=True, filename="skyrim_effects.csv")

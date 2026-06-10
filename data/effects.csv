@@ -41,7 +41,7 @@ Regenerate Magicka,0003eb22,5,300,0.1,restoration,true,false,Magicka regenerates
 Regenerate Stamina,0003eb23,5,300,0.1,restoration,true,false,Stamina regenerates {mag}% faster for {dur} seconds.
 Resist Fire,0003eb24,3,60,0.5,restoration,true,false,Resist {mag}% of fire damage for {dur} seconds.
 Resist Frost,0003eb25,3,60,0.5,restoration,true,false,Resist {mag}% of frost damage for {dur} seconds.
-Resist Magic,0003eb26,2,60,1.0,restoration,true,false,Resist {mag}% of magic for {dur} seconds.
+Resist Magic,0003eb26,1,60,1.0,restoration,true,false,Resist {mag}% of magic for {dur} seconds.
 Resist Poison,0003eb27,4,60,0.5,restoration,true,false,Resist {mag}% of poison for {dur} seconds.
 Resist Shock,0003eb28,3,60,0.5,restoration,true,false,Resist {mag}% of shock damage for {dur} seconds.
 Restore Health,00073f2d,5,0,0.5,restoration,true,false,Restore {mag} points of Health.

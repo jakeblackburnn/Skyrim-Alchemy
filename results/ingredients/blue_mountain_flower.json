@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "name": "Blue Mountain Flower",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 35,
+    "synergy_by_order": {
+      "1": 29,
+      "2": 6,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Ash Hopper Jelly",
+        "Blisterwort",
+        "Blue Dartwing",
+        "Boar Tusk",
+        "Bone Meal",
+        "Burnt Spriggan Wood",
+        "Butterfly Wing",
+        "Charred Skeever Hide",
+        "Chicken Egg",
+        "Daedra Heart",
+        "Eye of Sabre Cat",
+        "Felsaad Tern Feathers",
+        "Frost Salts",
+        "Giant's Toe",
+        "Glow Dust",
+        "Glowing Mushroom",
+        "Hagraven Feathers",
+        "Hawk's Egg",
+        "Human Heart",
+        "Imp Stool",
+        "Jarrin Root",
+        "Lavender",
+        "Nightshade",
+        "Rock Warbler Egg",
+        "Spider Egg",
+        "Spriggan Sap",
+        "Swamp Fungal Pod",
+        "Yellow Mountain Flower"
+      ],
+      "2": [
+        "Ancestor Moth Wing",
+        "Bear Claws",
+        "Blue Butterfly Wing",
+        "Chaurus Hunter Antennae",
+        "Hanging Moss",
+        "Wheat"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 41,
+    "unique_effects": [],
+    "substitutability": 10.25,
+    "effect_type_balance": {
+      "beneficial": 3,
+      "poison": 1
+    },
+    "perk_alignment": [
+      "benefactor",
+      "physician",
+      "poisoner"
+    ],
+    "valid_potion_count": 1109,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Health",
+      "ingredients": [
+        "Blue Mountain Flower",
+        "Boar Tusk"
+      ],
+      "total_value": 332,
+      "effects": [
+        {
+          "name": "Fortify Health",
+          "description": "Health is increased by 17 points for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 332,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Blue Mountain Flower",
+        "Chicken Egg",
+        "Salmon Roe"
+      ],
+      "total_value": 1259,
+      "effects": [
+        {
+          "name": "Damage Magicka Regen",
+          "description": "Decrease the target's Magicka regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 188,
+          "is_poison": true
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

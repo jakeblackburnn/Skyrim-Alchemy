@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "name": "Hagraven Claw",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 23,
+    "synergy_by_order": {
+      "1": 22,
+      "2": 1,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Ancestor Moth Wing",
+        "Bleeding Crown",
+        "Blue Butterfly Wing",
+        "Butterfly Wing",
+        "Chaurus Hunter Antennae",
+        "Chicken Egg",
+        "Crimson Nirnroot",
+        "Dragon's Tongue",
+        "Felsaad Tern Feathers",
+        "Gleamblossom",
+        "Hawk's Egg",
+        "Lavender",
+        "Nirnroot",
+        "Purple Mountain Flower",
+        "Snowberries",
+        "Spawn Ash",
+        "Spriggan Sap",
+        "Swamp Fungal Pod",
+        "Torchbug Thorax",
+        "Void Salts",
+        "Wheat",
+        "Wisp Wrappings"
+      ],
+      "2": [
+        "Tundra Cotton"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 24,
+    "unique_effects": [],
+    "substitutability": 6.0,
+    "effect_type_balance": {
+      "beneficial": 3,
+      "poison": 1
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 723,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Resist Magic",
+      "ingredients": [
+        "Hagraven Claw",
+        "Tundra Cotton"
+      ],
+      "total_value": 110,
+      "effects": [
+        {
+          "name": "Resist Magic",
+          "description": "Resist 9% of magic for 60 seconds.",
+          "magnitude": 9,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Barter",
+          "description": "You haggle for 4% better prices for 30 seconds.",
+          "magnitude": 4,
+          "duration": 30,
+          "value": 30,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Chicken Egg",
+        "Hagraven Claw",
+        "Salmon Roe"
+      ],
+      "total_value": 1151,
+      "effects": [
+        {
+          "name": "Resist Magic",
+          "description": "Resist 9% of magic for 60 seconds.",
+          "magnitude": 9,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "rare",
+    "dlc": false
+  }
+}

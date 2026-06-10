@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "name": "Honeycomb",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 37,
+    "synergy_by_order": {
+      "1": 35,
+      "2": 2,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Ash Hopper Jelly",
+        "Bear Claws",
+        "Beehive Husk",
+        "Bleeding Crown",
+        "Boar Tusk",
+        "Bone Meal",
+        "Briar Heart",
+        "Charred Skeever Hide",
+        "Deathbell",
+        "Eye of Sabre Cat",
+        "Felsaad Tern Feathers",
+        "Hawk Beak",
+        "Hawk Feathers",
+        "Histcarp",
+        "Large Antlers",
+        "Luna Moth Wing",
+        "Mudcrab Chitin",
+        "Netch Jelly",
+        "Orange Dartwing",
+        "Pine Thrush Egg",
+        "Powdered Mammoth Tusk",
+        "Purple Mountain Flower",
+        "Sabre Cat Tooth",
+        "Salmon Roe",
+        "Scathecraw",
+        "Silverside Perch",
+        "Skeever Tail",
+        "Slaughterfish Scales",
+        "Small Pearl",
+        "Spawn Ash",
+        "Thistle Branch",
+        "Torchbug Thorax",
+        "Tundra Cotton",
+        "Wisp Wrappings"
+      ],
+      "2": [
+        "Bee",
+        "Pearl"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 39,
+    "unique_effects": [],
+    "substitutability": 9.75,
+    "effect_type_balance": {
+      "beneficial": 3,
+      "poison": 1
+    },
+    "perk_alignment": [
+      "benefactor",
+      "physician",
+      "poisoner"
+    ],
+    "valid_potion_count": 1274,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Block",
+      "ingredients": [
+        "Honeycomb",
+        "Pearl"
+      ],
+      "total_value": 97,
+      "effects": [
+        {
+          "name": "Restore Stamina",
+          "description": "Restore 22 Stamina.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 17,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Block",
+          "description": "Blocking absorbs 17% more damage for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Histcarp",
+        "Honeycomb",
+        "Salmon Roe"
+      ],
+      "total_value": 1139,
+      "effects": [
+        {
+          "name": "Restore Stamina",
+          "description": "Restore 22 Stamina.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 17,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Magicka",
+          "description": "Magicka is increased by 215 points for 5 seconds.",
+          "magnitude": 215,
+          "duration": 5,
+          "value": 51,
+          "is_poison": false
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "name": "Ash Creep Cluster",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 32,
+    "synergy_by_order": {
+      "1": 29,
+      "2": 3,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Ancestor Moth Wing",
+        "Ashen Grass Pod",
+        "Beehive Husk",
+        "Blisterwort",
+        "Blue Butterfly Wing",
+        "Canis Root",
+        "Chaurus Eggs",
+        "Chaurus Hunter Antennae",
+        "Cyrodilic Spadetail",
+        "Dragon's Tongue",
+        "Ectoplasm",
+        "Elves Ear",
+        "Fire Salts",
+        "Fly Amanita",
+        "Giant's Toe",
+        "Glow Dust",
+        "Glowing Mushroom",
+        "Ice Wraith Teeth",
+        "Jarrin Root",
+        "Luna Moth Wing",
+        "Mudcrab Chitin",
+        "Nightshade",
+        "Rock Warbler Egg",
+        "Snowberries",
+        "Spawn Ash",
+        "Spider Egg",
+        "Vampire Dust",
+        "Wisp Wrappings"
+      ],
+      "2": [
+        "Bone Meal",
+        "Crimson Nirnroot",
+        "Nirnroot"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 35,
+    "unique_effects": [],
+    "substitutability": 8.75,
+    "effect_type_balance": {
+      "beneficial": 3,
+      "poison": 1
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 1051,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Invisibility",
+      "ingredients": [
+        "Ash Creep Cluster",
+        "Crimson Nirnroot"
+      ],
+      "total_value": 280,
+      "effects": [
+        {
+          "name": "Damage Stamina",
+          "description": "Does 39 points of Stamina damage.",
+          "magnitude": 39,
+          "duration": 0,
+          "value": 101,
+          "is_poison": true
+        },
+        {
+          "name": "Invisibility",
+          "description": "Invisibility for 17 seconds.",
+          "magnitude": 0,
+          "duration": 17,
+          "value": 179,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Stamina",
+      "ingredients": [
+        "Ash Creep Cluster",
+        "Boar Tusk",
+        "Chaurus Eggs"
+      ],
+      "total_value": 557,
+      "effects": [
+        {
+          "name": "Invisibility",
+          "description": "Invisibility for 17 seconds.",
+          "magnitude": 0,
+          "duration": 17,
+          "value": 179,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Stamina",
+          "description": "Stamina is increased by 22 points for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 378,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": true
+  }
+}

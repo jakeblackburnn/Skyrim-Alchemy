@@ -1,0 +1,138 @@
+{
+  "metadata": {
+    "name": "Powdered Mammoth Tusk",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 39,
+    "synergy_by_order": {
+      "1": 37,
+      "2": 2,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Abecean Longfin",
+        "Aloe Vera Leaves",
+        "Ashen Grass Pod",
+        "Bear Claws",
+        "Bee",
+        "Beehive Husk",
+        "Bleeding Crown",
+        "Blue Dartwing",
+        "Burnt Spriggan Wood",
+        "Charred Skeever Hide",
+        "Cyrodilic Spadetail",
+        "Daedra Heart",
+        "Eye of Sabre Cat",
+        "Frost Mirriam",
+        "Frost Salts",
+        "Gleamblossom",
+        "Hawk Beak",
+        "Hawk Feathers",
+        "Histcarp",
+        "Honeycomb",
+        "Human Flesh",
+        "Ice Wraith Teeth",
+        "Juniper Berries",
+        "Large Antlers",
+        "Moon Sugar",
+        "Mudcrab Chitin",
+        "Namira's Rot",
+        "Orange Dartwing",
+        "Pearl",
+        "Pine Thrush Egg",
+        "Poison Bloom",
+        "Sabre Cat Tooth",
+        "Salmon Roe",
+        "Silverside Perch",
+        "Small Pearl",
+        "Torchbug Thorax",
+        "Wisp Wrappings"
+      ],
+      "2": [
+        "Netch Jelly",
+        "Purple Mountain Flower"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 41,
+    "unique_effects": [],
+    "substitutability": 10.25,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "benefactor",
+      "physician",
+      "poisoner"
+    ],
+    "valid_potion_count": 1374,
+    "ideal_2_ingredient_potion": {
+      "name": "Poison of Fear",
+      "ingredients": [
+        "Netch Jelly",
+        "Powdered Mammoth Tusk"
+      ],
+      "total_value": 113,
+      "effects": [
+        {
+          "name": "Restore Stamina",
+          "description": "Restore 43 Stamina.",
+          "magnitude": 43,
+          "duration": 0,
+          "value": 37,
+          "is_poison": false
+        },
+        {
+          "name": "Fear",
+          "description": "Creatures and people up to level 4 flee from combat for 30 seconds.",
+          "magnitude": 4,
+          "duration": 30,
+          "value": 76,
+          "is_poison": true
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Histcarp",
+        "Powdered Mammoth Tusk",
+        "Salmon Roe"
+      ],
+      "total_value": 1139,
+      "effects": [
+        {
+          "name": "Restore Stamina",
+          "description": "Restore 22 Stamina.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 17,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Magicka",
+          "description": "Magicka is increased by 215 points for 5 seconds.",
+          "magnitude": 215,
+          "duration": 5,
+          "value": 51,
+          "is_poison": false
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "uncommon",
+    "dlc": false
+  }
+}

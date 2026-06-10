@@ -1,0 +1,143 @@
+{
+  "metadata": {
+    "name": "Rock Warbler Egg",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 36,
+    "synergy_by_order": {
+      "1": 34,
+      "2": 2,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Ancestor Moth Wing",
+        "Ash Creep Cluster",
+        "Ash Hopper Jelly",
+        "Bear Claws",
+        "Blue Butterfly Wing",
+        "Blue Dartwing",
+        "Blue Mountain Flower",
+        "Bone Meal",
+        "Butterfly Wing",
+        "Charred Skeever Hide",
+        "Chaurus Hunter Antennae",
+        "Creep Cluster",
+        "Crimson Nirnroot",
+        "Cyrodilic Spadetail",
+        "Daedra Heart",
+        "Dwarven Oil",
+        "Eye of Sabre Cat",
+        "Felsaad Tern Feathers",
+        "Giant's Toe",
+        "Hanging Moss",
+        "Hawk Feathers",
+        "Imp Stool",
+        "Jarrin Root",
+        "Jazbay Grapes",
+        "Nirnroot",
+        "Salt Pile",
+        "Scaly Pholiota",
+        "Small Pearl",
+        "Spider Egg",
+        "Swamp Fungal Pod",
+        "Taproot",
+        "Torchbug Thorax",
+        "Wheat"
+      ],
+      "2": [
+        "Blisterwort",
+        "Canis Root"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 38,
+    "unique_effects": [],
+    "substitutability": 9.5,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "benefactor",
+      "physician",
+      "poisoner"
+    ],
+    "valid_potion_count": 1224,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify One-Handed",
+      "ingredients": [
+        "Canis Root",
+        "Rock Warbler Egg"
+      ],
+      "total_value": 110,
+      "effects": [
+        {
+          "name": "Damage Stamina",
+          "description": "Does 13 points of Stamina damage.",
+          "magnitude": 13,
+          "duration": 0,
+          "value": 30,
+          "is_poison": true
+        },
+        {
+          "name": "Fortify One-Handed",
+          "description": "One-handed weapons do 17% more damage for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Health",
+      "ingredients": [
+        "Giant's Toe",
+        "Rock Warbler Egg",
+        "Wheat"
+      ],
+      "total_value": 489,
+      "effects": [
+        {
+          "name": "Damage Stamina",
+          "description": "Does 13 points of Stamina damage.",
+          "magnitude": 13,
+          "duration": 0,
+          "value": 30,
+          "is_poison": true
+        },
+        {
+          "name": "Fortify Health",
+          "description": "Health is increased by 17 points for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 332,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Stamina Regen",
+          "description": "Decrease the target's Stamina regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 113,
+          "is_poison": true
+        },
+        {
+          "name": "Restore Health",
+          "description": "Restore 22 points of Health.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 14,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

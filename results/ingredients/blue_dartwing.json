@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "name": "Blue Dartwing",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 28,
+    "synergy_by_order": {
+      "1": 25,
+      "2": 3,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Blisterwort",
+        "Blue Mountain Flower",
+        "Butterfly Wing",
+        "Charred Skeever Hide",
+        "Cyrodilic Spadetail",
+        "Eye of Sabre Cat",
+        "Felsaad Tern Feathers",
+        "Gleamblossom",
+        "Glow Dust",
+        "Glowing Mushroom",
+        "Hawk Beak",
+        "Imp Stool",
+        "Namira's Rot",
+        "Netch Jelly",
+        "Nordic Barnacle",
+        "Orange Dartwing",
+        "Pearl",
+        "Pine Thrush Egg",
+        "Poison Bloom",
+        "Powdered Mammoth Tusk",
+        "Rock Warbler Egg",
+        "Slaughterfish Egg",
+        "Snowberries",
+        "Wheat"
+      ],
+      "2": [
+        "Ash Hopper Jelly",
+        "Daedra Heart",
+        "Swamp Fungal Pod"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 31,
+    "unique_effects": [],
+    "substitutability": 7.75,
+    "effect_type_balance": {
+      "beneficial": 3,
+      "poison": 1
+    },
+    "perk_alignment": [
+      "benefactor",
+      "physician",
+      "poisoner"
+    ],
+    "valid_potion_count": 933,
+    "ideal_2_ingredient_potion": {
+      "name": "Poison of Fear",
+      "ingredients": [
+        "Blue Dartwing",
+        "Daedra Heart"
+      ],
+      "total_value": 90,
+      "effects": [
+        {
+          "name": "Restore Health",
+          "description": "Restore 22 points of Health.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 14,
+          "is_poison": false
+        },
+        {
+          "name": "Fear",
+          "description": "Creatures and people up to level 4 flee from combat for 30 seconds.",
+          "magnitude": 4,
+          "duration": 30,
+          "value": 76,
+          "is_poison": true
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Blue Dartwing",
+        "Nordic Barnacle",
+        "Salmon Roe"
+      ],
+      "total_value": 1151,
+      "effects": [
+        {
+          "name": "Fortify Pickpocket",
+          "description": "Pickpocketing is 17% easier for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

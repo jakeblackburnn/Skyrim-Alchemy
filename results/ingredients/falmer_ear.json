@@ -1,0 +1,140 @@
+{
+  "metadata": {
+    "name": "Falmer Ear",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 33,
+    "synergy_by_order": {
+      "1": 31,
+      "2": 1,
+      "3": 1,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Ashen Grass Pod",
+        "Beehive Husk",
+        "Blisterwort",
+        "Boar Tusk",
+        "Charred Skeever Hide",
+        "Crimson Nirnroot",
+        "Deathbell",
+        "Ectoplasm",
+        "Emperor Parasol Moss",
+        "Fly Amanita",
+        "Garlic",
+        "Grass Pod",
+        "Hagraven Feathers",
+        "Human Flesh",
+        "Imp Stool",
+        "Jarrin Root",
+        "Mudcrab Chitin",
+        "Namira's Rot",
+        "Nightshade",
+        "Nirnroot",
+        "Pine Thrush Egg",
+        "Poison Bloom",
+        "Red Mountain Flower",
+        "River Betty",
+        "Skeever Tail",
+        "Slaughterfish Egg",
+        "Small Antlers",
+        "Spider Egg",
+        "Thistle Branch",
+        "Void Salts",
+        "Yellow Mountain Flower"
+      ],
+      "2": [
+        "Human Heart"
+      ],
+      "3": [
+        "Troll Fat"
+      ],
+      "4": []
+    },
+    "total_synergy_weight": 36,
+    "unique_effects": [],
+    "substitutability": 9.0,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 1089,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Resist Poison",
+      "ingredients": [
+        "Falmer Ear",
+        "Troll Fat"
+      ],
+      "total_value": 150,
+      "effects": [
+        {
+          "name": "Damage Health",
+          "description": "Causes 9 points of poison damage.",
+          "magnitude": 9,
+          "duration": 1,
+          "value": 2,
+          "is_poison": true
+        },
+        {
+          "name": "Frenzy",
+          "description": "Creatures and people up to level 4 will attack anything nearby for 10 seconds.",
+          "magnitude": 4,
+          "duration": 10,
+          "value": 68,
+          "is_poison": true
+        },
+        {
+          "name": "Resist Poison",
+          "description": "Resist 17% of poison for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Stamina",
+      "ingredients": [
+        "Boar Tusk",
+        "Falmer Ear",
+        "Garlic"
+      ],
+      "total_value": 526,
+      "effects": [
+        {
+          "name": "Fortify Stamina",
+          "description": "Stamina is increased by 22 points for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 378,
+          "is_poison": false
+        },
+        {
+          "name": "Frenzy",
+          "description": "Creatures and people up to level 4 will attack anything nearby for 10 seconds.",
+          "magnitude": 4,
+          "duration": 10,
+          "value": 68,
+          "is_poison": true
+        },
+        {
+          "name": "Resist Poison",
+          "description": "Resist 17% of poison for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "rare",
+    "dlc": false
+  }
+}

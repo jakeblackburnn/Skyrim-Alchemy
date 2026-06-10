@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "name": "Namira's Rot",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 27,
+    "synergy_by_order": {
+      "1": 23,
+      "2": 4,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Ashen Grass Pod",
+        "Blue Dartwing",
+        "Butterfly Wing",
+        "Chaurus Eggs",
+        "Cyrodilic Spadetail",
+        "Emperor Parasol Moss",
+        "Eye of Sabre Cat",
+        "Falmer Ear",
+        "Garlic",
+        "Glow Dust",
+        "Hagraven Feathers",
+        "Hanging Moss",
+        "Human Heart",
+        "Jarrin Root",
+        "Juniper Berries",
+        "Netch Jelly",
+        "Pine Thrush Egg",
+        "Poison Bloom",
+        "Powdered Mammoth Tusk",
+        "Spider Egg",
+        "Trama Root",
+        "Vampire Dust"
+      ],
+      "2": [
+        "Daedra Heart",
+        "Gleamblossom",
+        "Luna Moth Wing",
+        "Nordic Barnacle"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 31,
+    "unique_effects": [],
+    "substitutability": 7.75,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 855,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Regenerate Health",
+      "ingredients": [
+        "Gleamblossom",
+        "Namira's Rot"
+      ],
+      "total_value": 202,
+      "effects": [
+        {
+          "name": "Fear",
+          "description": "Creatures and people up to level 4 flee from combat for 30 seconds.",
+          "magnitude": 4,
+          "duration": 30,
+          "value": 76,
+          "is_poison": true
+        },
+        {
+          "name": "Regenerate Health",
+          "description": "Health regenerates 22% faster for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 126,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Namira's Rot",
+        "Nordic Barnacle",
+        "Salmon Roe"
+      ],
+      "total_value": 1233,
+      "effects": [
+        {
+          "name": "Damage Magicka",
+          "description": "Does 13 points of Magicka damage.",
+          "magnitude": 13,
+          "duration": 0,
+          "value": 36,
+          "is_poison": true
+        },
+        {
+          "name": "Regenerate Health",
+          "description": "Health regenerates 22% faster for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 126,
+          "is_poison": false
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "rare",
+    "dlc": false
+  }
+}

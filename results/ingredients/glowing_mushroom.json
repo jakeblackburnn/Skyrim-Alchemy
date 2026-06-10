@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "name": "Glowing Mushroom",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 23,
+    "synergy_by_order": {
+      "1": 22,
+      "2": 1,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Ash Creep Cluster",
+        "Ash Hopper Jelly",
+        "Bear Claws",
+        "Beehive Husk",
+        "Blisterwort",
+        "Blue Dartwing",
+        "Blue Mountain Flower",
+        "Boar Tusk",
+        "Ectoplasm",
+        "Giant's Toe",
+        "Hanging Moss",
+        "Hawk Beak",
+        "Nightshade",
+        "Pearl",
+        "Pine Thrush Egg",
+        "Sabre Cat Tooth",
+        "Snowberries",
+        "Spriggan Sap",
+        "Swamp Fungal Pod",
+        "Wheat",
+        "Wisp Wrappings",
+        "Yellow Mountain Flower"
+      ],
+      "2": [
+        "Glow Dust"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 24,
+    "unique_effects": [],
+    "substitutability": 6.0,
+    "effect_type_balance": {
+      "beneficial": 4,
+      "poison": 0
+    },
+    "perk_alignment": [
+      "benefactor"
+    ],
+    "valid_potion_count": 785,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Health",
+      "ingredients": [
+        "Boar Tusk",
+        "Glowing Mushroom"
+      ],
+      "total_value": 332,
+      "effects": [
+        {
+          "name": "Fortify Health",
+          "description": "Health is increased by 17 points for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 332,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Stamina",
+      "ingredients": [
+        "Boar Tusk",
+        "Chaurus Eggs",
+        "Glowing Mushroom"
+      ],
+      "total_value": 710,
+      "effects": [
+        {
+          "name": "Fortify Stamina",
+          "description": "Stamina is increased by 22 points for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 378,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Health",
+          "description": "Health is increased by 17 points for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 332,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

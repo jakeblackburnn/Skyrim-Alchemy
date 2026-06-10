@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "name": "Slaughterfish Egg",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 21,
+    "synergy_by_order": {
+      "1": 19,
+      "2": 2,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Beehive Husk",
+        "Blue Dartwing",
+        "Boar Tusk",
+        "Charred Skeever Hide",
+        "Chaurus Eggs",
+        "Falmer Ear",
+        "Grass Pod",
+        "Imp Stool",
+        "Large Antlers",
+        "Lavender",
+        "Mora Tapinella",
+        "Mudcrab Chitin",
+        "Nordic Barnacle",
+        "Scathecraw",
+        "Slaughterfish Scales",
+        "Thistle Branch",
+        "Torchbug Thorax",
+        "Troll Fat",
+        "Yellow Mountain Flower"
+      ],
+      "2": [
+        "Garlic",
+        "Orange Dartwing"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 23,
+    "unique_effects": [],
+    "substitutability": 5.75,
+    "effect_type_balance": {
+      "beneficial": 3,
+      "poison": 1
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 670,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Stamina",
+      "ingredients": [
+        "Boar Tusk",
+        "Slaughterfish Egg"
+      ],
+      "total_value": 378,
+      "effects": [
+        {
+          "name": "Fortify Stamina",
+          "description": "Stamina is increased by 22 points for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 378,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Nordic Barnacle",
+        "Salmon Roe",
+        "Slaughterfish Egg"
+      ],
+      "total_value": 1151,
+      "effects": [
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Pickpocket",
+          "description": "Pickpocketing is 17% easier for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

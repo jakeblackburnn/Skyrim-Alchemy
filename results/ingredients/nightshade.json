@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "name": "Nightshade",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 34,
+    "synergy_by_order": {
+      "1": 27,
+      "2": 7,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Ancestor Moth Wing",
+        "Ash Creep Cluster",
+        "Bear Claws",
+        "Beehive Husk",
+        "Blue Butterfly Wing",
+        "Blue Mountain Flower",
+        "Burnt Spriggan Wood",
+        "Butterfly Wing",
+        "Chaurus Hunter Antennae",
+        "Crimson Nirnroot",
+        "Deathbell",
+        "Emperor Parasol Moss",
+        "Falmer Ear",
+        "Glowing Mushroom",
+        "Hanging Moss",
+        "Human Flesh",
+        "Imp Stool",
+        "Nirnroot",
+        "Poison Bloom",
+        "Red Mountain Flower",
+        "River Betty",
+        "Skeever Tail",
+        "Spider Egg",
+        "Spriggan Sap",
+        "Troll Fat",
+        "Void Salts",
+        "Wisp Wrappings"
+      ],
+      "2": [
+        "Chicken Egg",
+        "Ectoplasm",
+        "Glow Dust",
+        "Hawk's Egg",
+        "Human Heart",
+        "Jarrin Root",
+        "Small Antlers"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 41,
+    "unique_effects": [],
+    "substitutability": 10.25,
+    "effect_type_balance": {
+      "beneficial": 1,
+      "poison": 3
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 1073,
+    "ideal_2_ingredient_potion": {
+      "name": "Poison of Damage Magicka Regen",
+      "ingredients": [
+        "Glow Dust",
+        "Nightshade"
+      ],
+      "total_value": 295,
+      "effects": [
+        {
+          "name": "Damage Magicka Regen",
+          "description": "Decrease the target's Magicka regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 188,
+          "is_poison": true
+        },
+        {
+          "name": "Fortify Destruction",
+          "description": "Destruction spells are 22% stronger for 60 seconds.",
+          "magnitude": 22,
+          "duration": 60,
+          "value": 107,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Chicken Egg",
+        "Nightshade",
+        "Salmon Roe"
+      ],
+      "total_value": 1267,
+      "effects": [
+        {
+          "name": "Damage Magicka Regen",
+          "description": "Decrease the target's Magicka regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 188,
+          "is_poison": true
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        },
+        {
+          "name": "Lingering Damage Stamina",
+          "description": "Drain the target's Stamina by 4 points per second for 10 seconds.",
+          "magnitude": 4,
+          "duration": 10,
+          "value": 8,
+          "is_poison": true
+        }
+      ]
+    },
+    "rarity": "uncommon",
+    "dlc": false
+  }
+}

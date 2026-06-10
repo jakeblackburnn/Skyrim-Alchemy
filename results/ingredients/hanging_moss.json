@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "name": "Hanging Moss",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 33,
+    "synergy_by_order": {
+      "1": 28,
+      "2": 4,
+      "3": 1,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Ancestor Moth Wing",
+        "Blue Butterfly Wing",
+        "Boar Tusk",
+        "Burnt Spriggan Wood",
+        "Butterfly Wing",
+        "Canis Root",
+        "Chaurus Eggs",
+        "Chaurus Hunter Antennae",
+        "Chicken Egg",
+        "Daedra Heart",
+        "Eye of Sabre Cat",
+        "Giant's Toe",
+        "Glowing Mushroom",
+        "Hagraven Feathers",
+        "Hawk Feathers",
+        "Hawk's Egg",
+        "Luna Moth Wing",
+        "Namira's Rot",
+        "Nightshade",
+        "Nordic Barnacle",
+        "Rock Warbler Egg",
+        "Small Pearl",
+        "Spider Egg",
+        "Spriggan Sap",
+        "Trama Root",
+        "Wheat",
+        "Yellow Mountain Flower"
+      ],
+      "2": [
+        "Blue Mountain Flower",
+        "Glow Dust",
+        "Human Heart",
+        "Jarrin Root"
+      ],
+      "3": [
+        "Bear Claws"
+      ],
+      "4": []
+    },
+    "total_synergy_weight": 39,
+    "unique_effects": [],
+    "substitutability": 9.75,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 1017,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Health",
+      "ingredients": [
+        "Boar Tusk",
+        "Hanging Moss"
+      ],
+      "total_value": 332,
+      "effects": [
+        {
+          "name": "Fortify Health",
+          "description": "Health is increased by 17 points for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 332,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Chicken Egg",
+        "Hanging Moss",
+        "Salmon Roe"
+      ],
+      "total_value": 1259,
+      "effects": [
+        {
+          "name": "Damage Magicka Regen",
+          "description": "Decrease the target's Magicka regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 188,
+          "is_poison": true
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "metadata": {
+    "name": "Human Flesh",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 42,
+    "synergy_by_order": {
+      "1": 38,
+      "2": 4,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Abecean Longfin",
+        "Ashen Grass Pod",
+        "Beehive Husk",
+        "Canis Root",
+        "Creep Cluster",
+        "Crimson Nirnroot",
+        "Deathbell",
+        "Dwarven Oil",
+        "Elves Ear",
+        "Emperor Parasol Moss",
+        "Falmer Ear",
+        "Fire Salts",
+        "Frost Mirriam",
+        "Frost Salts",
+        "Giant Lichen",
+        "Gleamblossom",
+        "Grass Pod",
+        "Hawk Feathers",
+        "Human Heart",
+        "Jarrin Root",
+        "Moon Sugar",
+        "Mora Tapinella",
+        "Netch Jelly",
+        "Nightshade",
+        "Nirnroot",
+        "Pearl",
+        "Poison Bloom",
+        "Powdered Mammoth Tusk",
+        "Purple Mountain Flower",
+        "River Betty",
+        "Skeever Tail",
+        "Small Antlers",
+        "Swamp Fungal Pod",
+        "Taproot",
+        "Troll Fat",
+        "Vampire Dust",
+        "Void Salts",
+        "White Cap"
+      ],
+      "2": [
+        "Briar Heart",
+        "Ectoplasm",
+        "Imp Stool",
+        "Red Mountain Flower"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 46,
+    "unique_effects": [],
+    "substitutability": 11.5,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "benefactor",
+      "physician",
+      "poisoner"
+    ],
+    "valid_potion_count": 1451,
+    "ideal_2_ingredient_potion": {
+      "name": "Poison of Paralysis",
+      "ingredients": [
+        "Briar Heart",
+        "Human Flesh"
+      ],
+      "total_value": 199,
+      "effects": [
+        {
+          "name": "Restore Magicka",
+          "description": "Restore 22 points of Magicka.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 17,
+          "is_poison": false
+        },
+        {
+          "name": "Paralysis",
+          "description": "Target is paralyzed for 4 seconds.",
+          "magnitude": 0,
+          "duration": 4,
+          "value": 182,
+          "is_poison": true
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Poison of Paralysis",
+      "ingredients": [
+        "Human Flesh",
+        "Netch Jelly",
+        "Poison Bloom"
+      ],
+      "total_value": 404,
+      "effects": [
+        {
+          "name": "Damage Health",
+          "description": "Causes 13 points of poison damage.",
+          "magnitude": 13,
+          "duration": 1,
+          "value": 4,
+          "is_poison": true
+        },
+        {
+          "name": "Paralysis",
+          "description": "Target is paralyzed for 4 seconds.",
+          "magnitude": 0,
+          "duration": 4,
+          "value": 182,
+          "is_poison": true
+        },
+        {
+          "name": "Fortify Carry Weight",
+          "description": "Carrying capacity increases by 17 for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 142,
+          "is_poison": false
+        },
+        {
+          "name": "Fear",
+          "description": "Creatures and people up to level 4 flee from combat for 30 seconds.",
+          "magnitude": 4,
+          "duration": 30,
+          "value": 76,
+          "is_poison": true
+        }
+      ]
+    },
+    "rarity": "very_rare",
+    "dlc": false
+  }
+}

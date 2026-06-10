@@ -1,94 +1,94 @@
 ingredient_name,ingredient_id,base_value,weight,effect_1,effect_1_magnitude,effect_1_duration,effect_2,effect_2_magnitude,effect_2_duration,effect_3,effect_3_magnitude,effect_3_duration,effect_4,effect_4_magnitude,effect_4_duration,dlc,rarity,source_type
 Abecean Longfin,1,15,0.5,Weakness to Frost,3,30,Fortify Sneak,4,60,Weakness to Poison,2,30,Fortify Restoration,4,60,base,common,fish
-Aloe Vera Leaves,2,1,0.1,Restore Health,5,0,Restore Stamina,5,0,Damage Magicka,3,0,Invisibility,1,5,base,uncommon,plant
+Aloe Vera Leaves,2,1,0.1,Restore Health,5,0,Restore Stamina,5,0,Damage Magicka,5,0,Invisibility,0,4,base,uncommon,plant
 Ancestor Moth Wing,3,2,0.1,Damage Stamina,3,0,Fortify Conjuration,5,60,Damage Magicka Regen,100,5,Fortify Enchanting,1,30,dawnguard,rare,creature
-Ash Creep Cluster,4,1,0.2,Damage Stamina,3,0,Invisibility,1,4,Resist Fire,3,60,Fortify Destruction,5,60,dragonborn,common,plant
+Ash Creep Cluster,4,1,0.2,Damage Stamina,3,0,Invisibility,0,4,Resist Fire,3,60,Fortify Destruction,5,60,dragonborn,common,plant
 Ash Hopper Jelly,5,20,0.2,Restore Health,5,0,Fortify Light Armor,2,60,Resist Shock,3,60,Weakness to Frost,3,30,dragonborn,uncommon,creature
-Ashen Grass Pod,6,1,0.1,Resist Fire,3,60,Weakness to Shock,3,30,Fortify Lockpicking,2,30,Paralysis,1,1,dragonborn,common,plant
+Ashen Grass Pod,6,1,0.1,Resist Fire,4,60,Weakness to Shock,3,30,Fortify Lockpicking,2,30,Fortify Sneak,4,60,dragonborn,common,plant
 Bear Claws,7,2,0.1,Restore Stamina,4,0,Fortify Health,4,60,Fortify One-Handed,4,60,Damage Magicka Regen,100,5,base,common,creature
 Bee,8,3,0.1,Restore Stamina,5,0,Ravage Stamina,2,10,Regenerate Stamina,5,300,Weakness to Shock,3,30,base,common,creature
-Beehive Husk,9,5,0.1,Resist Poison,2,60,Fortify Light Armor,2,60,Fortify Sneak,2,60,Fortify Destruction,5,60,base,common,plant
-Bleeding Crown,10,10,0.3,Weakness to Fire,3,30,Fortify Block,4,60,Weakness to Poison,2,30,Resist Magic,1,60,base,uncommon,fungus
-Blisterwort,11,2,0.1,Damage Health,2,1,Frenzy,1,10,Restore Health,5,0,Fortify Smithing,4,30,hearthfire,common,fungus
+Beehive Husk,9,5,1.0,Resist Poison,2,60,Fortify Light Armor,2,60,Fortify Sneak,4,60,Fortify Destruction,5,60,base,common,plant
+Bleeding Crown,10,10,0.3,Weakness to Fire,3,30,Fortify Block,4,60,Weakness to Poison,2,30,Resist Magic,2,60,base,uncommon,fungus
+Blisterwort,11,12,0.2,Damage Stamina,3,0,Frenzy,1,10,Restore Health,3,0,Fortify Smithing,4,30,hearthfire,common,fungus
 Blue Butterfly Wing,12,2,0.1,Damage Stamina,3,0,Fortify Conjuration,5,60,Damage Magicka Regen,100,5,Fortify Enchanting,1,30,base,common,creature
 Blue Dartwing,13,1,0.1,Resist Shock,3,60,Fortify Pickpocket,4,60,Restore Health,5,0,Fear,1,30,base,common,creature
 Blue Mountain Flower,14,2,0.1,Restore Health,5,0,Fortify Conjuration,5,60,Fortify Health,4,60,Damage Magicka Regen,100,5,base,common,plant
-Boar Tusk,15,20,0.5,Fortify Stamina,4,60,Fortify Health,4,60,Slow,50,5,Fear,1,30,dragonborn,uncommon,creature
+Boar Tusk,15,20,0.5,Fortify Stamina,5,300,Fortify Health,4,300,Fortify Block,4,60,Frenzy,1,10,dragonborn,uncommon,creature
 Bone Meal,16,5,0.5,Damage Stamina,3,0,Resist Fire,3,60,Fortify Conjuration,5,60,Ravage Stamina,2,10,base,common,crafting
-Briar Heart,17,20,0.5,Restore Magicka,5,0,Fortify Block,2,60,Paralysis,1,1,Fortify Magicka,4,60,base,rare,creature
+Briar Heart,17,20,0.5,Restore Magicka,5,0,Fortify Block,2,60,Paralysis,0,1,Fortify Magicka,4,60,base,rare,creature
 Burnt Spriggan Wood,18,20,0.5,Weakness to Fire,3,30,Fortify Alteration,4,60,Damage Magicka Regen,100,5,Slow,50,5,dragonborn,rare,creature
 Butterfly Wing,19,3,0.1,Restore Health,5,0,Fortify Barter,1,30,Lingering Damage Stamina,1,10,Damage Magicka,3,0,base,common,creature
-Canis Root,20,5,0.1,Damage Stamina,3,0,Fortify Marksman,4,60,Fortify One-Handed,4,60,Paralysis,1,1,base,common,plant
-Charred Skeever Hide,21,1,0.5,Restore Stamina,5,0,Cure Disease,2,0,Resist Poison,4,60,Restore Health,5,0,base,common,creature
-Chaurus Eggs,22,2,0.2,Weakness to Poison,2,30,Fortify Stamina,4,60,Damage Magicka,3,0,Invisibility,1,4,base,uncommon,creature
+Canis Root,20,5,0.1,Damage Stamina,3,0,Fortify One-Handed,4,60,Fortify Marksman,4,60,Paralysis,0,1,base,common,plant
+Charred Skeever Hide,21,1,0.5,Restore Stamina,5,0,Cure Disease,5,0,Resist Poison,4,60,Restore Health,5,0,base,common,creature
+Chaurus Eggs,22,10,0.2,Weakness to Poison,2,30,Fortify Stamina,4,60,Damage Magicka,3,0,Invisibility,0,4,base,uncommon,creature
 Chaurus Hunter Antennae,23,2,0.1,Damage Stamina,3,0,Fortify Conjuration,5,60,Damage Magicka Regen,100,5,Fortify Enchanting,1,30,dawnguard,rare,creature
 Chicken Egg,24,2,0.5,Resist Magic,1,60,Damage Magicka Regen,100,5,Waterbreathing,1,5,Lingering Damage Stamina,1,10,base,common,food
 Creep Cluster,25,1,0.2,Restore Magicka,5,0,Damage Stamina Regen,100,5,Fortify Carry Weight,4,300,Weakness to Magic,2,30,base,common,plant
-Crimson Nirnroot,26,10,0.2,Damage Health,6,1,Damage Stamina,9,0,Invisibility,1,4,Resist Magic,1,60,base,very_rare,plant
-Cyrodilic Spadetail,27,15,0.25,Damage Stamina,3,0,Fortify Restoration,5,60,Fear,1,30,Ravage Health,5,10,base,common,fish
+Crimson Nirnroot,26,10,0.2,Damage Health,6,1,Damage Stamina,9,0,Invisibility,0,4,Resist Magic,2,60,base,very_rare,plant
+Cyrodilic Spadetail,27,15,0.25,Damage Stamina,3,0,Fortify Restoration,4,60,Fear,1,30,Ravage Health,2,10,base,common,fish
 Daedra Heart,28,250,0.5,Restore Health,5,0,Damage Stamina Regen,100,5,Damage Magicka,3,0,Fear,1,30,base,very_rare,creature
-Deathbell,29,4,0.1,Damage Health,3,1,Ravage Stamina,2,20,Slow,50,5,Weakness to Poison,2,30,base,common,plant
+Deathbell,29,4,0.1,Damage Health,3,1,Ravage Stamina,2,10,Slow,50,5,Weakness to Poison,2,30,base,common,plant
 Dragon's Tongue,30,5,0.1,Resist Fire,3,60,Fortify Barter,1,30,Fortify Illusion,4,60,Fortify Two-Handed,4,60,base,uncommon,plant
 Dwarven Oil,31,15,0.3,Weakness to Magic,2,30,Fortify Illusion,4,60,Regenerate Magicka,5,300,Restore Magicka,5,0,base,uncommon,crafting
 Ectoplasm,32,25,0.1,Restore Magicka,5,0,Fortify Destruction,4,60,Fortify Magicka,4,60,Damage Health,2,1,base,rare,creature
-Elves Ear,33,10,0.1,Restore Magicka,5,0,Fortify Marksman,4,60,Weakness to Frost,2,30,Resist Fire,3,30,base,common,plant
-Emperor Parasol Moss,34,1,0.1,Damage Health,2,1,Fortify Two-Handed,4,60,Regenerate Health,5,300,Fortify Magicka,4,60,dragonborn,common,plant
-Eye of Sabre Cat,35,2,0.1,Restore Stamina,5,0,Ravage Health,2,10,Damage Magicka,3,0,Restore Health,5,0,base,uncommon,creature
+Elves Ear,33,10,0.1,Restore Magicka,5,0,Fortify Marksman,4,60,Weakness to Frost,3,30,Resist Fire,3,60,base,common,plant
+Emperor Parasol Moss,34,1,0.1,Damage Health,3,1,Fortify Magicka,4,60,Regenerate Health,5,300,Fortify Two-Handed,4,60,dragonborn,common,plant
+Eye of Sabre Cat,35,2,0.1,Restore Stamina,2,1,Ravage Health,2,10,Damage Magicka,3,0,Restore Health,5,0,base,uncommon,creature
 Falmer Ear,36,10,0.2,Damage Health,2,1,Frenzy,1,10,Resist Poison,4,60,Fortify Lockpicking,2,30,base,rare,creature
-Felsaad Tern Feathers,37,15,0.1,Restore Health,5,0,Fortify Light Armor,2,60,Cure Disease,2,0,Resist Magic,1,60,dragonborn,uncommon,creature
+Felsaad Tern Feathers,37,15,0.1,Restore Health,5,0,Fortify Light Armor,2,60,Cure Disease,5,0,Resist Magic,2,60,dragonborn,uncommon,creature
 Fire Salts,38,50,0.3,Weakness to Frost,3,30,Resist Fire,3,60,Restore Magicka,5,0,Regenerate Magicka,5,300,base,rare,crafting
 Fly Amanita,39,2,0.1,Resist Fire,3,60,Fortify Two-Handed,4,60,Frenzy,1,10,Regenerate Stamina,5,300,base,common,fungus
-Frost Mirriam,40,1,0.1,Resist Frost,50,60,Fortify Sneak,5,60,Ravage Magicka,5,10,Damage Stamina Regen,100,5,base,uncommon,plant
+Frost Mirriam,40,1,0.1,Resist Frost,3,60,Fortify Sneak,4,60,Ravage Magicka,2,10,Damage Stamina Regen,100,5,base,uncommon,plant
 Frost Salts,41,100,0.3,Weakness to Fire,3,30,Resist Frost,3,60,Restore Magicka,5,0,Fortify Conjuration,5,60,base,rare,crafting
 Garlic,42,1,0.1,Resist Poison,4,60,Fortify Stamina,4,60,Regenerate Magicka,5,300,Regenerate Health,5,300,base,common,food
-Giant Lichen,43,5,0.25,Weakness to Shock,50,30,Ravage Health,5,10,Weakness to Poison,25,30,Restore Magicka,5,0,base,uncommon,fungus
-Giant's Toe,44,20,1.0,Damage Stamina,3,0,Fortify Health,4,60,Fortify Carry Weight,4,300,Damage Stamina Regen,100,5,base,rare,creature
-Gleamblossom,45,5,0.1,Resist Magic,1,60,Fear,1,30,Regenerate Health,5,300,Paralysis,1,1,dawnguard,uncommon,plant
-Glow Dust,46,20,0.1,Damage Magicka,3,0,Damage Magicka Regen,100,5,Fortify Destruction,5,60,Resist Shock,3,60,base,uncommon,creature
+Giant Lichen,43,5,0.25,Weakness to Shock,3,30,Ravage Health,2,10,Weakness to Poison,2,30,Restore Magicka,5,0,base,uncommon,fungus
+Giant's Toe,44,20,1.0,Damage Stamina,3,0,Fortify Health,4,300,Fortify Carry Weight,4,300,Damage Stamina Regen,100,5,base,rare,creature
+Gleamblossom,45,5,0.1,Resist Magic,2,60,Fear,1,30,Regenerate Health,5,300,Paralysis,0,1,dawnguard,uncommon,plant
+Glow Dust,46,20,0.5,Damage Magicka,3,0,Damage Magicka Regen,100,5,Fortify Destruction,5,60,Resist Shock,3,60,base,uncommon,creature
 Glowing Mushroom,47,5,0.2,Resist Shock,3,60,Fortify Destruction,5,60,Fortify Smithing,4,30,Fortify Health,4,60,base,common,fungus
 Grass Pod,48,1,0.1,Resist Poison,4,60,Ravage Magicka,2,10,Fortify Alteration,4,60,Restore Magicka,5,0,base,common,plant
-Hagraven Claw,49,20,0.1,Resist Magic,1,60,Lingering Damage Magicka,1,10,Fortify Enchanting,1,30,Fortify Barter,1,30,base,rare,creature
+Hagraven Claw,49,20,0.25,Resist Magic,2,60,Lingering Damage Magicka,1,10,Fortify Enchanting,1,30,Fortify Barter,1,30,base,rare,creature
 Hagraven Feathers,50,20,0.1,Damage Magicka,3,0,Fortify Conjuration,5,60,Frenzy,1,10,Weakness to Shock,3,30,base,rare,creature
 Hanging Moss,51,3,0.1,Damage Magicka,3,0,Fortify Health,4,60,Damage Magicka Regen,100,5,Fortify One-Handed,4,60,base,common,plant
 Hawk Beak,52,15,0.05,Restore Stamina,5,0,Resist Frost,3,60,Fortify Carry Weight,4,300,Resist Shock,3,60,base,uncommon,creature
-Hawk Feathers,53,5,0.05,Cure Disease,2,0,Fortify Light Armor,2,60,Fortify One-Handed,4,60,Fortify Sneak,4,60,base,uncommon,creature
-Hawk's Egg,54,5,0.5,Resist Magic,1,60,Damage Magicka Regen,100,5,Waterbreathing,1,5,Lingering Damage Stamina,1,10,hearthfire,rare,food
-Histcarp,55,6,0.3,Restore Stamina,5,0,Fortify Magicka,4,60,Damage Stamina Regen,100,5,Waterbreathing,1,5,base,common,fish
+Hawk Feathers,53,5,0.05,Cure Disease,5,0,Fortify Light Armor,2,60,Fortify One-Handed,4,60,Fortify Sneak,4,60,base,uncommon,creature
+Hawk's Egg,54,5,0.5,Resist Magic,2,60,Damage Magicka Regen,100,5,Waterbreathing,0,5,Lingering Damage Stamina,1,10,hearthfire,rare,food
+Histcarp,55,6,0.3,Restore Stamina,5,0,Fortify Magicka,4,60,Damage Stamina Regen,100,5,Waterbreathing,0,5,base,common,fish
 Honeycomb,56,5,0.1,Restore Stamina,5,0,Fortify Block,2,60,Fortify Light Armor,2,60,Ravage Stamina,2,10,base,common,creature
-Human Flesh,57,1,1.0,Damage Health,2,1,Paralysis,1,1,Restore Magicka,5,0,Fortify Sneak,4,60,base,very_rare,creature
-Human Heart,58,1,1.0,Damage Health,2,1,Damage Magicka,3,0,Damage Magicka Regen,100,5,Frenzy,1,10,base,very_rare,creature
-Ice Wraith Teeth,59,30,0.1,Weakness to Frost,3,30,Fortify Heavy Armor,2,60,Invisibility,1,4,Weakness to Fire,3,30,base,rare,creature
-Imp Stool,60,1,0.1,Damage Health,2,1,Lingering Damage Health,1,10,Paralysis,1,1,Restore Health,3,0,base,common,fungus
+Human Flesh,57,1,1.0,Damage Health,2,1,Paralysis,0,1,Restore Magicka,5,0,Fortify Sneak,4,60,base,very_rare,creature
+Human Heart,58,0,1.0,Damage Health,2,1,Damage Magicka,3,0,Damage Magicka Regen,100,5,Frenzy,1,10,base,very_rare,creature
+Ice Wraith Teeth,59,30,0.1,Weakness to Frost,3,30,Fortify Heavy Armor,2,60,Invisibility,0,4,Weakness to Fire,3,30,base,rare,creature
+Imp Stool,60,0,0.1,Damage Health,2,1,Lingering Damage Health,1,10,Paralysis,0,1,Restore Health,3,0,base,common,fungus
 Jarrin Root,61,1,0.1,Damage Health,200,1,Damage Magicka,3,0,Damage Stamina,3,0,Damage Magicka Regen,100,5,base,unique,plant
 Jazbay Grapes,62,1,0.1,Weakness to Magic,2,30,Fortify Magicka,4,60,Regenerate Magicka,5,300,Ravage Health,2,10,base,common,plant
 Juniper Berries,63,1,0.1,Weakness to Fire,3,30,Fortify Marksman,4,60,Regenerate Health,5,300,Damage Stamina Regen,100,5,base,common,plant
-Large Antlers,64,2,1.0,Restore Stamina,5,0,Fortify Stamina,4,60,Slow,5,30,Damage Stamina Regen,100,5,base,uncommon,creature
-Lavender,65,3,0.1,Resist Magic,1,60,Fortify Stamina,4,60,Ravage Magicka,2,10,Fortify Conjuration,4,60,base,common,plant
-Luna Moth Wing,66,5,0.1,Damage Magicka,3,0,Fortify Light Armor,2,60,Regenerate Health,5,300,Invisibility,1,4,base,uncommon,creature
+Large Antlers,64,2,1.0,Restore Stamina,5,0,Fortify Stamina,4,60,Slow,50,5,Damage Stamina Regen,100,5,base,uncommon,creature
+Lavender,65,3,0.1,Resist Magic,2,60,Fortify Stamina,4,60,Ravage Magicka,2,10,Fortify Conjuration,5,60,base,common,plant
+Luna Moth Wing,66,5,0.1,Damage Magicka,3,0,Fortify Light Armor,2,60,Regenerate Health,5,300,Invisibility,0,4,base,uncommon,creature
 Moon Sugar,67,50,0.3,Weakness to Fire,3,30,Resist Frost,3,60,Restore Magicka,5,0,Regenerate Magicka,5,300,base,uncommon,drug
 Mora Tapinella,68,4,0.1,Restore Magicka,5,0,Lingering Damage Health,1,10,Regenerate Stamina,5,300,Fortify Illusion,4,60,base,common,fungus
 Mudcrab Chitin,69,2,0.1,Restore Stamina,5,0,Cure Disease,5,0,Resist Poison,4,60,Resist Fire,3,60,base,common,creature
 Namira's Rot,70,0,0.1,Damage Magicka,3,0,Fortify Lockpicking,2,30,Fear,1,30,Regenerate Health,5,300,base,rare,fungus
-Netch Jelly,71,10,0.2,Paralysis,1,1,Fortify Carry Weight,4,300,Restore Stamina,5,0,Fear,1,30,dragonborn,uncommon,creature
+Netch Jelly,71,10,0.2,Paralysis,0,1,Fortify Carry Weight,4,300,Restore Stamina,10,0,Fear,1,30,dragonborn,uncommon,creature
 Nightshade,72,8,0.1,Damage Health,2,1,Damage Magicka Regen,100,5,Lingering Damage Stamina,1,10,Fortify Destruction,4,60,base,uncommon,plant
-Nirnroot,73,10,0.2,Damage Health,2,0,Damage Stamina,3,0,Invisibility,1,4,Resist Magic,1,60,base,rare,plant
-Nordic Barnacle,74,5,0.2,Damage Magicka,3,0,Waterbreathing,1,5,Regenerate Health,5,300,Fortify Pickpocket,4,60,base,common,creature
+Nirnroot,73,10,0.2,Damage Health,2,1,Damage Stamina,3,0,Invisibility,0,4,Resist Magic,2,60,base,rare,plant
+Nordic Barnacle,74,5,0.2,Damage Magicka,3,0,Waterbreathing,0,5,Regenerate Health,5,300,Fortify Pickpocket,4,60,base,common,creature
 Orange Dartwing,75,1,0.1,Restore Stamina,5,0,Ravage Magicka,2,10,Fortify Pickpocket,4,60,Lingering Damage Health,1,10,base,common,creature
 Pearl,76,2,0.1,Restore Stamina,5,0,Fortify Block,4,60,Restore Magicka,5,0,Resist Shock,3,60,base,uncommon,misc
-Pine Thrush Egg,77,2,0.1,Restore Stamina,5,0,Fortify Lockpicking,2,30,Weakness to Poison,2,30,Resist Shock,3,60,base,common,food
+Pine Thrush Egg,77,2,0.5,Restore Stamina,5,0,Fortify Lockpicking,2,30,Weakness to Poison,2,30,Resist Shock,3,60,base,common,food
 Poison Bloom,78,5,0.1,Damage Health,3,1,Slow,50,5,Fortify Carry Weight,4,300,Fear,1,30,dawnguard,uncommon,plant
 Powdered Mammoth Tusk,79,2,0.1,Restore Stamina,5,0,Fortify Sneak,4,60,Weakness to Fire,3,30,Fear,1,30,base,uncommon,creature
 Purple Mountain Flower,80,2,0.1,Restore Stamina,5,0,Fortify Sneak,4,60,Lingering Damage Magicka,1,10,Resist Frost,3,60,base,common,plant
 Red Mountain Flower,81,2,0.1,Restore Magicka,5,0,Ravage Magicka,2,10,Fortify Magicka,4,60,Damage Health,2,1,base,common,plant
-River Betty,82,15,0.3,Damage Health,5,0,Fortify Alteration,4,60,Slow,50,5,Fortify Carry Weight,4,300,base,uncommon,fish
-Rock Warbler Egg,83,2,0.1,Restore Health,5,0,Fortify One-Handed,4,60,Damage Stamina,3,0,Weakness to Magic,2,30,base,common,food
+River Betty,82,15,0.3,Damage Health,5,1,Fortify Alteration,4,60,Slow,50,5,Fortify Carry Weight,4,300,base,uncommon,fish
+Rock Warbler Egg,83,2,0.5,Restore Health,5,0,Fortify One-Handed,4,60,Damage Stamina,3,0,Weakness to Magic,2,30,base,common,food
 Sabre Cat Tooth,84,2,0.1,Restore Stamina,5,0,Fortify Heavy Armor,2,60,Fortify Smithing,4,30,Weakness to Poison,2,30,base,uncommon,creature
-Salmon Roe,85,5,0.2,Restore Stamina,5,0,Waterbreathing,1,60,Fortify Magicka,50,5,Regenerate Magicka,5,300,hearthfire,rare,food
+Salmon Roe,85,5,0.2,Restore Stamina,2,0,Waterbreathing,0,60,Fortify Magicka,50,5,Regenerate Magicka,5,300,hearthfire,rare,food
 Salt Pile,86,2,0.2,Weakness to Magic,2,30,Fortify Restoration,4,60,Slow,50,5,Regenerate Magicka,5,300,base,common,crafting
 Scaly Pholiota,87,4,0.1,Weakness to Magic,2,30,Fortify Illusion,4,60,Regenerate Stamina,5,300,Fortify Carry Weight,4,300,base,common,fungus
-Scathecraw,88,1,0.1,Ravage Health,2,10,Ravage Stamina,2,10,Ravage Magicka,2,10,Restore Health,5,0,dragonborn,common,plant
+Scathecraw,88,1,0.1,Ravage Health,2,10,Ravage Stamina,2,10,Ravage Magicka,2,10,Lingering Damage Health,1,10,dragonborn,common,plant
 Silverside Perch,89,15,0.3,Restore Stamina,5,0,Damage Stamina Regen,100,5,Ravage Health,2,10,Resist Frost,3,60,base,common,fish
-Skeever Tail,90,3,0.1,Damage Stamina Regen,100,5,Ravage Health,2,10,Damage Health,2,1,Fortify Light Armor,2,60,base,common,creature
+Skeever Tail,90,3,0.2,Damage Stamina Regen,100,5,Ravage Health,2,10,Damage Health,2,1,Fortify Light Armor,2,60,base,common,creature
 Slaughterfish Egg,91,3,0.2,Resist Poison,4,60,Fortify Pickpocket,4,60,Lingering Damage Health,1,10,Fortify Stamina,4,60,base,common,fish
 Slaughterfish Scales,92,3,0.1,Resist Frost,3,60,Lingering Damage Health,1,10,Fortify Heavy Armor,2,60,Fortify Block,4,60,base,common,fish
 Small Antlers,93,2,0.1,Weakness to Poison,2,30,Fortify Restoration,4,60,Lingering Damage Stamina,1,10,Damage Health,2,1,base,common,creature
@@ -97,16 +97,16 @@ Snowberries,95,4,0.1,Resist Fire,3,60,Fortify Enchanting,1,30,Resist Frost,3,60,
 Spawn Ash,96,20,0.1,Ravage Stamina,2,10,Resist Fire,3,60,Fortify Enchanting,1,30,Ravage Magicka,2,10,dragonborn,uncommon,creature
 Spider Egg,97,3,0.1,Damage Stamina,3,0,Damage Magicka Regen,100,5,Fortify Lockpicking,2,30,Fortify Marksman,4,60,base,common,creature
 Spriggan Sap,98,15,0.2,Damage Magicka Regen,100,5,Fortify Enchanting,1,30,Fortify Smithing,4,30,Fortify Alteration,4,60,base,rare,creature
-Swamp Fungal Pod,99,3,0.2,Resist Shock,3,60,Lingering Damage Magicka,1,10,Paralysis,1,1,Restore Health,5,0,base,common,fungus
-Taproot,100,15,0.1,Weakness to Magic,2,30,Fortify Illusion,4,60,Regenerate Magicka,5,300,Restore Magicka,5,0,base,uncommon,plant
-Thistle Branch,101,1,0.1,Resist Frost,3,60,Ravage Stamina,2,10,Fortify Heavy Armor,2,60,Resist Poison,3,60,base,common,plant
+Swamp Fungal Pod,99,3,0.2,Resist Shock,3,60,Lingering Damage Magicka,1,10,Paralysis,0,1,Restore Health,5,0,base,common,fungus
+Taproot,100,15,0.5,Weakness to Magic,2,30,Fortify Illusion,4,60,Regenerate Magicka,5,300,Restore Magicka,5,0,base,uncommon,plant
+Thistle Branch,101,1,0.1,Resist Frost,3,60,Ravage Stamina,2,10,Resist Poison,3,0,Fortify Heavy Armor,2,60,base,common,plant
 Torchbug Thorax,102,1,0.1,Restore Stamina,5,0,Lingering Damage Magicka,1,10,Weakness to Magic,2,30,Fortify Stamina,4,60,base,common,creature
 Trama Root,103,1,0.1,Weakness to Shock,3,30,Fortify Carry Weight,4,300,Damage Magicka,3,0,Slow,50,5,dragonborn,common,plant
-Troll Fat,104,15,0.1,Resist Poison,4,60,Fortify Two-Handed,4,60,Frenzy,1,10,Damage Health,2,1,base,uncommon,creature
-Tundra Cotton,105,1,0.1,Resist Magic,1,60,Fortify Magicka,4,60,Fortify Block,4,60,Fortify Barter,1,30,base,common,plant
-Vampire Dust,106,25,0.2,Invisibility,1,4,Restore Magicka,5,0,Regenerate Health,5,300,Cure Disease,5,0,base,rare,creature
-Void Salts,107,125,0.2,Weakness to Shock,3,30,Resist Magic,1,60,Damage Health,2,1,Fortify Magicka,4,60,base,rare,crafting
+Troll Fat,104,15,1.0,Resist Poison,4,60,Fortify Two-Handed,4,60,Frenzy,1,10,Damage Health,2,1,base,uncommon,creature
+Tundra Cotton,105,1,0.1,Resist Magic,2,60,Fortify Magicka,4,60,Fortify Block,4,60,Fortify Barter,1,30,base,common,plant
+Vampire Dust,106,25,0.2,Invisibility,0,4,Restore Magicka,5,0,Regenerate Health,5,300,Cure Disease,5,0,base,rare,creature
+Void Salts,107,125,0.2,Weakness to Shock,3,30,Resist Magic,2,60,Damage Health,2,1,Fortify Magicka,4,60,base,rare,crafting
 Wheat,108,5,0.1,Restore Health,5,0,Fortify Health,4,60,Damage Stamina Regen,100,5,Lingering Damage Magicka,1,10,base,common,food
 White Cap,109,0,0.3,Weakness to Frost,3,30,Fortify Heavy Armor,2,60,Restore Magicka,5,0,Ravage Magicka,2,10,base,common,fungus
-Wisp Wrappings,110,2,0.1,Restore Stamina,5,0,Fortify Destruction,5,60,Fortify Carry Weight,4,300,Resist Magic,1,60,base,rare,creature
+Wisp Wrappings,110,2,0.1,Restore Stamina,5,0,Fortify Destruction,5,60,Fortify Carry Weight,4,300,Resist Magic,2,60,base,rare,creature
 Yellow Mountain Flower,111,2,0.1,Resist Poison,4,60,Fortify Restoration,5,60,Fortify Health,4,60,Damage Stamina Regen,100,5,dawnguard,common,plant
