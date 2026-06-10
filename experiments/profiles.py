@@ -7,6 +7,7 @@ import networkx as nx
 
 from experiments.utils import tee_stdout, RESULTS_DIR
 from alchemy.database import IngredientsDatabase
+from alchemy.inventory import Inventory
 from alchemy.player import Player
 from alchemy.potion import Potion
 
@@ -26,6 +27,31 @@ def _enumerate_valid_potions(ingredients, player, db):
             if _shared_effects(combo):
                 try:
                     potions.append(Potion(list(combo), player, db))
+                except ValueError:
+                    pass
+    return potions
+
+
+def _jarrin_root_potions(ingredients, player, db):
+    """Valid potions that *include* Jarrin Root.
+
+    Jarrin Root is filtered out of the main recipe enumeration (a quest item, not
+    foraged), so it ends up with no ideal recipes. This recomputes only the combos
+    containing it, kept separate from the main pass and patched back into its
+    profile afterwards. Mirrors _enumerate_valid_potions, restricted to Jarrin
+    Root combos (size 1/2 of other ingredients -> 2-/3-ingredient potions).
+    """
+    jarrin = db.get_ingredient(Inventory.JARRIN_ROOT)
+    if jarrin is None:
+        return []
+    others = [i for i in ingredients if i.name != Inventory.JARRIN_ROOT]
+    potions: list[Potion] = []
+    for size in (1, 2):
+        for combo in combinations(others, size):
+            full = [jarrin, *combo]
+            if _shared_effects(full):
+                try:
+                    potions.append(Potion(full, player, db))
                 except ValueError:
                     pass
     return potions
@@ -233,7 +259,12 @@ def _run_profiles_inner():
     G = _build_synergy_graph(ingredients)
 
     print("Computing valid potions for ideal recipes (base player)...")
-    base_potions = _enumerate_valid_potions(ingredients, Player(), db)
+    # Mirror inventory generation: Jarrin Root is a fixed-quantity quest item, not
+    # a foraged ingredient, so it must not appear in "best recipes". (The synergy
+    # graph above still includes it, so it keeps a profile and can be referenced as
+    # a partner — it just can't be a recipe ingredient.)
+    recipe_ingredients = [i for i in ingredients if i.name != Inventory.JARRIN_ROOT]
+    base_potions = _enumerate_valid_potions(recipe_ingredients, Player(), db)
     base_potions_by_ingredient = _index_potions_by_ingredient(base_potions, ingredients)
 
     print("Building profiles...")
@@ -241,6 +272,19 @@ def _run_profiles_inner():
         ing.name: _build_ingredient_profile(ing, G, effect_sharing, effects_db, base_potions_by_ingredient)
         for ing in ingredients
     }
+
+    # Jarrin Root is absent from the main recipe pool, so its profile has no ideal
+    # recipes. Compute them separately and patch them (plus the potion count) back
+    # in, so its profile is complete without polluting everyone else's recipes.
+    if Inventory.JARRIN_ROOT in profiles:
+        print("Patching in Jarrin Root's best recipes (computed separately)...")
+        jr_potions = _jarrin_root_potions(ingredients, Player(), db)
+        jr_2, jr_3 = _best_potion(jr_potions, 2), _best_potion(jr_potions, 3)
+        profiles[Inventory.JARRIN_ROOT].update({
+            "valid_potion_count": len(jr_potions),
+            "ideal_2_ingredient_potion": jr_2.to_dict() if jr_2 else None,
+            "ideal_3_ingredient_potion": jr_3.to_dict() if jr_3 else None,
+        })
 
     _save_results(profiles, base_potions)
     _print_profiles_report(profiles)
