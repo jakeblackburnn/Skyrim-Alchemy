@@ -1,7 +1,7 @@
 # Development Dockerfile for Skyrim Alchemy Calculator
 # Optimized for local development with hot-reload and debugging
 
-FROM python:3.11-slim
+FROM python:3.14-slim
 
 # Set environment variables for development
 ENV PYTHONUNBUFFERED=1 \
@@ -15,7 +15,7 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Install Python dependencies
-# Note: NumPy/Pandas come with prebuilt wheels for Python 3.11
+# Note: NumPy/Pandas come with prebuilt wheels for Python 3.14
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
