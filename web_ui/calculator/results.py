@@ -47,3 +47,17 @@ def available_experiments():
     """Names of experiments that currently have at least one result file on disk."""
     return [name for name, pattern in EXPERIMENT_PATTERNS.items()
             if glob.glob(str(settings.RESULTS_DIR / pattern))]
+
+
+def load_ingredient_profile(slug):
+    """Load one ingredient's profile written by experiments/profiles.py.
+
+    profiles.py splits its combined output into results/ingredients/<slug>.json
+    (slug = lowercased name, non-alphanumeric runs -> '_'). Returns the parsed
+    {metadata, profile} payload, or None if there's no file for `slug`.
+    """
+    path = settings.RESULTS_DIR / 'ingredients' / f'{slug}.json'
+    if not path.exists():
+        return None
+    with open(path) as f:
+        return json.load(f)

@@ -108,6 +108,25 @@ def insights_api(request):
 
 
 @require_http_methods(["GET"])
+def ingredient_profile_api(request, slug):
+    """
+    GET /api/ingredient/<slug>
+    Serves one ingredient's precomputed profile (synergies, ideal recipes,
+    substitutability, ...) from results/ingredients/<slug>.json. The browser
+    lazy-fetches this when an ingredient is selected. 404 if no profile exists
+    (e.g. profiles.py hasn't been run, or the dataset changed).
+    Run experiments/profiles.py to refresh.
+    """
+    profile = results.load_ingredient_profile(slug)
+    if profile is None:
+        return JsonResponse(
+            {"error": f"No profile for '{slug}'. Run experiments/profiles.py."},
+            status=404,
+        )
+    return JsonResponse(profile)
+
+
+@require_http_methods(["GET"])
 def results_api(request, experiment):
     """
     GET /api/results/<experiment>

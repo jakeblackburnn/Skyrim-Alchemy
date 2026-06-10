@@ -38,6 +38,7 @@ function InsightsTab({ theme }) {
     .map(([name, d]) => ({
       name,
       avg_potion_value: d.avg_potion_value,
+      stderr_potion_value: d.stderr_potion_value,
       avg_contribution: d.avg_contribution,
       appearance_rate: d.appearance_rate,
     }))
@@ -51,14 +52,36 @@ function InsightsTab({ theme }) {
   const Shared = window;
   const HBar = (props) => <Shared.HBar theme={t} {...props}/>;
   const Card = (props) => <Shared.Card theme={t} {...props}/>;
+  const StatChip = (props) => <Shared.StatChip theme={t} {...props}/>;
 
-  const subtitle = data.average_value != null
-    ? `Average total gold value each ingredient contributes per crafting session, ranked across ${round(data.average_potions)} potions per session at ${round(data.average_value)}g avg session value. Bars and right-hand figure show contribution; "avg" is the mean value of potions the ingredient appears in.`
-    : `Average total gold value each ingredient contributes per crafting session. Bars and right-hand figure show contribution; "avg" is the mean value of potions the ingredient appears in.`;
+  const subtitle = 'Average potion value contribution across a massive number of random simulations.';
+
+  // Global stats — derived from the run-level fields the API already returns.
+  // `n` (simulation count) isn't stored directly; recover it from totals/averages.
+  const simulations = data.average_potions ? Math.round(data.total_potions / data.average_potions) : null;
+  const globalStats = [
+    simulations != null && { label: 'Simulations',       value: round(simulations) },
+    data.total_potions != null && { label: 'Total Potions',     value: round(data.total_potions) },
+    data.total_value   != null && { label: 'Total Value',       value: `${round(data.total_value)}g` },
+    data.average_value != null && { label: 'Avg Session Value', value: `${round(data.average_value)}g` },
+  ].filter(Boolean);
+
+  // Native tooltip per ingredient, from the fields present in the results JSON.
+  const hoverTitle = ing => [
+    `Appearance rate: ${(ing.appearance_rate * 100).toFixed(1)}%`,
+    `Avg potion value: ${round(ing.avg_potion_value)}g`,
+    ing.stderr_potion_value != null ? `Std error: ±${ing.stderr_potion_value.toFixed(1)}g` : null,
+    `Contribution: ${round(ing.avg_contribution)}g`,
+  ].filter(Boolean).join('\n');
 
   return (
     <div style={{ overflowY:'auto', height:'calc(100vh - 140px)', paddingBottom:40 }}>
       <Card title="Ingredient Performance" subtitle={subtitle}>
+        {globalStats.length > 0 && (
+          <div style={{ display:'flex', flexWrap:'wrap', gap:24, marginBottom:20, paddingBottom:16, borderBottom:`1px solid ${t.border}` }}>
+            {globalStats.map(s => <StatChip key={s.label} label={s.label} value={s.value}/>)}
+          </div>
+        )}
         {ingredients.map((ing, i) => (
           <HBar
             key={ing.name}
@@ -67,7 +90,7 @@ function InsightsTab({ theme }) {
             maxVal={maxContribution}
             color={t.accent}
             right={`${round(ing.avg_contribution)}g`}
-            sub={`${round(ing.avg_potion_value)}g avg`}
+            title={hoverTitle(ing)}
           />
         ))}
       </Card>
