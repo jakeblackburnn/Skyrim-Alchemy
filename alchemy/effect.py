@@ -74,6 +74,10 @@ class Effect:
         if duration == 0:
             duration = 10
 
+        # mag=0; treat as 1 so mag^1.1 evaluates to 1.0 instead of zeroing the value
+        if magnitude == 0:
+            magnitude = 1
+
         return math.floor(self.base_cost * pow(magnitude, 1.1) * pow(duration / 10, 1.1))
 
     # formula for scaling the magnitude or duration from actual game logic
