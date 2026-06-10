@@ -1,0 +1,113 @@
+{
+  "metadata": {
+    "name": "Felsaad Tern Feathers",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 31,
+    "synergy_by_order": {
+      "1": 28,
+      "2": 3,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Beehive Husk",
+        "Bleeding Crown",
+        "Blisterwort",
+        "Blue Dartwing",
+        "Blue Mountain Flower",
+        "Butterfly Wing",
+        "Chicken Egg",
+        "Crimson Nirnroot",
+        "Daedra Heart",
+        "Eye of Sabre Cat",
+        "Gleamblossom",
+        "Hagraven Claw",
+        "Hawk's Egg",
+        "Honeycomb",
+        "Imp Stool",
+        "Lavender",
+        "Luna Moth Wing",
+        "Mudcrab Chitin",
+        "Nirnroot",
+        "Rock Warbler Egg",
+        "Skeever Tail",
+        "Swamp Fungal Pod",
+        "Tundra Cotton",
+        "Vampire Dust",
+        "Void Salts",
+        "Wheat",
+        "Wisp Wrappings"
+      ],
+      "2": [
+        "Ash Hopper Jelly",
+        "Charred Skeever Hide",
+        "Hawk Feathers"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 34,
+    "unique_effects": [],
+    "substitutability": 8.5,
+    "effect_type_balance": {
+      "beneficial": 4,
+      "poison": 0
+    },
+    "perk_alignment": [
+      "benefactor",
+      "physician"
+    ],
+    "valid_potion_count": 1067,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Resist Magic",
+      "ingredients": [
+        "Bleeding Crown",
+        "Felsaad Tern Feathers"
+      ],
+      "total_value": 80,
+      "effects": [
+        {
+          "name": "Resist Magic",
+          "description": "Resist 9% of magic for 60 seconds.",
+          "magnitude": 9,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Chicken Egg",
+        "Felsaad Tern Feathers",
+        "Salmon Roe"
+      ],
+      "total_value": 1151,
+      "effects": [
+        {
+          "name": "Resist Magic",
+          "description": "Resist 9% of magic for 60 seconds.",
+          "magnitude": 9,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "uncommon",
+    "dlc": true
+  }
+}

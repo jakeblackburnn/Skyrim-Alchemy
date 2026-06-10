@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "name": "Bleeding Crown",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 29,
+    "synergy_by_order": {
+      "1": 28,
+      "2": 1,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Abecean Longfin",
+        "Boar Tusk",
+        "Briar Heart",
+        "Burnt Spriggan Wood",
+        "Chaurus Eggs",
+        "Chicken Egg",
+        "Crimson Nirnroot",
+        "Deathbell",
+        "Felsaad Tern Feathers",
+        "Frost Salts",
+        "Giant Lichen",
+        "Gleamblossom",
+        "Hagraven Claw",
+        "Hawk's Egg",
+        "Honeycomb",
+        "Ice Wraith Teeth",
+        "Juniper Berries",
+        "Lavender",
+        "Moon Sugar",
+        "Nirnroot",
+        "Pearl",
+        "Pine Thrush Egg",
+        "Powdered Mammoth Tusk",
+        "Sabre Cat Tooth",
+        "Slaughterfish Scales",
+        "Small Antlers",
+        "Void Salts",
+        "Wisp Wrappings"
+      ],
+      "2": [
+        "Tundra Cotton"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 30,
+    "unique_effects": [],
+    "substitutability": 7.5,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 1001,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Block",
+      "ingredients": [
+        "Bleeding Crown",
+        "Tundra Cotton"
+      ],
+      "total_value": 160,
+      "effects": [
+        {
+          "name": "Fortify Block",
+          "description": "Blocking absorbs 17% more damage for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        },
+        {
+          "name": "Resist Magic",
+          "description": "Resist 9% of magic for 60 seconds.",
+          "magnitude": 9,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Bleeding Crown",
+        "Chicken Egg",
+        "Salmon Roe"
+      ],
+      "total_value": 1151,
+      "effects": [
+        {
+          "name": "Resist Magic",
+          "description": "Resist 9% of magic for 60 seconds.",
+          "magnitude": 9,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "uncommon",
+    "dlc": false
+  }
+}

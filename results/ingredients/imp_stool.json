@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "name": "Imp Stool",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 39,
+    "synergy_by_order": {
+      "1": 37,
+      "2": 2,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Ash Hopper Jelly",
+        "Blisterwort",
+        "Blue Dartwing",
+        "Blue Mountain Flower",
+        "Briar Heart",
+        "Butterfly Wing",
+        "Canis Root",
+        "Charred Skeever Hide",
+        "Crimson Nirnroot",
+        "Daedra Heart",
+        "Deathbell",
+        "Ectoplasm",
+        "Emperor Parasol Moss",
+        "Eye of Sabre Cat",
+        "Falmer Ear",
+        "Felsaad Tern Feathers",
+        "Gleamblossom",
+        "Human Heart",
+        "Jarrin Root",
+        "Mora Tapinella",
+        "Netch Jelly",
+        "Nightshade",
+        "Nirnroot",
+        "Orange Dartwing",
+        "Poison Bloom",
+        "Red Mountain Flower",
+        "River Betty",
+        "Rock Warbler Egg",
+        "Scathecraw",
+        "Skeever Tail",
+        "Slaughterfish Egg",
+        "Slaughterfish Scales",
+        "Small Antlers",
+        "Troll Fat",
+        "Void Salts",
+        "Wheat"
+      ],
+      "2": [
+        "Human Flesh",
+        "Swamp Fungal Pod"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 41,
+    "unique_effects": [],
+    "substitutability": 10.25,
+    "effect_type_balance": {
+      "beneficial": 1,
+      "poison": 3
+    },
+    "perk_alignment": [
+      "physician",
+      "poisoner"
+    ],
+    "valid_potion_count": 1364,
+    "ideal_2_ingredient_potion": {
+      "name": "Poison of Paralysis",
+      "ingredients": [
+        "Imp Stool",
+        "Swamp Fungal Pod"
+      ],
+      "total_value": 196,
+      "effects": [
+        {
+          "name": "Paralysis",
+          "description": "Target is paralyzed for 4 seconds.",
+          "magnitude": 0,
+          "duration": 4,
+          "value": 182,
+          "is_poison": true
+        },
+        {
+          "name": "Restore Health",
+          "description": "Restore 22 points of Health.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 14,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Health",
+      "ingredients": [
+        "Giant's Toe",
+        "Imp Stool",
+        "Wheat"
+      ],
+      "total_value": 459,
+      "effects": [
+        {
+          "name": "Fortify Health",
+          "description": "Health is increased by 17 points for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 332,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Stamina Regen",
+          "description": "Decrease the target's Stamina regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 113,
+          "is_poison": true
+        },
+        {
+          "name": "Restore Health",
+          "description": "Restore 22 points of Health.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 14,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

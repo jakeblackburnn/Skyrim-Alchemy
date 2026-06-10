@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "name": "Mudcrab Chitin",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 41,
+    "synergy_by_order": {
+      "1": 40,
+      "2": 0,
+      "3": 1,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Ash Creep Cluster",
+        "Ashen Grass Pod",
+        "Bear Claws",
+        "Bee",
+        "Beehive Husk",
+        "Bone Meal",
+        "Dragon's Tongue",
+        "Elves Ear",
+        "Eye of Sabre Cat",
+        "Falmer Ear",
+        "Felsaad Tern Feathers",
+        "Fire Salts",
+        "Fly Amanita",
+        "Garlic",
+        "Grass Pod",
+        "Hawk Beak",
+        "Hawk Feathers",
+        "Histcarp",
+        "Honeycomb",
+        "Large Antlers",
+        "Netch Jelly",
+        "Orange Dartwing",
+        "Pearl",
+        "Pine Thrush Egg",
+        "Powdered Mammoth Tusk",
+        "Purple Mountain Flower",
+        "Sabre Cat Tooth",
+        "Salmon Roe",
+        "Silverside Perch",
+        "Slaughterfish Egg",
+        "Small Pearl",
+        "Snowberries",
+        "Spawn Ash",
+        "Thistle Branch",
+        "Torchbug Thorax",
+        "Troll Fat",
+        "Vampire Dust",
+        "Wisp Wrappings",
+        "Yellow Mountain Flower"
+      ],
+      "2": [],
+      "3": [
+        "Charred Skeever Hide"
+      ],
+      "4": []
+    },
+    "total_synergy_weight": 43,
+    "unique_effects": [],
+    "substitutability": 10.75,
+    "effect_type_balance": {
+      "beneficial": 4,
+      "poison": 0
+    },
+    "perk_alignment": [
+      "physician"
+    ],
+    "valid_potion_count": 1454,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Resist Poison",
+      "ingredients": [
+        "Charred Skeever Hide",
+        "Mudcrab Chitin"
+      ],
+      "total_value": 111,
+      "effects": [
+        {
+          "name": "Restore Stamina",
+          "description": "Restore 22 Stamina.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 17,
+          "is_poison": false
+        },
+        {
+          "name": "Cure Disease",
+          "description": "Cures all diseases.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 14,
+          "is_poison": false
+        },
+        {
+          "name": "Resist Poison",
+          "description": "Resist 17% of poison for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Histcarp",
+        "Mudcrab Chitin",
+        "Salmon Roe"
+      ],
+      "total_value": 1139,
+      "effects": [
+        {
+          "name": "Restore Stamina",
+          "description": "Restore 22 Stamina.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 17,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Magicka",
+          "description": "Magicka is increased by 215 points for 5 seconds.",
+          "magnitude": 215,
+          "duration": 5,
+          "value": 51,
+          "is_poison": false
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

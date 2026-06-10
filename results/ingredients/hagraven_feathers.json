@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "name": "Hagraven Feathers",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 29,
+    "synergy_by_order": {
+      "1": 27,
+      "2": 2,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Ancestor Moth Wing",
+        "Ashen Grass Pod",
+        "Bee",
+        "Blisterwort",
+        "Blue Butterfly Wing",
+        "Blue Mountain Flower",
+        "Boar Tusk",
+        "Bone Meal",
+        "Butterfly Wing",
+        "Chaurus Eggs",
+        "Chaurus Hunter Antennae",
+        "Daedra Heart",
+        "Eye of Sabre Cat",
+        "Falmer Ear",
+        "Fly Amanita",
+        "Frost Salts",
+        "Giant Lichen",
+        "Glow Dust",
+        "Hanging Moss",
+        "Jarrin Root",
+        "Lavender",
+        "Luna Moth Wing",
+        "Namira's Rot",
+        "Nordic Barnacle",
+        "Troll Fat",
+        "Void Salts"
+      ],
+      "2": [
+        "Human Heart",
+        "Trama Root"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 31,
+    "unique_effects": [],
+    "substitutability": 7.75,
+    "effect_type_balance": {
+      "beneficial": 1,
+      "poison": 3
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 939,
+    "ideal_2_ingredient_potion": {
+      "name": "Poison of Frenzy",
+      "ingredients": [
+        "Hagraven Feathers",
+        "Human Heart"
+      ],
+      "total_value": 104,
+      "effects": [
+        {
+          "name": "Damage Magicka",
+          "description": "Does 13 points of Magicka damage.",
+          "magnitude": 13,
+          "duration": 0,
+          "value": 36,
+          "is_poison": true
+        },
+        {
+          "name": "Frenzy",
+          "description": "Creatures and people up to level 4 will attack anything nearby for 10 seconds.",
+          "magnitude": 4,
+          "duration": 10,
+          "value": 68,
+          "is_poison": true
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Hagraven Feathers",
+        "Nordic Barnacle",
+        "Salmon Roe"
+      ],
+      "total_value": 1107,
+      "effects": [
+        {
+          "name": "Damage Magicka",
+          "description": "Does 13 points of Magicka damage.",
+          "magnitude": 13,
+          "duration": 0,
+          "value": 36,
+          "is_poison": true
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "rare",
+    "dlc": false
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "name": "Thistle Branch",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 27,
+    "synergy_by_order": {
+      "1": 26,
+      "2": 1,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Bee",
+        "Beehive Husk",
+        "Bone Meal",
+        "Charred Skeever Hide",
+        "Deathbell",
+        "Falmer Ear",
+        "Frost Mirriam",
+        "Frost Salts",
+        "Garlic",
+        "Grass Pod",
+        "Hawk Beak",
+        "Honeycomb",
+        "Ice Wraith Teeth",
+        "Moon Sugar",
+        "Mudcrab Chitin",
+        "Purple Mountain Flower",
+        "Sabre Cat Tooth",
+        "Scathecraw",
+        "Silverside Perch",
+        "Slaughterfish Egg",
+        "Small Pearl",
+        "Snowberries",
+        "Spawn Ash",
+        "Troll Fat",
+        "White Cap",
+        "Yellow Mountain Flower"
+      ],
+      "2": [
+        "Slaughterfish Scales"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 28,
+    "unique_effects": [],
+    "substitutability": 7.0,
+    "effect_type_balance": {
+      "beneficial": 3,
+      "poison": 1
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 880,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Resist Frost",
+      "ingredients": [
+        "Slaughterfish Scales",
+        "Thistle Branch"
+      ],
+      "total_value": 100,
+      "effects": [
+        {
+          "name": "Resist Frost",
+          "description": "Resist 13% of frost damage for 60 seconds.",
+          "magnitude": 13,
+          "duration": 60,
+          "value": 60,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Heavy Armor",
+          "description": "Increase Heavy Armor skill by 9 points for 60 seconds.",
+          "magnitude": 9,
+          "duration": 60,
+          "value": 40,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Health",
+      "ingredients": [
+        "Giant's Toe",
+        "Thistle Branch",
+        "Yellow Mountain Flower"
+      ],
+      "total_value": 525,
+      "effects": [
+        {
+          "name": "Fortify Health",
+          "description": "Health is increased by 17 points for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 332,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Stamina Regen",
+          "description": "Decrease the target's Stamina regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 113,
+          "is_poison": true
+        },
+        {
+          "name": "Resist Poison",
+          "description": "Resist 17% of poison for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

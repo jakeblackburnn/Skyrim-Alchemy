@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "name": "Bone Meal",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 30,
+    "synergy_by_order": {
+      "1": 25,
+      "2": 5,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Ashen Grass Pod",
+        "Bee",
+        "Blisterwort",
+        "Blue Mountain Flower",
+        "Canis Root",
+        "Crimson Nirnroot",
+        "Cyrodilic Spadetail",
+        "Deathbell",
+        "Dragon's Tongue",
+        "Elves Ear",
+        "Fire Salts",
+        "Fly Amanita",
+        "Frost Salts",
+        "Giant's Toe",
+        "Hagraven Feathers",
+        "Honeycomb",
+        "Jarrin Root",
+        "Lavender",
+        "Mudcrab Chitin",
+        "Nirnroot",
+        "Rock Warbler Egg",
+        "Scathecraw",
+        "Snowberries",
+        "Spider Egg",
+        "Thistle Branch"
+      ],
+      "2": [
+        "Ancestor Moth Wing",
+        "Ash Creep Cluster",
+        "Blue Butterfly Wing",
+        "Chaurus Hunter Antennae",
+        "Spawn Ash"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 35,
+    "unique_effects": [],
+    "substitutability": 8.75,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 947,
+    "ideal_2_ingredient_potion": {
+      "name": "Poison of Damage Stamina",
+      "ingredients": [
+        "Bone Meal",
+        "Crimson Nirnroot"
+      ],
+      "total_value": 101,
+      "effects": [
+        {
+          "name": "Damage Stamina",
+          "description": "Does 39 points of Stamina damage.",
+          "magnitude": 39,
+          "duration": 0,
+          "value": 101,
+          "is_poison": true
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Health",
+      "ingredients": [
+        "Bone Meal",
+        "Giant's Toe",
+        "Wheat"
+      ],
+      "total_value": 475,
+      "effects": [
+        {
+          "name": "Damage Stamina",
+          "description": "Does 13 points of Stamina damage.",
+          "magnitude": 13,
+          "duration": 0,
+          "value": 30,
+          "is_poison": true
+        },
+        {
+          "name": "Fortify Health",
+          "description": "Health is increased by 17 points for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 332,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Stamina Regen",
+          "description": "Decrease the target's Stamina regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 113,
+          "is_poison": true
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

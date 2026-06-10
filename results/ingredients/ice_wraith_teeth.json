@@ -1,0 +1,103 @@
+{
+  "metadata": {
+    "name": "Ice Wraith Teeth",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 21,
+    "synergy_by_order": {
+      "1": 20,
+      "2": 1,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Abecean Longfin",
+        "Aloe Vera Leaves",
+        "Ash Creep Cluster",
+        "Ash Hopper Jelly",
+        "Bleeding Crown",
+        "Burnt Spriggan Wood",
+        "Chaurus Eggs",
+        "Crimson Nirnroot",
+        "Elves Ear",
+        "Fire Salts",
+        "Frost Salts",
+        "Juniper Berries",
+        "Luna Moth Wing",
+        "Moon Sugar",
+        "Nirnroot",
+        "Powdered Mammoth Tusk",
+        "Sabre Cat Tooth",
+        "Slaughterfish Scales",
+        "Thistle Branch",
+        "Vampire Dust"
+      ],
+      "2": [
+        "White Cap"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 22,
+    "unique_effects": [],
+    "substitutability": 5.5,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 698,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Invisibility",
+      "ingredients": [
+        "Aloe Vera Leaves",
+        "Ice Wraith Teeth"
+      ],
+      "total_value": 179,
+      "effects": [
+        {
+          "name": "Invisibility",
+          "description": "Invisibility for 17 seconds.",
+          "magnitude": 0,
+          "duration": 17,
+          "value": 179,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Stamina",
+      "ingredients": [
+        "Boar Tusk",
+        "Chaurus Eggs",
+        "Ice Wraith Teeth"
+      ],
+      "total_value": 557,
+      "effects": [
+        {
+          "name": "Fortify Stamina",
+          "description": "Stamina is increased by 22 points for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 378,
+          "is_poison": false
+        },
+        {
+          "name": "Invisibility",
+          "description": "Invisibility for 17 seconds.",
+          "magnitude": 0,
+          "duration": 17,
+          "value": 179,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "rare",
+    "dlc": false
+  }
+}

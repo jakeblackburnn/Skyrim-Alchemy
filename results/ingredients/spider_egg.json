@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "name": "Spider Egg",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 29,
+    "synergy_by_order": {
+      "1": 24,
+      "2": 5,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Ash Creep Cluster",
+        "Ashen Grass Pod",
+        "Bear Claws",
+        "Blisterwort",
+        "Blue Mountain Flower",
+        "Bone Meal",
+        "Burnt Spriggan Wood",
+        "Chicken Egg",
+        "Crimson Nirnroot",
+        "Cyrodilic Spadetail",
+        "Elves Ear",
+        "Falmer Ear",
+        "Giant's Toe",
+        "Glow Dust",
+        "Hanging Moss",
+        "Hawk's Egg",
+        "Human Heart",
+        "Juniper Berries",
+        "Namira's Rot",
+        "Nightshade",
+        "Nirnroot",
+        "Pine Thrush Egg",
+        "Rock Warbler Egg",
+        "Spriggan Sap"
+      ],
+      "2": [
+        "Ancestor Moth Wing",
+        "Blue Butterfly Wing",
+        "Canis Root",
+        "Chaurus Hunter Antennae",
+        "Jarrin Root"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 34,
+    "unique_effects": [],
+    "substitutability": 8.5,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 874,
+    "ideal_2_ingredient_potion": {
+      "name": "Poison of Damage Magicka Regen",
+      "ingredients": [
+        "Ancestor Moth Wing",
+        "Spider Egg"
+      ],
+      "total_value": 218,
+      "effects": [
+        {
+          "name": "Damage Stamina",
+          "description": "Does 13 points of Stamina damage.",
+          "magnitude": 13,
+          "duration": 0,
+          "value": 30,
+          "is_poison": true
+        },
+        {
+          "name": "Damage Magicka Regen",
+          "description": "Decrease the target's Magicka regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 188,
+          "is_poison": true
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Chicken Egg",
+        "Salmon Roe",
+        "Spider Egg"
+      ],
+      "total_value": 1259,
+      "effects": [
+        {
+          "name": "Damage Magicka Regen",
+          "description": "Decrease the target's Magicka regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 188,
+          "is_poison": true
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

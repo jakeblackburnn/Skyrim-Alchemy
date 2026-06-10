@@ -1,0 +1,133 @@
+{
+  "metadata": {
+    "name": "Orange Dartwing",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 34,
+    "synergy_by_order": {
+      "1": 32,
+      "2": 2,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Bear Claws",
+        "Bee",
+        "Blue Dartwing",
+        "Charred Skeever Hide",
+        "Eye of Sabre Cat",
+        "Frost Mirriam",
+        "Grass Pod",
+        "Hawk Beak",
+        "Histcarp",
+        "Honeycomb",
+        "Imp Stool",
+        "Large Antlers",
+        "Lavender",
+        "Mora Tapinella",
+        "Mudcrab Chitin",
+        "Netch Jelly",
+        "Nordic Barnacle",
+        "Pearl",
+        "Pine Thrush Egg",
+        "Powdered Mammoth Tusk",
+        "Purple Mountain Flower",
+        "Red Mountain Flower",
+        "Sabre Cat Tooth",
+        "Salmon Roe",
+        "Silverside Perch",
+        "Slaughterfish Scales",
+        "Small Pearl",
+        "Spawn Ash",
+        "Torchbug Thorax",
+        "White Cap",
+        "Wisp Wrappings"
+      ],
+      "2": [
+        "Scathecraw",
+        "Slaughterfish Egg"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 36,
+    "unique_effects": [],
+    "substitutability": 9.0,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "benefactor",
+      "physician",
+      "poisoner"
+    ],
+    "valid_potion_count": 1139,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Pickpocket",
+      "ingredients": [
+        "Orange Dartwing",
+        "Slaughterfish Egg"
+      ],
+      "total_value": 135,
+      "effects": [
+        {
+          "name": "Fortify Pickpocket",
+          "description": "Pickpocketing is 17% easier for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        },
+        {
+          "name": "Lingering Damage Health",
+          "description": "Causes 4 points of poison damage for 10 seconds.",
+          "magnitude": 4,
+          "duration": 10,
+          "value": 55,
+          "is_poison": true
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Nordic Barnacle",
+        "Orange Dartwing",
+        "Salmon Roe"
+      ],
+      "total_value": 1168,
+      "effects": [
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Pickpocket",
+          "description": "Pickpocketing is 17% easier for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        },
+        {
+          "name": "Restore Stamina",
+          "description": "Restore 22 Stamina.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 17,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

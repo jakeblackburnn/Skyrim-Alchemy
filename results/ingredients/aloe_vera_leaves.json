@@ -1,0 +1,146 @@
+{
+  "metadata": {
+    "name": "Aloe Vera Leaves",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 47,
+    "synergy_by_order": {
+      "1": 41,
+      "2": 5,
+      "3": 1,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Ash Creep Cluster",
+        "Ash Hopper Jelly",
+        "Bear Claws",
+        "Bee",
+        "Blisterwort",
+        "Blue Dartwing",
+        "Blue Mountain Flower",
+        "Crimson Nirnroot",
+        "Felsaad Tern Feathers",
+        "Glow Dust",
+        "Hagraven Feathers",
+        "Hanging Moss",
+        "Hawk Beak",
+        "Histcarp",
+        "Honeycomb",
+        "Human Heart",
+        "Ice Wraith Teeth",
+        "Imp Stool",
+        "Jarrin Root",
+        "Large Antlers",
+        "Mudcrab Chitin",
+        "Namira's Rot",
+        "Netch Jelly",
+        "Nirnroot",
+        "Nordic Barnacle",
+        "Orange Dartwing",
+        "Pearl",
+        "Pine Thrush Egg",
+        "Powdered Mammoth Tusk",
+        "Purple Mountain Flower",
+        "Rock Warbler Egg",
+        "Sabre Cat Tooth",
+        "Salmon Roe",
+        "Silverside Perch",
+        "Small Pearl",
+        "Swamp Fungal Pod",
+        "Torchbug Thorax",
+        "Trama Root",
+        "Vampire Dust",
+        "Wheat",
+        "Wisp Wrappings"
+      ],
+      "2": [
+        "Butterfly Wing",
+        "Charred Skeever Hide",
+        "Chaurus Eggs",
+        "Daedra Heart",
+        "Luna Moth Wing"
+      ],
+      "3": [
+        "Eye of Sabre Cat"
+      ],
+      "4": []
+    },
+    "total_synergy_weight": 54,
+    "unique_effects": [],
+    "substitutability": 13.5,
+    "effect_type_balance": {
+      "beneficial": 3,
+      "poison": 1
+    },
+    "perk_alignment": [
+      "physician",
+      "poisoner"
+    ],
+    "valid_potion_count": 1687,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Invisibility",
+      "ingredients": [
+        "Aloe Vera Leaves",
+        "Chaurus Eggs"
+      ],
+      "total_value": 244,
+      "effects": [
+        {
+          "name": "Damage Magicka",
+          "description": "Does 22 points of Magicka damage.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 65,
+          "is_poison": true
+        },
+        {
+          "name": "Invisibility",
+          "description": "Invisibility for 17 seconds.",
+          "magnitude": 0,
+          "duration": 17,
+          "value": 179,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Aloe Vera Leaves",
+        "Nordic Barnacle",
+        "Salmon Roe"
+      ],
+      "total_value": 1153,
+      "effects": [
+        {
+          "name": "Restore Stamina",
+          "description": "Restore 22 Stamina.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 17,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Magicka",
+          "description": "Does 22 points of Magicka damage.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 65,
+          "is_poison": true
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "uncommon",
+    "dlc": false
+  }
+}

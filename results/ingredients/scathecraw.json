@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "name": "Scathecraw",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 22,
+    "synergy_by_order": {
+      "1": 20,
+      "2": 2,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Bee",
+        "Bone Meal",
+        "Cyrodilic Spadetail",
+        "Deathbell",
+        "Eye of Sabre Cat",
+        "Frost Mirriam",
+        "Giant Lichen",
+        "Grass Pod",
+        "Honeycomb",
+        "Imp Stool",
+        "Jazbay Grapes",
+        "Lavender",
+        "Mora Tapinella",
+        "Red Mountain Flower",
+        "Silverside Perch",
+        "Skeever Tail",
+        "Slaughterfish Egg",
+        "Slaughterfish Scales",
+        "Thistle Branch",
+        "White Cap"
+      ],
+      "2": [
+        "Orange Dartwing",
+        "Spawn Ash"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 24,
+    "unique_effects": [],
+    "substitutability": 6.0,
+    "effect_type_balance": {
+      "beneficial": 0,
+      "poison": 4
+    },
+    "perk_alignment": [
+      "poisoner"
+    ],
+    "valid_potion_count": 718,
+    "ideal_2_ingredient_potion": {
+      "name": "Poison of Lingering Damage Health",
+      "ingredients": [
+        "Orange Dartwing",
+        "Scathecraw"
+      ],
+      "total_value": 66,
+      "effects": [
+        {
+          "name": "Ravage Magicka",
+          "description": "Concentrated poison damages maximum magicka by 9 points.",
+          "magnitude": 9,
+          "duration": 10,
+          "value": 11,
+          "is_poison": true
+        },
+        {
+          "name": "Lingering Damage Health",
+          "description": "Causes 4 points of poison damage for 10 seconds.",
+          "magnitude": 4,
+          "duration": 10,
+          "value": 55,
+          "is_poison": true
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Stamina",
+      "ingredients": [
+        "Boar Tusk",
+        "Scathecraw",
+        "Slaughterfish Egg"
+      ],
+      "total_value": 433,
+      "effects": [
+        {
+          "name": "Fortify Stamina",
+          "description": "Stamina is increased by 22 points for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 378,
+          "is_poison": false
+        },
+        {
+          "name": "Lingering Damage Health",
+          "description": "Causes 4 points of poison damage for 10 seconds.",
+          "magnitude": 4,
+          "duration": 10,
+          "value": 55,
+          "is_poison": true
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": true
+  }
+}

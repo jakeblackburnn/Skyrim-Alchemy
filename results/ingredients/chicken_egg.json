@@ -1,0 +1,127 @@
+{
+  "metadata": {
+    "name": "Chicken Egg",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 29,
+    "synergy_by_order": {
+      "1": 27,
+      "2": 1,
+      "3": 0,
+      "4": 1
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Ancestor Moth Wing",
+        "Bear Claws",
+        "Bleeding Crown",
+        "Blue Butterfly Wing",
+        "Blue Mountain Flower",
+        "Burnt Spriggan Wood",
+        "Butterfly Wing",
+        "Chaurus Hunter Antennae",
+        "Crimson Nirnroot",
+        "Felsaad Tern Feathers",
+        "Gleamblossom",
+        "Glow Dust",
+        "Hagraven Claw",
+        "Hanging Moss",
+        "Histcarp",
+        "Human Heart",
+        "Jarrin Root",
+        "Lavender",
+        "Nirnroot",
+        "Nordic Barnacle",
+        "Salmon Roe",
+        "Small Antlers",
+        "Spider Egg",
+        "Spriggan Sap",
+        "Tundra Cotton",
+        "Void Salts",
+        "Wisp Wrappings"
+      ],
+      "2": [
+        "Nightshade"
+      ],
+      "3": [],
+      "4": [
+        "Hawk's Egg"
+      ]
+    },
+    "total_synergy_weight": 33,
+    "unique_effects": [],
+    "substitutability": 8.25,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "poisoner"
+    ],
+    "valid_potion_count": 875,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Chicken Egg",
+        "Salmon Roe"
+      ],
+      "total_value": 1071,
+      "effects": [
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Chicken Egg",
+        "Hawk's Egg",
+        "Salmon Roe"
+      ],
+      "total_value": 1347,
+      "effects": [
+        {
+          "name": "Resist Magic",
+          "description": "Resist 9% of magic for 60 seconds.",
+          "magnitude": 9,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Magicka Regen",
+          "description": "Decrease the target's Magicka regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 188,
+          "is_poison": true
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        },
+        {
+          "name": "Lingering Damage Stamina",
+          "description": "Drain the target's Stamina by 4 points per second for 10 seconds.",
+          "magnitude": 4,
+          "duration": 10,
+          "value": 8,
+          "is_poison": true
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

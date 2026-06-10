@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "name": "Hawk Feathers",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 20,
+    "synergy_by_order": {
+      "1": 18,
+      "2": 2,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Abecean Longfin",
+        "Ash Hopper Jelly",
+        "Ashen Grass Pod",
+        "Bear Claws",
+        "Canis Root",
+        "Charred Skeever Hide",
+        "Frost Mirriam",
+        "Hanging Moss",
+        "Honeycomb",
+        "Human Flesh",
+        "Luna Moth Wing",
+        "Mudcrab Chitin",
+        "Powdered Mammoth Tusk",
+        "Purple Mountain Flower",
+        "Rock Warbler Egg",
+        "Skeever Tail",
+        "Small Pearl",
+        "Vampire Dust"
+      ],
+      "2": [
+        "Beehive Husk",
+        "Felsaad Tern Feathers"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 22,
+    "unique_effects": [],
+    "substitutability": 5.5,
+    "effect_type_balance": {
+      "beneficial": 4,
+      "poison": 0
+    },
+    "perk_alignment": [
+      "benefactor"
+    ],
+    "valid_potion_count": 685,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Sneak",
+      "ingredients": [
+        "Beehive Husk",
+        "Hawk Feathers"
+      ],
+      "total_value": 120,
+      "effects": [
+        {
+          "name": "Fortify Light Armor",
+          "description": "Increases Light Armor skill by 9 points for 60 seconds.",
+          "magnitude": 9,
+          "duration": 60,
+          "value": 40,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Sneak",
+          "description": "You are 17% harder to detect for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Health",
+      "ingredients": [
+        "Bear Claws",
+        "Boar Tusk",
+        "Hawk Feathers"
+      ],
+      "total_value": 412,
+      "effects": [
+        {
+          "name": "Fortify Health",
+          "description": "Health is increased by 17 points for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 332,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify One-Handed",
+          "description": "One-handed weapons do 17% more damage for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "uncommon",
+    "dlc": false
+  }
+}

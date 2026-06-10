@@ -1,0 +1,124 @@
+{
+  "metadata": {
+    "name": "Beehive Husk",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 27,
+    "synergy_by_order": {
+      "1": 26,
+      "2": 1,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Abecean Longfin",
+        "Ash Creep Cluster",
+        "Ash Hopper Jelly",
+        "Ashen Grass Pod",
+        "Charred Skeever Hide",
+        "Ectoplasm",
+        "Falmer Ear",
+        "Felsaad Tern Feathers",
+        "Frost Mirriam",
+        "Garlic",
+        "Glow Dust",
+        "Glowing Mushroom",
+        "Grass Pod",
+        "Honeycomb",
+        "Human Flesh",
+        "Luna Moth Wing",
+        "Mudcrab Chitin",
+        "Nightshade",
+        "Powdered Mammoth Tusk",
+        "Purple Mountain Flower",
+        "Skeever Tail",
+        "Slaughterfish Egg",
+        "Thistle Branch",
+        "Troll Fat",
+        "Wisp Wrappings",
+        "Yellow Mountain Flower"
+      ],
+      "2": [
+        "Hawk Feathers"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 28,
+    "unique_effects": [],
+    "substitutability": 7.0,
+    "effect_type_balance": {
+      "beneficial": 4,
+      "poison": 0
+    },
+    "perk_alignment": [
+      "benefactor"
+    ],
+    "valid_potion_count": 933,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Sneak",
+      "ingredients": [
+        "Beehive Husk",
+        "Hawk Feathers"
+      ],
+      "total_value": 120,
+      "effects": [
+        {
+          "name": "Fortify Light Armor",
+          "description": "Increases Light Armor skill by 9 points for 60 seconds.",
+          "magnitude": 9,
+          "duration": 60,
+          "value": 40,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Sneak",
+          "description": "You are 17% harder to detect for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Health",
+      "ingredients": [
+        "Beehive Husk",
+        "Giant's Toe",
+        "Yellow Mountain Flower"
+      ],
+      "total_value": 525,
+      "effects": [
+        {
+          "name": "Resist Poison",
+          "description": "Resist 17% of poison for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Health",
+          "description": "Health is increased by 17 points for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 332,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Stamina Regen",
+          "description": "Decrease the target's Stamina regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 113,
+          "is_poison": true
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

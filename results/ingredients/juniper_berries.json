@@ -1,0 +1,123 @@
+{
+  "metadata": {
+    "name": "Juniper Berries",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 26,
+    "synergy_by_order": {
+      "1": 26,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Bleeding Crown",
+        "Burnt Spriggan Wood",
+        "Canis Root",
+        "Creep Cluster",
+        "Daedra Heart",
+        "Elves Ear",
+        "Emperor Parasol Moss",
+        "Frost Mirriam",
+        "Frost Salts",
+        "Garlic",
+        "Giant's Toe",
+        "Gleamblossom",
+        "Histcarp",
+        "Ice Wraith Teeth",
+        "Large Antlers",
+        "Luna Moth Wing",
+        "Moon Sugar",
+        "Namira's Rot",
+        "Nordic Barnacle",
+        "Powdered Mammoth Tusk",
+        "Silverside Perch",
+        "Skeever Tail",
+        "Spider Egg",
+        "Vampire Dust",
+        "Wheat",
+        "Yellow Mountain Flower"
+      ],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 26,
+    "unique_effects": [],
+    "substitutability": 6.5,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 888,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Regenerate Health",
+      "ingredients": [
+        "Emperor Parasol Moss",
+        "Juniper Berries"
+      ],
+      "total_value": 126,
+      "effects": [
+        {
+          "name": "Regenerate Health",
+          "description": "Health regenerates 22% faster for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 126,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Histcarp",
+        "Juniper Berries",
+        "Salmon Roe"
+      ],
+      "total_value": 1252,
+      "effects": [
+        {
+          "name": "Restore Stamina",
+          "description": "Restore 22 Stamina.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 17,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Magicka",
+          "description": "Magicka is increased by 215 points for 5 seconds.",
+          "magnitude": 215,
+          "duration": 5,
+          "value": 51,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Stamina Regen",
+          "description": "Decrease the target's Stamina regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 113,
+          "is_poison": true
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

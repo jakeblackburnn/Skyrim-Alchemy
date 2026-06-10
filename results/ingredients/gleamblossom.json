@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "name": "Gleamblossom",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 29,
+    "synergy_by_order": {
+      "1": 27,
+      "2": 2,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Bleeding Crown",
+        "Blue Dartwing",
+        "Briar Heart",
+        "Canis Root",
+        "Chicken Egg",
+        "Crimson Nirnroot",
+        "Cyrodilic Spadetail",
+        "Daedra Heart",
+        "Emperor Parasol Moss",
+        "Felsaad Tern Feathers",
+        "Garlic",
+        "Hagraven Claw",
+        "Hawk's Egg",
+        "Human Flesh",
+        "Imp Stool",
+        "Juniper Berries",
+        "Lavender",
+        "Luna Moth Wing",
+        "Nirnroot",
+        "Nordic Barnacle",
+        "Poison Bloom",
+        "Powdered Mammoth Tusk",
+        "Swamp Fungal Pod",
+        "Tundra Cotton",
+        "Vampire Dust",
+        "Void Salts",
+        "Wisp Wrappings"
+      ],
+      "2": [
+        "Namira's Rot",
+        "Netch Jelly"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 31,
+    "unique_effects": [],
+    "substitutability": 7.75,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "poisoner"
+    ],
+    "valid_potion_count": 975,
+    "ideal_2_ingredient_potion": {
+      "name": "Poison of Paralysis",
+      "ingredients": [
+        "Gleamblossom",
+        "Netch Jelly"
+      ],
+      "total_value": 258,
+      "effects": [
+        {
+          "name": "Fear",
+          "description": "Creatures and people up to level 4 flee from combat for 30 seconds.",
+          "magnitude": 4,
+          "duration": 30,
+          "value": 76,
+          "is_poison": true
+        },
+        {
+          "name": "Paralysis",
+          "description": "Target is paralyzed for 4 seconds.",
+          "magnitude": 0,
+          "duration": 4,
+          "value": 182,
+          "is_poison": true
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Gleamblossom",
+        "Nordic Barnacle",
+        "Salmon Roe"
+      ],
+      "total_value": 1197,
+      "effects": [
+        {
+          "name": "Regenerate Health",
+          "description": "Health regenerates 22% faster for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 126,
+          "is_poison": false
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "uncommon",
+    "dlc": true
+  }
+}

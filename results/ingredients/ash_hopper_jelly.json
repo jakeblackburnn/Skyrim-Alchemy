@@ -1,0 +1,128 @@
+{
+  "metadata": {
+    "name": "Ash Hopper Jelly",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 29,
+    "synergy_by_order": {
+      "1": 26,
+      "2": 3,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Abecean Longfin",
+        "Aloe Vera Leaves",
+        "Beehive Husk",
+        "Blisterwort",
+        "Blue Mountain Flower",
+        "Butterfly Wing",
+        "Charred Skeever Hide",
+        "Daedra Heart",
+        "Elves Ear",
+        "Eye of Sabre Cat",
+        "Fire Salts",
+        "Glow Dust",
+        "Glowing Mushroom",
+        "Hawk Beak",
+        "Hawk Feathers",
+        "Honeycomb",
+        "Ice Wraith Teeth",
+        "Imp Stool",
+        "Luna Moth Wing",
+        "Pearl",
+        "Pine Thrush Egg",
+        "Rock Warbler Egg",
+        "Skeever Tail",
+        "Snowberries",
+        "Wheat",
+        "White Cap"
+      ],
+      "2": [
+        "Blue Dartwing",
+        "Felsaad Tern Feathers",
+        "Swamp Fungal Pod"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 32,
+    "unique_effects": [],
+    "substitutability": 8.0,
+    "effect_type_balance": {
+      "beneficial": 3,
+      "poison": 1
+    },
+    "perk_alignment": [
+      "benefactor",
+      "physician",
+      "poisoner"
+    ],
+    "valid_potion_count": 996,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Resist Shock",
+      "ingredients": [
+        "Ash Hopper Jelly",
+        "Blue Dartwing"
+      ],
+      "total_value": 74,
+      "effects": [
+        {
+          "name": "Restore Health",
+          "description": "Restore 22 points of Health.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 14,
+          "is_poison": false
+        },
+        {
+          "name": "Resist Shock",
+          "description": "Resist 13% of shock damage for 60 seconds.",
+          "magnitude": 13,
+          "duration": 60,
+          "value": 60,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Health",
+      "ingredients": [
+        "Ash Hopper Jelly",
+        "Giant's Toe",
+        "Wheat"
+      ],
+      "total_value": 459,
+      "effects": [
+        {
+          "name": "Restore Health",
+          "description": "Restore 22 points of Health.",
+          "magnitude": 22,
+          "duration": 0,
+          "value": 14,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Health",
+          "description": "Health is increased by 17 points for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 332,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Stamina Regen",
+          "description": "Decrease the target's Stamina regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 113,
+          "is_poison": true
+        }
+      ]
+    },
+    "rarity": "uncommon",
+    "dlc": true
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "name": "Lavender",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 31,
+    "synergy_by_order": {
+      "1": 31,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Ancestor Moth Wing",
+        "Bleeding Crown",
+        "Blue Butterfly Wing",
+        "Blue Mountain Flower",
+        "Boar Tusk",
+        "Bone Meal",
+        "Chaurus Eggs",
+        "Chaurus Hunter Antennae",
+        "Chicken Egg",
+        "Crimson Nirnroot",
+        "Felsaad Tern Feathers",
+        "Frost Mirriam",
+        "Frost Salts",
+        "Garlic",
+        "Gleamblossom",
+        "Grass Pod",
+        "Hagraven Claw",
+        "Hagraven Feathers",
+        "Hawk's Egg",
+        "Large Antlers",
+        "Nirnroot",
+        "Orange Dartwing",
+        "Red Mountain Flower",
+        "Scathecraw",
+        "Slaughterfish Egg",
+        "Spawn Ash",
+        "Torchbug Thorax",
+        "Tundra Cotton",
+        "Void Salts",
+        "White Cap",
+        "Wisp Wrappings"
+      ],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 31,
+    "unique_effects": [],
+    "substitutability": 7.75,
+    "effect_type_balance": {
+      "beneficial": 3,
+      "poison": 1
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 1083,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Stamina",
+      "ingredients": [
+        "Boar Tusk",
+        "Lavender"
+      ],
+      "total_value": 378,
+      "effects": [
+        {
+          "name": "Fortify Stamina",
+          "description": "Stamina is increased by 22 points for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 378,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Chicken Egg",
+        "Lavender",
+        "Salmon Roe"
+      ],
+      "total_value": 1151,
+      "effects": [
+        {
+          "name": "Resist Magic",
+          "description": "Resist 9% of magic for 60 seconds.",
+          "magnitude": 9,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

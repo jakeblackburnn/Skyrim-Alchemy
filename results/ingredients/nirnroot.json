@@ -1,0 +1,148 @@
+{
+  "metadata": {
+    "name": "Nirnroot",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 42,
+    "synergy_by_order": {
+      "1": 38,
+      "2": 3,
+      "3": 0,
+      "4": 1
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Ancestor Moth Wing",
+        "Bleeding Crown",
+        "Blisterwort",
+        "Blue Butterfly Wing",
+        "Bone Meal",
+        "Canis Root",
+        "Chaurus Eggs",
+        "Chaurus Hunter Antennae",
+        "Chicken Egg",
+        "Cyrodilic Spadetail",
+        "Deathbell",
+        "Ectoplasm",
+        "Emperor Parasol Moss",
+        "Falmer Ear",
+        "Felsaad Tern Feathers",
+        "Giant's Toe",
+        "Gleamblossom",
+        "Hagraven Claw",
+        "Hawk's Egg",
+        "Human Flesh",
+        "Human Heart",
+        "Ice Wraith Teeth",
+        "Imp Stool",
+        "Lavender",
+        "Luna Moth Wing",
+        "Nightshade",
+        "Poison Bloom",
+        "Red Mountain Flower",
+        "River Betty",
+        "Rock Warbler Egg",
+        "Skeever Tail",
+        "Small Antlers",
+        "Spider Egg",
+        "Troll Fat",
+        "Tundra Cotton",
+        "Vampire Dust",
+        "Wisp Wrappings"
+      ],
+      "2": [
+        "Ash Creep Cluster",
+        "Jarrin Root",
+        "Void Salts"
+      ],
+      "3": [],
+      "4": [
+        "Crimson Nirnroot"
+      ]
+    },
+    "total_synergy_weight": 48,
+    "unique_effects": [],
+    "substitutability": 12.0,
+    "effect_type_balance": {
+      "beneficial": 2,
+      "poison": 2
+    },
+    "perk_alignment": [
+      "poisoner"
+    ],
+    "valid_potion_count": 1425,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Invisibility",
+      "ingredients": [
+        "Crimson Nirnroot",
+        "Nirnroot"
+      ],
+      "total_value": 368,
+      "effects": [
+        {
+          "name": "Damage Health",
+          "description": "Causes 26 points of poison damage.",
+          "magnitude": 26,
+          "duration": 1,
+          "value": 8,
+          "is_poison": true
+        },
+        {
+          "name": "Damage Stamina",
+          "description": "Does 39 points of Stamina damage.",
+          "magnitude": 39,
+          "duration": 0,
+          "value": 101,
+          "is_poison": true
+        },
+        {
+          "name": "Invisibility",
+          "description": "Invisibility for 17 seconds.",
+          "magnitude": 0,
+          "duration": 17,
+          "value": 179,
+          "is_poison": false
+        },
+        {
+          "name": "Resist Magic",
+          "description": "Resist 9% of magic for 60 seconds.",
+          "magnitude": 9,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Chicken Egg",
+        "Nirnroot",
+        "Salmon Roe"
+      ],
+      "total_value": 1151,
+      "effects": [
+        {
+          "name": "Resist Magic",
+          "description": "Resist 9% of magic for 60 seconds.",
+          "magnitude": 9,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "rare",
+    "dlc": false
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "name": "Deathbell",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 33,
+    "synergy_by_order": {
+      "1": 30,
+      "2": 3,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Abecean Longfin",
+        "Bee",
+        "Bleeding Crown",
+        "Bone Meal",
+        "Burnt Spriggan Wood",
+        "Chaurus Eggs",
+        "Crimson Nirnroot",
+        "Ectoplasm",
+        "Emperor Parasol Moss",
+        "Falmer Ear",
+        "Giant Lichen",
+        "Honeycomb",
+        "Human Flesh",
+        "Human Heart",
+        "Imp Stool",
+        "Jarrin Root",
+        "Large Antlers",
+        "Nightshade",
+        "Nirnroot",
+        "Pine Thrush Egg",
+        "Red Mountain Flower",
+        "Sabre Cat Tooth",
+        "Salt Pile",
+        "Scathecraw",
+        "Skeever Tail",
+        "Spawn Ash",
+        "Thistle Branch",
+        "Trama Root",
+        "Troll Fat",
+        "Void Salts"
+      ],
+      "2": [
+        "Poison Bloom",
+        "River Betty",
+        "Small Antlers"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 36,
+    "unique_effects": [],
+    "substitutability": 9.0,
+    "effect_type_balance": {
+      "beneficial": 0,
+      "poison": 4
+    },
+    "perk_alignment": [
+      "poisoner"
+    ],
+    "valid_potion_count": 1103,
+    "ideal_2_ingredient_potion": {
+      "name": "Poison of Slow",
+      "ingredients": [
+        "Deathbell",
+        "River Betty"
+      ],
+      "total_value": 183,
+      "effects": [
+        {
+          "name": "Damage Health",
+          "description": "Causes 22 points of poison damage.",
+          "magnitude": 22,
+          "duration": 1,
+          "value": 7,
+          "is_poison": true
+        },
+        {
+          "name": "Slow",
+          "description": "Target moves at 50% speed for 22 seconds.",
+          "magnitude": 50,
+          "duration": 22,
+          "value": 176,
+          "is_poison": true
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Stamina",
+      "ingredients": [
+        "Boar Tusk",
+        "Deathbell",
+        "Large Antlers"
+      ],
+      "total_value": 554,
+      "effects": [
+        {
+          "name": "Fortify Stamina",
+          "description": "Stamina is increased by 22 points for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 378,
+          "is_poison": false
+        },
+        {
+          "name": "Slow",
+          "description": "Target moves at 50% speed for 22 seconds.",
+          "magnitude": 50,
+          "duration": 22,
+          "value": 176,
+          "is_poison": true
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

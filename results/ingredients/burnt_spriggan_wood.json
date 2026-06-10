@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "name": "Burnt Spriggan Wood",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 27,
+    "synergy_by_order": {
+      "1": 25,
+      "2": 2,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Ancestor Moth Wing",
+        "Bear Claws",
+        "Bleeding Crown",
+        "Blue Butterfly Wing",
+        "Blue Mountain Flower",
+        "Chaurus Hunter Antennae",
+        "Chicken Egg",
+        "Deathbell",
+        "Frost Salts",
+        "Glow Dust",
+        "Grass Pod",
+        "Hanging Moss",
+        "Hawk's Egg",
+        "Human Heart",
+        "Ice Wraith Teeth",
+        "Jarrin Root",
+        "Juniper Berries",
+        "Large Antlers",
+        "Moon Sugar",
+        "Nightshade",
+        "Poison Bloom",
+        "Powdered Mammoth Tusk",
+        "Salt Pile",
+        "Spider Egg",
+        "Trama Root"
+      ],
+      "2": [
+        "River Betty",
+        "Spriggan Sap"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 29,
+    "unique_effects": [],
+    "substitutability": 7.25,
+    "effect_type_balance": {
+      "beneficial": 1,
+      "poison": 3
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 858,
+    "ideal_2_ingredient_potion": {
+      "name": "Poison of Damage Magicka Regen",
+      "ingredients": [
+        "Burnt Spriggan Wood",
+        "Spriggan Sap"
+      ],
+      "total_value": 220,
+      "effects": [
+        {
+          "name": "Fortify Alteration",
+          "description": "Alteration spells last 17% longer for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 32,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Magicka Regen",
+          "description": "Decrease the target's Magicka regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 188,
+          "is_poison": true
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Burnt Spriggan Wood",
+        "Chicken Egg",
+        "Salmon Roe"
+      ],
+      "total_value": 1259,
+      "effects": [
+        {
+          "name": "Damage Magicka Regen",
+          "description": "Decrease the target's Magicka regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 188,
+          "is_poison": true
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "rare",
+    "dlc": true
+  }
+}

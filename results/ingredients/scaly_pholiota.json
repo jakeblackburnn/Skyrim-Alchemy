@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "name": "Scaly Pholiota",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 18,
+    "synergy_by_order": {
+      "1": 14,
+      "2": 4,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Bee",
+        "Dragon's Tongue",
+        "Fly Amanita",
+        "Giant's Toe",
+        "Hawk Beak",
+        "Jazbay Grapes",
+        "Netch Jelly",
+        "Poison Bloom",
+        "River Betty",
+        "Rock Warbler Egg",
+        "Salt Pile",
+        "Torchbug Thorax",
+        "Trama Root",
+        "Wisp Wrappings"
+      ],
+      "2": [
+        "Creep Cluster",
+        "Dwarven Oil",
+        "Mora Tapinella",
+        "Taproot"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 22,
+    "unique_effects": [],
+    "substitutability": 5.5,
+    "effect_type_balance": {
+      "beneficial": 3,
+      "poison": 1
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 550,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Regenerate Stamina",
+      "ingredients": [
+        "Mora Tapinella",
+        "Scaly Pholiota"
+      ],
+      "total_value": 190,
+      "effects": [
+        {
+          "name": "Regenerate Stamina",
+          "description": "Stamina regenerates 22% faster for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 126,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Illusion",
+          "description": "Illusion spells are 17% stronger for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 64,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Health",
+      "ingredients": [
+        "Giant's Toe",
+        "Scaly Pholiota",
+        "Wheat"
+      ],
+      "total_value": 587,
+      "effects": [
+        {
+          "name": "Fortify Health",
+          "description": "Health is increased by 17 points for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 332,
+          "is_poison": false
+        },
+        {
+          "name": "Fortify Carry Weight",
+          "description": "Carrying capacity increases by 17 for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 142,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Stamina Regen",
+          "description": "Decrease the target's Stamina regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 113,
+          "is_poison": true
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

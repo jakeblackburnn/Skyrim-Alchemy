@@ -1,0 +1,128 @@
+Loaded 111 ingredients, 55 effects
+Building synergy graph...
+Computing valid potions for ideal recipes (base player)...
+Building profiles...
+Patching in Jarrin Root's best recipes (computed separately)...
+
+Results saved to /Users/jackblackburn/code/main/esv-alchemy/results/profiles_20260610_163708.json
+Wrote 111 per-ingredient files to /Users/jackblackburn/code/main/esv-alchemy/results/ingredients
+
+================================================================================
+INGREDIENT PROFILES  (111 total)
+================================================================================
+
+Sorted by total_synergy_weight
+----------------------------------------------------------------------------------------------------------------------------
+  #  Name                             Compat   S-Wt   S1   S2   S3   S4  Subst.  Unique  Potions  DLC    Rarity        Perks
+----------------------------------------------------------------------------------------------------------------------------
+  1  Jarrin Root                          46     57   36    9    1    0   14.25       0     1613  No     unique        poisoner
+  2  Aloe Vera Leaves                     47     54   41    5    1    0   13.50       0     1687  No     uncommon      physician, poisoner
+  3  Eye of Sabre Cat                     47     53   42    4    1    0   13.25       0     1663  No     uncommon      physician, poisoner
+  4  Pearl                                47     51   43    4    0    0   12.75       0     1705  No     uncommon      benefactor, physician
+  5  Human Heart                          42     50   35    6    1    0   12.50       0     1406  No     very_rare     poisoner
+  6  Crimson Nirnroot                     42     48   38    3    0    1   12.00       0     1425  No     very_rare     poisoner
+  7  Nirnroot                             42     48   38    3    0    1   12.00       0     1425  No     rare          poisoner
+  8  Red Mountain Flower                  40     48   33    6    1    0   12.00       0     1328  No     common        benefactor, physician, poisoner
+  9  Bear Claws                           43     47   40    2    1    0   11.75       0     1485  No     common        benefactor, physician, poisoner
+ 10  Charred Skeever Hide                 42     47   38    3    1    0   11.75       0     1480  No     common        physician
+ 11  Ectoplasm                            40     47   34    5    1    0   11.75       0     1359  No     rare          benefactor, physician, poisoner
+ 12  Hawk Beak                            38     46   30    8    0    0   11.50       0     1295  No     uncommon      benefactor, physician
+ 13  Human Flesh                          42     46   38    4    0    0   11.50       0     1451  No     very_rare     benefactor, physician, poisoner
+ 14  Silverside Perch                     38     46   30    8    0    0   11.50       0     1290  No     common        physician, poisoner
+ 15  Wisp Wrappings                       44     46   42    2    0    0   11.50       0     1643  No     rare          benefactor, physician
+ 16  Daedra Heart                         37     43   31    6    0    0   10.75       0     1242  No     very_rare     physician, poisoner
+ 17  Histcarp                             39     43   36    2    1    0   10.75       0     1401  No     common        benefactor, physician, poisoner
+ 18  Large Antlers                        40     43   37    3    0    0   10.75       0     1405  No     uncommon      benefactor, physician, poisoner
+ 19  Mudcrab Chitin                       41     43   40    0    1    0   10.75       0     1454  No     common        physician
+ 20  Netch Jelly                          37     42   32    5    0    0   10.50       0     1279  Yes    uncommon      benefactor, physician, poisoner
+ 21  Blue Mountain Flower                 35     41   29    6    0    0   10.25       0     1109  No     common        benefactor, physician, poisoner
+ 22  Creep Cluster                        37     41   33    4    0    0   10.25       0     1276  No     common        benefactor, physician, poisoner
+ 23  Glow Dust                            36     41   31    5    0    0   10.25       0     1186  No     uncommon      benefactor, poisoner
+ 24  Imp Stool                            39     41   37    2    0    0   10.25       0     1364  No     common        physician, poisoner
+ 25  Nightshade                           34     41   27    7    0    0   10.25       0     1073  No     uncommon      benefactor, poisoner
+ 26  Powdered Mammoth Tusk                39     41   37    2    0    0   10.25       0     1374  No     uncommon      benefactor, physician, poisoner
+ 27  Purple Mountain Flower               35     41   29    6    0    0   10.25       0     1154  No     common        benefactor, physician, poisoner
+ 28  Void Salts                           35     41   29    6    0    0   10.25       0     1142  No     rare          benefactor, poisoner
+ 29  Ancestor Moth Wing                   29     40   22    5    0    2   10.00       0      831  Yes    rare          benefactor, poisoner
+ 30  Blue Butterfly Wing                  29     40   22    5    0    2   10.00       0      831  No     common        benefactor, poisoner
+ 31  Chaurus Hunter Antennae              29     40   22    5    0    2   10.00       0      831  Yes    rare          benefactor, poisoner
+ 32  Pine Thrush Egg                      37     40   34    3    0    0   10.00       0     1284  No     common        benefactor, physician, poisoner
+ 33  Salmon Roe                           37     40   35    1    1    0   10.00       0     1301  Yes    rare          benefactor, physician
+ 34  Small Pearl                          36     40   32    4    0    0   10.00       0     1227  No     common        benefactor, physician
+ 35  Hanging Moss                         33     39   28    4    1    0    9.75       0     1017  No     common        benefactor, poisoner
+ 36  Honeycomb                            37     39   35    2    0    0    9.75       0     1274  No     common        benefactor, physician, poisoner
+ 37  Skeever Tail                         38     39   37    1    0    0    9.75       0     1323  No     common        benefactor, poisoner
+ 38  Frost Salts                          36     38   35    0    1    0    9.50       0     1255  No     rare          benefactor, physician, poisoner
+ 39  Giant's Toe                          35     38   32    3    0    0    9.50       0     1190  No     rare          benefactor, poisoner
+ 40  Moon Sugar                           33     38   29    3    1    0    9.50       0     1057  No     uncommon      physician, poisoner
+ 41  Poison Bloom                         33     38   29    3    1    0    9.50       0     1092  Yes    uncommon      benefactor, poisoner
+ 42  Rock Warbler Egg                     36     38   34    2    0    0    9.50       0     1224  No     common        benefactor, physician, poisoner
+ 43  Torchbug Thorax                      36     38   34    2    0    0    9.50       0     1215  No     common        benefactor, physician, poisoner
+ 44  Fire Salts                           31     37   26    4    1    0    9.25       0      950  No     rare          physician, poisoner
+ 45  Briar Heart                          31     36   26    5    0    0    9.00       0     1011  No     rare          benefactor, physician, poisoner
+ 46  Deathbell                            33     36   30    3    0    0    9.00       0     1103  No     common        poisoner
+ 47  Falmer Ear                           33     36   31    1    1    0    9.00       0     1089  No     rare          benefactor, poisoner
+ 48  Orange Dartwing                      34     36   32    2    0    0    9.00       0     1139  No     common        benefactor, physician, poisoner
+ 49  Ash Creep Cluster                    32     35   29    3    0    0    8.75       0     1051  Yes    common        benefactor, poisoner
+ 50  Bee                                  34     35   33    1    0    0    8.75       0     1142  No     common        physician, poisoner
+ 51  Blisterwort                          34     35   33    1    0    0    8.75       0     1104  Yes    common        benefactor, physician, poisoner
+ 52  Bone Meal                            30     35   25    5    0    0    8.75       0      947  No     common        benefactor, poisoner
+ 53  Emperor Parasol Moss                 31     35   27    4    0    0    8.75       0      970  Yes    common        benefactor, poisoner
+ 54  Grass Pod                            33     35   31    2    0    0    8.75       0     1083  No     common        benefactor, physician, poisoner
+ 55  Sabre Cat Tooth                      34     35   33    1    0    0    8.75       0     1150  No     uncommon      benefactor, physician, poisoner
+ 56  Troll Fat                            30     35   26    3    1    0    8.75       0      950  No     uncommon      benefactor, poisoner
+ 57  Dwarven Oil                          24     34   16    7    0    1    8.50       0      686  No     uncommon      benefactor, physician, poisoner
+ 58  Felsaad Tern Feathers                31     34   28    3    0    0    8.50       0     1067  Yes    uncommon      benefactor, physician
+ 59  Giant Lichen                         34     34   34    0    0    0    8.50       0     1163  No     uncommon      physician, poisoner
+ 60  River Betty                          29     34   25    3    1    0    8.50       0      926  No     uncommon      benefactor, poisoner
+ 61  Spider Egg                           29     34   24    5    0    0    8.50       0      874  No     common        benefactor, poisoner
+ 62  Taproot                              24     34   16    7    0    1    8.50       0      686  No     uncommon      benefactor, physician, poisoner
+ 63  Vampire Dust                         33     34   32    1    0    0    8.50       0     1139  No     rare          physician
+ 64  Wheat                                29     34   24    5    0    0    8.50       0      979  No     common        benefactor, physician, poisoner
+ 65  Butterfly Wing                       30     33   27    3    0    0    8.25       0      926  No     common        benefactor, physician, poisoner
+ 66  Chaurus Eggs                         31     33   29    2    0    0    8.25       0     1051  No     uncommon      benefactor, poisoner
+ 67  Chicken Egg                          29     33   27    1    0    1    8.25       0      875  No     common        poisoner
+ 68  Elves Ear                            30     33   28    1    1    0    8.25       0      924  No     common        benefactor, physician, poisoner
+ 69  Frost Mirriam                        31     33   29    2    0    0    8.25       0     1062  No     uncommon      benefactor, poisoner
+ 70  Hawk's Egg                           29     33   27    1    0    1    8.25       0      875  Yes    rare          poisoner
+ 71  Luna Moth Wing                       28     33   23    5    0    0    8.25       0      891  No     uncommon      benefactor, poisoner
+ 72  Small Antlers                        30     33   27    3    0    0    8.25       0      970  No     common        benefactor, poisoner
+ 73  Ash Hopper Jelly                     29     32   26    3    0    0    8.00       0      996  Yes    uncommon      benefactor, physician, poisoner
+ 74  Snowberries                          30     32   28    2    0    0    8.00       0     1003  No     common        benefactor
+ 75  Trama Root                           29     32   26    3    0    0    8.00       0      955  Yes    common        benefactor, poisoner
+ 76  White Cap                            27     32   22    5    0    0    8.00       0      806  No     common        benefactor, physician, poisoner
+ 77  Blue Dartwing                        28     31   25    3    0    0    7.75       0      933  No     common        benefactor, physician, poisoner
+ 78  Cyrodilic Spadetail                  31     31   31    0    0    0    7.75       0     1054  No     common        benefactor, poisoner
+ 79  Gleamblossom                         29     31   27    2    0    0    7.75       0      975  Yes    uncommon      poisoner
+ 80  Hagraven Feathers                    29     31   27    2    0    0    7.75       0      939  No     rare          benefactor, poisoner
+ 81  Lavender                             31     31   31    0    0    0    7.75       0     1083  No     common        benefactor, poisoner
+ 82  Namira's Rot                         27     31   23    4    0    0    7.75       0      855  No     rare          benefactor, poisoner
+ 83  Swamp Fungal Pod                     27     31   23    4    0    0    7.75       0      915  No     common        physician, poisoner
+ 84  Yellow Mountain Flower               29     31   27    2    0    0    7.75       0      999  Yes    common        benefactor, poisoner
+ 85  Bleeding Crown                       29     30   28    1    0    0    7.50       0     1001  No     uncommon      benefactor, poisoner
+ 86  Burnt Spriggan Wood                  27     29   25    2    0    0    7.25       0      858  Yes    rare          benefactor, poisoner
+ 87  Garlic                               28     29   27    1    0    0    7.25       0      929  No     common        benefactor
+ 88  Beehive Husk                         27     28   26    1    0    0    7.00       0      933  No     common        benefactor
+ 89  Jazbay Grapes                        24     28   20    4    0    0    7.00       0      782  No     common        benefactor, poisoner
+ 90  Mora Tapinella                       25     28   22    3    0    0    7.00       0      734  No     common        benefactor, physician, poisoner
+ 91  Spawn Ash                            25     28   22    3    0    0    7.00       0      785  Yes    uncommon      benefactor, poisoner
+ 92  Thistle Branch                       27     28   26    1    0    0    7.00       0      880  No     common        benefactor, poisoner
+ 93  Tundra Cotton                        24     28   20    4    0    0    7.00       0      791  No     common        benefactor
+ 94  Canis Root                           25     27   23    2    0    0    6.75       0      797  No     common        benefactor, poisoner
+ 95  Nordic Barnacle                      25     27   23    2    0    0    6.75       0      775  No     common        benefactor, poisoner
+ 96  Juniper Berries                      26     26   26    0    0    0    6.50       0      888  No     common        benefactor, poisoner
+ 97  Spriggan Sap                         22     26   18    4    0    0    6.50       0      620  No     rare          benefactor, poisoner
+ 98  Ashen Grass Pod                      25     25   25    0    0    0    6.25       0      817  Yes    common        benefactor, poisoner
+ 99  Boar Tusk                            25     25   25    0    0    0    6.25       0      872  Yes    uncommon      benefactor, poisoner
+100  Salt Pile                            22     25   19    3    0    0    6.25       0      701  No     common        benefactor, poisoner
+101  Abecean Longfin                      23     24   22    1    0    0    6.00       0      749  No     common        benefactor, poisoner
+102  Glowing Mushroom                     23     24   22    1    0    0    6.00       0      785  No     common        benefactor
+103  Hagraven Claw                        23     24   22    1    0    0    6.00       0      723  No     rare          benefactor, poisoner
+104  Scathecraw                           22     24   20    2    0    0    6.00       0      718  Yes    common        poisoner
+105  Slaughterfish Scales                 23     24   22    1    0    0    6.00       0      732  No     common        benefactor, poisoner
+106  Slaughterfish Egg                    21     23   19    2    0    0    5.75       0      670  No     common        benefactor, poisoner
+107  Hawk Feathers                        20     22   18    2    0    0    5.50       0      685  No     uncommon      benefactor
+108  Ice Wraith Teeth                     21     22   20    1    0    0    5.50       0      698  No     rare          benefactor, poisoner
+109  Scaly Pholiota                       18     22   14    4    0    0    5.50       0      550  No     common        benefactor, poisoner
+110  Fly Amanita                          19     21   17    2    0    0    5.25       0      576  No     common        benefactor, poisoner
+111  Dragon's Tongue                      18     19   17    1    0    0    4.75       0      520  No     uncommon      benefactor

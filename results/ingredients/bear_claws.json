@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "name": "Bear Claws",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 43,
+    "synergy_by_order": {
+      "1": 40,
+      "2": 2,
+      "3": 1,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Aloe Vera Leaves",
+        "Ancestor Moth Wing",
+        "Bee",
+        "Blue Butterfly Wing",
+        "Boar Tusk",
+        "Burnt Spriggan Wood",
+        "Canis Root",
+        "Charred Skeever Hide",
+        "Chaurus Hunter Antennae",
+        "Chicken Egg",
+        "Eye of Sabre Cat",
+        "Giant's Toe",
+        "Glow Dust",
+        "Glowing Mushroom",
+        "Hawk Beak",
+        "Hawk Feathers",
+        "Hawk's Egg",
+        "Histcarp",
+        "Honeycomb",
+        "Human Heart",
+        "Jarrin Root",
+        "Large Antlers",
+        "Mudcrab Chitin",
+        "Netch Jelly",
+        "Nightshade",
+        "Orange Dartwing",
+        "Pearl",
+        "Pine Thrush Egg",
+        "Powdered Mammoth Tusk",
+        "Purple Mountain Flower",
+        "Rock Warbler Egg",
+        "Sabre Cat Tooth",
+        "Salmon Roe",
+        "Silverside Perch",
+        "Spider Egg",
+        "Spriggan Sap",
+        "Torchbug Thorax",
+        "Wheat",
+        "Wisp Wrappings",
+        "Yellow Mountain Flower"
+      ],
+      "2": [
+        "Blue Mountain Flower",
+        "Small Pearl"
+      ],
+      "3": [
+        "Hanging Moss"
+      ],
+      "4": []
+    },
+    "total_synergy_weight": 47,
+    "unique_effects": [],
+    "substitutability": 11.75,
+    "effect_type_balance": {
+      "beneficial": 3,
+      "poison": 1
+    },
+    "perk_alignment": [
+      "benefactor",
+      "physician",
+      "poisoner"
+    ],
+    "valid_potion_count": 1485,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Health",
+      "ingredients": [
+        "Bear Claws",
+        "Boar Tusk"
+      ],
+      "total_value": 332,
+      "effects": [
+        {
+          "name": "Fortify Health",
+          "description": "Health is increased by 17 points for 300 seconds.",
+          "magnitude": 17,
+          "duration": 300,
+          "value": 332,
+          "is_poison": false
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Waterbreathing",
+      "ingredients": [
+        "Bear Claws",
+        "Chicken Egg",
+        "Salmon Roe"
+      ],
+      "total_value": 1272,
+      "effects": [
+        {
+          "name": "Restore Stamina",
+          "description": "Restore 17 Stamina.",
+          "magnitude": 17,
+          "duration": 0,
+          "value": 13,
+          "is_poison": false
+        },
+        {
+          "name": "Damage Magicka Regen",
+          "description": "Decrease the target's Magicka regeneration by 100% for 22 seconds.",
+          "magnitude": 100,
+          "duration": 22,
+          "value": 188,
+          "is_poison": true
+        },
+        {
+          "name": "Waterbreathing",
+          "description": "Can breathe underwater for 258 seconds.",
+          "magnitude": 0,
+          "duration": 258,
+          "value": 1071,
+          "is_poison": false
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}

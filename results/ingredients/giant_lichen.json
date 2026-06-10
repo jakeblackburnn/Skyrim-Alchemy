@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "name": "Giant Lichen",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 34,
+    "synergy_by_order": {
+      "1": 34,
+      "2": 0,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Abecean Longfin",
+        "Ashen Grass Pod",
+        "Bee",
+        "Bleeding Crown",
+        "Briar Heart",
+        "Chaurus Eggs",
+        "Creep Cluster",
+        "Cyrodilic Spadetail",
+        "Deathbell",
+        "Dwarven Oil",
+        "Ectoplasm",
+        "Elves Ear",
+        "Eye of Sabre Cat",
+        "Fire Salts",
+        "Frost Salts",
+        "Grass Pod",
+        "Hagraven Feathers",
+        "Human Flesh",
+        "Jazbay Grapes",
+        "Moon Sugar",
+        "Mora Tapinella",
+        "Pearl",
+        "Pine Thrush Egg",
+        "Red Mountain Flower",
+        "Sabre Cat Tooth",
+        "Scathecraw",
+        "Silverside Perch",
+        "Skeever Tail",
+        "Small Antlers",
+        "Taproot",
+        "Trama Root",
+        "Vampire Dust",
+        "Void Salts",
+        "White Cap"
+      ],
+      "2": [],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 34,
+    "unique_effects": [],
+    "substitutability": 8.5,
+    "effect_type_balance": {
+      "beneficial": 1,
+      "poison": 3
+    },
+    "perk_alignment": [
+      "physician",
+      "poisoner"
+    ],
+    "valid_potion_count": 1163,
+    "ideal_2_ingredient_potion": {
+      "name": "Poison of Weakness to Shock",
+      "ingredients": [
+        "Ashen Grass Pod",
+        "Giant Lichen"
+      ],
+      "total_value": 39,
+      "effects": [
+        {
+          "name": "Weakness to Shock",
+          "description": "Target is 13% weaker to shock damage for 30 seconds.",
+          "magnitude": 13,
+          "duration": 30,
+          "value": 39,
+          "is_poison": true
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Stamina",
+      "ingredients": [
+        "Boar Tusk",
+        "Chaurus Eggs",
+        "Giant Lichen"
+      ],
+      "total_value": 415,
+      "effects": [
+        {
+          "name": "Fortify Stamina",
+          "description": "Stamina is increased by 22 points for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 378,
+          "is_poison": false
+        },
+        {
+          "name": "Weakness to Poison",
+          "description": "Target is 9% weaker to poison for 30 seconds.",
+          "magnitude": 9,
+          "duration": 30,
+          "value": 37,
+          "is_poison": true
+        }
+      ]
+    },
+    "rarity": "uncommon",
+    "dlc": false
+  }
+}

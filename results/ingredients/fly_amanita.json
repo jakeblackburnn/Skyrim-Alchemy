@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "name": "Fly Amanita",
+    "timestamp": "20260610_163708"
+  },
+  "profile": {
+    "compatible_count": 19,
+    "synergy_by_order": {
+      "1": 17,
+      "2": 2,
+      "3": 0,
+      "4": 0
+    },
+    "synergizing_by_order": {
+      "1": [
+        "Ash Creep Cluster",
+        "Ashen Grass Pod",
+        "Bee",
+        "Blisterwort",
+        "Boar Tusk",
+        "Bone Meal",
+        "Elves Ear",
+        "Emperor Parasol Moss",
+        "Falmer Ear",
+        "Fire Salts",
+        "Hagraven Feathers",
+        "Human Heart",
+        "Mora Tapinella",
+        "Mudcrab Chitin",
+        "Scaly Pholiota",
+        "Snowberries",
+        "Spawn Ash"
+      ],
+      "2": [
+        "Dragon's Tongue",
+        "Troll Fat"
+      ],
+      "3": [],
+      "4": []
+    },
+    "total_synergy_weight": 21,
+    "unique_effects": [],
+    "substitutability": 5.25,
+    "effect_type_balance": {
+      "beneficial": 3,
+      "poison": 1
+    },
+    "perk_alignment": [
+      "benefactor",
+      "poisoner"
+    ],
+    "valid_potion_count": 576,
+    "ideal_2_ingredient_potion": {
+      "name": "Potion of Fortify Two-Handed",
+      "ingredients": [
+        "Fly Amanita",
+        "Troll Fat"
+      ],
+      "total_value": 148,
+      "effects": [
+        {
+          "name": "Fortify Two-Handed",
+          "description": "Two-handed weapons do 17% more damage for 60 seconds.",
+          "magnitude": 17,
+          "duration": 60,
+          "value": 80,
+          "is_poison": false
+        },
+        {
+          "name": "Frenzy",
+          "description": "Creatures and people up to level 4 will attack anything nearby for 10 seconds.",
+          "magnitude": 4,
+          "duration": 10,
+          "value": 68,
+          "is_poison": true
+        }
+      ]
+    },
+    "ideal_3_ingredient_potion": {
+      "name": "Potion of Fortify Stamina",
+      "ingredients": [
+        "Boar Tusk",
+        "Chaurus Eggs",
+        "Fly Amanita"
+      ],
+      "total_value": 446,
+      "effects": [
+        {
+          "name": "Fortify Stamina",
+          "description": "Stamina is increased by 22 points for 300 seconds.",
+          "magnitude": 22,
+          "duration": 300,
+          "value": 378,
+          "is_poison": false
+        },
+        {
+          "name": "Frenzy",
+          "description": "Creatures and people up to level 4 will attack anything nearby for 10 seconds.",
+          "magnitude": 4,
+          "duration": 10,
+          "value": 68,
+          "is_poison": true
+        }
+      ]
+    },
+    "rarity": "common",
+    "dlc": false
+  }
+}
