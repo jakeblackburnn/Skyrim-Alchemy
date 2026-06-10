@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from .effect import Effect
 
 class Ingredient:

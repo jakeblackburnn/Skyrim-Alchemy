@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from itertools import combinations
 from typing import Set, Dict, List
 from .potion import Potion
