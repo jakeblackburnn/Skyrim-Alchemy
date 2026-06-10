@@ -20,8 +20,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application code
 # Note: In dev, you might want to use volumes instead for hot-reload
-COPY src/ ./src/
+# alchemy/ is the engine (web_ui imports `from alchemy...`); data/ backs the
+# CSV-download endpoint; results/ backs the insights and ingredient-profile APIs.
+COPY alchemy/ ./alchemy/
 COPY data/ ./data/
+COPY results/ ./results/
 COPY web_ui/ ./web_ui/
 COPY run_webui.py .
 
