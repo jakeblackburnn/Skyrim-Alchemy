@@ -1,95 +1,19 @@
 # ESV: Skyrim Alchemy
 
-Simulation infrastructure for Skyrim's alchemy system. Provides Monte Carlo framework for analyzing potion-making strategies and ingredient performance.
+This project is mainly an exercise in *design of experiments*, as well as data presentation and general programming in python. The code is constitutes a simulation and experimentation infrastructure for analyzing optimization of the alchemy mechanic from *ESV: Skyrim*.
 
-## Core Components
+includes three main components: 
 
-**Alembic** - Potion-making engine. Generates valid potions from inventory and executes exhaustion strategies.
+- ```alchemy/``` : Engine for emulating and gathering data from Skyrim's alchemy mechanic.
+- ```monte_carlo/``` : Monte Carlo runner, defining the interface for experiments and the scenarios analyzed.
+- ```experiments/``` : Scripts for analyzing and saving results of simple experiments and Monte Carlo simulations.
 
-**Inventory** - Ingredient storage with generation methods:
-- `generate_weighted()` - Rarity-weighted sampling
-- `generate_stable()` - Uniform random sampling  
-- `generate_normal()` - Chi-squared quantity distribution
+## Code Demo:
+TODO: create jupyter notebook demo
 
-**Player** - Skill level, perks (Alchemist, Physician, Benefactor, Poisoner), and fortify alchemy enchantments.
+## Experiments and Results:
+TODO
 
-**Potion** - Effect realization and value calculation from ingredient combinations.
+Salmon Roe is by far the most valuable ingredient in skyrim, confirmed by its raw effect values as well as average performance in Monte Carlo simulations. This is due to its unusually high magnitudes for the 'Fortify Magicka' and 'Fortify Stamina' effects, which lead to extremely high value potions when both are expressed. 
 
-**Database** - Loads Skyrim ingredient and effect data from CSVs (`data/master_ingredients.csv`, `data/effects.csv`).
-
-## Potion-Making Strategy
-
-Currently implements **lazy** strategy: iteratively select highest-value potion until inventory exhausted.
-
-```python
-from src.alembic import Alembic
-from src.inventory import Inventory
-from src.database import IngredientsDatabase
-from src.player import Player
-
-db = IngredientsDatabase()
-inv = Inventory.generate_weighted(db, total=128, distinct=24)
-player = Player(skill=50, alchemist_perk_level=3)
-
-alembic = Alembic(db, player, inv)
-potions = alembic.exhaust_inventory(strategy="lazy")
-alembic.fancy_print()
-```
-
-## Monte Carlo Framework
-
-Run experiments with configurable simulations and custom result aggregation.
-
-**Runner** (`monte_carlo/runner.py`):
-- `MonteCarloConfig` - Simulation count, progress bar, SIGINT debugging
-- `MonteCarlo.run()` - Execute experiment with automatic state tracking
-
-**Experiments** (`monte_carlo/experiments/`):
-- Subclass `Experiment` and implement `run_once()`
-- Subclass `MonteCarloResult` and implement `aggregate_stats()`
-
-Example experiment (`run_mc.py`):
-```python
-from monte_carlo.runner import MonteCarlo, MonteCarloConfig
-from monte_carlo.experiments.weighted_test import WeightedInventoryExperiment, WeightedInventoryResult
-
-db = IngredientsDatabase()
-config = MonteCarloConfig(num_simulations=3200, progress_bar=True)
-
-result = WeightedInventoryResult(config=config, db=db)
-exp = WeightedInventoryExperiment(db=db, total=128, distinct=24)
-
-runner = MonteCarlo(config, result, verbose=True)
-runner.run(exp)
-```
-
-## Analysis Tools
-
-**Perk analysis** (`analysis/perks.py`) - Test perk combinations across ingredients to identify synergies.
-
-**Rarity tolerance** (`analysis/rarity.py`) - Sweep rarity distributions to find stable vs volatile ingredients.
-
-## Structure
-
-```
-src/               # Core simulation engine
-  alembic.py       # Potion-making strategies
-  inventory.py     # Inventory generation and management
-  player.py        # Player stats and perks
-  potion.py        # Effect realization
-  database.py      # CSV data loading
-  ingredient.py    # Ingredient objects
-  effect.py        # Effect mechanics
-
-monte_carlo/       # Monte Carlo framework
-  runner.py        # Experiment execution
-  experiments/     # Custom experiments
-
-analysis/          # Meta-experiments (perks, rarity)
-data/              # Skyrim data (ingredients, effects)
-web_ui/            # Django calculator interface
-```
-
-## Dependencies
-
-NumPy, Pandas, Django. See `requirements.txt`.
+The widely held belief is that the most valuable potion possible in skyrim is the combination (Salmon Roe, Garlic, Nordic Barnalce), though this misses the true best potion combination: (Chicken Egg, Hawks Egg, Salmon Roe). Other calculators seem to miss this combination because (contrary to confirmed in-game behavior) they do not allow a potion combination that adds an ingredient when its contributed effects are already expressed in the other two ingredients. For instance, the hawks egg and chickens egg are essentially identical, meaning their combination yeilds a potion with all four of their effects. Adding salmon roe to this combination doesn't add any new effects, so other calculators (notably powtions.com) seem to exclude the possibility, when in reality the added salmon roe increases the value dramatically by scaling the fortify magicka and fortify stamina effects.
